@@ -1,0 +1,59 @@
+using System;
+
+namespace Avastrad.Settings.Template
+{
+    public class TemplateSettingsModel : ISettingModel
+    {
+        public float Value { get; private set; }
+        public bool HasChanged { get; private set; }
+
+        public int Priority => _config.Priority;
+        public float DefaultValue => _config.DefaultValue;
+        
+        private readonly TemplateSettingsConfig _config;
+        
+        public TemplateSettingsModel(TemplateSettingsConfig config)
+        {
+            _config = config;
+            
+            Value = DefaultValue;
+        }
+
+        public void SetValue(float value)
+        {
+            Value = value;
+            HasChanged = true;
+        }
+        
+        public void Apply()
+        {
+            //apply value to some system, if it required
+            HasChanged = false;
+        }
+        
+        public void ResetToDefault() 
+            => SetValue(DefaultValue);
+
+        public Type GetStateType() 
+            => typeof(SettingState);
+
+        public ISettingState GetState() 
+            => new SettingState(this);
+
+        public void LoadState(ISettingState genericState)
+        {
+            var state = (SettingState)genericState;
+            SetValue(state.Value);
+        }
+
+        private struct SettingState : ISettingState
+        {
+            public float Value { get; set; }
+
+            public SettingState(TemplateSettingsModel model)
+            {
+                Value = model.Value;
+            }
+        }
+    }
+}

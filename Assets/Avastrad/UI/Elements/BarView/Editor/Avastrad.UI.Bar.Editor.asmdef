@@ -1,0 +1,18 @@
+{
+    "name": "Avastrad.UI.Bar.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9729c39b9e64ac6428fba5bf131a1cd9"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
