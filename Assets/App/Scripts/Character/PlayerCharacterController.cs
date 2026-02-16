@@ -25,6 +25,8 @@ namespace App.Character
 
         private float _normalHeight;
         private Vector3 _velocity = Vector3.zero;
+        private Vector3 _jumpHorizontalVelocity = Vector3.zero;
+        private bool _isInAirJump = false;
         private bool _isGrounded = false;
         private bool _isCrouching = false;
         private Animator _animator;
@@ -75,6 +77,12 @@ namespace App.Character
             {
                 _velocity.y = -0.1f; // Малое значение для сохранения контакта с землёй
             }
+            // Если касаемся земли — заканчиваем фазу прыжка с инерцией
+            if (_isGrounded)
+            {
+                _isInAirJump = false;
+                _jumpHorizontalVelocity = Vector3.zero;
+            }
         }
 
         private void CheckHeadCollision()
@@ -96,6 +104,15 @@ namespace App.Character
 
         private void HandleMovement()
         {
+            // Если мы в фазе прыжка с сохранением инерции — фиксируем горизонтальную скорость
+            if (!_isGrounded && _isInAirJump)
+            {
+                _velocity.x = _jumpHorizontalVelocity.x;
+                _velocity.z = _jumpHorizontalVelocity.z;
+                // В воздухе во время прыжка игрок не меняет направление/скорость движения
+                return;
+            }
+
             Vector2 moveInput = inputManager.MoveInput;
             bool isSprinting = inputManager.IsSprintPressed && _isGrounded && !_isCrouching;
 
@@ -136,6 +153,10 @@ namespace App.Character
 
         private void Jump()
         {
+            // Фиксируем горизонтальную скорость в момент старта прыжка
+            _jumpHorizontalVelocity = new Vector3(_velocity.x, 0f, _velocity.z);
+            _isInAirJump = true;
+
             _velocity.y = jumpForce;
             _isGrounded = false;
         }
