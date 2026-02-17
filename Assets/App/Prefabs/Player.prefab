@@ -123,28 +123,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205fd2d947281a4459fa24ee15e44094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Character.PlayerCharacterController
+  cameraController: {fileID: 1287651065015622182}
   inputManager: {fileID: 7483723162105313711}
   characterController: {fileID: 2783987760247693574}
-  moveSpeed: 5
-  sprintSpeed: 8
-  acceleration: 10
-  deceleration: 10
-  groundDrag: 5
-  jumpForce: 5
-  gravity: 9.81
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 55
-  groundCheckDistance: 0.1
-  crouchHeight: 1.3
-  crouchSpeed: 2
-  crouchHeightSpeed: 5
-  headCollisionDistance: 0.1
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 55
-  standCheckDistance: 1.45
-  standCheckOffset: -0.1
+  playerParams:
+    MoveSpeed: 5
+    SprintSpeed: 8
+    Acceleration: 10
+    Deceleration: 10
+    GroundDrag: 5
+    JumpForce: 5
+    Gravity: 9.81
+    GroundLayer:
+      serializedVersion: 2
+      m_Bits: 55
+    GroundCheckDistance: 0.1
+    CrouchHeight: 1.3
+    CrouchSpeed: 2
+    CrouchHeightSpeed: 5
+    HeadCollisionDistance: 0.1
+    ObstacleLayer:
+      serializedVersion: 2
+      m_Bits: 55
+    StandCheckDistance: 1.35
+    StandCheckOffset: -0.1
+    NormalCameraHeight: 2.1
+    CrouchCameraHeight: 0.9
+  animator: {fileID: 0}
 --- !u!114 &1287651065015622182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,12 +166,9 @@ MonoBehaviour:
   cameraRig: {fileID: 6734760262169552703}
   virtualCamera: {fileID: 4708030628450986178}
   inputManager: {fileID: 7483723162105313711}
-  characterController: {fileID: 4247805323651797999}
   lookSensitivity: 0.5
   minPitch: -90
   maxPitch: 90
-  normalCameraHeight: 2.1
-  crouchCameraHeight: 0.9
   cameraHeightSpeed: 5
 --- !u!114 &7483723162105313711
 MonoBehaviour:

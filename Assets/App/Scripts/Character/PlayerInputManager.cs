@@ -11,35 +11,23 @@ namespace App.Character
         [SerializeField] private InputActionReference jumpAction;
         [SerializeField] private InputActionReference crouchAction;
 
-        private Vector2 _moveInput;
-        private Vector2 _lookInput;
-        private bool _isSprintPressed;
         private bool _jumpPressed;
-        private bool _jumpPressedThisFrame;
-        private bool _crouchPressed;
-        private bool _crouchPressedThisFrame;
 
-        public Vector2 MoveInput => _moveInput;
-        public Vector2 LookInput => _lookInput;
-        public bool IsSprintPressed => _isSprintPressed;
-        public bool JumpPressedThisFrame => _jumpPressedThisFrame;
-        public bool IsCrouchPressed => _crouchPressed;
-        public bool CrouchPressedThisFrame => _crouchPressedThisFrame;
+        public Vector2 MoveInput { get; private set; }
+        public Vector2 LookInput { get; private set; }
+        public bool IsSprintPressed { get; private set; }
+        public bool JumpPressedThisFrame { get; private set; }
+        public bool IsCrouchPressed { get; private set; }
+        public bool CrouchPressedThisFrame { get; private set; }
 
-        private void OnEnable()
-        {
-            EnableInputActions();
-        }
+        private void OnEnable() 
+            => EnableInputActions();
 
-        private void OnDisable()
-        {
-            DisableInputActions();
-        }
+        private void OnDisable() 
+            => DisableInputActions();
 
-        private void Update()
-        {
-            ReadInputs();
-        }
+        private void Update() 
+            => ReadInputs();
 
         private void EnableInputActions()
         {
@@ -71,19 +59,19 @@ namespace App.Character
 
         private void ReadInputs()
         {
-            _moveInput = moveAction != null ? moveAction.action.ReadValue<Vector2>() : Vector2.zero;
-            _lookInput = lookAction != null ? lookAction.action.ReadValue<Vector2>() : Vector2.zero;
-            _isSprintPressed = sprintAction != null ? sprintAction.action.IsPressed() : false;
+            MoveInput = moveAction != null ? moveAction.action.ReadValue<Vector2>() : Vector2.zero;
+            LookInput = lookAction != null ? lookAction.action.ReadValue<Vector2>() : Vector2.zero;
+            IsSprintPressed = sprintAction != null ? sprintAction.action.IsPressed() : false;
             
             // Отслеживаем нажатие прыжка в этом кадре
-            bool jumpCurrentlyPressed = jumpAction != null ? jumpAction.action.IsPressed() : false;
-            _jumpPressedThisFrame = jumpCurrentlyPressed && !_jumpPressed;
+            var jumpCurrentlyPressed = jumpAction != null ? jumpAction.action.IsPressed() : false;
+            JumpPressedThisFrame = jumpCurrentlyPressed && !_jumpPressed;
             _jumpPressed = jumpCurrentlyPressed;
             
             // Отслеживаем нажатие приседания в этом кадре
-            bool crouchCurrentlyPressed = crouchAction != null ? crouchAction.action.IsPressed() : false;
-            _crouchPressedThisFrame = crouchCurrentlyPressed && !_crouchPressed;
-            _crouchPressed = crouchCurrentlyPressed;
+            var crouchCurrentlyPressed = crouchAction != null ? crouchAction.action.IsPressed() : false;
+            CrouchPressedThisFrame = crouchCurrentlyPressed && !IsCrouchPressed;
+            IsCrouchPressed = crouchCurrentlyPressed;
         }
     }
 }
