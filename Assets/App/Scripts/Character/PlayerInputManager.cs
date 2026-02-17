@@ -10,6 +10,7 @@ namespace App.Character
         [SerializeField] private InputActionReference sprintAction;
         [SerializeField] private InputActionReference jumpAction;
         [SerializeField] private InputActionReference crouchAction;
+        [SerializeField] private InputActionReference interactAction;
 
         private bool _jumpPressed;
 
@@ -19,6 +20,7 @@ namespace App.Character
         public bool JumpPressedThisFrame { get; private set; }
         public bool IsCrouchPressed { get; private set; }
         public bool CrouchPressedThisFrame { get; private set; }
+        public bool InteractPressedThisFrame { get; private set; }
 
         private void OnEnable() 
             => EnableInputActions();
@@ -41,6 +43,8 @@ namespace App.Character
                 jumpAction.action.Enable();
             if (crouchAction != null)
                 crouchAction.action.Enable();
+            if (interactAction != null)
+                interactAction.action.Enable();
         }
 
         private void DisableInputActions()
@@ -55,6 +59,8 @@ namespace App.Character
                 jumpAction.action.Disable();
             if (crouchAction != null)
                 crouchAction.action.Disable();
+            if (interactAction != null)
+                interactAction.action.Disable();
         }
 
         private void ReadInputs()
@@ -72,6 +78,9 @@ namespace App.Character
             var crouchCurrentlyPressed = crouchAction != null ? crouchAction.action.IsPressed() : false;
             CrouchPressedThisFrame = crouchCurrentlyPressed && !IsCrouchPressed;
             IsCrouchPressed = crouchCurrentlyPressed;
+
+            // Interact - rising edge using action.triggered
+            InteractPressedThisFrame = interactAction != null && interactAction.action != null && interactAction.action.triggered;
         }
     }
 }

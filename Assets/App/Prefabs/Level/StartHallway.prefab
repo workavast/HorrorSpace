@@ -1290,6 +1290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_3 Variant_2
       objectReference: {fileID: 0}
+    - target: {fileID: 9085610888022740921, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+      propertyPath: <IsInteractable>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2343,6 +2347,10 @@ PrefabInstance:
     - target: {fileID: 658524715672275466, guid: 7853e2a1d7b33be479ad9aedcfe986ec, type: 3}
       propertyPath: m_Name
       value: door_1 Variant_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650411714892020667, guid: 7853e2a1d7b33be479ad9aedcfe986ec, type: 3}
+      propertyPath: <IsInteractable>k__BackingField
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

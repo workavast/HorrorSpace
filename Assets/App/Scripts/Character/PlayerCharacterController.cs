@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using App.Character.FSM.Jump;
 using App.Character.FSM.Movement;
+using App.Interaction;
 using Avastrad.FSM;
 using UnityEngine;
 
@@ -19,6 +20,10 @@ namespace App.Character
         private StateMachine _movementFsm;
         private StateMachine _jumpFsm;
         private StateMachine _mainFsm;
+
+        [Header("Interaction")]
+        [SerializeField] private float interactRange = 3f;
+        [SerializeField] private LayerMask interactLayerMask = ~0;
 
         private readonly int _animatorSpeedHash = Animator.StringToHash("Speed");
         private readonly int _animatorIsGroundedHash = Animator.StringToHash("IsGrounded");
@@ -132,6 +137,29 @@ namespace App.Character
 
                 _owner.ApplyMovement();
                 _owner.UpdateAnimator();
+
+                // Interaction handling
+                if (_owner.inputManager.InteractPressedThisFrame)
+                    _owner.TryInteract();
+            }
+        }
+
+        private void TryInteract()
+        {
+            Debug.Log("TryInteract");
+            
+            var cam = Camera.main;
+            if (cam == null)
+                return;
+
+            var origin = cam.transform.position;
+            var dir = cam.transform.forward;
+
+            if (Physics.Raycast(origin, dir, out var hit, interactRange, interactLayerMask))
+            {
+                var interactable = hit.collider.GetComponent<IInteractable>() ?? hit.collider.GetComponentInParent<IInteractable>();
+                interactable?.Interact(_ctx);
+                Debug.Log(interactable == null);
             }
         }
     }

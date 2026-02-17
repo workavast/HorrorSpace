@@ -2404,6 +2404,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1732517341701538721}
     m_Modifications:
+    - target: {fileID: 7992001953913379970, guid: 367329bad2dd1e94ba41f538e4ebb72f, type: 3}
+      propertyPath: <IsInteractable>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8880944466277002288, guid: 367329bad2dd1e94ba41f538e4ebb72f, type: 3}
       propertyPath: m_Name
       value: door_2 Variant
