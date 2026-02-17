@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e07d6aacfead1284f85aedcb0db59986
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: -32000
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167951
+  packageName: Cast Visualizer
+  packageVersion: 1.2.6
+  assetPath: Assets/CastVisualizer/Runtime/Physics2DPatches.cs
+  uploadId: 781794

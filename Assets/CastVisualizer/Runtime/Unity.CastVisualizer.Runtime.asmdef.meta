@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f197b388563999945bcd81a6b00bcf0a
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167951
+  packageName: Cast Visualizer
+  packageVersion: 1.2.6
+  assetPath: Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef
+  uploadId: 781794

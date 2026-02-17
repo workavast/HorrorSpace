@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ca85abc0633ff7d45a63b583781819fe
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167951
+  packageName: Cast Visualizer
+  packageVersion: 1.2.6
+  assetPath: Assets/CastVisualizer/Runtime/CastVisualizerManager.cs
+  uploadId: 781794

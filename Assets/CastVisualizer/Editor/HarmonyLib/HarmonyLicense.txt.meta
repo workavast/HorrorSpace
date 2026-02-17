@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ecc0a1b3519d64043bfed30c0df871ba
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167951
+  packageName: Cast Visualizer
+  packageVersion: 1.2.6
+  assetPath: Assets/CastVisualizer/Editor/HarmonyLib/HarmonyLicense.txt
+  uploadId: 781794

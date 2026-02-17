@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2b46c703d0477a4458a9d9d4008817bb
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167951
+  packageName: Cast Visualizer
+  packageVersion: 1.2.6
+  assetPath: Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef
+  uploadId: 781794

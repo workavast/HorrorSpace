@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 178eb2a577c21fe49ba80cdd797f0af2
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167951
+  packageName: Cast Visualizer
+  packageVersion: 1.2.6
+  assetPath: Assets/CastVisualizer/Documentation/MANUAL.html
+  uploadId: 781794

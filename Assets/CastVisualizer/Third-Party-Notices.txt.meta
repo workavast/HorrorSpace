@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3cdb802c9bfdece44a25533bb32a30ff
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167951
+  packageName: Cast Visualizer
+  packageVersion: 1.2.6
+  assetPath: Assets/CastVisualizer/Third-Party-Notices.txt
+  uploadId: 781794

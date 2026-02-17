@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1fe3662df2d34da4aae7fa3a8006abd1
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167951
+  packageName: Cast Visualizer
+  packageVersion: 1.2.6
+  assetPath: Assets/CastVisualizer/CHANGELOG.md
+  uploadId: 781794
