@@ -126,6 +126,7 @@ MonoBehaviour:
   cameraController: {fileID: 1287651065015622182}
   inputManager: {fileID: 7483723162105313711}
   characterController: {fileID: 2783987760247693574}
+  animator: {fileID: 0}
   playerParams:
     MoveSpeed: 5
     SprintSpeed: 8
@@ -147,9 +148,9 @@ MonoBehaviour:
       m_Bits: 55
     StandCheckDistance: 1.35
     StandCheckOffset: -0.1
+    CollisionCheckRadius: 0.59
     NormalCameraHeight: 2.1
     CrouchCameraHeight: 0.9
-  animator: {fileID: 0}
 --- !u!114 &1287651065015622182
 MonoBehaviour:
   m_ObjectHideFlags: 0

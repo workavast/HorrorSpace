@@ -40,7 +40,16 @@ namespace App.Character.FSM.Movement
         private bool CanStand()
         {
             var headPosition = _ctx.Transform.position + Vector3.up * _params.CrouchHeight + Vector3.up * _params.StandCheckOffset;
-            return !Physics.Raycast(headPosition, Vector3.up, _params.StandCheckDistance, _params.ObstacleLayer);
+            var origin = headPosition + Vector3.down * _params.CollisionCheckRadius;
+            
+            return !Physics.SphereCast(
+                origin,
+                _params.CollisionCheckRadius,
+                Vector3.up,
+                out var hit,
+                _params.StandCheckDistance,
+                _params.ObstacleLayer
+            );
         }
     }
 }

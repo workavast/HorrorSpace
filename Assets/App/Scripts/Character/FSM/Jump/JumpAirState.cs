@@ -49,10 +49,10 @@ namespace App.Character.FSM.Jump
                 return false;
 
             var headPosition = _ctx.Transform.position + Vector3.up * _ctx.CharacterController.height;
-            if (Physics.Raycast(headPosition, Vector3.up, _params.HeadCollisionDistance, _params.ObstacleLayer))
-                return true;
-            
-            return false;
+            var checkOffset = Vector3.up * _params.HeadCollisionDistance;
+            var origin = headPosition + checkOffset - Vector3.up * _params.CollisionCheckRadius;
+
+            return Physics.CheckSphere(origin, _params.CollisionCheckRadius, _params.ObstacleLayer);
         }
     }
 }

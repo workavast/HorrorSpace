@@ -71,12 +71,11 @@ namespace App.Character
         // Exposed helpers used by PlayerMainState
         private void CheckGroundContact()
         {
-            _ctx.IsGroundContact = Physics.Raycast(
-                transform.position + Vector3.up * (characterController.height * 0.5f),
-                Vector3.down,
-                characterController.height * 0.5f + playerParams.GroundCheckDistance,
-                playerParams.GroundLayer
-            );
+            var legs = _ctx.Transform.position;
+            var checkOffset = Vector3.down * playerParams.GroundCheckDistance;
+            var origin = legs + checkOffset + Vector3.up * playerParams.CollisionCheckRadius;
+
+            _ctx.IsGroundContact = Physics.CheckSphere(origin, playerParams.CollisionCheckRadius, playerParams.ObstacleLayer);
         }
 
         private void ApplyMovement()

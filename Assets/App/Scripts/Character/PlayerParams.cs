@@ -21,7 +21,8 @@ namespace App.Character
         public LayerMask ObstacleLayer;
         public float StandCheckDistance = 1.35f;
         public float StandCheckOffset = -0.1f;
-        
+        [Space]
+        public float CollisionCheckRadius = 0.2f;
         [Space]
         public float NormalCameraHeight = 2.1f;
         public float CrouchCameraHeight = 0.9f;
