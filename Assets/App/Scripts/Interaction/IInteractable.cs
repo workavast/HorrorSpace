@@ -1,5 +1,4 @@
 using App.Character;
-using UnityEngine;
 
 namespace App.Interaction
 {

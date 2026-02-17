@@ -146,12 +146,7 @@ namespace App.Character
 
         private void TryInteract()
         {
-            Debug.Log("TryInteract");
-            
             var cam = Camera.main;
-            if (cam == null)
-                return;
-
             var origin = cam.transform.position;
             var dir = cam.transform.forward;
 
@@ -159,7 +154,6 @@ namespace App.Character
             {
                 var interactable = hit.collider.GetComponent<IInteractable>() ?? hit.collider.GetComponentInParent<IInteractable>();
                 interactable?.Interact(_ctx);
-                Debug.Log(interactable == null);
             }
         }
     }

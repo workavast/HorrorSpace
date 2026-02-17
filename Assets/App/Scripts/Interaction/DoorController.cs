@@ -53,23 +53,19 @@ namespace App.Interaction
 
         public void Close()
         {
-            if (!_isOpen) return;
+            if (!_isOpen) 
+                return;
+            
             _isOpen = false;
-            if (leftPanel != null)
-            {
+            if (leftPanel != null) 
                 StartPanelMotion(ref _leftHandle, leftPanel, leftPanel.localPosition, _leftClosedLocal, animationDuration, closeEase);
-            }
 
-            if (rightPanel != null)
-            {
+            if (rightPanel != null) 
                 StartPanelMotion(ref _rightHandle, rightPanel, rightPanel.localPosition, _rightClosedLocal, animationDuration, closeEase);
-            }
         }
 
         public void Toggle()
         {
-            Debug.Log("Toggle door");
-            
             if (_isOpen) 
                 Close(); 
             else 
@@ -79,15 +75,12 @@ namespace App.Interaction
         private void StartPanelMotion(ref MotionHandle? handleRef, Transform panel, Vector3 from, Vector3 to, float baseDuration, Ease ease)
         {
             // Cancel previous
-            try
+            if (handleRef.HasValue)
             {
-                if (handleRef.HasValue)
-                {
-                    var h = handleRef.Value;
-                    if (h.IsActive()) h.Cancel();
-                }
+                var handle = handleRef.Value;
+                if (handle.IsActive()) 
+                    handle.Cancel();
             }
-            catch { /* ignore if MotionHandle API differs at compile time */ }
 
             var totalDist = Vector3.Distance(from, to);
             if (totalDist <= 0.0001f)
@@ -109,27 +102,12 @@ namespace App.Interaction
                 return;
             }
 
-            var motion = LMotion.Create(current, to, duration).WithEase(ease).Bind(v => panel.localPosition = v);
-            // Bind likely returns MotionHandle; capture it if possible
-            try
-            {
-                handleRef = motion;
-            }
-            catch
-            {
-                // if Bind doesn't return handle, attempt RunWithoutBinding and re-create binding
-                try
-                {
-                    var h = LMotion.Create(current, to, duration).WithEase(ease).RunWithoutBinding();
-                    // we still bind to property using the regular Create+Bind call, but keep handle from RunWithoutBinding
-                    LMotion.Create(current, to, duration).WithEase(ease).Bind(v => panel.localPosition = v).AddTo(panel.gameObject);
-                    handleRef = h;
-                }
-                catch
-                {
-                    handleRef = null;
-                }
-            }
+            var motion = LMotion
+                .Create(current, to, duration)
+                .WithEase(ease)
+                .Bind(v => panel.localPosition = v);
+
+            handleRef = motion;
         }
     }
 }
