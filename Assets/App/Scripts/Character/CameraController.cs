@@ -38,6 +38,9 @@ namespace App.Character
 
         private void HandleCameraRotation()
         {
+            if (!_cameraRotationEnabled)
+                return;
+
             var lookDelta = inputManager.LookInput;
 
             if (lookDelta.magnitude < 0.01f)
@@ -60,7 +63,8 @@ namespace App.Character
         private void HandleCameraHeight()
         {
             // Плавно изменяем высоту
-            _currentCameraHeight = Mathf.Lerp(_currentCameraHeight, _targetCameraHeight, Time.deltaTime * cameraHeightSpeed);
+            _currentCameraHeight =
+                Mathf.Lerp(_currentCameraHeight, _targetCameraHeight, Time.deltaTime * cameraHeightSpeed);
 
             // Применяем смещение к локальной позиции камеры
             var localPosition = cameraRig.localPosition;
@@ -68,10 +72,10 @@ namespace App.Character
             cameraRig.localPosition = localPosition;
         }
 
-        public void SetTargetHeight(float height) 
+        public void SetTargetHeight(float height)
             => _targetCameraHeight = height;
 
-        public void SetLookSensitivity(float sensitivity) 
+        public void SetLookSensitivity(float sensitivity)
             => lookSensitivity = Mathf.Max(0.1f, sensitivity);
 
         public void SetPitchLimits(float minValue, float maxValue)
@@ -81,10 +85,10 @@ namespace App.Character
             _currentPitch = Mathf.Clamp(_currentPitch, minPitch, maxPitch);
         }
 
-        public float GetCurrentPitch() 
+        public float GetCurrentPitch()
             => _currentPitch;
 
-        public float GetCurrentYaw() 
+        public float GetCurrentYaw()
             => _currentYaw;
 
         public void ResetRotation()
@@ -94,7 +98,20 @@ namespace App.Character
             cameraRig.localRotation = Quaternion.identity;
         }
 
-        public void SetCameraHeightSpeed(float speed) 
+        public void SetCameraHeightSpeed(float speed)
             => cameraHeightSpeed = Mathf.Max(0.1f, speed);
+
+        public Camera GetCamera()
+        {
+            return Camera.main;
+        }
+
+        public void SetCameraRotationEnabled(bool enabled)
+        {
+            // We'll modify HandleCameraRotation to check this flag
+            _cameraRotationEnabled = enabled;
+        }
+
+        private bool _cameraRotationEnabled = true;
     }
 }

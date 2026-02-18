@@ -12,8 +12,12 @@ namespace App.Character
         [SerializeField] private InputActionReference crouchAction;
         [SerializeField] private InputActionReference interactAction;
 
-        private bool _jumpPressed;
+        [SerializeField] private InputActionReference pickupAction;
+        [SerializeField] private InputActionReference rotateAction;
+        [SerializeField] private InputActionReference zoomAction;
 
+        private bool _jumpPressed;
+        
         public Vector2 MoveInput { get; private set; }
         public Vector2 LookInput { get; private set; }
         public bool IsSprintPressed { get; private set; }
@@ -21,6 +25,9 @@ namespace App.Character
         public bool IsCrouchPressed { get; private set; }
         public bool CrouchPressedThisFrame { get; private set; }
         public bool InteractPressedThisFrame { get; private set; }
+        public bool IsPickupPressed { get; private set; }
+        public bool IsRotatePressed { get; private set; }
+        public float ZoomDelta { get; private set; }
 
         private void OnEnable() 
             => EnableInputActions();
@@ -45,6 +52,12 @@ namespace App.Character
                 crouchAction.action.Enable();
             if (interactAction != null)
                 interactAction.action.Enable();
+            if (pickupAction != null)
+                pickupAction.action.Enable();
+            if (rotateAction != null)
+                rotateAction.action.Enable();
+            if (zoomAction != null)
+                zoomAction.action.Enable();
         }
 
         private void DisableInputActions()
@@ -61,6 +74,12 @@ namespace App.Character
                 crouchAction.action.Disable();
             if (interactAction != null)
                 interactAction.action.Disable();
+            if (pickupAction != null)
+                pickupAction.action.Disable();
+            if (rotateAction != null)
+                rotateAction.action.Disable();
+            if (zoomAction != null)
+                zoomAction.action.Disable();
         }
 
         private void ReadInputs()
@@ -81,6 +100,10 @@ namespace App.Character
 
             // Interact - rising edge using action.triggered
             InteractPressedThisFrame = interactAction != null && interactAction.action != null && interactAction.action.triggered;
+
+            IsPickupPressed = pickupAction != null ? pickupAction.action.IsPressed() : false;
+            IsRotatePressed = rotateAction != null ? rotateAction.action.IsPressed() : false;
+            ZoomDelta = zoomAction != null ? zoomAction.action.ReadValue<Vector2>().y : 0;
         }
     }
 }

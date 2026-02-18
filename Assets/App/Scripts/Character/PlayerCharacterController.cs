@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using App.Character.FSM.Jump;
 using App.Character.FSM.Movement;
 using App.Interaction;
+using App.ObjectHandling;
 using Avastrad.FSM;
 using UnityEngine;
 
@@ -25,6 +26,7 @@ namespace App.Character
         [Header("Interaction")]
         [SerializeField] private float interactRange = 3f;
         [SerializeField] private LayerMask interactLayerMask = ~0;
+        [SerializeField] private HandleObjectController handleObjectController;
 
         private readonly int _animatorSpeedHash = Animator.StringToHash("Speed");
         private readonly int _animatorIsGroundedHash = Animator.StringToHash("IsGrounded");
@@ -140,10 +142,11 @@ namespace App.Character
                 _owner.UpdateAnimator();
 
                 // Check for interaction highlight
-                _owner.CheckInteractionHighlight();
+                if (_owner.handleObjectController == null || !_owner.handleObjectController.IsHoldingObject())
+                    _owner.CheckInteractionHighlight();
 
                 // Interaction handling
-                if (_owner.inputManager.InteractPressedThisFrame)
+                if ((_owner.handleObjectController == null || !_owner.handleObjectController.IsHoldingObject()) && _owner.inputManager.InteractPressedThisFrame)
                     _owner.TryInteract();
             }
         }
