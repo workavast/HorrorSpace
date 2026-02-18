@@ -14,27 +14,22 @@ namespace App.ObjectHandling
 
         public void OnPickup()
         {
-            // Disable physics while holding
+            // Disable gravity but keep physics active for more realistic behavior
             if (rb != null)
             {
-                rb.isKinematic = true;
+                rb.useGravity = false;
+                rb.velocity = Vector3.zero; // Reset velocity
+                rb.angularVelocity = Vector3.zero; // Reset angular velocity
             }
-            if (col != null)
-            {
-                col.enabled = false;
-            }
+            // Keep collider enabled for collision detection
         }
 
         public void OnDrop()
         {
-            // Re-enable physics
+            // Re-enable gravity
             if (rb != null)
             {
-                rb.isKinematic = false;
-            }
-            if (col != null)
-            {
-                col.enabled = true;
+                rb.useGravity = true;
             }
         }
     }

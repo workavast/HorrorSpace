@@ -14,6 +14,9 @@ namespace App.ObjectHandling
         [SerializeField] private float maxDistance = 5f;
         [SerializeField] private float zoomSpeed = 1f;
         [SerializeField] private float rotationSensitivity = 1f;
+        [SerializeField] private float attractionForce = 100f;
+        [SerializeField] private float maxAttractionSpeed = 10f;
+        [SerializeField] private float dampingFactor = 0.9f;
 
         private IHandleObject _currentHandledObject;
         private float _currentDistance;
@@ -73,7 +76,15 @@ namespace App.ObjectHandling
 
             // Position object in front of camera
             var targetPosition = camera.transform.position + camera.transform.forward * _currentDistance;
-            objTransform.position = targetPosition;
+            var rb = handleObject.GetGameObject().GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.MovePosition(targetPosition);
+            }
+            else
+            {
+                objTransform.position = targetPosition;
+            }
             objTransform.rotation = Quaternion.identity; // Or keep original?
 
             handleObject.OnPickup();
@@ -107,8 +118,20 @@ namespace App.ObjectHandling
                 // Rotate object based on mouse movement
                 var mouseDelta = inputManager.LookInput;
                 var objTransform2 = _currentHandledObject.GetGameObject().transform;
-                objTransform2.Rotate(Vector3.up, mouseDelta.x * rotationSensitivity, Space.World);
-                objTransform2.Rotate(Vector3.right, -mouseDelta.y * rotationSensitivity, Space.Self);
+                var rb = _currentHandledObject.GetGameObject().GetComponent<Rigidbody>();
+                
+                if (rb != null)
+                {
+                    // Use physics-based rotation for smoother movement
+                    var rotation = objTransform2.rotation;
+                    rotation *= Quaternion.Euler(-mouseDelta.y * rotationSensitivity, mouseDelta.x * rotationSensitivity, 0);
+                    rb.MoveRotation(rotation);
+                }
+                else
+                {
+                    objTransform2.Rotate(Vector3.up, mouseDelta.x * rotationSensitivity, Space.World);
+                    objTransform2.Rotate(Vector3.right, -mouseDelta.y * rotationSensitivity, Space.Self);
+                }
             }
             else
             {
@@ -119,9 +142,35 @@ namespace App.ObjectHandling
                 }
             }
 
-            // Position object in front of camera
+            // Apply physics forces to attract object to target position
             var targetPosition = camera.transform.position + camera.transform.forward * _currentDistance;
-            objTransform.position = targetPosition;
+            var rb2 = _currentHandledObject.GetGameObject().GetComponent<Rigidbody>();
+            if (rb2 != null)
+            {
+                var direction = targetPosition - objTransform.position;
+                var distance = direction.magnitude;
+                
+                if (distance > 0.01f)
+                {
+                    // Apply attraction force proportional to distance
+                    var force = direction.normalized * attractionForce * distance;
+                    
+                    // Limit maximum speed
+                    if (rb2.velocity.magnitude > maxAttractionSpeed)
+                    {
+                        rb2.velocity = rb2.velocity.normalized * maxAttractionSpeed;
+                    }
+                    
+                    rb2.AddForce(force * Time.deltaTime);
+                    
+                    // Apply damping to prevent oscillation
+                    rb2.velocity *= dampingFactor;
+                }
+            }
+            else
+            {
+                objTransform.position = targetPosition;
+            }
 
             // Drop object if pickup button released
             if (!inputManager.IsPickupPressed)
