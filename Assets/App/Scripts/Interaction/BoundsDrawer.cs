@@ -1,12 +1,11 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace App.Interaction
 {
     public class BoundsDrawer : MonoBehaviour
     {
-        [SerializeField] private Image highlightImage;
-        [SerializeField] private Image nonInteractableImage;
+        [SerializeField] private RectTransform highlightImage;
+        [SerializeField] private RectTransform nonInteractableImage;
         [SerializeField] private Camera mainCamera;
 
         private void Awake()
@@ -14,24 +13,24 @@ namespace App.Interaction
             if (mainCamera == null)
                 mainCamera = Camera.main;
 
-            highlightImage.enabled = false;
-            nonInteractableImage.enabled = false;
+            highlightImage.gameObject.SetActive(false);
+            nonInteractableImage.gameObject.SetActive(false);
         }
 
         public void SetTarget(IInteractable interactable)
         {
             if (interactable == null)
             {
-                highlightImage.enabled = false;
-                nonInteractableImage.enabled = false;
+                highlightImage.gameObject.SetActive(false);
+                nonInteractableImage.gameObject.SetActive(false);
                 return;
             }
 
             var target = interactable.GetGameObject();
             if (target == null)
             {
-                highlightImage.enabled = false;
-                nonInteractableImage.enabled = false;
+                highlightImage.gameObject.SetActive(false);
+                nonInteractableImage.gameObject.SetActive(false);
                 return;
             }
             
@@ -39,8 +38,8 @@ namespace App.Interaction
             var bounds = GetBounds(target);
             if (bounds.size == Vector3.zero)
             {
-                highlightImage.enabled = false;
-                nonInteractableImage.enabled = false;
+                highlightImage.gameObject.SetActive(false);
+                nonInteractableImage.gameObject.SetActive(false);
                 return;
             }
 
@@ -68,30 +67,29 @@ namespace App.Interaction
 
             if (minX >= maxX || minY >= maxY)
             {
-                highlightImage.enabled = false;
-                nonInteractableImage.enabled = false;
+                highlightImage.gameObject.SetActive(false);
+                nonInteractableImage.gameObject.SetActive(false);
                 return;
             }
 
             // Choose which image to use based on IsInteractable
-            Image targetImage;
+            RectTransform targetRect;
             if (interactable.IsInteractable)
             {
-                targetImage = highlightImage;
-                nonInteractableImage.enabled = false;
+                targetRect = highlightImage;
+                nonInteractableImage.gameObject.SetActive(false);
             }
             else
             {
-                targetImage = nonInteractableImage;
-                highlightImage.enabled = false;
+                targetRect = nonInteractableImage;
+                highlightImage.gameObject.SetActive(false);
             }
 
             // Set image position and size
-            var rectTransform = targetImage.rectTransform;
-            rectTransform.position = new Vector2(minX, minY);
-            rectTransform.sizeDelta = new Vector2(maxX - minX, maxY - minY);
+            targetRect.position = new Vector2(minX, minY);
+            targetRect.sizeDelta = new Vector2(maxX - minX, maxY - minY);
 
-            targetImage.enabled = true;
+            targetRect.gameObject.SetActive(true);
         }
 
         private static Bounds GetBounds(GameObject target)
