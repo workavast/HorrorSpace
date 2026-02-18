@@ -151,10 +151,11 @@ MonoBehaviour:
     CollisionCheckRadius: 0.59
     NormalCameraHeight: 2.1
     CrouchCameraHeight: 0.9
+  boundsDrawer: {fileID: 0}
   interactRange: 3
   interactLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 23
 --- !u!114 &1287651065015622182
 MonoBehaviour:
   m_ObjectHideFlags: 0

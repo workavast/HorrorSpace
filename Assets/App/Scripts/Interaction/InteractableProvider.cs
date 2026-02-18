@@ -11,5 +11,8 @@ namespace App.Interaction
         
         public void Interact(PlayerContext playerContext) 
             => interactableSource.Value.Interact(playerContext);
+
+        public GameObject GetGameObject() 
+            => gameObject;
     }
 }

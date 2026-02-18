@@ -16,5 +16,8 @@ namespace App.Interaction
             foreach (var door in targetDoors) 
                 door.Toggle();
         }
+
+        public GameObject GetGameObject() 
+            => null;
     }
 }

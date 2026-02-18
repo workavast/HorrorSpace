@@ -1,4 +1,5 @@
 using App.Character;
+using UnityEngine;
 
 namespace App.Interaction
 {
@@ -7,5 +8,6 @@ namespace App.Interaction
         public bool IsInteractable { get; }
         
         public void Interact(PlayerContext playerContext);
+        public GameObject GetGameObject();
     }
 }

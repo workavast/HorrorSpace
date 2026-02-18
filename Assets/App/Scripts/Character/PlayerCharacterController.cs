@@ -14,6 +14,7 @@ namespace App.Character
         [SerializeField] private CharacterController characterController;
         [SerializeField] private Animator animator;
         [SerializeField] private PlayerParams playerParams = new();
+        [SerializeField] private BoundsDrawer boundsDrawer;
 
         private PlayerContext _ctx;
         private InputProvider _inputProvider;
@@ -138,6 +139,9 @@ namespace App.Character
                 _owner.ApplyMovement();
                 _owner.UpdateAnimator();
 
+                // Check for interaction highlight
+                _owner.CheckInteractionHighlight();
+
                 // Interaction handling
                 if (_owner.inputManager.InteractPressedThisFrame)
                     _owner.TryInteract();
@@ -154,6 +158,23 @@ namespace App.Character
             {
                 var interactable = hit.collider.GetComponent<IInteractable>() ?? hit.collider.GetComponentInParent<IInteractable>();
                 interactable?.Interact(_ctx);
+            }
+        }
+
+        private void CheckInteractionHighlight()
+        {
+            var cam = Camera.main;
+            var origin = cam.transform.position;
+            var dir = cam.transform.forward;
+
+            if (Physics.Raycast(origin, dir, out var hit, interactRange, interactLayerMask))
+            {
+                var interactable = hit.collider.GetComponent<IInteractable>() ?? hit.collider.GetComponentInParent<IInteractable>();
+                boundsDrawer?.SetTarget(interactable);
+            }
+            else
+            {
+                boundsDrawer?.SetTarget(null);
             }
         }
     }
