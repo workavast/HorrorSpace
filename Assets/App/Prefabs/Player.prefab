@@ -214,20 +214,22 @@ MonoBehaviour:
   inputManager: {fileID: 7483723162105313711}
   cameraController: {fileID: 1287651065015622182}
   playerTransform: {fileID: 4095698566600033491}
-  pickupRange: 3
   handleLayerMask:
     serializedVersion: 2
     m_Bits: 23
+  pickupRange: 3
   minDistance: 1
   maxDistance: 4
-  zoomSpeed: -5
+  zoomSpeed: 5
   rotationSensitivity: 1
-  attractionForce: 2500
+  attractionForce: 5000
   maxAttractionSpeed: 20
-  dampingFactor: 0.9
-  angularDampingPickup: 5
-  rotationReturnSpeed: 3
+  dampingFactor: 1
+  angularDampingPickup: 4
+  linerDampingPickup: 12
+  rotationReturnSpeed: 10
   manualRotationSpeed: 0.1
+  torqueMultiplier: 1
 --- !u!143 &2783987760247693574
 CharacterController:
   m_ObjectHideFlags: 0

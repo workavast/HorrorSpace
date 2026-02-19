@@ -9,8 +9,9 @@ namespace App.ObjectHandling
         [SerializeField] private Collider col;
 
         public bool CanBeHandled => canBeHandled;
-
-        public GameObject GetGameObject() => gameObject;
+        public Transform Transform => transform;
+        public GameObject Go => gameObject;
+        public Rigidbody Rb => rb;
 
         public void OnPickup()
         {
@@ -18,7 +19,7 @@ namespace App.ObjectHandling
             if (rb != null)
             {
                 rb.useGravity = false;
-                rb.velocity = Vector3.zero; // Reset velocity
+                rb.linearVelocity = Vector3.zero; // Reset velocity
                 rb.angularVelocity = Vector3.zero; // Reset angular velocity
             }
             // Keep collider enabled for collision detection
@@ -28,9 +29,7 @@ namespace App.ObjectHandling
         {
             // Re-enable gravity
             if (rb != null)
-            {
                 rb.useGravity = true;
-            }
         }
     }
 }

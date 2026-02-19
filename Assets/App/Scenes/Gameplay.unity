@@ -1361,22 +1361,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 766444337314766684, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
-      propertyPath: dampingFactor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 766444337314766684, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
-      propertyPath: attractionForce
-      value: 5000
-      objectReference: {fileID: 0}
-    - target: {fileID: 766444337314766684, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
-      propertyPath: linerDampingPickup
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 766444337314766684, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
-      propertyPath: angularDampingPickup
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4095698566600033491, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.906

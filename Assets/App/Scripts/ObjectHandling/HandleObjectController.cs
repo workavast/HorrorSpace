@@ -8,15 +8,14 @@ namespace App.ObjectHandling
         [SerializeField] private PlayerInputManager inputManager;
         [SerializeField] private CameraController cameraController;
         [SerializeField] private Transform playerTransform;
-        [SerializeField] private float pickupRange = 3f;
         [SerializeField] private LayerMask handleLayerMask = ~0;
+        [SerializeField] private float pickupRange = 3f;
         [SerializeField] private float minDistance = 1f;
         [SerializeField] private float maxDistance = 5f;
         [SerializeField] private float zoomSpeed = 1f;
         [SerializeField] private float rotationSensitivity = 1f;
         [SerializeField] private float attractionForce = 100f;
         [SerializeField] private float maxAttractionSpeed = 10f;
-        [SerializeField] private float dampingFactor = 0.9f;
         [SerializeField] private float angularDampingPickup = 5f;
         [SerializeField] private float linerDampingPickup = 5f;
         [SerializeField] private float rotationReturnSpeed = 2f;
@@ -24,25 +23,28 @@ namespace App.ObjectHandling
         [SerializeField] private float torqueMultiplier = 1f;
 
         private IHandleObject _currentHandledObject;
+        private float _defaultLinearDamping;
+        private float _defaultAngularDamping;
         private float _currentDistance;
-        private Vector3 _localOffset;
         private bool _isRotatingObject;
+        private Vector3 _localOffset;
         private Quaternion _targetRotationRelativeToPlayer;
-
-        // Input actions - assuming we add them to PlayerInputManager
-        // For now, we'll use mouse buttons directly, but ideally integrate with Input System
 
         private void Update()
         {
             if (_currentHandledObject != null)
+            {
                 HandleHeldObject();
+                
+                if (!inputManager.IsPickupPressed)
+                    DropObject();
+            }
             else
                 CheckForPickup();
         }
 
         private void CheckForPickup()
         {
-            // Check if pickup button is pressed
             if (inputManager.IsPickupPressed)
                 TryPickupObject();
         }
@@ -65,7 +67,7 @@ namespace App.ObjectHandling
         private void PickupObject(IHandleObject handleObject, Vector3 pickupPoint)
         {
             _currentHandledObject = handleObject;
-            var objTransform = handleObject.GetGameObject().transform;
+            var objTransform = handleObject.Transform;
 
             // Calculate initial distance and offset
             var camera = cameraController.GetCamera();
@@ -81,12 +83,11 @@ namespace App.ObjectHandling
             handleObject.OnPickup();
 
             // Increase angular damping for picked up object
-            var rb = handleObject.GetGameObject().GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.angularDamping = angularDampingPickup;
-                rb.linearDamping = linerDampingPickup;
-            }
+            var rb = handleObject.Rb;
+            _defaultLinearDamping = rb.linearDamping;
+            _defaultAngularDamping = rb.angularDamping;
+            rb.angularDamping = angularDampingPickup;
+            rb.linearDamping = linerDampingPickup;
 
             // Disable interaction system - we'll need to notify PlayerCharacterController
             // For now, assume we have a way to disable it
@@ -95,14 +96,14 @@ namespace App.ObjectHandling
         private void HandleHeldObject()
         {
             var camera = cameraController.GetCamera();
-            var objTransform = _currentHandledObject.GetGameObject().transform;
-            var rb = _currentHandledObject.GetGameObject().GetComponent<Rigidbody>();
+            var objTransform = _currentHandledObject.Transform;
+            var rb = _currentHandledObject.Rb;
 
             // Handle zoom with mouse wheel
             var scrollDelta = inputManager.ZoomDelta;
             if (scrollDelta != 0)
             {
-                _currentDistance -= scrollDelta * zoomSpeed * Time.deltaTime;
+                _currentDistance += scrollDelta * zoomSpeed * Time.deltaTime;
                 _currentDistance = Mathf.Clamp(_currentDistance, minDistance, maxDistance);
             }
 
@@ -118,20 +119,12 @@ namespace App.ObjectHandling
                 // Rotate object based on mouse movement and update target rotation
                 var mouseDelta = inputManager.LookInput;
                 
-                if (rb != null)
-                {
-                    // Apply manual rotation with higher speed
-                    var torque = new Vector3(-mouseDelta.y, mouseDelta.x, 0) * manualRotationSpeed;
-                    rb.AddTorque(torque);
+                // Apply manual rotation with higher speed
+                var torque = new Vector3(-mouseDelta.y, mouseDelta.x, 0) * manualRotationSpeed;
+                rb.AddTorque(torque);
                     
-                    // Update target rotation based on new orientation
-                    _targetRotationRelativeToPlayer = Quaternion.Inverse(playerTransform.rotation) * objTransform.rotation;
-                }
-                else
-                {
-                    objTransform.Rotate(Vector3.up, mouseDelta.x * rotationSensitivity, Space.World);
-                    objTransform.Rotate(Vector3.right, -mouseDelta.y * rotationSensitivity, Space.Self);
-                }
+                // Update target rotation based on new orientation
+                _targetRotationRelativeToPlayer = Quaternion.Inverse(playerTransform.rotation) * objTransform.rotation;
             }
             else
             {
@@ -144,108 +137,86 @@ namespace App.ObjectHandling
 
             // Apply physics forces to attract object to target position
             var targetPosition = camera.transform.position + camera.transform.forward * _currentDistance;
-            if (rb != null)
-            {
-                var direction = targetPosition - objTransform.position;
-                var distance = direction.magnitude;
+            var direction = targetPosition - objTransform.position;
+            var distance = direction.magnitude;
                 
-                if (distance > 0.01f)
-                {
-                    // Apply attraction force proportional to distance
-                    var force = direction.normalized * (attractionForce * distance);
-                    
-                    // Limit maximum speed
-                    if (rb.velocity.magnitude > maxAttractionSpeed)
-                        rb.velocity = rb.velocity.normalized * maxAttractionSpeed;
-                    
-                    rb.AddForce(force * Time.deltaTime);
-                    
-                    // Apply damping to prevent oscillation
-                    rb.velocity *= dampingFactor;
-                }
-            }
-            else
+            if (distance > 0.01f)
             {
-                objTransform.position = targetPosition;
+                // Apply attraction force proportional to distance
+                var force = direction.normalized * (attractionForce * distance);
+                    
+                // Limit maximum speed
+                if (rb.linearVelocity.magnitude > maxAttractionSpeed)
+                    rb.linearVelocity = rb.linearVelocity.normalized * maxAttractionSpeed;
+                    
+                rb.AddForce(force * Time.deltaTime);
             }
 
             // Apply rotation return to target rotation relative to player
-            if (rb != null)
+            // Compute target rotation in world space from stored relative-to-player quaternion
+            var targetWorld = playerTransform.rotation * _targetRotationRelativeToPlayer;
+            var currentWorld = objTransform.rotation;
+
+            // Delta that rotates current -> target: delta = target * inv(current)
+            var delta = targetWorld * Quaternion.Inverse(currentWorld);
+
+            delta.ToAngleAxis(out var angleDeg, out var axis);
+            if (axis == Vector3.zero || float.IsNaN(axis.x))
             {
-                // Compute target rotation in world space from stored relative-to-player quaternion
-                var targetWorld = playerTransform.rotation * _targetRotationRelativeToPlayer;
-                var currentWorld = objTransform.rotation;
-
-                // Delta that rotates current -> target: delta = target * inv(current)
-                var delta = targetWorld * Quaternion.Inverse(currentWorld);
-
-                delta.ToAngleAxis(out float angleDeg, out Vector3 axis);
-                if (axis == Vector3.zero || float.IsNaN(axis.x))
-                {
-                    // no meaningful rotation
-                }
-                else
-                {
-                    // Ensure shortest angle (-180..180)
-                    if (angleDeg > 180f) angleDeg -= 360f;
-
-                    var angleRad = angleDeg * Mathf.Deg2Rad;
-
-                    // Proportional target angular velocity (PD-style)
-                    var desiredAngVel = axis.normalized * (angleRad * rotationReturnSpeed);
-
-                    // Compute corrective torque: proportional to velocity error and some damping
-                    var angVelError = desiredAngVel - rb.angularVelocity;
-
-                    // Scale torque by approximate inertia (use inertiaTensor average) to respect object's shape
-                    var inertiaAvg = (rb.inertiaTensor.x + rb.inertiaTensor.y + rb.inertiaTensor.z) * 0.3333333f;
-                    var torque = angVelError * inertiaAvg * torqueMultiplier;
-
-                    // Apply torque
-                    rb.AddTorque(torque);
-                }
+                // no meaningful rotation
             }
+            else
+            {
+                // Ensure shortest angle (-180..180)
+                if (angleDeg > 180f) angleDeg -= 360f;
 
-            // Drop object if pickup button released
-            if (!inputManager.IsPickupPressed)
-                DropObject();
+                var angleRad = angleDeg * Mathf.Deg2Rad;
+
+                // Proportional target angular velocity (PD-style)
+                var desiredAngVel = axis.normalized * (angleRad * rotationReturnSpeed);
+
+                // Compute corrective torque: proportional to velocity error and some damping
+                var angVelError = desiredAngVel - rb.angularVelocity;
+
+                // Scale torque by approximate inertia (use inertiaTensor average) to respect object's shape
+                var inertiaAvg = (rb.inertiaTensor.x + rb.inertiaTensor.y + rb.inertiaTensor.z) * 0.3333333f;
+                var torque = angVelError * (inertiaAvg * torqueMultiplier);
+
+                // Apply torque
+                rb.AddTorque(torque);
+            }
         }
 
-        public bool IsHoldingObject()
-        {
-            return _currentHandledObject != null;
-        }
+        public bool IsHoldingObject() 
+            => _currentHandledObject != null;
 
         private void DropObject()
         {
-            if (_currentHandledObject != null)
-            {
-                // Reset angular damping before dropping
-                var rb = _currentHandledObject.GetGameObject().GetComponent<Rigidbody>();
-                if (rb != null)
-                {
-                    rb.angularDamping = 0.05f; // Default Unity value
-                    rb.linearDamping = 0;
-                }
+            if (_currentHandledObject == null)
+                return;
+            
+            // Reset angular damping before dropping
+            var rb = _currentHandledObject.Rb;
+            rb.linearDamping = _defaultLinearDamping;
+            rb.angularDamping = _defaultAngularDamping;
 
-                _currentHandledObject.OnDrop();
-                _currentHandledObject = null;
-                _isRotatingObject = false;
-                // Re-enable interaction system
-            }
+            _currentHandledObject.OnDrop();
+            _currentHandledObject = null;
+            _isRotatingObject = false;
+            // Re-enable interaction system
         }
 
-        private Vector3 CalculateTorqueForRotation(Rigidbody rb, Quaternion rotationDifference, float speed)
+        private Vector3 CalculateTorqueForRotation(Quaternion rotationDifference, float speed)
         {
             // Convert rotation difference to axis-angle representation
-            rotationDifference.ToAngleAxis(out float angle, out Vector3 axis);
+            rotationDifference.ToAngleAxis(out var angle, out var axis);
             
             // Ensure angle is in range [0, 180]
             if (angle > 180f)
                 angle -= 360f;
             
             // Calculate torque magnitude based on angle
-            float torqueMagnitude = Mathf.Abs(angle) * speed;
+            var torqueMagnitude = Mathf.Abs(angle) * speed;
             
             // Apply torque in the direction of the axis
             return axis * torqueMagnitude;
