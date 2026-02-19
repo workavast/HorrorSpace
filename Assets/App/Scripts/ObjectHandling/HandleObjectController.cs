@@ -18,6 +18,7 @@ namespace App.ObjectHandling
         [SerializeField] private float maxAttractionSpeed = 10f;
         [SerializeField] private float dampingFactor = 0.9f;
         [SerializeField] private float angularDampingPickup = 5f;
+        [SerializeField] private float linerDampingPickup = 5f;
         [SerializeField] private float rotationReturnSpeed = 2f;
         [SerializeField] private float manualRotationSpeed = 5f;
         [SerializeField] private float torqueMultiplier = 1f;
@@ -82,7 +83,10 @@ namespace App.ObjectHandling
             // Increase angular damping for picked up object
             var rb = handleObject.GetGameObject().GetComponent<Rigidbody>();
             if (rb != null)
+            {
                 rb.angularDamping = angularDampingPickup;
+                rb.linearDamping = linerDampingPickup;
+            }
 
             // Disable interaction system - we'll need to notify PlayerCharacterController
             // For now, assume we have a way to disable it
@@ -219,7 +223,10 @@ namespace App.ObjectHandling
                 // Reset angular damping before dropping
                 var rb = _currentHandledObject.GetGameObject().GetComponent<Rigidbody>();
                 if (rb != null)
+                {
                     rb.angularDamping = 0.05f; // Default Unity value
+                    rb.linearDamping = 0;
+                }
 
                 _currentHandledObject.OnDrop();
                 _currentHandledObject = null;

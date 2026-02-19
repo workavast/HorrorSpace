@@ -1324,14 +1324,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139528421}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.13, y: 1.23, z: 9.4}
+  m_LocalRotation: {x: -0, y: -0, z: 0.5501149, w: 0.83508897}
+  m_LocalPosition: {x: -6.1640706, y: 1.2277169, z: 9.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1658117001}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 66.75}
 --- !u!65 &2139528428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1363,11 +1363,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 766444337314766684, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
       propertyPath: dampingFactor
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 766444337314766684, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
       propertyPath: attractionForce
       value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 766444337314766684, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
+      propertyPath: linerDampingPickup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 766444337314766684, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
+      propertyPath: angularDampingPickup
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4095698566600033491, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
       propertyPath: m_LocalPosition.x
