@@ -74,18 +74,8 @@ namespace App.ObjectHandling
             _currentDistance = Vector3.Distance(camera.transform.position, pickupPoint);
             _currentDistance = Mathf.Clamp(_currentDistance, minDistance, maxDistance);
 
-            // Position object in front of camera
-            var targetPosition = camera.transform.position + camera.transform.forward * _currentDistance;
-            var rb = handleObject.GetGameObject().GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.MovePosition(targetPosition);
-            }
-            else
-            {
-                objTransform.position = targetPosition;
-            }
-            objTransform.rotation = Quaternion.identity; // Or keep original?
+            // Don't instantly position object - let physics forces handle attraction
+            // Object will naturally move to target position while keeping its orientation
 
             handleObject.OnPickup();
 
