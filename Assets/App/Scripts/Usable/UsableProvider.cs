@@ -1,18 +1,15 @@
 ﻿using App.Character;
 using UnityEngine;
 
-namespace App.Interaction
+namespace App.Usable
 {
-    public class InteractableProvider : MonoBehaviour, IInteractable
+    public class UsableProvider : MonoBehaviour, IUsable
     {
-        [SerializeField] private InterfaceReference<IInteractable> interactableSource;
+        [SerializeField] private InterfaceReference<IUsable> interactableSource;
         
         public bool IsInteractable => interactableSource.Value.IsInteractable;
         
         public void Interact(PlayerContext playerContext) 
             => interactableSource.Value.Interact(playerContext);
-
-        public GameObject GetGameObject() 
-            => gameObject;
     }
 }

@@ -1,7 +1,7 @@
 using LitMotion;
 using UnityEngine;
 
-namespace App.Interaction
+namespace App.Usable
 {
     public class DoorController : MonoBehaviour
     {

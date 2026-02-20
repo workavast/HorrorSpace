@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &93829099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1265,6 +1265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2139528427}
   - component: {fileID: 2139528426}
+  - component: {fileID: 2139528429}
   - component: {fileID: 2139528428}
   - component: {fileID: 2139528422}
   m_Layer: 0
@@ -1353,6 +1354,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.18345165, y: 0.5238495, z: 0.35690212}
   m_Center: {x: 0.010840416, y: -0.031437993, z: 0.01517725}
+--- !u!114 &2139528429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139528421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff2a8bdc6ba46cb85be95b300f5047f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.InteractiveObj
+  isInteractable: 1
 --- !u!1001 &5652629365689262437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1402,7 +1416,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4247805323651797999, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
-      propertyPath: boundsDrawer
+      propertyPath: interactiveObjBoundsDrawer
       value: 
       objectReference: {fileID: 1282911820}
     - target: {fileID: 8712057721741398327, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}

@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using App.Character.FSM.Jump;
 using App.Character.FSM.Movement;
-using App.Interaction;
+using App.InteractiveObjects;
 using App.ObjectHandling;
+using App.Usable;
 using Avastrad.FSM;
 using UnityEngine;
 
@@ -15,7 +16,7 @@ namespace App.Character
         [SerializeField] private CharacterController characterController;
         [SerializeField] private Animator animator;
         [SerializeField] private PlayerParams playerParams = new();
-        [SerializeField] private BoundsDrawer boundsDrawer;
+        [SerializeField] private InteractiveObjBoundsDrawer interactiveObjBoundsDrawer;
 
         private PlayerContext _ctx;
         private InputProvider _inputProvider;
@@ -141,17 +142,17 @@ namespace App.Character
                 _owner.ApplyMovement();
                 _owner.UpdateAnimator();
 
+                var isHoldObject = _owner.handleObjectController.IsHoldingObject();
                 // Check for interaction highlight
-                if (_owner.handleObjectController == null || !_owner.handleObjectController.IsHoldingObject())
-                    _owner.CheckInteractionHighlight();
+                _owner.CheckInteractionHighlight(!isHoldObject);
 
-                // Interaction handling
-                if ((_owner.handleObjectController == null || !_owner.handleObjectController.IsHoldingObject()) && _owner.inputManager.InteractPressedThisFrame)
-                    _owner.TryInteract();
+                // Using handling
+                if (_owner.inputManager.InteractPressedThisFrame && !isHoldObject)
+                    _owner.TryUse();
             }
         }
 
-        private void TryInteract()
+        private void TryUse()
         {
             var cam = Camera.main;
             var origin = cam.transform.position;
@@ -159,25 +160,31 @@ namespace App.Character
 
             if (Physics.Raycast(origin, dir, out var hit, interactRange, interactLayerMask))
             {
-                var interactable = hit.collider.GetComponent<IInteractable>() ?? hit.collider.GetComponentInParent<IInteractable>();
+                var interactable = hit.collider.GetComponent<IUsable>() ?? hit.collider.GetComponentInParent<IUsable>();
                 interactable?.Interact(_ctx);
             }
         }
 
-        private void CheckInteractionHighlight()
+        private void CheckInteractionHighlight(bool show)
         {
+            if (!show)
+            {
+                interactiveObjBoundsDrawer.SetTarget(null);
+                return;
+            }
+            
             var cam = Camera.main;
             var origin = cam.transform.position;
             var dir = cam.transform.forward;
 
             if (Physics.Raycast(origin, dir, out var hit, interactRange, interactLayerMask))
             {
-                var interactable = hit.collider.GetComponent<IInteractable>() ?? hit.collider.GetComponentInParent<IInteractable>();
-                boundsDrawer?.SetTarget(interactable);
+                var interactive = hit.collider.GetComponent<IInteractiveObj>() ?? hit.collider.GetComponentInParent<IInteractiveObj>();
+                interactiveObjBoundsDrawer.SetTarget(interactive);
             }
             else
             {
-                boundsDrawer?.SetTarget(null);
+                interactiveObjBoundsDrawer.SetTarget(null);
             }
         }
     }

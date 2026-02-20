@@ -1,8 +1,9 @@
+using Avastrad.Libs.CheckOnNullLib;
 using UnityEngine;
 
-namespace App.Interaction
+namespace App.InteractiveObjects
 {
-    public class BoundsDrawer : MonoBehaviour
+    public class InteractiveObjBoundsDrawer : MonoBehaviour
     {
         [SerializeField] private RectTransform highlightImage;
         [SerializeField] private RectTransform nonInteractableImage;
@@ -17,16 +18,16 @@ namespace App.Interaction
             nonInteractableImage.gameObject.SetActive(false);
         }
 
-        public void SetTarget(IInteractable interactable)
+        public void SetTarget(IInteractiveObj interactiveObj)
         {
-            if (interactable == null)
+            if (interactiveObj.IsAnyNull())
             {
                 highlightImage.gameObject.SetActive(false);
                 nonInteractableImage.gameObject.SetActive(false);
                 return;
             }
 
-            var target = interactable.GetGameObject();
+            var target = interactiveObj.Go;
             if (target == null)
             {
                 highlightImage.gameObject.SetActive(false);
@@ -74,7 +75,7 @@ namespace App.Interaction
 
             // Choose which image to use based on IsInteractable
             RectTransform targetRect;
-            if (interactable.IsInteractable)
+            if (interactiveObj.IsInteractable)
             {
                 targetRect = highlightImage;
                 nonInteractableImage.gameObject.SetActive(false);

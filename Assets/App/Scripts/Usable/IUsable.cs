@@ -1,13 +1,11 @@
 using App.Character;
-using UnityEngine;
 
-namespace App.Interaction
+namespace App.Usable
 {
-    public interface IInteractable
+    public interface IUsable
     {
         public bool IsInteractable { get; }
         
         public void Interact(PlayerContext playerContext);
-        public GameObject GetGameObject();
     }
 }

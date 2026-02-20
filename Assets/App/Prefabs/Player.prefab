@@ -152,12 +152,12 @@ MonoBehaviour:
     CollisionCheckRadius: 0.59
     NormalCameraHeight: 2.1
     CrouchCameraHeight: 0.9
-  boundsDrawer: {fileID: 0}
+  interactiveObjBoundsDrawer: {fileID: 0}
   interactRange: 3
   interactLayerMask:
     serializedVersion: 2
     m_Bits: 23
-  handleObjectController: {fileID: 0}
+  handleObjectController: {fileID: 766444337314766684}
 --- !u!114 &1287651065015622182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +224,6 @@ MonoBehaviour:
   rotationSensitivity: 1
   attractionForce: 5000
   maxAttractionSpeed: 20
-  dampingFactor: 1
   angularDampingPickup: 4
   linerDampingPickup: 12
   rotationReturnSpeed: 10

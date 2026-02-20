@@ -67,7 +67,9 @@ namespace App.ObjectHandling
         private void PickupObject(IHandleObject handleObject, Vector3 pickupPoint)
         {
             _currentHandledObject = handleObject;
-            var objTransform = handleObject.Transform;
+            handleObject.OnPickup();
+            
+            var objTransform = _currentHandledObject.Transform;
 
             // Calculate initial distance and offset
             var camera = cameraController.GetCamera();
@@ -77,13 +79,8 @@ namespace App.ObjectHandling
             // Store target rotation relative to player (not camera)
             _targetRotationRelativeToPlayer = Quaternion.Inverse(playerTransform.rotation) * objTransform.rotation;
 
-            // Don't instantly position object - let physics forces handle attraction
-            // Object will naturally move to target position while keeping its orientation
-
-            handleObject.OnPickup();
-
             // Increase angular damping for picked up object
-            var rb = handleObject.Rb;
+            var rb = _currentHandledObject.Rb;
             _defaultLinearDamping = rb.linearDamping;
             _defaultAngularDamping = rb.angularDamping;
             rb.angularDamping = angularDampingPickup;
@@ -168,7 +165,8 @@ namespace App.ObjectHandling
             else
             {
                 // Ensure shortest angle (-180..180)
-                if (angleDeg > 180f) angleDeg -= 360f;
+                if (angleDeg > 180f) 
+                    angleDeg -= 360f;
 
                 var angleRad = angleDeg * Mathf.Deg2Rad;
 

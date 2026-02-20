@@ -1,9 +1,9 @@
-using UnityEngine;
 using App.Character;
+using UnityEngine;
 
-namespace App.Interaction
+namespace App.Usable
 {
-    public class InteractButton : MonoBehaviour, IInteractable
+    public class UseButton : MonoBehaviour, IUsable
     {
         [field: SerializeField] public bool IsInteractable { get; private set; } = true;
         [SerializeField] private DoorController[] targetDoors;
@@ -16,8 +16,5 @@ namespace App.Interaction
             foreach (var door in targetDoors) 
                 door.Toggle();
         }
-
-        public GameObject GetGameObject() 
-            => null;
     }
 }
