@@ -7,23 +7,32 @@ namespace App.KeySystem
     {
         [SerializeField] private KeyConfig requiredConfig;
         [SerializeField] private bool isActive;
+        [SerializeField] private KeyObjectTriggerZone[] triggerZones;
 
         public event Action OnInvalidType;
         public event Action OnInvalidKey;
         public event Action OnUnlocked;
 
+        private void Awake()
+        {
+            foreach (var triggerZone in triggerZones) 
+                triggerZone.OnTriggerEnterEvent += TryUnlock;
+        }
+
+        private void OnDestroy()
+        {
+            foreach (var triggerZone in triggerZones) 
+                triggerZone.OnTriggerEnterEvent -= TryUnlock;
+        }
+
         public void SetActivityState(bool state)
         {
             isActive = state;
         }
-        
-        private void OnTriggerEnter(Collider other)
+
+        private void TryUnlock(IKeyObject keyObject)
         {
             if (!isActive)
-                return;
-            
-            var keyObject = other.GetComponent<IKeyObject>();
-            if (keyObject == null) 
                 return;
             
             if (keyObject.GetKeyType() != requiredConfig.KeyType)
@@ -38,7 +47,6 @@ namespace App.KeySystem
                 return;
             }
             
-            Debug.Log("Unlocked!");
             OnUnlocked?.Invoke();
         }
     }

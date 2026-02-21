@@ -150,6 +150,72 @@ Transform:
   - {fileID: 4752731698137621894}
   m_Father: {fileID: 7760671337751658530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6168505823781730046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8283049636832814359}
+  - component: {fileID: 6826271514777142057}
+  - component: {fileID: 7123870955884638770}
+  m_Layer: 0
+  m_Name: DoorKeyTriggerZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8283049636832814359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6168505823781730046}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2339121230480494670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6826271514777142057
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6168505823781730046}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4, y: 3.75, z: 1}
+  m_Center: {x: 0, y: 1.85, z: 0}
+--- !u!114 &7123870955884638770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6168505823781730046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836e76781abd4de2a58b2ba15e6db3df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.KeySystem.LockProviderTriggerZone
 --- !u!1 &6227258099447818758
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +250,72 @@ Transform:
   - {fileID: 70649869965111868}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8596493087511008417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3598801810994843456}
+  - component: {fileID: 1817964643878698604}
+  - component: {fileID: 1283209382944220692}
+  m_Layer: 0
+  m_Name: DoorKeyTriggerZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3598801810994843456
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596493087511008417}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2780564752739988931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1817964643878698604
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596493087511008417}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4, y: 3.75, z: 1}
+  m_Center: {x: 0, y: 1.85, z: 0}
+--- !u!114 &1283209382944220692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596493087511008417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836e76781abd4de2a58b2ba15e6db3df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.KeySystem.LockProviderTriggerZone
 --- !u!1001 &183784719529378544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2224,16 +2356,89 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_3 Variant_0
       objectReference: {fileID: 0}
+    - target: {fileID: 9085610888022740921, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+      propertyPath: <IsInteractable>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8278239491250941488, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8283049636832814359}
+    - targetCorrespondingSourceObject: {fileID: 8359384877812665277, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3598801810994843456}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5215275450409252736, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 5103748196750997927}
+    - targetCorrespondingSourceObject: {fileID: 5215275450409252736, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 3407115281513289632}
   m_SourcePrefab: {fileID: 100100000, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
 --- !u!4 &1942298059286409936 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5215275450408914094, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
   m_PrefabInstance: {fileID: 5950394926524153470}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1942298059286727166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5215275450409252736, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+  m_PrefabInstance: {fileID: 5950394926524153470}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5103748196750997927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942298059286727166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6bb079b7d044e6ab777248e93b5795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorLock
+  doorBtn: {fileID: 3207300018466091463}
+  lockProvider: {fileID: 3407115281513289632}
+--- !u!114 &3407115281513289632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942298059286727166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2fe86d266a28c945b8ca88241400dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.KeySystem.LockProvider
+  requiredConfig: {fileID: 11400000, guid: a3884f508c3f9e84c825fba71a5f4381, type: 2}
+  isActive: 1
+  triggerZones:
+  - {fileID: 7123870955884638770}
+  - {fileID: 1283209382944220692}
+--- !u!4 &2339121230480494670 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8278239491250941488, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+  m_PrefabInstance: {fileID: 5950394926524153470}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2780564752739988931 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8359384877812665277, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+  m_PrefabInstance: {fileID: 5950394926524153470}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3207300018466091463 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9085610888022740921, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+  m_PrefabInstance: {fileID: 5950394926524153470}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942298059286727166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0178a437eed3e244ba0d36df00a34854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.InteractButton
 --- !u!1001 &6231899845918795566
 PrefabInstance:
   m_ObjectHideFlags: 0
