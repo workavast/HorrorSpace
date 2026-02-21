@@ -94,7 +94,7 @@ public class ReplaceWithPrefabEditor : EditorWindow
 
         // Build a set of existing names to ensure unique postfixes
         var existingNames = new HashSet<string>();
-        foreach (var go in Object.FindObjectsOfType<GameObject>())
+        foreach (var go in FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None))
             existingNames.Add(go.name);
 
         int createdIndex = 0;
