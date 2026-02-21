@@ -55,9 +55,10 @@ namespace App.ObjectHandling
 
             var mouseDelta = _context.InputManager.LookInput;
             
-            // Apply manual rotation with higher speed
-            var torque = new Vector3(-mouseDelta.y, mouseDelta.x, 0) * _parameters.ManualRotationSpeed;
-            rb.AddTorque(torque);
+            // Apply manual rotation relative to player orientation
+            var localTorque = new Vector3(-mouseDelta.y, mouseDelta.x, 0) * _parameters.ManualRotationSpeed;
+            var worldTorque = _context.PlayerTransform.TransformVector(localTorque);
+            rb.AddTorque(worldTorque);
                 
             // Update target rotation based on new orientation
             var targetRotationRelativeToPlayer = Quaternion.Inverse(_context.PlayerTransform.rotation) * objTransform.rotation;
