@@ -10,26 +10,19 @@ namespace App.ObjectHandling
 
         public bool CanBeHandled => canBeHandled;
         public Transform Transform => transform;
-        public GameObject Go => gameObject;
         public Rigidbody Rb => rb;
 
         public void OnPickup()
         {
-            // Disable gravity but keep physics active for more realistic behavior
-            if (rb != null)
-            {
-                rb.useGravity = false;
-                rb.linearVelocity = Vector3.zero; // Reset velocity
-                rb.angularVelocity = Vector3.zero; // Reset angular velocity
-            }
-            // Keep collider enabled for collision detection
+            rb.useGravity = false;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
         }
 
         public void OnDrop()
         {
             // Re-enable gravity
-            if (rb != null)
-                rb.useGravity = true;
+            rb.useGravity = true;
         }
     }
 }

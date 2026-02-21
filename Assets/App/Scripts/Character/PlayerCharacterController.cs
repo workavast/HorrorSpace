@@ -14,20 +14,21 @@ namespace App.Character
         [SerializeField] private CameraController cameraController;
         [SerializeField] private PlayerInputManager inputManager;
         [SerializeField] private CharacterController characterController;
-        [SerializeField] private Animator animator;
-        [SerializeField] private PlayerParams playerParams = new();
+        [SerializeField] private HandsController handsController;
         [SerializeField] private InteractiveObjBoundsDrawer interactiveObjBoundsDrawer;
+        [SerializeField] private Animator animator;
+        [Space]
+        [SerializeField] private PlayerParams playerParams = new();
 
+        [Header("Interaction")]
+        [SerializeField] private float interactRange = 3f;
+        [SerializeField] private LayerMask interactLayerMask = ~0;
+        
         private PlayerContext _ctx;
         private InputProvider _inputProvider;
         private StateMachine _movementFsm;
         private StateMachine _jumpFsm;
         private StateMachine _mainFsm;
-
-        [Header("Interaction")]
-        [SerializeField] private float interactRange = 3f;
-        [SerializeField] private LayerMask interactLayerMask = ~0;
-        [SerializeField] private HandleObjectController handleObjectController;
 
         private readonly int _animatorSpeedHash = Animator.StringToHash("Speed");
         private readonly int _animatorIsGroundedHash = Animator.StringToHash("IsGrounded");
@@ -142,17 +143,14 @@ namespace App.Character
                 _owner.ApplyMovement();
                 _owner.UpdateAnimator();
 
-                var isHoldObject = _owner.handleObjectController.IsHoldingObject();
-                // Check for interaction highlight
-                _owner.CheckInteractionHighlight(!isHoldObject);
-
-                // Using handling
-                if (_owner.inputManager.InteractPressedThisFrame && !isHoldObject)
-                    _owner.TryUse();
+                var isHoldingObject = _owner.handsController.IsHoldingObject();
+                _owner.CheckInteractionHighlight(!isHoldingObject);
+                if (_owner.inputManager.InteractPressedThisFrame && !isHoldingObject)
+                    _owner.TryUseObject();
             }
         }
 
-        private void TryUse()
+        private void TryUseObject()
         {
             var cam = Camera.main;
             var origin = cam.transform.position;
