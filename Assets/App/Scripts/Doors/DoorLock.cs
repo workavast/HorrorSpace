@@ -1,11 +1,11 @@
-﻿using App.Usable;
+﻿using App.KeySystem;
 using UnityEngine;
 
-namespace App.KeySystem
+namespace App.Doors
 {
     public class DoorLock : MonoBehaviour
     {
-        [SerializeField] private UseButton doorBtn;
+        [SerializeField] private DoorButton doorBtn;
         [SerializeField] private LockProvider lockProvider;
 
         private void Awake() 

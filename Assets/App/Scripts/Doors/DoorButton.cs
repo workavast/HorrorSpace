@@ -1,9 +1,10 @@
 using App.Character;
+using App.Usable;
 using UnityEngine;
 
-namespace App.Usable
+namespace App.Doors
 {
-    public class UseButton : MonoBehaviour, IUsable
+    public class DoorButton : MonoBehaviour, IUsable
     {
         [field: SerializeField] public bool IsInteractable { get; private set; } = true;
         [SerializeField] private DoorController[] targetDoors;
