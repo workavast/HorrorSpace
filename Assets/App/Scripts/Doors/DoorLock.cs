@@ -5,7 +5,7 @@ namespace App.Doors
 {
     public class DoorLock : MonoBehaviour
     {
-        [SerializeField] private DoorButton doorBtn;
+        [SerializeField] private DoorController door;
         [SerializeField] private LockProvider lockProvider;
 
         private void Awake() 
@@ -25,7 +25,7 @@ namespace App.Doors
 
         private void Unlock()
         {
-            doorBtn.SetState(true);
+            door.SetUnLockState(true);
             lockProvider.SetActivityState(false);
         }
         

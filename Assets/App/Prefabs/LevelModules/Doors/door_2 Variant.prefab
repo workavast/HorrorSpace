@@ -8,10 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8880944466277366744}
     m_Modifications:
-    - target: {fileID: 1625940283820383082, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
-      propertyPath: interactableSource.underlyingValue
-      value: 
-      objectReference: {fileID: 7992001953913379970}
     - target: {fileID: 3443257213867172465, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
       propertyPath: m_Name
       value: DoorInteractButton_2
@@ -56,6 +52,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7128153375829360339, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 2568076600815093854}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -74,10 +74,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8880944466277366744}
     m_Modifications:
-    - target: {fileID: 1625940283820383082, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
-      propertyPath: interactableSource.underlyingValue
-      value: 
-      objectReference: {fileID: 7992001953913379970}
     - target: {fileID: 3443257213867172465, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
       propertyPath: m_Name
       value: DoorInteractButton_3
@@ -122,6 +118,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7128153375829360339, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 2568076600815093854}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -221,13 +221,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f685ab8f4d7e03a4fa3e009051c13a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
-  leftPanel: {fileID: 8880944466277418970}
-  rightPanel: {fileID: 8880944466277427546}
-  leftOpenOffset: {x: 0, y: -2, z: 0}
-  rightOpenOffset: {x: 0, y: 2, z: 0}
-  animationDuration: 0.5
-  openEase: 5
-  closeEase: 5
+  <IsUnLocked>k__BackingField: 1
+  targetDoors:
+  - {fileID: 7992001953913379970}
 --- !u!114 &7992001953913379970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,12 +233,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8880944466277002288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0178a437eed3e244ba0d36df00a34854, type: 3}
+  m_Script: {fileID: 11500000, guid: ec893924dee591e41ac47c2e0678fad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.InteractButton
-  <IsInteractable>k__BackingField: 1
-  targetDoors:
-  - {fileID: 2568076600815093854}
+  leftPanel: {fileID: 8880944466277418970}
+  rightPanel: {fileID: 8880944466277427546}
+  leftOpenOffset: {x: 0, y: -2, z: 0}
+  rightOpenOffset: {x: 0, y: 2, z: 0}
+  animationDuration: 0.5
+  openEase: 5
+  closeEase: 5
 --- !u!4 &8880944466277366744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 415124, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}

@@ -1,10 +1,15 @@
+using System;
 using App.Character;
 
 namespace App.Usable
 {
     public interface IUsable
     {
-        public bool IsInteractable { get; }
+        public bool IsUsable { get; }
+        
+        public event Action OnUse; 
+        public event Action<bool> OnTryUse; 
+        public event Action OnUsableStateChanged; 
         
         public void Interact(PlayerContext playerContext);
     }

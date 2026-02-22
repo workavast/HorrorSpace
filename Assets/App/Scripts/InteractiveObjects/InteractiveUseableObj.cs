@@ -7,7 +7,7 @@ namespace App.InteractiveObjects
     {
         [SerializeField] private InterfaceReference<IUsable> usable;
         
-        public bool IsInteractable => usable.Value.IsInteractable;
+        public bool IsInteractable => usable.Value.IsUsable;
         public GameObject Go => gameObject;
     }
 }

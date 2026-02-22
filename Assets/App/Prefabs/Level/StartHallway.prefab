@@ -43,6 +43,135 @@ Transform:
   - {fileID: 3260966180487427678}
   m_Father: {fileID: 7760671337751658530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3115961133278531477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7175952824973523746}
+  - component: {fileID: 5338181767599400952}
+  m_Layer: 0
+  m_Name: Voice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7175952824973523746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3115961133278531477}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2339121230480494670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &5338181767599400952
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3115961133278531477}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 047db7151e258de4e8ab3e10ca8e92ba, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5372566104314278373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,10 +1551,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_3 Variant_2
       objectReference: {fileID: 0}
-    - target: {fileID: 9085610888022740921, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
-      propertyPath: <IsInteractable>k__BackingField
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2312,6 +2437,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5997682190630025529}
     m_Modifications:
+    - target: {fileID: 1876512206958445118, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+      propertyPath: <IsUnLocked>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5215275450408914094, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.5
@@ -2356,13 +2485,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_3 Variant_0
       objectReference: {fileID: 0}
-    - target: {fileID: 9085610888022740921, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
-      propertyPath: <IsInteractable>k__BackingField
-      value: 0
+    - target: {fileID: 7865925190444228467, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+      propertyPath: failSound.Array.size
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7865925190444228467, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+      propertyPath: 'failSound.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5338181767599400952}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8278239491250941488, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7175952824973523746}
     - targetCorrespondingSourceObject: {fileID: 8278239491250941488, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8283049636832814359}
@@ -2399,7 +2535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6bb079b7d044e6ab777248e93b5795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorLock
-  doorBtn: {fileID: 3207300018466091463}
+  door: {fileID: 5232823502732753984}
   lockProvider: {fileID: 3407115281513289632}
 --- !u!114 &3407115281513289632
 MonoBehaviour:
@@ -2428,17 +2564,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8359384877812665277, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
   m_PrefabInstance: {fileID: 5950394926524153470}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3207300018466091463 stripped
+--- !u!114 &5232823502732753984 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9085610888022740921, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1876512206958445118, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
   m_PrefabInstance: {fileID: 5950394926524153470}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942298059286727166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0178a437eed3e244ba0d36df00a34854, type: 3}
+  m_Script: {fileID: 11500000, guid: f685ab8f4d7e03a4fa3e009051c13a3f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.InteractButton
+  m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
 --- !u!1001 &6231899845918795566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2553,8 +2689,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_1 Variant_2
       objectReference: {fileID: 0}
-    - target: {fileID: 1650411714892020667, guid: 7853e2a1d7b33be479ad9aedcfe986ec, type: 3}
-      propertyPath: <IsInteractable>k__BackingField
+    - target: {fileID: 7902355715787095758, guid: 7853e2a1d7b33be479ad9aedcfe986ec, type: 3}
+      propertyPath: <IsUnLocked>k__BackingField
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
