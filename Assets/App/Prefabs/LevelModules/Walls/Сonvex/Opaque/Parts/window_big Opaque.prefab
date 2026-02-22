@@ -50,10 +50,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994748750547328783, guid: 831b7675ce831794cb1a4c835d9f45f3, type: 3}
       propertyPath: m_Name
-      value: window_big Variant
+      value: window_big Opaque
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994748750547328783, guid: 831b7675ce831794cb1a4c835d9f45f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4517646787073782654}
   m_SourcePrefab: {fileID: 100100000, guid: 831b7675ce831794cb1a4c835d9f45f3, type: 3}
+--- !u!1 &8801446663447928187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994748750547328783, guid: 831b7675ce831794cb1a4c835d9f45f3, type: 3}
+  m_PrefabInstance: {fileID: 2960172418897494644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-4517646787073782654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8801446663447928187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700114e3a2f5e5b4db36d878320bbe07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.SelectionBaseScript

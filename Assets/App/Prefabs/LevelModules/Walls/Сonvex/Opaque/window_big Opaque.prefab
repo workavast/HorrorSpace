@@ -156,8 +156,28 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5039809439067972363, guid: 4f20f457473558e4f88c07bfce6d7bb0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8746983923635098999}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5039809439067563621, guid: 4f20f457473558e4f88c07bfce6d7bb0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7676555287943921659}
   m_SourcePrefab: {fileID: 100100000, guid: 4f20f457473558e4f88c07bfce6d7bb0, type: 3}
+--- !u!1 &8644678423561738572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5039809439067563621, guid: 4f20f457473558e4f88c07bfce6d7bb0, type: 3}
+  m_PrefabInstance: {fileID: 3605394019215605545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7676555287943921659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644678423561738572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700114e3a2f5e5b4db36d878320bbe07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.SelectionBaseScript
 --- !u!4 &8644678423562116130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5039809439067972363, guid: 4f20f457473558e4f88c07bfce6d7bb0, type: 3}
