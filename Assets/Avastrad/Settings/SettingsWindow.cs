@@ -1,17 +1,16 @@
 using UnityEngine;
-using Zenject;
 
 namespace Avastrad.Settings
 {
     public class SettingsWindow : MonoBehaviour
     {
-        [Inject] private readonly SettingsRepository _settingsRepository;
-        
+        private SettingsRepository _settingsRepository;
         private ISettingViewModel[] _settingsViewModels;
         private ISettingView[] _settingsViews;
 
-        public void Initialize()
+        public void Initialize(SettingsRepository settingsRepository)
         {
+            _settingsRepository = settingsRepository;
             _settingsViewModels = GetComponentsInChildren<ISettingViewModel>(true);
             _settingsViews = GetComponentsInChildren<ISettingView>(true);
 
