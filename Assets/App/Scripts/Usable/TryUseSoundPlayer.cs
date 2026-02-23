@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace App.Usable
 {
@@ -11,6 +12,11 @@ namespace App.Usable
         private void Awake()
         {
             usable.Value.OnTryUse += PlaySound;
+        }
+
+        private void OnDestroy()
+        {
+            usable.Value.OnTryUse -= PlaySound;
         }
 
         private void PlaySound(bool useSuccessful)

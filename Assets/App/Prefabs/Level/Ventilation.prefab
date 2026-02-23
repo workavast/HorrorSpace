@@ -1160,14 +1160,6 @@ PrefabInstance:
       value: DoorInteractButton
       objectReference: {fileID: 0}
     - target: {fileID: 3443257213867313399, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.09999998
-      objectReference: {fileID: 0}
-    - target: {fileID: 3443257213867313399, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.09999998
-      objectReference: {fileID: 0}
-    - target: {fileID: 3443257213867313399, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.7013222
       objectReference: {fileID: 0}
@@ -2880,14 +2872,6 @@ PrefabInstance:
       value: DoorInteractButton_1
       objectReference: {fileID: 0}
     - target: {fileID: 3443257213867313399, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.09999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 3443257213867313399, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.09999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 3443257213867313399, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2927,10 +2911,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3459819552294713780, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
-      propertyPath: usable.underlyingValue
-      value: 
-      objectReference: {fileID: 8893739904435067130}
     - target: {fileID: 7128153375829360339, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
       propertyPath: door
       value: 
