@@ -20,11 +20,7 @@ namespace App.Character.FSM.Movement
         {
             // If we are in an in-air jump phase, keep horizontal velocity locked
             if (!_ctx.IsGrounded && _ctx.IsInAirJump)
-            {
-                _ctx.Velocity.x = _ctx.JumpHorizontalVelocity.x;
-                _ctx.Velocity.z = _ctx.JumpHorizontalVelocity.z;
                 return;
-            }
 
             targetSpeed *= moveInput.magnitude;
 
@@ -42,13 +38,15 @@ namespace App.Character.FSM.Movement
         // Small helper to smoothly change controller height and center for crouch
         protected void UpdateHeight(float targetHeight)
         {
-            var currentHeight = _ctx.CharacterController.height;
-            _ctx.CharacterController.height = Mathf.Lerp(currentHeight, targetHeight, Time.deltaTime * _params.CrouchHeightSpeed);
+            var currentHeight = _ctx.Motor.Capsule.height;
+            var height = Mathf.Lerp(currentHeight, targetHeight, Time.deltaTime * _params.CrouchHeightSpeed);
             
-            var currentCenter = _ctx.CharacterController.center;
+            var currentCenter = _ctx.Motor.Capsule.center;
             var targetCenterY = targetHeight * 0.5f;
             currentCenter.y = Mathf.Lerp(currentCenter.y, targetCenterY, Time.deltaTime * _params.CrouchHeightSpeed);
-            _ctx.CharacterController.center = currentCenter;
+
+            var capsule = _ctx.Motor.Capsule;
+            _ctx.Motor.SetCapsuleDimensions(capsule.radius, height, currentCenter.y);
         }
     }
 }

@@ -5,6 +5,7 @@ namespace App.Character
 {
     public class CameraController : MonoBehaviour
     {
+        [SerializeField] private CharMover charMover;
         [SerializeField] private Transform characterRoot;
         [SerializeField] private Transform cameraRig;
         [SerializeField] private CinemachineCamera virtualCamera;
@@ -39,12 +40,18 @@ namespace App.Character
         private void HandleCameraRotation()
         {
             if (!_cameraRotationEnabled)
+            {
+                charMover.SetLookDeltaRotation(new Vector3(0, 0, 0));
                 return;
+            }
 
             var lookDelta = inputManager.LookInput;
 
             if (lookDelta.magnitude < 0.01f)
+            {
+                charMover.SetLookDeltaRotation(new Vector3(0, 0, 0));
                 return;
+            }
 
             // Pitch - поворот вверх/вниз (X ось)
             _currentPitch -= lookDelta.y * lookSensitivity;
@@ -55,9 +62,7 @@ namespace App.Character
 
             // Применяем pitch к камере (X ось локальная)
             cameraRig.localRotation = Quaternion.Euler(_currentPitch, 0, 0);
-
-            // Применяем yaw к персонажу (Y ось глобальная)
-            characterRoot.Rotate(0, lookDelta.x * lookSensitivity, 0, Space.World);
+            charMover.SetLookDeltaRotation(new Vector3(0, lookDelta.x * lookSensitivity, 0));
         }
 
         private void HandleCameraHeight()

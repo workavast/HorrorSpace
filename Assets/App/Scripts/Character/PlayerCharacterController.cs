@@ -4,19 +4,21 @@ using App.Character.FSM.Movement;
 using App.InteractiveObjects;
 using App.ObjectHandling;
 using App.Usable;
+using App.Utils.Debug;
 using Avastrad.FSM;
+using KinematicCharacterController;
 using UnityEngine;
 
 namespace App.Character
 {
     public class PlayerCharacterController : MonoBehaviour
     {
+        [SerializeField] private CharMover charMover;
+        [SerializeField] private KinematicCharacterMotor motor;
         [SerializeField] private CameraController cameraController;
         [SerializeField] private PlayerInputManager inputManager;
-        [SerializeField] private CharacterController characterController;
         [SerializeField] private HandsController handsController;
         [SerializeField] private InteractiveObjBoundsDrawer interactiveObjBoundsDrawer;
-        [SerializeField] private Animator animator;
         [Space]
         [SerializeField] private PlayerParams playerParams = new();
 
@@ -24,31 +26,27 @@ namespace App.Character
         [SerializeField] private float interactRange = 3f;
         [SerializeField] private LayerMask interactLayerMask = ~0;
         
+        [Header("Debug")]
+        [SerializeField] private ReadOnlyQueue<string> jumpDebugStates;
+
         private PlayerContext _ctx;
         private InputProvider _inputProvider;
         private StateMachine _movementFsm;
         private StateMachine _jumpFsm;
         private StateMachine _mainFsm;
 
-        private readonly int _animatorSpeedHash = Animator.StringToHash("Speed");
-        private readonly int _animatorIsGroundedHash = Animator.StringToHash("IsGrounded");
-        private readonly int _animatorIsCrouchingHash = Animator.StringToHash("IsCrouching");
-
-        private void Awake() 
-            => Initialize();
+        private void Awake()
+        {
+            Initialize();
+            charMover.Initialize(_ctx, playerParams);
+        }
 
         private void Update() 
             => _mainFsm.ManualUpdate();
 
         private void Initialize()
         {
-            if (characterController == null)
-                characterController = GetComponent<CharacterController>();
-
-            if (animator == null)
-                animator = GetComponentInChildren<Animator>();
-
-            _ctx = new PlayerContext(characterController, cameraController, transform, animator);
+            _ctx = new PlayerContext(charMover, motor,cameraController, transform);
             _inputProvider = new InputProvider();
 
             // Movement FSM
@@ -68,6 +66,7 @@ namespace App.Character
             };
             _jumpFsm = new StateMachine(jumpStates);
             _jumpFsm.Init<JumpGroundedState>();
+            _jumpFsm.OnStateSwitched += (state) => jumpDebugStates.Enqueue(state.Name + " " + Time.time);
 
             // Main FSM with a single active state that routes input and updates inner FSMs
             var mainStates = new List<StateBase>
@@ -76,33 +75,6 @@ namespace App.Character
             };
             _mainFsm = new StateMachine(mainStates);
             _mainFsm.Init<PlayerMainState>();
-        }
-
-        // Exposed helpers used by PlayerMainState
-        private void CheckGroundContact()
-        {
-            var legs = _ctx.Transform.position;
-            var checkOffset = Vector3.down * playerParams.GroundCheckDistance;
-            var origin = legs + checkOffset + Vector3.up * playerParams.CollisionCheckRadius;
-
-            _ctx.IsGroundContact = Physics.CheckSphere(origin, playerParams.CollisionCheckRadius, playerParams.ObstacleLayer);
-        }
-
-        private void ApplyMovement()
-        {
-            if (characterController.enabled)
-                characterController.Move(_ctx.Velocity * Time.deltaTime);
-        }
-
-        private void UpdateAnimator()
-        {
-            if (animator == null)
-                return;
-
-            var currentSpeed = new Vector3(_ctx.Velocity.x, 0, _ctx.Velocity.z).magnitude;
-            animator.SetFloat(_animatorSpeedHash, currentSpeed);
-            animator.SetBool(_animatorIsGroundedHash, _ctx.IsGrounded);
-            animator.SetBool(_animatorIsCrouchingHash, _ctx.IsCrouching);
         }
 
         // PlayerMainState nested so it can call private helpers cleanly
@@ -133,15 +105,9 @@ namespace App.Character
                 _inputProvider.SetCrouch(_owner.inputManager.IsCrouchPressed);
                 _inputProvider.SetJumpThisFrame(_owner.inputManager.JumpPressedThisFrame);
 
-                // Environment and collision checks
-                _owner.CheckGroundContact();
-
                 // Update nested FSMs
                 _movementFsm.ManualUpdate();
                 _jumpFsm.ManualUpdate();
-
-                _owner.ApplyMovement();
-                _owner.UpdateAnimator();
 
                 var isHoldingObject = _owner.handsController.IsHoldingObject();
                 _owner.CheckInteractionHighlight(!isHoldingObject);

@@ -26,20 +26,17 @@ namespace App.Character.FSM.Jump
         {
             // Apply gravity
             _ctx.Velocity.y -= _params.Gravity * Time.deltaTime;
-
-            // Keep horizontal velocity if in-air jump
-            _ctx.Velocity.x = _ctx.JumpHorizontalVelocity.x;
-            _ctx.Velocity.z = _ctx.JumpHorizontalVelocity.z;
-
+            // Drag
+            _ctx.Velocity *= (1f / (1f + (_params.AirDrag * Time.deltaTime)));
+            
             // If landed, switch to grounded
             if (_ctx.IsGrounded)
             {
-                _ctx.JumpHorizontalVelocity = Vector3.zero;
                 SetState<JumpGroundedState>();
                 return;
             }
 
-            if (CheckHeadCollision()) 
+            if (CheckHeadCollision())
                 _ctx.Velocity.y = -0.1f;
         }
         
@@ -48,10 +45,10 @@ namespace App.Character.FSM.Jump
             if (_ctx.Velocity.y <= 0)
                 return false;
 
-            var headPosition = _ctx.Transform.position + Vector3.up * _ctx.CharacterController.height;
+            var headPosition = _ctx.Transform.position + Vector3.up * _ctx.Motor.Capsule.height;
             var checkOffset = Vector3.up * _params.HeadCollisionDistance;
             var origin = headPosition + checkOffset - Vector3.up * _params.CollisionCheckRadius;
-
+            
             return Physics.CheckSphere(origin, _params.CollisionCheckRadius, _params.ObstacleLayer);
         }
     }

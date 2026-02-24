@@ -1,4 +1,5 @@
 using System;
+using KinematicCharacterController;
 using UnityEngine;
 
 namespace App.Character
@@ -6,27 +7,26 @@ namespace App.Character
     [Serializable]
     public class PlayerContext
     {
-        public readonly CharacterController CharacterController;
+        public readonly CharMover CharMover;
+        public readonly KinematicCharacterMotor Motor;
         public readonly CameraController CameraController;
         public readonly Transform Transform;
-        public readonly Animator Animator;
         public readonly float DefaultHeight;
 
         public Vector3 Velocity;
-        public Vector3 JumpHorizontalVelocity;
         public bool IsInAirJump;
         public bool IsCrouching;
-        public bool IsGroundContact;
+        public bool IsGroundContact => Motor.GroundingStatus.IsStableOnGround;
         public bool IsGrounded => IsGroundContact && Velocity.y <= 0.01f;
 
-        public PlayerContext(CharacterController cc, CameraController cameraController, Transform t, Animator a)
+        public PlayerContext(CharMover charMover, KinematicCharacterMotor motor, CameraController cameraController, Transform t)
         {
-            CharacterController = cc;
+            CharMover = charMover;
+            Motor = motor;
             CameraController = cameraController;
             Transform = t;
-            Animator = a;
 
-            DefaultHeight = cc.height;
+            DefaultHeight = Motor.Capsule.height;
         }
     }
 }

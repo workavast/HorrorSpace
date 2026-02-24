@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace App.Character.FSM.Jump
 {
     public class JumpGroundedState : JumpStateBase
@@ -24,14 +22,21 @@ namespace App.Character.FSM.Jump
 
         public override void ManualUpdate()
         {
-            _ctx.Velocity.y = -9.8f;
+            _ctx.Velocity.y = -0.1f;
 
             // If jump pressed, perform jump and switch to air state
             if (_input.JumpPressedThisFrame && _ctx.IsGrounded)
             {
-                _ctx.JumpHorizontalVelocity = new Vector3(_ctx.Velocity.x, 0f, _ctx.Velocity.z);
+                _ctx.Motor.ForceUnground();
                 _ctx.Velocity.y = _params.JumpForce;
                 SetState<JumpAirState>();
+                return;
+            }
+
+            if (!_ctx.IsGroundContact)
+            {
+                SetState<JumpAirState>();
+                return;
             }
         }
     }

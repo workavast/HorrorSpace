@@ -88,7 +88,9 @@ GameObject:
   - component: {fileID: 1287651065015622182}
   - component: {fileID: 7483723162105313711}
   - component: {fileID: 766444337314766684}
-  - component: {fileID: 2783987760247693574}
+  - component: {fileID: 8450550693926369004}
+  - component: {fileID: 5438028260905461622}
+  - component: {fileID: 3548465234966692427}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -124,24 +126,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205fd2d947281a4459fa24ee15e44094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Character.PlayerCharacterController
+  charMover: {fileID: 8450550693926369004}
+  motor: {fileID: 5438028260905461622}
   cameraController: {fileID: 1287651065015622182}
   inputManager: {fileID: 7483723162105313711}
-  characterController: {fileID: 2783987760247693574}
   handsController: {fileID: 766444337314766684}
   interactiveObjBoundsDrawer: {fileID: 0}
-  animator: {fileID: 0}
   playerParams:
     MoveSpeed: 5
     SprintSpeed: 8
-    Acceleration: 10
-    Deceleration: 10
-    GroundDrag: 5
+    Acceleration: 5
+    Deceleration: 5
     JumpForce: 5
     Gravity: 9.81
-    GroundLayer:
-      serializedVersion: 2
-      m_Bits: 55
-    GroundCheckDistance: 0.1
+    AirDrag: 0.2
     CrouchHeight: 1.3
     CrouchSpeed: 2
     CrouchHeightSpeed: 5
@@ -154,6 +152,13 @@ MonoBehaviour:
     CollisionCheckRadius: 0.59
     NormalCameraHeight: 2.1
     CrouchCameraHeight: 0.9
+  jumpDebugStates:
+    queue:
+    - 
+    - 
+    - 
+    - 
+    - 
   interactRange: 3
   interactLayerMask:
     serializedVersion: 2
@@ -170,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 526b187e338733645a7a1ca7953695a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Character.CameraController
+  charMover: {fileID: 8450550693926369004}
   characterRoot: {fileID: 4095698566600033491}
   cameraRig: {fileID: 6734760262169552703}
   virtualCamera: {fileID: 4708030628450986178}
@@ -229,9 +235,64 @@ MonoBehaviour:
     rotationReturnSpeed: 10
     manualRotationSpeed: 0.1
     torqueMultiplier: 1
---- !u!143 &2783987760247693574
-CharacterController:
+--- !u!114 &8450550693926369004
+MonoBehaviour:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712057721741398327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7e2015e3694ca49e494017ee782c66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Character.CharMover
+  Motor: {fileID: 5438028260905461622}
+--- !u!114 &5438028260905461622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712057721741398327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1bc5515e3ab954e80599c538834774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KinematicCharacterController.KinematicCharacterMotor
+  Capsule: {fileID: 3548465234966692427}
+  CapsuleRadius: 0.6
+  CapsuleHeight: 2.6
+  CapsuleYOffset: 1.3
+  CapsulePhysicsMaterial: {fileID: 0}
+  GroundDetectionExtraDistance: 0
+  MaxStableSlopeAngle: 60
+  StableGroundLayers:
+    serializedVersion: 2
+    m_Bits: 23
+  DiscreteCollisionEvents: 0
+  StepHandling: 1
+  MaxStepHeight: 0.5
+  AllowSteppingWithoutStableGrounding: 0
+  MinRequiredStepDepth: 0.1
+  LedgeAndDenivelationHandling: 1
+  MaxStableDistanceFromLedge: 0.5
+  MaxVelocityForLedgeSnap: 0
+  MaxStableDenivelationAngle: 180
+  InteractiveRigidbodyHandling: 1
+  RigidbodyInteractionType: 2
+  SimulatedCharacterMass: 60
+  PreserveAttachedRigidbodyMomentum: 1
+  HasPlanarConstraint: 0
+  PlanarConstraintAxis: {x: 0, y: 0, z: 1}
+  MaxMovementIterations: 5
+  MaxDecollisionIterations: 1
+  CheckMovementInitialOverlaps: 1
+  KillVelocityWhenExceedMaxMovementIterations: 1
+  KillRemainingMovementWhenExceedMaxMovementIterations: 1
+--- !u!136 &3548465234966692427
+CapsuleCollider:
+  m_ObjectHideFlags: 8
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -244,13 +305,11 @@ CharacterController:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2.6
+  serializedVersion: 2
   m_Radius: 0.6
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
+  m_Height: 2.6
+  m_Direction: 1
   m_Center: {x: 0, y: 1.3, z: 0}
