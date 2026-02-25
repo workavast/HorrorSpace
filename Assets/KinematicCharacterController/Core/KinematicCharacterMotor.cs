@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Avastrad.Extensions;
 using UnityEngine;
 
 namespace KinematicCharacterController
@@ -1797,7 +1798,7 @@ namespace KinematicCharacterController
                 // On stable slopes, simply reorient the movement without any loss
                 if (stableOnHit)
                 {
-                    velocity = GetDirectionTangentToSurface(velocity, obstructionNormal) * velocity.magnitude;
+                    velocity = GetDirectionTangentToSurface(velocity.X0Z(), obstructionNormal) * velocity.X0Z().magnitude;
                 }
                 // On blocking hits, project the movement on the obstruction while following the grounding plane
                 else
