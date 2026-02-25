@@ -1,4 +1,5 @@
-﻿using KinematicCharacterController;
+﻿using Avastrad.Extensions;
+using KinematicCharacterController;
 using UnityEngine;
 
 namespace App.Character
@@ -35,7 +36,39 @@ namespace App.Character
 
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
-            currentVelocity = _ctx.Velocity;
+            Vector3 moveDirection;
+            float targetSpeed;
+            if (_ctx.VelocityInput == Vector2.zero)
+            {
+                targetSpeed = 0;
+                moveDirection = -currentVelocity.X0Z().normalized;
+            }
+            else
+            {
+                targetSpeed = _ctx.TargetSpeed;
+                moveDirection = _ctx.Transform.right * _ctx.VelocityInput.x + 
+                                _ctx.Transform.forward * _ctx.VelocityInput.y;    
+            }
+
+            var velocityDelta = moveDirection * (_params.Acceleration * deltaTime);
+            currentVelocity += velocityDelta;
+            
+            if (currentVelocity.XZ().magnitude > targetSpeed)
+            {
+                var acceleration = _params.Deceleration;
+                if (_ctx.VelocityInput != Vector2.zero) 
+                    acceleration += _params.Acceleration;
+                
+                var decScale = (acceleration * deltaTime);
+
+                if (currentVelocity.XZ().magnitude - targetSpeed < decScale) 
+                    decScale = currentVelocity.XZ().magnitude - targetSpeed;
+                
+                var dec = currentVelocity.X0Z().normalized * decScale;
+                currentVelocity -= dec;
+            }
+
+            currentVelocity.y = _ctx.GravityVelocity;
         }
 
         public void BeforeCharacterUpdate(float deltaTime)

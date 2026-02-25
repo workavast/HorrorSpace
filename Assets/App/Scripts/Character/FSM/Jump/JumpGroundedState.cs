@@ -22,13 +22,13 @@ namespace App.Character.FSM.Jump
 
         public override void ManualUpdate()
         {
-            _ctx.Velocity.y = -0.1f;
+            _ctx.GravityVelocity = -0.1f;
 
             // If jump pressed, perform jump and switch to air state
             if (_input.JumpPressedThisFrame && _ctx.IsGrounded)
             {
                 _ctx.Motor.ForceUnground();
-                _ctx.Velocity.y = _params.JumpForce;
+                _ctx.GravityVelocity = _params.JumpForce;
                 SetState<JumpAirState>();
                 return;
             }

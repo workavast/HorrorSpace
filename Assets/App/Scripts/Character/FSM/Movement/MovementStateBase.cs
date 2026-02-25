@@ -1,3 +1,4 @@
+using Avastrad.Extensions;
 using Avastrad.FSM;
 using UnityEngine;
 
@@ -20,19 +21,13 @@ namespace App.Character.FSM.Movement
         {
             // If we are in an in-air jump phase, keep horizontal velocity locked
             if (!_ctx.IsGrounded && _ctx.IsInAirJump)
+            {
+                _ctx.VelocityInput *= (1f / (1f + (_params.AirDrag * Time.deltaTime)));
                 return;
+            }
 
-            targetSpeed *= moveInput.magnitude;
-
-            var currentHorizontalSpeed = new Vector3(_ctx.Velocity.x, 0, _ctx.Velocity.z).magnitude;
-            if (moveInput.magnitude > 0)
-                currentHorizontalSpeed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed, Time.deltaTime * _params.Acceleration);
-            else
-                currentHorizontalSpeed = Mathf.Lerp(currentHorizontalSpeed, 0, Time.deltaTime * _params.Deceleration);
-
-            var moveDirection = _ctx.Transform.right * moveInput.x + _ctx.Transform.forward * moveInput.y;
-            _ctx.Velocity.x = moveDirection.x * currentHorizontalSpeed;
-            _ctx.Velocity.z = moveDirection.z * currentHorizontalSpeed;
+            _ctx.VelocityInput = moveInput;
+            _ctx.TargetSpeed = targetSpeed;
         }
         
         // Small helper to smoothly change controller height and center for crouch

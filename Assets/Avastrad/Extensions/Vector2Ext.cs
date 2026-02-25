@@ -4,8 +4,8 @@ namespace Avastrad.Extensions
 {
     public static class Vector2Ext
     {
-        public static Vector3 X0Y(this Vector2 vector2) 
-            => new(vector2.x, 0, vector2.y);
+        public static Vector3 X0Y(this Vector2 vector2, float o = 0) 
+            => new(vector2.x, o, vector2.y);
 
         public static Vector3 XY0(this Vector2 vector2, float o = 0) 
             => new(vector2.x, vector2.y, o);

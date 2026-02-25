@@ -1,4 +1,5 @@
-﻿using Avastrad.FSM;
+﻿using Avastrad.Extensions;
+using Avastrad.FSM;
 using UnityEngine;
 
 namespace App.ObjectHandling
@@ -14,6 +15,13 @@ namespace App.ObjectHandling
             _parameters = parameters;
         }
 
+        protected bool ObjectInHoldRange()
+        {
+            var playerPosition = _context.PlayerTransform.position;
+            var objPosition = _context.HandledObject.Transform.position;
+            return playerPosition.DistanceXZ(objPosition) <= _parameters.AutoDropDistance;
+        }
+        
         protected void HoldObject()
         {
             var camera = _context.CameraController.GetCamera();

@@ -27,7 +27,7 @@ namespace App.ObjectHandling
                 return;
             }
             
-            if (!_context.InputManager.IsPickupPressed)
+            if (!_context.InputManager.IsPickupPressed || !ObjectInHoldRange())
             {
                 DropObject();
                 SetState<HandEmptyState>();

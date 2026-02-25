@@ -7,6 +7,7 @@ namespace App.ObjectHandling
         public LayerMask HandleLayerMask { get; }
         public float PickupRange { get; }
 
+        public float AutoDropDistance { get; }
         public float MinDistance { get; }
         public float MaxDistance { get; }
         public float ZoomSpeed { get; }

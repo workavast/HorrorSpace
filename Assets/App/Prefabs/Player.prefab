@@ -152,6 +152,10 @@ MonoBehaviour:
     CollisionCheckRadius: 0.59
     NormalCameraHeight: 2.1
     CrouchCameraHeight: 0.9
+  interactRange: 3
+  interactLayerMask:
+    serializedVersion: 2
+    m_Bits: 23
   jumpDebugStates:
     queue:
     - 
@@ -159,10 +163,6 @@ MonoBehaviour:
     - 
     - 
     - 
-  interactRange: 3
-  interactLayerMask:
-    serializedVersion: 2
-    m_Bits: 23
 --- !u!114 &1287651065015622182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +225,7 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 23
     pickupRange: 3
+    autoDropDistance: 6
     minDistance: 1.5
     maxDistance: 4
     zoomSpeed: 5
@@ -281,7 +282,7 @@ MonoBehaviour:
   MaxStableDenivelationAngle: 180
   InteractiveRigidbodyHandling: 1
   RigidbodyInteractionType: 2
-  SimulatedCharacterMass: 60
+  SimulatedCharacterMass: 80
   PreserveAttachedRigidbodyMomentum: 1
   HasPlanarConstraint: 0
   PlanarConstraintAxis: {x: 0, y: 0, z: 1}

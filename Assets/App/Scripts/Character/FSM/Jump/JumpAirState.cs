@@ -25,9 +25,7 @@ namespace App.Character.FSM.Jump
         public override void ManualUpdate()
         {
             // Apply gravity
-            _ctx.Velocity.y -= _params.Gravity * Time.deltaTime;
-            // Drag
-            _ctx.Velocity *= (1f / (1f + (_params.AirDrag * Time.deltaTime)));
+            _ctx.GravityVelocity -= _params.Gravity * Time.deltaTime;
             
             // If landed, switch to grounded
             if (_ctx.IsGrounded)
@@ -37,7 +35,7 @@ namespace App.Character.FSM.Jump
             }
 
             if (CheckHeadCollision())
-                _ctx.Velocity.y = -0.1f;
+                _ctx.GravityVelocity = -0.1f;
         }
         
         private bool CheckHeadCollision()

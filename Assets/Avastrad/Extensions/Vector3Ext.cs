@@ -7,11 +7,20 @@ namespace Avastrad.Extensions
         public static Vector2 XZ(this Vector3 vector3) 
             => new(vector3.x, vector3.z);
         
+        public static float DistanceXZ(this Vector3 vector3, Vector3 other) 
+            => Vector2.Distance(vector3.XZ(), other.XZ());
+        
         public static Vector2 XY(this Vector3 vector3) 
             => new(vector3.x, vector3.y);
+
+        public static Vector3 _Y_(this Vector3 vector3) 
+            => new(0, vector3.y, 0);
         
         public static Vector3 X0Z(this Vector3 vector3, float o = 0) 
             => new(vector3.x, o, vector3.z);
+        
+        public static Vector3 X_Z(this Vector3 vector3, Vector3 addVector3) 
+            => new(addVector3.x, vector3.y, addVector3.z);
         
         public static Vector3 Div(this Vector3 vector3A, Vector3 vector3B)
         {

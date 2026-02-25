@@ -13,11 +13,15 @@ namespace App.Character
         public readonly Transform Transform;
         public readonly float DefaultHeight;
 
-        public Vector3 Velocity;
+        public Vector2 VelocityInput;
+        public float GravityVelocity;
+        public float TargetSpeed;
+
+        public Vector3 Velocity => Motor.Velocity;
         public bool IsInAirJump;
         public bool IsCrouching;
         public bool IsGroundContact => Motor.GroundingStatus.IsStableOnGround;
-        public bool IsGrounded => IsGroundContact && Velocity.y <= 0.01f;
+        public bool IsGrounded => IsGroundContact && GravityVelocity <= 0.01f;
 
         public PlayerContext(CharMover charMover, KinematicCharacterMotor motor, CameraController cameraController, Transform t)
         {
