@@ -5,8 +5,8 @@ namespace App.KeySystem
 {
     public class LockProvider : MonoBehaviour
     {
-        [SerializeField] private KeyConfig requiredConfig;
         [SerializeField] private bool isActive;
+        [SerializeField] private KeyConfig requiredConfig;
         [SerializeField] private KeyObjectTriggerZone[] triggerZones;
 
         public event Action OnInvalidType;
