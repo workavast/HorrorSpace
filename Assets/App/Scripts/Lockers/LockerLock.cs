@@ -7,6 +7,7 @@ namespace App.Lockers
 	{
 		[SerializeField] private LockerController locker;
 		[SerializeField] private LockProvider lockProvider;
+		[SerializeField] private AudioSource unlockSound;
 		
 		private void Awake() 
 			=> Initialize();
@@ -25,6 +26,7 @@ namespace App.Lockers
 
 		private void Unlock()
 		{
+			unlockSound.Play();
 			locker.SetUnLockState(true);
 			lockProvider.SetActivityState(false);
 		}
