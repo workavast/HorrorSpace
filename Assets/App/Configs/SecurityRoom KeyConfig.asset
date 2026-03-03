@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f446f9104fd4be4cb6755d46876b11b, type: 3}
   m_Name: SecurityRoom KeyConfig
   m_EditorClassIdentifier: Assembly-CSharp::KeyConfig
-  keyType: 1
-  key: Hand
+  keyType: 0
+  key: Card
