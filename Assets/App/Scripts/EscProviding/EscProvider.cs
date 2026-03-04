@@ -2,10 +2,11 @@
 using Avastrad.Libs.CheckOnNullLib;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using VContainer;
 
 namespace App.EscProviding
 {
-    public class EscProvider : MonoBehaviour
+    public class EscProvider
     {
         private readonly List<IEscListener> _listeners = new();
         
@@ -23,11 +24,8 @@ namespace App.EscProviding
         public void UnSub(IEscListener listener) 
             => _listeners.Remove(listener);
 
-        public void OnEscPressed(InputAction.CallbackContext input)
+        public void OnEscPressed()
         {
-            if (!input.started)
-                return;
-            
             ClearNulls();
             if (_listeners.Count > 0)
                 _listeners[^1].OnEscPressed();
