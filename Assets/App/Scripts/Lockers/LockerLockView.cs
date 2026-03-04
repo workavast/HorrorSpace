@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace App.Lockers
 {
-	public class LockerHandView : MonoBehaviour
+	public class LockerLockView : MonoBehaviour
 	{
 		[SerializeField] private SpriteRenderer handIcon;
 		[SerializeField] private Color lockedColor = Color.red;

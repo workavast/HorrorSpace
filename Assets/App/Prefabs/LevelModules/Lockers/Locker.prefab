@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f918a26b8eb94a94a87133c5a9ac1827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Lockers.LockerStateView
-  lockerHandView: {fileID: 3402387108046146548}
+  lockerLockView: {fileID: 3402387108046146548}
   lockerMaterialView: {fileID: 2475048192151847572}
 --- !u!114 &2475048192151847572
 MonoBehaviour:
