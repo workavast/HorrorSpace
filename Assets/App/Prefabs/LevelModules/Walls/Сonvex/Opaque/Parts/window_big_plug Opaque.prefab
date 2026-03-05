@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4427618087728451147, guid: b7a6e0cf70ceecd4b8ddeeac9e851ab9, type: 3}
       propertyPath: m_Name
-      value: window_big_plug Variant
+      value: window_big_plug Opaque
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

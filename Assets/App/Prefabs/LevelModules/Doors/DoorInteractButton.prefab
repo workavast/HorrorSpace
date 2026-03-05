@@ -661,6 +661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorInteractButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3783367454032804769, guid: 750a7fdb61ab8e0428125a311a7fd6bd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

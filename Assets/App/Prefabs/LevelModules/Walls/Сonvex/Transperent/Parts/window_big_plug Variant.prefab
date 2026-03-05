@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 137994, guid: d087389d05d4d7e44922758971ced6af, type: 3}
       propertyPath: m_Name
-      value: window_big_plug
+      value: window_big_plug Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 137994, guid: d087389d05d4d7e44922758971ced6af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 405540, guid: d087389d05d4d7e44922758971ced6af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +55,10 @@ PrefabInstance:
     - target: {fileID: 405540, guid: d087389d05d4d7e44922758971ced6af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312256, guid: d087389d05d4d7e44922758971ced6af, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

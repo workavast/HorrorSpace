@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4715859258035663680, guid: bf57e1b1cdeec4c4a852ed100ac04e0e, type: 3}
       propertyPath: m_Name
-      value: window_big_corner_plug Variant
+      value: window_big_corner_plug Opaque
       objectReference: {fileID: 0}
     - target: {fileID: 4715859258035854504, guid: bf57e1b1cdeec4c4a852ed100ac04e0e, type: 3}
       propertyPath: m_LocalPosition.x
