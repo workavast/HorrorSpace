@@ -19,6 +19,10 @@ namespace App.ObjectHandling
         public float DefaultObjectLinearDamping;
         public float DefaultObjectAngularDamping;
 
+        // Data for dragging behavior
+        public Vector3 PickupPoint;                   // world point where object was grabbed
+        public Vector3 PickupOffsetLocal;             // local offset from object origin to pickup point
+
         public HandContext(PlayerInputManager inputManager, CameraController cameraController, Transform playerTransform)
         {
             InputManager = inputManager;

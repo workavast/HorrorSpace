@@ -17,6 +17,7 @@ namespace App.ObjectHandling
 
         [Header("Physics")] 
         [SerializeField] private float attractionForce = 100f;
+        [SerializeField] private float dragAttractionForce = 100f;
         [SerializeField] private float maxAttractionSpeed = 10f;
         [SerializeField] private float angularDampingPickup = 5f;
         [SerializeField] private float linerDampingPickup = 5f;
@@ -33,6 +34,7 @@ namespace App.ObjectHandling
         public float MaxDistance => maxDistance;
         public float ZoomSpeed => zoomSpeed;
         public float AttractionForce => attractionForce;
+        public float DragAttractionForce => dragAttractionForce;
         public float MaxAttractionSpeed => maxAttractionSpeed;
         public float AngularDampingPickup => angularDampingPickup;
         public float LinerDampingPickup => linerDampingPickup;

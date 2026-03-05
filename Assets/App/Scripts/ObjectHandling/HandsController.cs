@@ -29,7 +29,8 @@ namespace App.ObjectHandling
             {
                 new HandEmptyState(_handContext, handParams),
                 new HandHoldState(_handContext, handParams),
-                new HandRotateState(_handContext, handParams)
+                new HandRotateState(_handContext, handParams),
+                new HandDragState(_handContext, handParams)
             };
             _fsm = new StateMachine(states);
             _fsm.Init<HandEmptyState>();

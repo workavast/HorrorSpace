@@ -180,7 +180,7 @@ MonoBehaviour:
   cameraRig: {fileID: 6734760262169552703}
   virtualCamera: {fileID: 4708030628450986178}
   inputManager: {fileID: 7483723162105313711}
-  lookSensitivity: 0.5
+  lookSensitivity: 0.4
   minPitch: -90
   maxPitch: 90
   cameraHeightSpeed: 5
@@ -230,6 +230,7 @@ MonoBehaviour:
     maxDistance: 4
     zoomSpeed: 5
     attractionForce: 5000
+    dragAttractionForce: 100000
     maxAttractionSpeed: 20
     angularDampingPickup: 4
     linerDampingPickup: 12

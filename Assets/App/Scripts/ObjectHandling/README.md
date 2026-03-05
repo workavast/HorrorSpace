@@ -31,7 +31,8 @@ Main controller that manages the object handling logic.
 - `minDistance` / `maxDistance` - Zoom limits
 - `zoomSpeed` - Speed of zooming
 - `rotationSensitivity` - Sensitivity of object rotation
-- `attractionForce` - Force attracting object to target position
+- `attractionForce` - Force attracting object to target position while holding
+- `dragAttractionForce` - Force attracting object towards cursor during drag
 - `maxAttractionSpeed` - Maximum attraction speed
 - `dampingFactor` - Velocity damping factor
 - `angularDampingPickup` - Angular damping when object is picked up

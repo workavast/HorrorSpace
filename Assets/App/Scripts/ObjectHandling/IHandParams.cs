@@ -13,6 +13,7 @@ namespace App.ObjectHandling
         public float ZoomSpeed { get; }
 
         public float AttractionForce { get; }
+        public float DragAttractionForce { get; }
         public float MaxAttractionSpeed { get; }
         public float AngularDampingPickup { get; }
         public float LinerDampingPickup { get; }

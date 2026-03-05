@@ -23,7 +23,13 @@ namespace App.ObjectHandling
             {
                 TryPickupObject();
                 if (_context.HasHandledObject)
-                    SetState<HandHoldState>();
+                {
+                    // Check if the object can be dragged
+                    if (IsDraggable(_context.HandledObject))
+                        SetState<HandDragState>();
+                    else
+                        SetState<HandHoldState>();
+                }
             }
         }
 
@@ -53,6 +59,10 @@ namespace App.ObjectHandling
             
             var objTransform = handleObject.Transform;
 
+            // store pickup point and local offset for dragging
+            _context.PickupPoint = pickupPoint;
+            _context.PickupOffsetLocal = objTransform.InverseTransformPoint(pickupPoint);
+
             // Calculate initial distance and offset
             var camera = _context.CameraController.GetCamera();
             var currentDistance = Vector3.Distance(camera.transform.position, pickupPoint);
@@ -68,6 +78,13 @@ namespace App.ObjectHandling
             _context.SetDefaultObjectDampings(rb.linearDamping, rb.angularDamping);
             rb.angularDamping = _parameters.AngularDampingPickup;
             rb.linearDamping = _parameters.LinerDampingPickup;
+        }
+
+        private static bool IsDraggable(IHandleObject handleObject)
+        {
+            var draggable = handleObject.Transform.GetComponent<IDraggable>() ??
+                           handleObject.Transform.GetComponentInParent<IDraggable>();
+            return draggable != null && draggable.CanBeDragged;
         }
     }
 }

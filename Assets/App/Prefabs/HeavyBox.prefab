@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2440466795566482503}
+  - component: {fileID: 2404217216691165398}
   - component: {fileID: 2527693081519832189}
-  - component: {fileID: 8251418543922437401}
   - component: {fileID: 2439989540038903197}
   - component: {fileID: 8663960467836531119}
   - component: {fileID: 1466457005737153819}
@@ -38,6 +38,18 @@ Transform:
   - {fileID: 6199869928516397743}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2404217216691165398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4055801239904409166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc932c3a99d04d67856cdfb506234ed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Draged
 --- !u!114 &2527693081519832189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,21 +63,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.InteractiveObjects.InteractiveObj
   isInteractable: 1
---- !u!114 &8251418543922437401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4055801239904409166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 015e8e82769e3c24da9fa196ee888e9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.ObjectHandling.HandleableObject
-  canBeHandled: 1
-  rb: {fileID: 1542935485284512173}
-  col: {fileID: 1466457005737153819}
 --- !u!33 &2439989540038903197
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -130,7 +127,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4055801239904409166}
-  m_Material: {fileID: 13400000, guid: 1ad1648e452059a4497def8134c2e137, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
