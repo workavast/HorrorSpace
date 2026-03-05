@@ -2,6 +2,7 @@ using App.Character;
 using UnityEngine;
 using Avastrad.FSM;
 using System.Collections.Generic;
+using App.ObjectHandling.FSM;
 
 namespace App.ObjectHandling
 {

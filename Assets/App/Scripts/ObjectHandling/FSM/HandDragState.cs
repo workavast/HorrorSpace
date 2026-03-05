@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace App.ObjectHandling
+namespace App.ObjectHandling.FSM
 {
     /// <summary>
     /// State for dragging objects that implement IDraggable interface.
@@ -13,6 +13,7 @@ namespace App.ObjectHandling
         private IDraggable _draggableObject;
         // offset from object origin to the point that was grabbed, in local space
         private Vector3 _pickupOffsetLocal;
+        private float _distance;
 
         public HandDragState(HandContext context, IHandParams parameters)
             : base(context, parameters)
@@ -39,6 +40,9 @@ namespace App.ObjectHandling
             // compute local offset to the point that was grabbed
             var objTransform = handleObject.Transform;
             _pickupOffsetLocal = objTransform.InverseTransformPoint(_context.PickupPoint);
+            
+            var camera = _context.CameraController.GetCamera();
+            _distance = Vector3.Distance(camera.transform.position, _context.PickupPoint);
         }
 
         public override void Exit()
@@ -87,7 +91,7 @@ namespace App.ObjectHandling
 
             // compute target point along cursor ray at fixed pickup distance
             var ray = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
-            var targetPointOnRay = ray.origin + ray.direction * _context.CurrentDistance;
+            var targetPointOnRay = ray.origin + ray.direction * _distance;
 
             // offset of grab point in world space
             var offsetWorld = objTransform.TransformVector(_pickupOffsetLocal);
