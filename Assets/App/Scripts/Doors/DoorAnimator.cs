@@ -63,6 +63,14 @@ namespace App.Doors
             if (rightPanel != null) 
                 StartPanelMotion(ref _rightHandle, rightPanel, rightPanel.localPosition, _rightClosedLocal, animationDuration, closeEase);
         }
+        
+        public void SetOpen(bool open)
+        {
+            if (open) 
+                Open(); 
+            else 
+                Close();
+        }
 
         public void Toggle()
         {
