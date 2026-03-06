@@ -1,4 +1,6 @@
-﻿using App.KeySystem;
+﻿using App.Audio;
+using App.Audio.Sources;
+using App.KeySystem;
 using UnityEngine;
 
 namespace App.Lockers
@@ -7,13 +9,12 @@ namespace App.Lockers
 	{
 		[SerializeField] private LockerController locker;
 		[SerializeField] private LockProvider lockProvider;
-		[SerializeField] private AudioSource unlockSound;
+		[SerializeField] private AudioPlayer audioPlayer;
 		
-		private void Awake() 
-			=> Initialize();
-
-		private void Initialize()
+		public void Initialize(AudioFactory audioFactory)
 		{
+			audioPlayer.Initialize(audioFactory);
+			
 			lockProvider.OnUnlocked += Unlock;
 			lockProvider.OnInvalidKey += InvalidKey;
 		}
@@ -26,7 +27,7 @@ namespace App.Lockers
 
 		private void Unlock()
 		{
-			unlockSound.Play();
+			audioPlayer.Play();
 			locker.SetUnLockState(true);
 			lockProvider.SetActivityState(false);
 		}

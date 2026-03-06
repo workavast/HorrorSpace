@@ -1,4 +1,5 @@
 using System;
+using App.Audio;
 using App.Character;
 using UnityEngine;
 
@@ -11,17 +12,17 @@ namespace App.Doors
         [SerializeField] private bool isOpen;
         [SerializeField] private BoxCollider closeCheckCollider;
         [SerializeField] private LayerMask checkLayers;
-
+        
         public event Action OnUse;
         public event Action<bool> OnTryUse;
         public event Action OnLockStateChanged;
 
-        private void Start()
+        public void Initialize()
         {
             foreach (var door in targetDoors) 
                 door.SetOpen(isOpen);
         }
-
+        
         public void SetUnLockState(bool isUnLocked)
         {
             IsUnLocked = isUnLocked;
@@ -38,10 +39,7 @@ namespace App.Doors
 
             var targetIsOpen = !isOpen;
             if (!targetIsOpen && !CanBeLocked())
-            {
-                Debug.Log("Door cannot be closed");
                 return false;
-            }
             
             isOpen = targetIsOpen;
             foreach (var door in targetDoors) 

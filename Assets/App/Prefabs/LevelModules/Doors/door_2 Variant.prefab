@@ -301,6 +301,9 @@ MonoBehaviour:
   checkLayers:
     serializedVersion: 2
     m_Bits: 63
+  cantCloseDoorAudioPlayer:
+    audioPrefab: {fileID: 6807525843585063602, guid: 8408c38757de5414bbe99ac3722babb4, type: 3}
+    point: {fileID: 8880944466277366744}
 --- !u!114 &7992001953913379970
 MonoBehaviour:
   m_ObjectHideFlags: 0

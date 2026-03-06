@@ -337,9 +337,6 @@ PrefabInstance:
       insertIndex: 3
       addedObject: {fileID: 7661551946611959354}
     - targetCorrespondingSourceObject: {fileID: 1983162374848688037, guid: 78b82625a57a0844f9d030de3b3eedfb, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 1135944955619076977}
-    - targetCorrespondingSourceObject: {fileID: 1983162374848688037, guid: 78b82625a57a0844f9d030de3b3eedfb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2927382207827327247}
     - targetCorrespondingSourceObject: {fileID: 1983162374848688037, guid: 78b82625a57a0844f9d030de3b3eedfb, type: 3}
@@ -392,18 +389,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.InteractiveObjects.InteractiveObj
   isInteractable: 1
---- !u!114 &1135944955619076977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2408609956665895202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c428a1973bf45d28951eabac3e3d15b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.Gizmo_RigidBodyCenterOfMass
 --- !u!65 &2927382207827327247
 BoxCollider:
   m_ObjectHideFlags: 0
