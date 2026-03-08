@@ -1,14 +1,18 @@
-﻿using UnityEngine;
+﻿using App.DraggedObjects;
+using App.InteractiveObjects;
+using UnityEngine;
 
 namespace App.Lockers
 {
 	public class LockerDoorBlocker : MonoBehaviour
 	{
-		[SerializeField] private Rigidbody doorRb;
+		[SerializeField] private DraggedObj draggedObj;
+		[SerializeField] private InteractiveObj interactiveObj;
 		
 		public void SetState(bool isBlocked)
 		{
-			doorRb.isKinematic = isBlocked;
+			draggedObj.SetStateWithRb(!isBlocked);
+			interactiveObj.SetActivityState(!isBlocked);
 		}
 	}
 }

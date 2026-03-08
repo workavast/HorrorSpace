@@ -10,19 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 289522358988700857, guid: 6e1abb8cbef5e81479f055c3a3c76383, type: 3}
       propertyPath: initialState
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2523298650401353823, guid: 6e1abb8cbef5e81479f055c3a3c76383, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71d349b51b4bcf84f9e599b41f53560c, type: 2}
+      objectReference: {fileID: 2100000, guid: dff51286da89648428b3953a72c42274, type: 2}
     - target: {fileID: 3740600916004967355, guid: 6e1abb8cbef5e81479f055c3a3c76383, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71d349b51b4bcf84f9e599b41f53560c, type: 2}
+      objectReference: {fileID: 2100000, guid: dff51286da89648428b3953a72c42274, type: 2}
     - target: {fileID: 3902909501396859862, guid: 6e1abb8cbef5e81479f055c3a3c76383, type: 3}
       propertyPath: m_Name
-      value: Locker-Locked
+      value: Locker-Active-Locked
       objectReference: {fileID: 0}
     - target: {fileID: 4423162860569485676, guid: 6e1abb8cbef5e81479f055c3a3c76383, type: 3}
       propertyPath: m_LocalPosition.x
@@ -64,69 +64,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4971972598692293968, guid: 6e1abb8cbef5e81479f055c3a3c76383, type: 3}
-      propertyPath: isActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5211522463571350068, guid: 6e1abb8cbef5e81479f055c3a3c76383, type: 3}
       propertyPath: initialState
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3902909501396859862, guid: 6e1abb8cbef5e81479f055c3a3c76383, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1986971448550936965}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e1abb8cbef5e81479f055c3a3c76383, type: 3}
---- !u!1 &3479739308685212217 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3902909501396859862, guid: 6e1abb8cbef5e81479f055c3a3c76383, type: 3}
-  m_PrefabInstance: {fileID: 460334687804752367}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1986971448550936965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3479739308685212217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93fe2c39dd534954ac95234db4fe033d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.Lockers.LockerLock
-  locker: {fileID: 5634112965621257179}
-  lockProvider: {fileID: 4799871048984243391}
-  unlockSound: {fileID: 580467566650088059, guid: 7a9810cea6c524249813946357e021d7, type: 3}
-  audioPlayer:
-    audioPrefab: {fileID: 17870534725371654, guid: 7a9810cea6c524249813946357e021d7, type: 3}
-    point: {fileID: 5168692528565946270}
---- !u!114 &4799871048984243391 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4971972598692293968, guid: 6e1abb8cbef5e81479f055c3a3c76383, type: 3}
-  m_PrefabInstance: {fileID: 460334687804752367}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2fe86d266a28c945b8ca88241400dd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.KeySystem.LockProvider
---- !u!4 &5168692528565946270 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4744979323134871153, guid: 6e1abb8cbef5e81479f055c3a3c76383, type: 3}
-  m_PrefabInstance: {fileID: 460334687804752367}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5634112965621257179 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5211522463571350068, guid: 6e1abb8cbef5e81479f055c3a3c76383, type: 3}
-  m_PrefabInstance: {fileID: 460334687804752367}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3479739308685212217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f32d2cccd0a48f98a64133d1397037e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.Lockers.LockerController

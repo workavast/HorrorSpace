@@ -2,8 +2,9 @@
 {
 	public enum LockerState
 	{
-		Inactive,
-		Locked,
-		Unlocked
+		InactiveLocked,
+		InactiveUnLocked,
+		ActiveLocked,
+		ActiveUnlocked
 	}
 }

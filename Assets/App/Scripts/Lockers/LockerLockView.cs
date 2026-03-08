@@ -13,14 +13,14 @@ namespace App.Lockers
 		{
 			switch (state)
 			{
-				case LockerState.Inactive:
+				case LockerState.InactiveLocked:
 					handIcon.gameObject.SetActive(false);
 					break;
-				case LockerState.Locked:
+				case LockerState.ActiveLocked:
 					handIcon.color = lockedColor;
 					handIcon.gameObject.SetActive(true);
 					break;
-				case LockerState.Unlocked:
+				case LockerState.ActiveUnlocked:
 					handIcon.color = unlockedColor;
 					handIcon.gameObject.SetActive(true);
 					break;

@@ -20,7 +20,7 @@ namespace App.InteractiveObjects
 
         public void SetTarget(IInteractiveObj interactiveObj)
         {
-            if (interactiveObj.IsAnyNull())
+            if (interactiveObj.IsAnyNull() || !interactiveObj.IsInteractive())
             {
                 highlightImage.gameObject.SetActive(false);
                 nonInteractableImage.gameObject.SetActive(false);

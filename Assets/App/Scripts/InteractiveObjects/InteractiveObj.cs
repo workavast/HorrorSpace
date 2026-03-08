@@ -4,14 +4,16 @@ namespace App.InteractiveObjects
 {
     public class InteractiveObj : MonoBehaviour, IInteractiveObj
     {
+        [SerializeField] private bool isActive = true;
         [SerializeField] private bool isInteractable = true;
 
+        public bool IsActive => isActive;
         public bool IsInteractable => isInteractable;
         public GameObject Go => gameObject;
 
-        public void SetState(bool isInteractableState)
+        public void SetActivityState(bool isActiveState)
         {
-            isInteractable = isInteractableState;
+            isActive = isActiveState;
         }
     }
 }

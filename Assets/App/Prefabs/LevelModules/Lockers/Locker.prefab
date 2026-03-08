@@ -363,6 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4401e18ed145118cc794a314dc66d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Lockers.LockerDoorBlocker
+  draggedObj: {fileID: 5735432922244311765}
+  interactiveObj: {fileID: 7661551946611959354}
   doorRb: {fileID: 126666262394216277}
 --- !u!114 &5735432922244311765
 MonoBehaviour:
@@ -388,6 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff2a8bdc6ba46cb85be95b300f5047f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.InteractiveObjects.InteractiveObj
+  isActive: 1
   isInteractable: 1
 --- !u!65 &2927382207827327247
 BoxCollider:

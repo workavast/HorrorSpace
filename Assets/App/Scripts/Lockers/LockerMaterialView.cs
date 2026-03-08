@@ -14,9 +14,9 @@ namespace App.Lockers
 		{
 			var material = state switch
 			{
-				LockerState.Inactive => inactiveMat,
-				LockerState.Locked => lockedMat,
-				LockerState.Unlocked => unlockedMat,
+				LockerState.InactiveLocked => inactiveMat,
+				LockerState.ActiveLocked => lockedMat,
+				LockerState.ActiveUnlocked => unlockedMat,
 				_ => throw new ArgumentOutOfRangeException(nameof(state), state, null)
 			};
 			

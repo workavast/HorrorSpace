@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace App.ObjectHandling
+namespace App.DraggedObjects
 {
     /// <summary>
     /// Interface for objects that can be dragged by the player.
