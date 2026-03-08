@@ -12,6 +12,7 @@ namespace App.ObjectHandling
         public override void Enter(string[] args)
         {
             _context.CameraController.SetCameraRotationEnabled(false);
+            _context.CursorViewToggler.SetState(true);
         }
 
         public override void Exit()

@@ -10,6 +10,7 @@ namespace App.ObjectHandling
         public readonly PlayerInputManager InputManager;
         public readonly CameraController CameraController;
         public readonly Transform PlayerTransform;
+        public readonly CursorViewToggler CursorViewToggler;
 
         public bool HasHandledObject => HandledObject != null;
         
@@ -23,11 +24,12 @@ namespace App.ObjectHandling
         public Vector3 PickupPoint;                   // world point where object was grabbed
         public Vector3 PickupOffsetLocal;             // local offset from object origin to pickup point
 
-        public HandContext(PlayerInputManager inputManager, CameraController cameraController, Transform playerTransform)
+        public HandContext(PlayerInputManager inputManager, CameraController cameraController, Transform playerTransform, CursorViewToggler cursorViewToggler)
         {
             InputManager = inputManager;
             CameraController = cameraController;
             PlayerTransform = playerTransform;
+            CursorViewToggler = cursorViewToggler;
         }
 
         public void SetDefaultObjectDampings(float defaultObjectLinearDamping, float defaultObjectAngularDamping)

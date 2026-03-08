@@ -11,6 +11,7 @@ namespace App.ObjectHandling
         [SerializeField] private PlayerInputManager inputManager;
         [SerializeField] private CameraController cameraController;
         [SerializeField] private Transform playerTransform;
+        [SerializeField] private CursorViewToggler cursorViewToggler;
         [SerializeField] private HandParams handParams = new();
 
         private HandContext _handContext;
@@ -24,7 +25,7 @@ namespace App.ObjectHandling
 
         private void Initialize()
         {
-            _handContext = new HandContext(inputManager, cameraController, playerTransform);
+            _handContext = new HandContext(inputManager, cameraController, playerTransform, cursorViewToggler);
             
             var states = new List<StateBase>
             {

@@ -12,6 +12,7 @@ namespace App.ObjectHandling
 
         public override void Enter(string[] args)
         {
+            _context.CursorViewToggler.SetState(false);
         }
 
         public override void Exit()

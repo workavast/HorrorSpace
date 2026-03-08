@@ -9,7 +9,7 @@
 
         public override void Enter(string[] args)
         {
-            
+            _context.CursorViewToggler.SetState(true);
         }
 
         public override void Exit()
