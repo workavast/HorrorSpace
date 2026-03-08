@@ -13,12 +13,24 @@ PrefabInstance:
       value: decorative_half_wall_3_LOD Variant
       objectReference: {fileID: 0}
     - target: {fileID: 146402, guid: 9cf71dac1b15d4546836049ad611cbc9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 146402, guid: 9cf71dac1b15d4546836049ad611cbc9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 165818, guid: 9cf71dac1b15d4546836049ad611cbc9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 165818, guid: 9cf71dac1b15d4546836049ad611cbc9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 190390, guid: 9cf71dac1b15d4546836049ad611cbc9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 190390, guid: 9cf71dac1b15d4546836049ad611cbc9, type: 3}
       propertyPath: m_StaticEditorFlags

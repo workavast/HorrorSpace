@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using App.DraggedDoors;
 using App.Lockers.FSM;
 using App.Lockers.Views;
 using Avastrad.FSM;
@@ -11,7 +12,7 @@ namespace App.Lockers
 	{
 		[SerializeField] private LockerState initialState;
 		[SerializeField] private LockerView view;
-		[SerializeField] private LockerDoor door;
+		[SerializeField] private DraggedDoor door;
 		
 		private LockerContext _context;
 		private StateMachine _fsm;

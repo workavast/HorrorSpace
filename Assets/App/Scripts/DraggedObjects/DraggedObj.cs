@@ -30,11 +30,6 @@ namespace App.DraggedObjects
 			
 		}
 		
-		public void SetState(bool isDragged)
-		{
-			CanBeDragged = CanBeHandled = isDragged;
-		}
-		
 		public void SetStateWithRb(bool isDragged)
 		{
 			CanBeDragged = CanBeHandled = isDragged;

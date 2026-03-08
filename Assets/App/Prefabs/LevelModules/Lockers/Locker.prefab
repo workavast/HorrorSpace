@@ -222,15 +222,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 78b82625a57a0844f9d030de3b3eedfb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0814912
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78b82625a57a0844f9d030de3b3eedfb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.19205618
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78b82625a57a0844f9d030de3b3eedfb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.467397
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78b82625a57a0844f9d030de3b3eedfb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -329,7 +329,7 @@ PrefabInstance:
       addedObject: {fileID: 162165752906258141}
     - targetCorrespondingSourceObject: {fileID: 1983162374848688037, guid: 78b82625a57a0844f9d030de3b3eedfb, type: 3}
       insertIndex: 1
-      addedObject: {fileID: 4490875227778787357}
+      addedObject: {fileID: 381616916771988293}
     - targetCorrespondingSourceObject: {fileID: 1983162374848688037, guid: 78b82625a57a0844f9d030de3b3eedfb, type: 3}
       insertIndex: 2
       addedObject: {fileID: 5735432922244311765}
@@ -351,7 +351,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1983162374848688037, guid: 78b82625a57a0844f9d030de3b3eedfb, type: 3}
   m_PrefabInstance: {fileID: 4244785940470204039}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4490875227778787357
+--- !u!114 &381616916771988293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,9 +360,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2408609956665895202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4401e18ed145118cc794a314dc66d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c44a7a040534a56abee371cecedcf70, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.Lockers.LockerDoorBlocker
+  m_EditorClassIdentifier: Assembly-CSharp::App.DraggedDoors.DraggedDoor
   draggedObj: {fileID: 5735432922244311765}
   interactiveObj: {fileID: 7661551946611959354}
 --- !u!114 &5735432922244311765
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.Lockers.LockerController
   initialState: 0
   view: {fileID: 289522358988700857}
-  door: {fileID: 4490875227778787357}
+  door: {fileID: 381616916771988293}
 --- !u!114 &289522358988700857
 MonoBehaviour:
   m_ObjectHideFlags: 0

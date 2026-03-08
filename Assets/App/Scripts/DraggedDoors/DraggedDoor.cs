@@ -2,17 +2,17 @@
 using App.InteractiveObjects;
 using UnityEngine;
 
-namespace App.Lockers
+namespace App.DraggedDoors
 {
-	public class LockerDoor : MonoBehaviour
+	public class DraggedDoor : MonoBehaviour
 	{
 		[SerializeField] private DraggedObj draggedObj;
 		[SerializeField] private InteractiveObj interactiveObj;
 		
-		public void SetState(bool isLocked)
+		public void SetState(bool isDragged)
 		{
-			draggedObj.SetStateWithRb(!isLocked);
-			interactiveObj.SetActivityState(!isLocked);
+			draggedObj.SetStateWithRb(isDragged);
+			interactiveObj.SetActivityState(isDragged);
 		}
 	}
 }

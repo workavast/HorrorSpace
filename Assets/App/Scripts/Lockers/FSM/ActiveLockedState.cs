@@ -9,7 +9,7 @@
 		public override void Enter(string[] args)
 		{
 			_context.View.SetState(LockerState.ActiveLocked);
-			_context.Door.SetState(true);
+			_context.Door.SetState(false);
 		}
 
 		public override void Exit()

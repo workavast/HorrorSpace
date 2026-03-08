@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8746983923635098999}
   - component: {fileID: 5293537076177942651}
   - component: {fileID: 4848323916782725337}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LightBlocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}

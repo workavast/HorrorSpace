@@ -13,6 +13,10 @@ PrefabInstance:
       value: window_big_blocker_2
       objectReference: {fileID: 0}
     - target: {fileID: 102200, guid: 6dc2880f157b0954f94e34369a97cc6f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 102200, guid: 6dc2880f157b0954f94e34369a97cc6f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

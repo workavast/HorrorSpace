@@ -146,7 +146,7 @@ MonoBehaviour:
     HeadCollisionDistance: 0.1
     ObstacleLayer:
       serializedVersion: 2
-      m_Bits: 55
+      m_Bits: 119
     StandCheckDistance: 1.35
     StandCheckOffset: -0.1
     CollisionCheckRadius: 0.59
@@ -155,7 +155,7 @@ MonoBehaviour:
   interactRange: 3
   interactLayerMask:
     serializedVersion: 2
-    m_Bits: 23
+    m_Bits: 87
   jumpDebugStates:
     queue:
     - 
@@ -220,10 +220,11 @@ MonoBehaviour:
   inputManager: {fileID: 7483723162105313711}
   cameraController: {fileID: 1287651065015622182}
   playerTransform: {fileID: 4095698566600033491}
+  cursorViewToggler: {fileID: 0}
   handParams:
     handleLayerMask:
       serializedVersion: 2
-      m_Bits: 23
+      m_Bits: 87
     pickupRange: 3
     autoDropDistance: 6
     minDistance: 1.5
@@ -271,7 +272,7 @@ MonoBehaviour:
   MaxStableSlopeAngle: 60
   StableGroundLayers:
     serializedVersion: 2
-    m_Bits: 23
+    m_Bits: 87
   DiscreteCollisionEvents: 0
   StepHandling: 1
   MaxStepHeight: 0.5
