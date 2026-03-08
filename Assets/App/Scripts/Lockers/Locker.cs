@@ -1,46 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
 using App.Lockers.FSM;
+using App.Lockers.Views;
 using Avastrad.FSM;
 using UnityEngine;
 
 namespace App.Lockers
 {
-	public class LockerController : MonoBehaviour
+	public class Locker : MonoBehaviour
 	{
 		[SerializeField] private LockerState initialState;
-		[SerializeField] private LockerStateView view;
-		[SerializeField] private LockerDoorBlocker doorBlocker;
+		[SerializeField] private LockerView view;
+		[SerializeField] private LockerDoor door;
 		
 		private LockerContext _context;
 		private StateMachine _fsm;
 		
 		private void Awake()
 		{
-			_context = new LockerContext(view, doorBlocker);
+			_context = new LockerContext(view, door);
 
 			var states = new List<StateBase>
 			{
-				new InactiveOpenState(_context),
-				new ActiveOpenState(_context),
-				new InactiveCloseState(_context),
-				new ActiveCloseState(_context)
+				new InactiveUnLockedState(_context),
+				new ActiveUnLockedState(_context),
+				new InactiveLockedState(_context),
+				new ActiveLockedState(_context)
 			};
 			_fsm = new StateMachine(states);
 
 			switch (initialState)
 			{
 				case LockerState.InactiveLocked:
-					_fsm.Init<InactiveCloseState>();
+					_fsm.Init<InactiveLockedState>();
 					break;
 				case LockerState.InactiveUnLocked:
-					_fsm.Init<InactiveOpenState>();
+					_fsm.Init<InactiveUnLockedState>();
 					break;
 				case LockerState.ActiveLocked:
-					_fsm.Init<ActiveOpenState>();
+					_fsm.Init<ActiveLockedState>();
 					break;
 				case LockerState.ActiveUnlocked:
-					_fsm.Init<ActiveCloseState>();
+					_fsm.Init<ActiveUnLockedState>();
 					break;
 				default:
 					throw new ArgumentOutOfRangeException();
@@ -50,9 +51,9 @@ namespace App.Lockers
 		public void SetUnLockState(bool unlocked)
 		{
 			if (unlocked)
-				_fsm.SetState<ActiveOpenState>();
+				_fsm.SetState<ActiveUnLockedState>();
 			else
-				_fsm.SetState<ActiveCloseState>();
+				_fsm.SetState<ActiveLockedState>();
 		}
 	}
 }

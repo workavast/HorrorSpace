@@ -1,17 +1,16 @@
-﻿using App.InteractiveObjects;
+﻿using App.Lockers.Views;
 
 namespace App.Lockers
 {
 	public class LockerContext
 	{
-		public LockerState State { get; set; }
-		public readonly LockerStateView StateView;
-		public readonly LockerDoorBlocker DoorBlocker;
+		public readonly LockerView View;
+		public readonly LockerDoor Door;
 
-		public LockerContext(LockerStateView stateView, LockerDoorBlocker doorBlocker)
+		public LockerContext(LockerView view, LockerDoor door)
 		{
-			StateView = stateView;
-			DoorBlocker = doorBlocker;
+			View = view;
+			Door = door;
 		}
 	}
 }

@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace App.Lockers
+namespace App.Lockers.Views
 {
-	public class LockerStateView : MonoBehaviour
+	public class LockerView : MonoBehaviour
 	{
 		[SerializeField] private LockerLockView lockerLockView;
 		[SerializeField] private LockerMaterialView lockerMaterialView;

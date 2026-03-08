@@ -4,15 +4,15 @@ using UnityEngine;
 
 namespace App.Lockers
 {
-	public class LockerDoorBlocker : MonoBehaviour
+	public class LockerDoor : MonoBehaviour
 	{
 		[SerializeField] private DraggedObj draggedObj;
 		[SerializeField] private InteractiveObj interactiveObj;
 		
-		public void SetState(bool isBlocked)
+		public void SetState(bool isLocked)
 		{
-			draggedObj.SetStateWithRb(!isBlocked);
-			interactiveObj.SetActivityState(!isBlocked);
+			draggedObj.SetStateWithRb(!isLocked);
+			interactiveObj.SetActivityState(!isLocked);
 		}
 	}
 }

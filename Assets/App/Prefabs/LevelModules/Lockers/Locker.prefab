@@ -365,7 +365,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.Lockers.LockerDoorBlocker
   draggedObj: {fileID: 5735432922244311765}
   interactiveObj: {fileID: 7661551946611959354}
-  doorRb: {fileID: 126666262394216277}
 --- !u!114 &5735432922244311765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.Lockers.LockerController
   initialState: 0
   view: {fileID: 289522358988700857}
-  doorBlocker: {fileID: 4490875227778787357}
+  door: {fileID: 4490875227778787357}
 --- !u!114 &289522358988700857
 MonoBehaviour:
   m_ObjectHideFlags: 0

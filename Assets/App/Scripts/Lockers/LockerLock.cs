@@ -7,7 +7,7 @@ namespace App.Lockers
 {
 	public class LockerLock : MonoBehaviour
 	{
-		[SerializeField] private LockerController locker;
+		[SerializeField] private Locker locker;
 		[SerializeField] private LockProvider lockProvider;
 		[SerializeField] private AudioPlayer audioPlayer;
 		

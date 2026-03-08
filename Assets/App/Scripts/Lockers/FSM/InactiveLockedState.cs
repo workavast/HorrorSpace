@@ -1,15 +1,15 @@
 ﻿namespace App.Lockers.FSM
 {
-	public class ActiveOpenState : LockerStateBase
+	public class InactiveLockedState : LockerStateBase
 	{
-		public ActiveOpenState(LockerContext context) : base(context)
+		public InactiveLockedState(LockerContext context) : base(context)
 		{
 		}
 
 		public override void Enter(string[] args)
 		{
-			_context.StateView.SetState(LockerState.ActiveUnlocked);
-			_context.DoorBlocker.SetState(false);
+			_context.View.SetState(LockerState.InactiveLocked);
+			_context.Door.SetState(true);
 		}
 
 		public override void Exit()

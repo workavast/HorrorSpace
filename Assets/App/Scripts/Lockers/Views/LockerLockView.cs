@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace App.Lockers
+namespace App.Lockers.Views
 {
 	public class LockerLockView : MonoBehaviour
 	{
