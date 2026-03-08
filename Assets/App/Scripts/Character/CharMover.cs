@@ -36,36 +36,38 @@ namespace App.Character
 
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
-            Vector3 moveDirection;
-            float targetSpeed;
-            if (_ctx.VelocityInput == Vector2.zero)
-            {
-                targetSpeed = 0;
-                moveDirection = -currentVelocity.X0Z().normalized;
-            }
-            else
-            {
-                targetSpeed = _ctx.TargetSpeed;
-                moveDirection = _ctx.Transform.right * _ctx.VelocityInput.x + 
-                                _ctx.Transform.forward * _ctx.VelocityInput.y;    
-            }
+            {//decelerate old velocity
+                const int targetSpeed = 0;
+                var decelerationScale = (_params.Deceleration * deltaTime);
 
-            var velocityDelta = moveDirection * (_params.Acceleration * deltaTime);
-            currentVelocity += velocityDelta;
+                if (currentVelocity.XZ().magnitude - targetSpeed < decelerationScale) 
+                    decelerationScale = currentVelocity.XZ().magnitude - targetSpeed;
+                
+                var decelerationResult = currentVelocity.X0Z().normalized * decelerationScale;
+                currentVelocity -= decelerationResult;
+            }
             
-            if (currentVelocity.XZ().magnitude > targetSpeed)
+            if (_ctx.VelocityInput != Vector2.zero)
             {
-                var acceleration = _params.Deceleration;
-                if (_ctx.VelocityInput != Vector2.zero) 
-                    acceleration += _params.Acceleration;
+                var targetSpeed = _ctx.TargetSpeed;
+                var moveDirection = _ctx.Transform.right * _ctx.VelocityInput.x + 
+                                    _ctx.Transform.forward * _ctx.VelocityInput.y;    
                 
-                var decScale = (acceleration * deltaTime);
-
-                if (currentVelocity.XZ().magnitude - targetSpeed < decScale) 
-                    decScale = currentVelocity.XZ().magnitude - targetSpeed;
+                //add deceleration to the acceleration need cus in prev block we decelerate old velocity
+                var velocityDelta = moveDirection * ((_params.Acceleration + _params.Deceleration) * deltaTime);
+                currentVelocity += velocityDelta;
                 
-                var dec = currentVelocity.X0Z().normalized * decScale;
-                currentVelocity -= dec;
+                if (currentVelocity.XZ().magnitude > targetSpeed)
+                {
+                    //add acceleration to the deceleration need cus in prev block we use sum of them
+                    var deceleration = _params.Deceleration + _params.Acceleration;
+                    var decelerationScale = (deceleration * deltaTime);
+                    if (currentVelocity.XZ().magnitude - targetSpeed < decelerationScale) 
+                        decelerationScale = currentVelocity.XZ().magnitude - targetSpeed;
+                
+                    var dec = currentVelocity.X0Z().normalized * decelerationScale;
+                    currentVelocity -= dec;
+                }
             }
 
             currentVelocity.y = _ctx.GravityVelocity;

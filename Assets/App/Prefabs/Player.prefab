@@ -135,8 +135,8 @@ MonoBehaviour:
   playerParams:
     MoveSpeed: 5
     SprintSpeed: 8
-    Acceleration: 30
-    Deceleration: 30
+    Acceleration: 20
+    Deceleration: 20
     JumpForce: 5
     Gravity: 9.81
     AirDrag: 0.2

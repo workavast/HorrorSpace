@@ -19,6 +19,9 @@ namespace Avastrad.Extensions
         public static Vector3 X0Z(this Vector3 vector3, float o = 0) 
             => new(vector3.x, o, vector3.z);
         
+        public static Vector3 Z0X(this Vector3 vector3, float o = 0) 
+            => new(vector3.z, o, vector3.x);
+        
         public static Vector3 X_Z(this Vector3 vector3, Vector3 addVector3) 
             => new(addVector3.x, vector3.y, addVector3.z);
         
