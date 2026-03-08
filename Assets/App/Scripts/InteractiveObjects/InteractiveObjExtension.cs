@@ -2,7 +2,7 @@
 {
 	public static class InteractiveObjExtension
 	{
-		public static bool IsInteractive(this IInteractiveObj obj) 
-			=> obj.IsActive && obj.IsInteractable;
+		public static bool ShouldDraw(this IInteractiveObj obj) 
+			=> obj.IsActive;
 	}
 }
