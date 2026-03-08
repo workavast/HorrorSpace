@@ -13,6 +13,8 @@ namespace App.Doors
         [SerializeField] private BoxCollider closeCheckCollider;
         [SerializeField] private LayerMask checkLayers;
         
+        public bool IsOpen => isOpen;
+        
         public event Action OnUse;
         public event Action<bool> OnTryUse;
         public event Action OnLockStateChanged;

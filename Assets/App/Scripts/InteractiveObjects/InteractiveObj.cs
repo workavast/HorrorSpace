@@ -8,5 +8,10 @@ namespace App.InteractiveObjects
 
         public bool IsInteractable => isInteractable;
         public GameObject Go => gameObject;
+
+        public void SetState(bool isInteractableState)
+        {
+            isInteractable = isInteractableState;
+        }
     }
 }

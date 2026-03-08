@@ -288,6 +288,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7760671337751658530, guid: 95c450d295dfa7d46a601bf592323685, type: 3}
   m_PrefabInstance: {fileID: 6746384843890699004}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5877432639850903325 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 868962306392219105, guid: 95c450d295dfa7d46a601bf592323685, type: 3}
+  m_PrefabInstance: {fileID: 6746384843890699004}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8f118e43ec4b85833e49c2a6f10eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.InspectionPoints.InspectionBtn
 --- !u!1001 &7377594523534553167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -526,6 +537,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8488995788083161920, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+      propertyPath: securityCheckpointBtn
+      value: 
+      objectReference: {fileID: 5877432639850903325}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
