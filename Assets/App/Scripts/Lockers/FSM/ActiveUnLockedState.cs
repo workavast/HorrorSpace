@@ -1,4 +1,6 @@
-﻿namespace App.Lockers.FSM
+﻿using System.Collections.Generic;
+
+namespace App.Lockers.FSM
 {
 	public class ActiveUnLockedState : LockerStateBase
 	{
@@ -6,7 +8,7 @@
 		{
 		}
 
-		public override void Enter(string[] args)
+		public override void Enter(Dictionary<string, object> args)
 		{
 			_context.View.SetState(LockerState.ActiveUnlocked);
 			_context.Door.SetState(true);

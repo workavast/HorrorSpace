@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace App.Character.FSM.Movement
 {
     public class MovementStandState : MovementStateBase
@@ -6,7 +8,7 @@ namespace App.Character.FSM.Movement
         {
         }
 
-        public override void Enter(string[] args)
+        public override void Enter(Dictionary<string, object> args)
         {
             _ctx.CameraController.SetTargetHeight(_params.NormalCameraHeight);
         }

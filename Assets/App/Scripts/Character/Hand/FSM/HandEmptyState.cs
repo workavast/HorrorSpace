@@ -1,4 +1,5 @@
-﻿using App.DraggedObjects;
+﻿using System.Collections.Generic;
+using App.DraggedObjects;
 using App.ObjectHandling;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ namespace App.Character.Hand.FSM
         {
         }
 
-        public override void Enter(string[] args)
+        public override void Enter(Dictionary<string, object> args)
         {
             _ctx.CursorViewToggler.SetState(false);
             _ctx.DraggedObjMass = 0;
@@ -25,12 +26,12 @@ namespace App.Character.Hand.FSM
         {
             if (_ctx.InputManager.IsPickupPressed)
             {
-                TryPickupObject();
+                TryPickupObject(out var pickupPoint);
                 if (_ctx.HasHandledObject)
                 {
                     // Check if the object can be dragged
                     if (IsDraggable(_ctx.HandledObject))
-                        SetState<HandDragState>();
+                        SetState<HandDragState>(new() { { HandDragState.DragPointKey, pickupPoint } });
                     else
                         SetState<HandHoldState>();
                 }
@@ -41,7 +42,7 @@ namespace App.Character.Hand.FSM
         {
         }
 
-        private void TryPickupObject()
+        private bool TryPickupObject(out Vector3 pickupPoint)
         {
             var camera = _ctx.CameraController.GetCamera();
             var ray = new Ray(camera.transform.position, camera.transform.forward);
@@ -52,8 +53,15 @@ namespace App.Character.Hand.FSM
                                    hit.collider.GetComponentInParent<IHandleObject>();
 
                 if (handleObject != null && handleObject.CanBeHandled)
-                    PickupObject(handleObject, hit.point);
+                {
+                    pickupPoint = hit.point;
+                    PickupObject(handleObject, pickupPoint);
+                    return true;
+                }
             }
+
+            pickupPoint = default;
+            return false;
         }
 
         private void PickupObject(IHandleObject handleObject, Vector3 pickupPoint)
@@ -62,9 +70,6 @@ namespace App.Character.Hand.FSM
             handleObject.OnPickup();
             
             var objTransform = handleObject.Transform;
-
-            // store pickup point and local offset for dragging
-            _ctx.DragPoint = pickupPoint;
 
             // Calculate initial distance and offset
             var camera = _ctx.CameraController.GetCamera();

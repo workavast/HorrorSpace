@@ -1,4 +1,6 @@
-﻿namespace App.Character.Hand.FSM
+﻿using System.Collections.Generic;
+
+namespace App.Character.Hand.FSM
 {
     public class HandHoldState : HandState
     {
@@ -7,7 +9,7 @@
         {
         }
 
-        public override void Enter(string[] args)
+        public override void Enter(Dictionary<string, object> args)
         {
             _ctx.CursorViewToggler.SetState(true);
             _ctx.DraggedObjMass = 0;

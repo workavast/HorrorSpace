@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace App.Character.FSM.Jump
 {
     public class JumpGroundedState : JumpStateBase
@@ -6,7 +8,7 @@ namespace App.Character.FSM.Jump
         {
         }
 
-        public override void Enter(string[] args)
+        public override void Enter(Dictionary<string, object> args)
         {
             
         }

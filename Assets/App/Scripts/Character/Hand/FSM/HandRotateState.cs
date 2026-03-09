@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace App.Character.Hand.FSM
 {
@@ -9,7 +10,7 @@ namespace App.Character.Hand.FSM
         {
         }
 
-        public override void Enter(string[] args)
+        public override void Enter(Dictionary<string, object> args)
         {
             _ctx.CameraController.SetCameraRotationEnabled(false);
             _ctx.CursorViewToggler.SetState(true);

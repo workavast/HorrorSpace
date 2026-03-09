@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Avastrad.FSM
 {
@@ -6,7 +7,7 @@ namespace Avastrad.FSM
     {
         protected StateMachine _fsm;
 
-        public abstract void Enter(string[] args);
+        public abstract void Enter(Dictionary<string, object> args);
         public abstract void Exit();
         public abstract void ManualUpdate();
         public abstract void ManualFixedUpdate();
@@ -19,7 +20,7 @@ namespace Avastrad.FSM
 
         }
 
-        protected void SetState<T>() where T : StateBase
-            => _fsm.SetState<T>();
+        protected void SetState<T>(Dictionary<string, object> args = null) where T : StateBase
+            => _fsm.SetState<T>(args);
     }
 }

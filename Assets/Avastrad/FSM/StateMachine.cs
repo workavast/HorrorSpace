@@ -21,7 +21,7 @@ namespace Avastrad.FSM
             }
         }
 
-        public void Init<TState>(string[] args = null) 
+        public void Init<TState>(Dictionary<string, object> args = null) 
             where TState: StateBase
         {
             _activeState = _states[typeof(TState)];
@@ -34,7 +34,7 @@ namespace Avastrad.FSM
         public void ManualFixedUpdate()
             => _activeState.ManualFixedUpdate();
 
-        public void SetState<TState>(string[] args = null) 
+        public void SetState<TState>(Dictionary<string, object> args = null) 
             where TState : StateBase
         {
             var type = typeof(TState);

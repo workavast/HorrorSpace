@@ -17,7 +17,6 @@ namespace App.Character.Hand
 		public Quaternion TargetRotationRelativeToPlayer;
 		public float DefaultObjectLinearDamping;
 		public float DefaultObjectAngularDamping;
-		public Vector3 DragPoint;
 
 		public HandContext(PlayerInputManager inputManager, CameraController cameraController, Transform transform, CursorViewToggler cursorViewToggler)
 		{

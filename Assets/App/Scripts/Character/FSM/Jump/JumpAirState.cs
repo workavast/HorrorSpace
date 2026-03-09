@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace App.Character.FSM.Jump
@@ -8,7 +9,7 @@ namespace App.Character.FSM.Jump
         {
         }
 
-        public override void Enter(string[] args)
+        public override void Enter(Dictionary<string, object> args)
         {
             _ctx.IsInAirJump = true;
         }

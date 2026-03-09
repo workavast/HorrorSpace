@@ -1,19 +1,16 @@
+using System.Collections.Generic;
 using App.DraggedObjects;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace App.Character.Hand.FSM
 {
-    /// <summary>
-    /// State for dragging objects that implement IDraggable interface.
-    /// Dragging moves the previously picked-up point toward the current cursor ray
-    /// while maintaining the initial pickup distance from the camera.
-    /// </summary>
     public class HandDragState : HandState
     {
+        public const string DragPointKey = "dragPoint";
+        
         private IDraggable _draggableObject;
-        // offset from object origin to the point that was grabbed, in local space
-        private Vector3 _pickupOffsetLocal;
+        private Vector3 _pickupOffsetLocal; // offset from object origin to the point that was grabbed, in local space
         private float _distance;
         
         public HandDragState(HandContext ctx, IHandParams parameters)
@@ -21,9 +18,14 @@ namespace App.Character.Hand.FSM
         {
         }
 
-        public override void Enter(string[] args)
+        public override void Enter(Dictionary<string, object> args)
         {
-            // Get the draggable component from the handled object
+            if (!args.ContainsKey(DragPointKey))
+            {
+                Debug.LogError("No drag point found in args");
+                return;
+            }
+            
             var handleObject = _ctx.HandledObject;
             _draggableObject = handleObject?.Transform.GetComponent<IDraggable>() ??
                               handleObject?.Transform.GetComponentInParent<IDraggable>();
@@ -31,7 +33,6 @@ namespace App.Character.Hand.FSM
             if (_draggableObject == null)
             {
                 Debug.LogError("No draggable component found on object");
-                // Should not happen, but fallback to hold state
                 SetState<HandHoldState>();
                 return;
             }
@@ -40,12 +41,14 @@ namespace App.Character.Hand.FSM
             _ctx.CursorViewToggler.SetState(true);
             _ctx.DraggedObjMass = _draggableObject.Mass;
 
+            var dragPoint = (Vector3)args[DragPointKey];
+            
             // compute local offset to the point that was grabbed
             var objTransform = handleObject.Transform;
-            _pickupOffsetLocal = objTransform.InverseTransformPoint(_ctx.DragPoint);
+            _pickupOffsetLocal = objTransform.InverseTransformPoint(dragPoint);
             
             var camera = _ctx.CameraController.GetCamera();
-            _distance = Vector3.Distance(camera.transform.position, _ctx.DragPoint);
+            _distance = Vector3.Distance(camera.transform.position, dragPoint);
         }
 
         public override void Exit()
@@ -65,7 +68,6 @@ namespace App.Character.Hand.FSM
                 return;
             }
 
-            // Drop if pickup button is released or object goes out of range
             if (!_ctx.InputManager.IsPickupPressed || !ObjectInHoldRange())
             {
                 DropObject();
