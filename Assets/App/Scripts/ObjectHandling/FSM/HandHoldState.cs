@@ -10,6 +10,7 @@
         public override void Enter(string[] args)
         {
             _context.CursorViewToggler.SetState(true);
+            _context.DraggedObjMass = 0;
         }
 
         public override void Exit()

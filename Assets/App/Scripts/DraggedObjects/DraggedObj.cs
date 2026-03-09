@@ -6,6 +6,7 @@ namespace App.DraggedObjects
 	[RequireComponent(typeof(Rigidbody))]
 	public class DraggedObj : MonoBehaviour, IDraggable, IHandleObject
 	{
+		public float Mass => Rb.mass;
 		public bool CanBeHandled { get; private set; } = true;
 		public bool CanBeDragged { get; private set; } = true;
     

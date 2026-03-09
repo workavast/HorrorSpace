@@ -14,6 +14,8 @@ namespace App.ObjectHandling
         [SerializeField] private CursorViewToggler cursorViewToggler;
         [SerializeField] private HandParams handParams = new();
 
+        public float DraggedObjMass => _handContext.DraggedObjMass;
+        
         private HandContext _handContext;
         private StateMachine _fsm;
 

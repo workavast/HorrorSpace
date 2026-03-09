@@ -1,4 +1,5 @@
-﻿using Avastrad.Extensions;
+﻿using App.ObjectHandling;
+using Avastrad.Extensions;
 using KinematicCharacterController;
 using UnityEngine;
 
@@ -6,26 +7,23 @@ namespace App.Character
 {
     public class CharMover : MonoBehaviour, ICharacterController
     {
-        public KinematicCharacterMotor Motor;
-
+        [SerializeField] private KinematicCharacterMotor motor;
+        [SerializeField] private HandsController handsController;
+        
         private PlayerContext _ctx;
         private PlayerParams _params;
         private Vector3 _delta;
 
-        private void Awake()
+        public void Initialize(PlayerContext playerContext, PlayerParams playerParams)
         {
-            Motor.CharacterController = this;
+            motor.CharacterController = this;
+            _ctx = playerContext;
+            _params = playerParams;
         }
-
+        
         public void SetLookDeltaRotation(Vector3 eulerDelta)
         {
             _delta = eulerDelta;
-        }
-            
-        public void Initialize(PlayerContext playerContext, PlayerParams playerParams)
-        {
-            _ctx = playerContext;
-            _params = playerParams;
         }
         
         public void UpdateRotation(ref Quaternion currentRotation, float deltaTime)
@@ -49,7 +47,7 @@ namespace App.Character
             
             if (_ctx.VelocityInput != Vector2.zero)
             {
-                var targetSpeed = _ctx.TargetSpeed;
+                var targetSpeed = _ctx.TargetSpeed * _params.VelocityModifierPerGrabObjMass.Evaluate(handsController.DraggedObjMass);
                 var moveDirection = _ctx.Transform.right * _ctx.VelocityInput.x + 
                                     _ctx.Transform.forward * _ctx.VelocityInput.y;    
                 

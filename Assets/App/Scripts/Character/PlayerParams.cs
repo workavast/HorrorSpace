@@ -5,6 +5,7 @@ namespace App.Character
     [System.Serializable]
     public class PlayerParams
     {
+        public AnimationCurve VelocityModifierPerGrabObjMass;
         public float MoveSpeed = 5f;
         public float SprintSpeed = 8f;
         public float Acceleration = 10f;

@@ -14,6 +14,7 @@ namespace App.ObjectHandling
 
         public bool HasHandledObject => HandledObject != null;
         
+        public float DraggedObjMass;
         public IHandleObject HandledObject;
         public float CurrentDistance;
         public Quaternion TargetRotationRelativeToPlayer;

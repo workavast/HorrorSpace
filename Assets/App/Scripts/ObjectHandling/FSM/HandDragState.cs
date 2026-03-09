@@ -38,6 +38,7 @@ namespace App.ObjectHandling.FSM
 
             _draggableObject.OnDragStart();
             _context.CursorViewToggler.SetState(true);
+            _context.DraggedObjMass = _draggableObject.Mass;
 
             // compute local offset to the point that was grabbed
             var objTransform = handleObject.Transform;

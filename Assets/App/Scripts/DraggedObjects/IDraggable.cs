@@ -7,6 +7,8 @@ namespace App.DraggedObjects
     /// </summary>
     public interface IDraggable
     {
+        public float Mass { get; }
+        
         /// <summary>
         /// Determines whether this object can be dragged.
         /// </summary>

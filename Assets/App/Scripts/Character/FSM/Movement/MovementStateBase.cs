@@ -1,4 +1,3 @@
-using Avastrad.Extensions;
 using Avastrad.FSM;
 using UnityEngine;
 

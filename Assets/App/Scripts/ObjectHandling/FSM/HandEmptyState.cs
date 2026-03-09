@@ -14,6 +14,7 @@ namespace App.ObjectHandling
         public override void Enter(string[] args)
         {
             _context.CursorViewToggler.SetState(false);
+            _context.DraggedObjMass = 0;
         }
 
         public override void Exit()
