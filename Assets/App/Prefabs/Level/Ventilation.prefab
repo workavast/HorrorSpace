@@ -150,7 +150,7 @@ Transform:
   m_GameObject: {fileID: 1851705951556759435}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1, z: 0.15}
+  m_LocalPosition: {x: 0, y: 1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -175,7 +175,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.5, y: 1.5, z: 0.3}
+  m_Size: {x: 3.5, y: 1.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3749901991665459804
 GameObject:
@@ -311,8 +311,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5291804172800086239}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.1, z: 0.15}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -337,7 +337,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.5, y: 1.5, z: 0.3}
+  m_Size: {x: 3.5, y: 1.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6812700365347573593
 GameObject:
@@ -1601,14 +1601,6 @@ PrefabInstance:
     - target: {fileID: 3443257213867172465, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
       propertyPath: m_Name
       value: DoorInteractButton_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3443257213867313399, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.09999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 3443257213867313399, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.09999999
       objectReference: {fileID: 0}
     - target: {fileID: 3443257213867313399, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
       propertyPath: m_LocalPosition.x

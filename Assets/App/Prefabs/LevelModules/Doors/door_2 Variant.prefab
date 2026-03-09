@@ -51,7 +51,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.6, y: 3.5, z: 1}
+  m_Size: {x: 2.6, y: 3.5, z: 0.75}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &7727678449699579597
 PrefabInstance:
@@ -301,9 +301,6 @@ MonoBehaviour:
   checkLayers:
     serializedVersion: 2
     m_Bits: 63
-  cantCloseDoorAudioPlayer:
-    audioPrefab: {fileID: 6807525843585063602, guid: 8408c38757de5414bbe99ac3722babb4, type: 3}
-    point: {fileID: 8880944466277366744}
 --- !u!114 &7992001953913379970
 MonoBehaviour:
   m_ObjectHideFlags: 0

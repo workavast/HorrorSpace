@@ -53,6 +53,7 @@ namespace App.Doors
         }
         
         private bool CanBeLocked() 
-            => !Physics.CheckBox(closeCheckCollider.transform.position, closeCheckCollider.size / 2, Quaternion.identity, checkLayers, QueryTriggerInteraction.Ignore);
+            => !Physics.CheckBox(closeCheckCollider.transform.position, closeCheckCollider.size / 2, 
+                closeCheckCollider.transform.rotation, checkLayers, QueryTriggerInteraction.Ignore);
     }
 }

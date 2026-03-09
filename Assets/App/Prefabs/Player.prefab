@@ -178,26 +178,26 @@ MonoBehaviour:
   handParams:
     handleLayerMask:
       serializedVersion: 2
-      m_Bits: 87
+      m_Bits: 83
     pickupRange: 3
     autoDropDistance: 6
     minDistance: 1.5
     maxDistance: 4
     zoomSpeed: 5
     attractionForce: 5000
-    dragAttractionForce: 100000
     maxAttractionSpeed: 20
     angularDampingPickup: 4
     linerDampingPickup: 12
     rotationReturnSpeed: 10
     manualRotationSpeed: 0.1
     torqueMultiplier: 1
+    dragAttractionForce: 100000
     angularDampingDrag: 4
     linerDampingDrag: 12
   interactRange: 3
   interactLayerMask:
     serializedVersion: 2
-    m_Bits: 87
+    m_Bits: 83
   jumpDebugStates:
     queue:
     - 
