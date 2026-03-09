@@ -2,7 +2,7 @@ namespace App.Character.FSM.Movement
 {
     public class MovementStandState : MovementStateBase
     {
-        public MovementStandState(PlayerParams p, IReadOnlyInputProvider input, PlayerContext ctx) : base(p, input, ctx)
+        public MovementStandState(PlayerParams p, PlayerInputManager input, PlayerContext ctx) : base(p, input, ctx)
         {
         }
 

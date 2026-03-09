@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using App.Character.FSM.Jump;
 using App.Character.FSM.Movement;
+using App.Character.Hand;
+using App.Character.Hand.FSM;
 using App.InteractiveObjects;
 using App.ObjectHandling;
 using App.Usable;
@@ -17,10 +19,11 @@ namespace App.Character
         [SerializeField] private KinematicCharacterMotor motor;
         [SerializeField] private CameraController cameraController;
         [SerializeField] private PlayerInputManager inputManager;
-        [SerializeField] private HandsController handsController;
+        [SerializeField] private CursorViewToggler cursorViewToggler;
         [SerializeField] private InteractiveObjBoundsDrawer interactiveObjBoundsDrawer;
         [Space]
         [SerializeField] private PlayerParams playerParams = new();
+        [SerializeField] private HandParams handParams = new();
 
         [Header("Interaction")]
         [SerializeField] private float interactRange = 3f;
@@ -30,10 +33,11 @@ namespace App.Character
         [SerializeField] private ReadOnlyQueue<string> jumpDebugStates;
 
         private PlayerContext _ctx;
-        private InputProvider _inputProvider;
+        
         private StateMachine _movementFsm;
         private StateMachine _jumpFsm;
         private StateMachine _mainFsm;
+        private StateMachine _handFsm;
 
         private void Awake()
         {
@@ -46,14 +50,13 @@ namespace App.Character
 
         private void Initialize()
         {
-            _ctx = new PlayerContext(charMover, motor,cameraController, transform);
-            _inputProvider = new InputProvider();
+            _ctx = new PlayerContext(motor,cameraController, transform, cursorViewToggler, inputManager);
 
             // Movement FSM
             var moveStates = new List<StateBase>
             {
-                new MovementStandState(playerParams, _inputProvider, _ctx),
-                new MovementCrouchState(playerParams, _inputProvider, _ctx)
+                new MovementStandState(playerParams, inputManager, _ctx),
+                new MovementCrouchState(playerParams, inputManager, _ctx)
             };
             _movementFsm = new StateMachine(moveStates);
             _movementFsm.Init<MovementStandState>();
@@ -61,59 +64,31 @@ namespace App.Character
             // Jump FSM
             var jumpStates = new List<StateBase>
             {
-                new JumpGroundedState(playerParams, _inputProvider, _ctx),
-                new JumpAirState(playerParams, _inputProvider, _ctx)
+                new JumpGroundedState(playerParams, inputManager, _ctx),
+                new JumpAirState(playerParams, inputManager, _ctx)
             };
             _jumpFsm = new StateMachine(jumpStates);
             _jumpFsm.Init<JumpGroundedState>();
             _jumpFsm.OnStateSwitched += (state) => jumpDebugStates.Enqueue(state.Name + " " + Time.time);
 
+            // Hand FSM
+            var handStates = new List<StateBase>
+            {
+                new HandEmptyState(_ctx, handParams),
+                new HandHoldState(_ctx, handParams),
+                new HandRotateState(_ctx, handParams),
+                new HandDragState(_ctx, handParams)
+            };
+            _handFsm = new StateMachine(handStates);
+            _handFsm.Init<HandEmptyState>();
+            
             // Main FSM with a single active state that routes input and updates inner FSMs
             var mainStates = new List<StateBase>
             {
-                new PlayerMainState(this, _inputProvider, _movementFsm, _jumpFsm)
+                new PlayerMainState(this, _movementFsm, _jumpFsm, _handFsm)
             };
             _mainFsm = new StateMachine(mainStates);
             _mainFsm.Init<PlayerMainState>();
-        }
-
-        // PlayerMainState nested so it can call private helpers cleanly
-        private class PlayerMainState : StateBase
-        {
-            private readonly PlayerCharacterController _owner;
-            private readonly InputProvider _inputProvider;
-            private readonly StateMachine _movementFsm;
-            private readonly StateMachine _jumpFsm;
-
-            public PlayerMainState(PlayerCharacterController owner, InputProvider input, StateMachine movementFsm, StateMachine jumpFsm)
-            {
-                _owner = owner;
-                _inputProvider = input;
-                _movementFsm = movementFsm;
-                _jumpFsm = jumpFsm;
-            }
-
-            public override void Enter(string[] args) { }
-            public override void Exit() { }
-            public override void ManualFixedUpdate() { }
-
-            public override void ManualUpdate()
-            {
-                // Read inputs into provider
-                _inputProvider.SetMove(_owner.inputManager.MoveInput);
-                _inputProvider.SetSprint(_owner.inputManager.IsSprintPressed);
-                _inputProvider.SetCrouch(_owner.inputManager.IsCrouchPressed);
-                _inputProvider.SetJumpThisFrame(_owner.inputManager.JumpPressedThisFrame);
-
-                // Update nested FSMs
-                _movementFsm.ManualUpdate();
-                _jumpFsm.ManualUpdate();
-
-                var isHoldingObject = _owner.handsController.IsHoldingObject();
-                _owner.CheckInteractionHighlight(!isHoldingObject);
-                if (_owner.inputManager.InteractPressedThisFrame && !isHoldingObject)
-                    _owner.TryUseObject();
-            }
         }
 
         private void TryUseObject()
@@ -149,6 +124,40 @@ namespace App.Character
             else
             {
                 interactiveObjBoundsDrawer.SetTarget(null);
+            }
+        }
+        
+        // PlayerMainState nested so it can call private helpers cleanly
+        private class PlayerMainState : StateBase
+        {
+            private readonly PlayerCharacterController _owner;
+            private readonly StateMachine _movementFsm;
+            private readonly StateMachine _jumpFsm;
+            private readonly StateMachine _handFsm;
+
+            public PlayerMainState(PlayerCharacterController owner, 
+                StateMachine movementFsm, StateMachine jumpFsm, StateMachine handFsm)
+            {
+                _owner = owner;
+                _movementFsm = movementFsm;
+                _jumpFsm = jumpFsm;
+                _handFsm = handFsm;
+            }
+
+            public override void Enter(string[] args) { }
+            public override void Exit() { }
+            public override void ManualFixedUpdate() { }
+
+            public override void ManualUpdate()
+            {
+                _movementFsm.ManualUpdate();
+                _jumpFsm.ManualUpdate();
+                _handFsm.ManualUpdate();
+                
+                var isHoldingObject = _owner._ctx.HasHandledObject;
+                _owner.CheckInteractionHighlight(!isHoldingObject);
+                if (_owner.inputManager.InteractPressedThisFrame && !isHoldingObject)
+                    _owner.TryUseObject();
             }
         }
     }

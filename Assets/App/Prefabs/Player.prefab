@@ -87,7 +87,6 @@ GameObject:
   - component: {fileID: 4247805323651797999}
   - component: {fileID: 1287651065015622182}
   - component: {fileID: 7483723162105313711}
-  - component: {fileID: 766444337314766684}
   - component: {fileID: 8450550693926369004}
   - component: {fileID: 5438028260905461622}
   - component: {fileID: 3548465234966692427}
@@ -130,7 +129,8 @@ MonoBehaviour:
   motor: {fileID: 5438028260905461622}
   cameraController: {fileID: 1287651065015622182}
   inputManager: {fileID: 7483723162105313711}
-  handsController: {fileID: 766444337314766684}
+  cursorViewToggler: {fileID: 0}
+  handsController: {fileID: 0}
   interactiveObjBoundsDrawer: {fileID: 0}
   playerParams:
     VelocityModifierPerGrabObjMass:
@@ -176,6 +176,23 @@ MonoBehaviour:
     CollisionCheckRadius: 0.59
     NormalCameraHeight: 2.1
     CrouchCameraHeight: 0.9
+  handParams:
+    handleLayerMask:
+      serializedVersion: 2
+      m_Bits: 87
+    pickupRange: 3
+    autoDropDistance: 6
+    minDistance: 1.5
+    maxDistance: 4
+    zoomSpeed: 5
+    attractionForce: 5000
+    dragAttractionForce: 100000
+    maxAttractionSpeed: 20
+    angularDampingPickup: 4
+    linerDampingPickup: 12
+    rotationReturnSpeed: 10
+    manualRotationSpeed: 0.1
+    torqueMultiplier: 1
   interactRange: 3
   interactLayerMask:
     serializedVersion: 2
@@ -229,39 +246,6 @@ MonoBehaviour:
   pickupAction: {fileID: -7917275616991045861, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   rotateAction: {fileID: 1077725060147773149, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   zoomAction: {fileID: 5741408299202811445, guid: 052faaac586de48259a63d0c4782560b, type: 3}
---- !u!114 &766444337314766684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8712057721741398327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82997740d70101142a6794e542ad085d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.ObjectHandling.HandleObjectController
-  inputManager: {fileID: 7483723162105313711}
-  cameraController: {fileID: 1287651065015622182}
-  playerTransform: {fileID: 4095698566600033491}
-  cursorViewToggler: {fileID: 0}
-  handParams:
-    handleLayerMask:
-      serializedVersion: 2
-      m_Bits: 87
-    pickupRange: 3
-    autoDropDistance: 6
-    minDistance: 1.5
-    maxDistance: 4
-    zoomSpeed: 5
-    attractionForce: 5000
-    dragAttractionForce: 100000
-    maxAttractionSpeed: 20
-    angularDampingPickup: 4
-    linerDampingPickup: 12
-    rotationReturnSpeed: 10
-    manualRotationSpeed: 0.1
-    torqueMultiplier: 1
 --- !u!114 &8450550693926369004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,7 +259,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Character.CharMover
   motor: {fileID: 5438028260905461622}
-  handsController: {fileID: 766444337314766684}
 --- !u!114 &5438028260905461622
 MonoBehaviour:
   m_ObjectHideFlags: 0

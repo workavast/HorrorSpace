@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-namespace App.ObjectHandling
+namespace App.Character.Hand.FSM
 {
     public class HandRotateState : HandState
     {
-        public HandRotateState(HandContext context, IHandParams parameters)
+        public HandRotateState(PlayerContext context, IHandParams parameters)
             : base(context, parameters)
         {
         }
@@ -58,11 +58,11 @@ namespace App.ObjectHandling
             
             // Apply manual rotation relative to player orientation
             var localTorque = new Vector3(-mouseDelta.y, mouseDelta.x, 0) * _parameters.ManualRotationSpeed;
-            var worldTorque = _context.PlayerTransform.TransformVector(localTorque);
+            var worldTorque = _context.Transform.TransformVector(localTorque);
             rb.AddTorque(worldTorque);
                 
             // Update target rotation based on new orientation
-            var targetRotationRelativeToPlayer = Quaternion.Inverse(_context.PlayerTransform.rotation) * objTransform.rotation;
+            var targetRotationRelativeToPlayer = Quaternion.Inverse(_context.Transform.rotation) * objTransform.rotation;
             _context.TargetRotationRelativeToPlayer = targetRotationRelativeToPlayer;
         }
 

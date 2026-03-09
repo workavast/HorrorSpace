@@ -1,8 +1,8 @@
-﻿namespace App.ObjectHandling
+﻿namespace App.Character.Hand.FSM
 {
     public class HandHoldState : HandState
     {
-        public HandHoldState(HandContext context, IHandParams parameters) 
+        public HandHoldState(PlayerContext context, IHandParams parameters) 
             : base(context, parameters)
         {
         }

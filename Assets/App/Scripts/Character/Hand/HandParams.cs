@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace App.ObjectHandling
+namespace App.Character.Hand
 {
     [System.Serializable]
     public class HandParams : IHandParams

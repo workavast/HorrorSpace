@@ -4,7 +4,7 @@ namespace App.Character.FSM.Jump
 {
     public class JumpAirState : JumpStateBase
     {
-        public JumpAirState(PlayerParams p, IReadOnlyInputProvider input, PlayerContext ctx) : base(p, input, ctx)
+        public JumpAirState(PlayerParams p, PlayerInputManager input, PlayerContext ctx) : base(p, input, ctx)
         {
         }
 

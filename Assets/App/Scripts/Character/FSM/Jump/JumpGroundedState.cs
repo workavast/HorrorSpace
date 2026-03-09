@@ -2,7 +2,7 @@ namespace App.Character.FSM.Jump
 {
     public class JumpGroundedState : JumpStateBase
     {
-        public JumpGroundedState(PlayerParams p, IReadOnlyInputProvider input, PlayerContext ctx) : base(p, input, ctx)
+        public JumpGroundedState(PlayerParams p, PlayerInputManager input, PlayerContext ctx) : base(p, input, ctx)
         {
         }
 

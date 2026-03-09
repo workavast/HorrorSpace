@@ -2,7 +2,7 @@ using App.DraggedObjects;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace App.ObjectHandling.FSM
+namespace App.Character.Hand.FSM
 {
     /// <summary>
     /// State for dragging objects that implement IDraggable interface.
@@ -16,7 +16,7 @@ namespace App.ObjectHandling.FSM
         private Vector3 _pickupOffsetLocal;
         private float _distance;
 
-        public HandDragState(HandContext context, IHandParams parameters)
+        public HandDragState(PlayerContext context, IHandParams parameters)
             : base(context, parameters)
         {
         }
@@ -42,10 +42,10 @@ namespace App.ObjectHandling.FSM
 
             // compute local offset to the point that was grabbed
             var objTransform = handleObject.Transform;
-            _pickupOffsetLocal = objTransform.InverseTransformPoint(_context.PickupPoint);
+            _pickupOffsetLocal = objTransform.InverseTransformPoint(_context.DragPoint);
             
             var camera = _context.CameraController.GetCamera();
-            _distance = Vector3.Distance(camera.transform.position, _context.PickupPoint);
+            _distance = Vector3.Distance(camera.transform.position, _context.DragPoint);
         }
 
         public override void Exit()

@@ -2,14 +2,14 @@
 using Avastrad.FSM;
 using UnityEngine;
 
-namespace App.ObjectHandling
+namespace App.Character.Hand.FSM
 {
     public abstract class HandState : StateBase
     {
-        protected readonly HandContext _context;
+        protected readonly PlayerContext _context;
         protected readonly IHandParams _parameters;
 
-        protected HandState(HandContext context, IHandParams parameters)
+        protected HandState(PlayerContext context, IHandParams parameters)
         {
             _context = context;
             _parameters = parameters;
@@ -17,7 +17,7 @@ namespace App.ObjectHandling
 
         protected bool ObjectInHoldRange()
         {
-            var playerPosition = _context.PlayerTransform.position;
+            var playerPosition = _context.Transform.position;
             var objPosition = _context.HandledObject.Transform.position;
             return playerPosition.DistanceXZ(objPosition) <= _parameters.AutoDropDistance;
         }
@@ -56,7 +56,7 @@ namespace App.ObjectHandling
 
             // Apply rotation return to target rotation relative to player
             // Compute target rotation in world space from stored relative-to-player quaternion
-            var targetWorld = _context.PlayerTransform.rotation * _context.TargetRotationRelativeToPlayer;
+            var targetWorld = _context.Transform.rotation * _context.TargetRotationRelativeToPlayer;
             var currentWorld = objTransform.rotation;
 
             // Delta that rotates current -> target: delta = target * inv(current)

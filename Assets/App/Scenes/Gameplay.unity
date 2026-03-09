@@ -2177,6 +2177,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4247805323651797999, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
+      propertyPath: handsController
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247805323651797999, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
+      propertyPath: cursorViewToggler
+      value: 
+      objectReference: {fileID: 1885751572}
+    - target: {fileID: 4247805323651797999, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
       propertyPath: interactiveObjBoundsDrawer
       value: 
       objectReference: {fileID: 1282911820}

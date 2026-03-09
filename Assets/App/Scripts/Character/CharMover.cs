@@ -8,7 +8,6 @@ namespace App.Character
     public class CharMover : MonoBehaviour, ICharacterController
     {
         [SerializeField] private KinematicCharacterMotor motor;
-        [SerializeField] private HandsController handsController;
         
         private PlayerContext _ctx;
         private PlayerParams _params;
@@ -47,7 +46,7 @@ namespace App.Character
             
             if (_ctx.VelocityInput != Vector2.zero)
             {
-                var targetSpeed = _ctx.TargetSpeed * _params.VelocityModifierPerGrabObjMass.Evaluate(handsController.DraggedObjMass);
+                var targetSpeed = _ctx.TargetSpeed * _params.VelocityModifierPerGrabObjMass.Evaluate(_ctx.DraggedObjMass);
                 var moveDirection = _ctx.Transform.right * _ctx.VelocityInput.x + 
                                     _ctx.Transform.forward * _ctx.VelocityInput.y;    
                 

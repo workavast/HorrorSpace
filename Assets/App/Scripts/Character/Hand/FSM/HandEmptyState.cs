@@ -1,12 +1,12 @@
 ﻿using App.DraggedObjects;
-using App.ObjectHandling.FSM;
+using App.ObjectHandling;
 using UnityEngine;
 
-namespace App.ObjectHandling
+namespace App.Character.Hand.FSM
 {
     public class HandEmptyState : HandState
     {
-        public HandEmptyState(HandContext context, IHandParams parameters) 
+        public HandEmptyState(PlayerContext context, IHandParams parameters) 
             : base(context, parameters)
         {
         }
@@ -64,7 +64,7 @@ namespace App.ObjectHandling
             var objTransform = handleObject.Transform;
 
             // store pickup point and local offset for dragging
-            _context.PickupPoint = pickupPoint;
+            _context.DragPoint = pickupPoint;
             _context.PickupOffsetLocal = objTransform.InverseTransformPoint(pickupPoint);
 
             // Calculate initial distance and offset
@@ -74,7 +74,7 @@ namespace App.ObjectHandling
             _context.CurrentDistance = currentDistance;
 
             // Store target rotation relative to player (not camera)
-            var targetRotationRelativeToPlayer = Quaternion.Inverse(_context.PlayerTransform.rotation) * objTransform.rotation;
+            var targetRotationRelativeToPlayer = Quaternion.Inverse(_context.Transform.rotation) * objTransform.rotation;
             _context.TargetRotationRelativeToPlayer = targetRotationRelativeToPlayer;
             
             // Increase angular damping for picked up object

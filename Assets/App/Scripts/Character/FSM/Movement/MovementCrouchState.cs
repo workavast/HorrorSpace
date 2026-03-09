@@ -4,7 +4,7 @@ namespace App.Character.FSM.Movement
 {
     public class MovementCrouchState : MovementStateBase
     {
-        public MovementCrouchState(PlayerParams p, IReadOnlyInputProvider input, PlayerContext ctx) : base(p, input, ctx)
+        public MovementCrouchState(PlayerParams p, PlayerInputManager input, PlayerContext ctx) : base(p, input, ctx)
         {
         }
 

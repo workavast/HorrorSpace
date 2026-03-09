@@ -6,10 +6,10 @@ namespace App.Character.FSM.Movement
     public abstract class MovementStateBase : StateBase
     {
         protected readonly PlayerParams _params;
-        protected readonly IReadOnlyInputProvider _input;
+        protected readonly PlayerInputManager _input;
         protected readonly PlayerContext _ctx;
 
-        protected MovementStateBase(PlayerParams p, IReadOnlyInputProvider input, PlayerContext ctx)
+        protected MovementStateBase(PlayerParams p, PlayerInputManager input, PlayerContext ctx)
         {
             _params = p;
             _input = input;
