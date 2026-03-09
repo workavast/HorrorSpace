@@ -17,7 +17,7 @@ namespace App.Character.Hand.FSM
             _parameters = parameters;
         }
 
-        protected bool ObjectInHoldRange(Transform objTransform)
+        protected bool ObjInHandleRange(Transform objTransform)
         {
             var playerPosition = _ctx.Transform.position;
             var objPosition = objTransform.position;

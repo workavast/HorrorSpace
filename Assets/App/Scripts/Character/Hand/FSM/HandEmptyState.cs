@@ -2,6 +2,8 @@
 using App.HandlingObjects;
 using App.HandlingObjects.DraggedObjects;
 using App.HandlingObjects.HoldableObjects;
+using Avastrad.Libs.CastLib;
+using Avastrad.Libs.CheckOnNullLib;
 using UnityEngine;
 
 namespace App.Character.Hand.FSM
@@ -45,70 +47,50 @@ namespace App.Character.Hand.FSM
         {
         }
 
-
-        
-
         private bool TryHoldObj()
         {
-            var camera = _ctx.CameraController.GetCamera();
-            var ray = new Ray(camera.transform.position, camera.transform.forward);
+            if (!TryHandleObj(out var handleObj, out var hitPoint))
+                return false;
 
-            if (Physics.Raycast(ray, out var hit, _parameters.PickupRange, _parameters.HandleLayerMask))
-            {
-                var handleObject = hit.collider.GetComponent<IHoldableObj>() ??
-                                   hit.collider.GetComponentInParent<IHoldableObj>();
-
-                if (handleObject != null && handleObject.CanBeHandled)
-                {
-                    PickupObject(handleObject, hit.point);
-                    return true;
-                }
-            }
-
-            return false;
+            if (!handleObj.TryCast(out IHoldableObj holdableObj))
+                return false;
+            
+            PickupObject(holdableObj, hitPoint);
+            return true;
         }
 
-        private bool TryDragObj(out Vector3 pickupPoint)
+        private bool TryDragObj(out Vector3 dragPoint)
         {
-            var camera = _ctx.CameraController.GetCamera();
-            var ray = new Ray(camera.transform.position, camera.transform.forward);
+            if (!TryHandleObj(out var handleObj, out dragPoint))
+                return false;
 
-            if (Physics.Raycast(ray, out var hit, _parameters.PickupRange, _parameters.HandleLayerMask))
-            {
-                var handleObject = hit.collider.GetComponent<IDraggable>() ??
-                                   hit.collider.GetComponentInParent<IDraggable>();
-
-                if (handleObject != null && handleObject.CanBeHandled)
-                {
-                    pickupPoint = hit.point;
-                    PickupObject(handleObject, pickupPoint);
-                    return true;
-                }
-            }
-
-            pickupPoint = default;
-            return false;
+            if (!handleObj.TryCast(out IDraggable draggable))
+                return false;
+            
+            PickupObject(draggable, dragPoint);
+            return true;
         }
         
-        private IHandleObject TryHandleObj(out Vector3 hitPopint)
+        private bool TryHandleObj(out IHandleObject handleObj, out Vector3 hitPoint)
         {
             var camera = _ctx.CameraController.GetCamera();
             var ray = new Ray(camera.transform.position, camera.transform.forward);
 
             if (Physics.Raycast(ray, out var hit, _parameters.PickupRange, _parameters.HandleLayerMask))
             {
-                var handleObject = hit.collider.GetComponent<IHoldableObj>() ??
-                                   hit.collider.GetComponentInParent<IHoldableObj>();
+                handleObj = hit.collider.GetComponent<IHandleObject>() ??
+                            hit.collider.GetComponentInParent<IHandleObject>();
 
-                if (handleObject != null && handleObject.CanBeHandled)
+                if (handleObj != null && handleObj.CanBeHandled)
                 {
-                    hitPopint = hit.point;
-                    return handleObject;
+                    hitPoint = hit.point;
+                    return true;
                 }
             }
 
-            hitPopint = Vector3.zero;
-            return null;
+            handleObj = null;
+            hitPoint = default;
+            return false;
         }
         
         private void PickupObject(IHoldableObj holdableObj, Vector3 pickupPoint)
@@ -116,15 +98,14 @@ namespace App.Character.Hand.FSM
             _ctx.HandledObj = holdableObj;
             holdableObj.OnPickup();
             
-            var objTransform = holdableObj.Transform;
-
-            // Calculate initial distance and offset
+            // Calculate initial distance
             var camera = _ctx.CameraController.GetCamera();
             var currentDistance = Vector3.Distance(camera.transform.position, pickupPoint);
             currentDistance = Mathf.Clamp(currentDistance, _parameters.MinDistance, _parameters.MaxDistance);
             _ctx.CurrentDistance = currentDistance;
 
             // Store target rotation relative to player (not camera)
+            var objTransform = holdableObj.Transform;
             var targetRotationRelativeToPlayer = Quaternion.Inverse(_ctx.Transform.rotation) * objTransform.rotation;
             _ctx.TargetRotationRelativeToPlayer = targetRotationRelativeToPlayer;
             
@@ -139,7 +120,7 @@ namespace App.Character.Hand.FSM
         {
             _ctx.HandledObj = draggable;
             
-            // Calculate initial distance and offset
+            // Calculate initial distance
             var camera = _ctx.CameraController.GetCamera();
             var currentDistance = Vector3.Distance(camera.transform.position, pickupPoint);
             currentDistance = Mathf.Clamp(currentDistance, _parameters.MinDistance, _parameters.MaxDistance);

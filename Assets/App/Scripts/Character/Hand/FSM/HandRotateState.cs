@@ -30,7 +30,7 @@ namespace App.Character.Hand.FSM
                 return;
             }
             
-            if (!_ctx.InputManager.IsPickupPressed || !ObjectInHoldRange(_ctx.HandledObj.Transform))
+            if (!_ctx.InputManager.IsPickupPressed || !ObjInHandleRange(_ctx.HandledObj.Transform))
             {
                 DropObject();
                 SetState<HandEmptyState>();

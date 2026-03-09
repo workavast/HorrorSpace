@@ -11,7 +11,6 @@ namespace App.Character.Hand.FSM
         
         private IDraggable _draggableObject;
         private Vector3 _pickupOffsetLocal; // offset from object origin to the point that was grabbed, in local space
-        private float _distance;
         
         public HandDragState(HandContext ctx, IHandParams parameters)
             : base(ctx, parameters)
@@ -44,9 +43,6 @@ namespace App.Character.Hand.FSM
             // compute local offset to the point that was grabbed
             var objTransform = _draggableObject.Transform;
             _pickupOffsetLocal = objTransform.InverseTransformPoint(dragPoint);
-            
-            var camera = _ctx.CameraController.GetCamera();
-            _distance = Vector3.Distance(camera.transform.position, dragPoint);
         }
 
         public override void Exit()
@@ -62,7 +58,7 @@ namespace App.Character.Hand.FSM
                 return;
             }
 
-            if (!_ctx.InputManager.IsPickupPressed || !ObjectInHoldRange(_draggableObject.Transform))
+            if (!_ctx.InputManager.IsPickupPressed || !ObjInHandleRange(_draggableObject.Transform))
             {
                 DropObject();
                 SetState<HandEmptyState>();
@@ -89,7 +85,7 @@ namespace App.Character.Hand.FSM
 
             // compute target point along cursor ray at fixed pickup distance
             var ray = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
-            var targetPointOnRay = ray.origin + ray.direction * _distance;
+            var targetPointOnRay = ray.origin + ray.direction * _ctx.CurrentDistance;
 
             // offset of grab point in world space
             var offsetWorld = objTransform.TransformVector(_pickupOffsetLocal);

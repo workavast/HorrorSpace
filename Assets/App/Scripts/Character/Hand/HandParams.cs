@@ -5,29 +5,27 @@ namespace App.Character.Hand
     [System.Serializable]
     public class HandParams : IHandParams
     {
-        [Header("Pickup")]
+        [Header("Core-Pickup")]
         [SerializeField] private LayerMask handleLayerMask = ~0;
         [SerializeField] private float pickupRange = 3f;
-
-        [Header("Distance")] 
+        [Header("Core-Distance")] 
         [SerializeField] private float autoDropDistance = 6f;
         [SerializeField] private float minDistance = 1f;
         [SerializeField] private float maxDistance = 5f;
         [SerializeField] private float zoomSpeed = 1f;
-
-        [Header("Physics")] 
+        [Space]
+        [Header("Hold-Physics")] 
         [SerializeField] private float attractionForce = 100f;
-        [SerializeField] private float dragAttractionForce = 100f;
         [SerializeField] private float maxAttractionSpeed = 10f;
         [SerializeField] private float angularDampingPickup = 5f;
         [SerializeField] private float linerDampingPickup = 5f;
-
-        [Header("Rotation")] 
+        [Header("Hold-Rotation")] 
         [SerializeField] private float rotationReturnSpeed = 2f;
         [SerializeField] private float manualRotationSpeed = 5f;
         [SerializeField] private float torqueMultiplier = 1f;
-
-        [Header("Drag")]
+        [Space]
+        [Header("Drag-Physics")]
+        [SerializeField] private float dragAttractionForce = 100f;
         [SerializeField] private float angularDampingDrag = 5f;
         [SerializeField] private float linerDampingDrag = 5f;
         
