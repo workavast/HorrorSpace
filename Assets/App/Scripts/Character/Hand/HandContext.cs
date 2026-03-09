@@ -1,4 +1,5 @@
-﻿using App.ObjectHandling;
+﻿using App.HandlingObjects;
+using App.HandlingObjects.HoldableObjects;
 using UnityEngine;
 
 namespace App.Character.Hand
@@ -10,8 +11,8 @@ namespace App.Character.Hand
 		public readonly Transform Transform;
 		public readonly CursorViewToggler CursorViewToggler;
 		
-		public bool HasHandledObject => HandledObject != null;
-		public IHandleObject HandledObject;
+		public bool HasHandledObject => HandledObj != null;
+		public IHandleObject HandledObj;
 		public float DraggedObjMass;
 		public float CurrentDistance;
 		public Quaternion TargetRotationRelativeToPlayer;

@@ -1,4 +1,6 @@
-﻿using Avastrad.Extensions;
+﻿using App.HandlingObjects;
+using App.HandlingObjects.HoldableObjects;
+using Avastrad.Extensions;
 using Avastrad.FSM;
 using UnityEngine;
 
@@ -15,18 +17,18 @@ namespace App.Character.Hand.FSM
             _parameters = parameters;
         }
 
-        protected bool ObjectInHoldRange()
+        protected bool ObjectInHoldRange(Transform objTransform)
         {
             var playerPosition = _ctx.Transform.position;
-            var objPosition = _ctx.HandledObject.Transform.position;
+            var objPosition = objTransform.position;
             return playerPosition.DistanceXZ(objPosition) <= _parameters.AutoDropDistance;
         }
         
-        protected void HoldObject()
+        protected void HoldObject(IHoldableObj holdableObj)
         {
             var camera = _ctx.CameraController.GetCamera();
-            var objTransform = _ctx.HandledObject.Transform;
-            var rb = _ctx.HandledObject.Rb;
+            var objTransform = holdableObj.Transform;
+            var rb = holdableObj.Rb;
 
             // Handle zoom with mouse wheel
             var scrollDelta = _ctx.InputManager.ZoomDelta;
@@ -92,7 +94,7 @@ namespace App.Character.Hand.FSM
         
         protected void DropObject()
         {
-            var currentHandledObject = _ctx.HandledObject;
+            var currentHandledObject = _ctx.HandledObj;
             if (currentHandledObject == null)
                 return;
             
@@ -101,8 +103,8 @@ namespace App.Character.Hand.FSM
             rb.linearDamping = _ctx.DefaultObjectLinearDamping;
             rb.angularDamping = _ctx.DefaultObjectAngularDamping;
 
-            currentHandledObject.OnDrop();
-            _ctx.HandledObject = null;
+            currentHandledObject.Drop();
+            _ctx.HandledObj = null;
         }
     }
 }

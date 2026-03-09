@@ -130,7 +130,6 @@ MonoBehaviour:
   cameraController: {fileID: 1287651065015622182}
   inputManager: {fileID: 7483723162105313711}
   cursorViewToggler: {fileID: 0}
-  handsController: {fileID: 0}
   interactiveObjBoundsDrawer: {fileID: 0}
   playerParams:
     VelocityModifierPerGrabObjMass:
@@ -193,6 +192,8 @@ MonoBehaviour:
     rotationReturnSpeed: 10
     manualRotationSpeed: 0.1
     torqueMultiplier: 1
+    angularDampingDrag: 4
+    linerDampingDrag: 12
   interactRange: 3
   interactLayerMask:
     serializedVersion: 2

@@ -21,5 +21,8 @@ namespace App.Character.Hand
         public float RotationReturnSpeed { get; }
         public float ManualRotationSpeed { get; }
         public float TorqueMultiplier { get; }
+        
+        public float AngularDampingDrag { get; }
+        public float LinerDampingDrag { get; }
     }
 }

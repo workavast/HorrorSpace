@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace App.ObjectHandling
+namespace App.HandlingObjects.HoldableObjects
 {
-    public class HandleableObject : MonoBehaviour, IHandleObject
+    public class HoldableObj : MonoBehaviour, IHoldableObj
     {
         [SerializeField] private bool canBeHandled = true;
         [SerializeField] private Rigidbody rb;
@@ -19,7 +19,7 @@ namespace App.ObjectHandling
             rb.angularVelocity = Vector3.zero;
         }
 
-        public void OnDrop()
+        public void Drop()
         {
             // Re-enable gravity
             rb.useGravity = true;

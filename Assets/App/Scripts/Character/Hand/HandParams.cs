@@ -27,6 +27,10 @@ namespace App.Character.Hand
         [SerializeField] private float manualRotationSpeed = 5f;
         [SerializeField] private float torqueMultiplier = 1f;
 
+        [Header("Drag")]
+        [SerializeField] private float angularDampingDrag = 5f;
+        [SerializeField] private float linerDampingDrag = 5f;
+        
         public LayerMask HandleLayerMask => handleLayerMask;
         public float PickupRange => pickupRange;
         public float AutoDropDistance => autoDropDistance;
@@ -41,5 +45,8 @@ namespace App.Character.Hand
         public float RotationReturnSpeed => rotationReturnSpeed;
         public float ManualRotationSpeed => manualRotationSpeed;
         public float TorqueMultiplier => torqueMultiplier;
+        
+        public float AngularDampingDrag => angularDampingDrag;
+        public float LinerDampingDrag => linerDampingDrag;
     }
 }

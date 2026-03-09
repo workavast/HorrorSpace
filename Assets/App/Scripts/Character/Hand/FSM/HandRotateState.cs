@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using App.HandlingObjects.HoldableObjects;
 using UnityEngine;
 
 namespace App.Character.Hand.FSM
@@ -29,7 +30,7 @@ namespace App.Character.Hand.FSM
                 return;
             }
             
-            if (!_ctx.InputManager.IsPickupPressed || !ObjectInHoldRange())
+            if (!_ctx.InputManager.IsPickupPressed || !ObjectInHoldRange(_ctx.HandledObj.Transform))
             {
                 DropObject();
                 SetState<HandEmptyState>();
@@ -42,7 +43,7 @@ namespace App.Character.Hand.FSM
                 return;
             }
 
-            HoldObject();
+            HoldObject(_ctx.HandledObj as IHoldableObj);
             RotateObject();
         }
 
@@ -52,8 +53,8 @@ namespace App.Character.Hand.FSM
 
         private void RotateObject()
         {
-            var objTransform = _ctx.HandledObject.Transform;
-            var rb = _ctx.HandledObject.Rb;
+            var objTransform = _ctx.HandledObj.Transform;
+            var rb = _ctx.HandledObj.Rb;
 
             var mouseDelta = _ctx.InputManager.LookInput;
             

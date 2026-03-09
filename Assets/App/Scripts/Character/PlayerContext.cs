@@ -1,6 +1,5 @@
 using System;
 using App.Character.Hand;
-using App.ObjectHandling;
 using KinematicCharacterController;
 using UnityEngine;
 

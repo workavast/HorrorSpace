@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using App.HandlingObjects.HoldableObjects;
 
 namespace App.Character.Hand.FSM
 {
@@ -27,7 +28,7 @@ namespace App.Character.Hand.FSM
                 return;
             }
             
-            if (!_ctx.InputManager.IsPickupPressed || !ObjectInHoldRange())
+            if (!_ctx.InputManager.IsPickupPressed || !ObjectInHoldRange(_ctx.HandledObj.Transform))
             {
                 DropObject();
                 SetState<HandEmptyState>();
@@ -40,7 +41,7 @@ namespace App.Character.Hand.FSM
                 return;
             }
 
-            HoldObject();
+            HoldObject(_ctx.HandledObj as IHoldableObj);
         }
 
         public override void ManualFixedUpdate()

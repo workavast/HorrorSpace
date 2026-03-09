@@ -1,5 +1,4 @@
-﻿using App.ObjectHandling;
-using Avastrad.Extensions;
+﻿using Avastrad.Extensions;
 using KinematicCharacterController;
 using UnityEngine;
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace App.ObjectHandling
+namespace App.HandlingObjects
 {
     public interface IHandleObject
     {
@@ -9,7 +9,6 @@ namespace App.ObjectHandling
         public Transform Transform { get; }
         public Rigidbody Rb { get; }
 
-        public void OnPickup();
-        public void OnDrop();
+        public void Drop();
     }
 }
