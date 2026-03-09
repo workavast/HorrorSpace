@@ -2,15 +2,15 @@
 {
     public class HandHoldState : HandState
     {
-        public HandHoldState(PlayerContext context, IHandParams parameters) 
-            : base(context, parameters)
+        public HandHoldState(HandContext ctx, IHandParams parameters) 
+            : base(ctx, parameters)
         {
         }
 
         public override void Enter(string[] args)
         {
-            _context.CursorViewToggler.SetState(true);
-            _context.DraggedObjMass = 0;
+            _ctx.CursorViewToggler.SetState(true);
+            _ctx.DraggedObjMass = 0;
         }
 
         public override void Exit()
@@ -19,20 +19,20 @@
 
         public override void ManualUpdate()
         {
-            if (!_context.HasHandledObject)
+            if (!_ctx.HasHandledObject)
             {
                 SetState<HandEmptyState>();
                 return;
             }
             
-            if (!_context.InputManager.IsPickupPressed || !ObjectInHoldRange())
+            if (!_ctx.InputManager.IsPickupPressed || !ObjectInHoldRange())
             {
                 DropObject();
                 SetState<HandEmptyState>();
                 return;
             }
 
-            if (_context.InputManager.IsRotatePressed)
+            if (_ctx.InputManager.IsRotatePressed)
             {
                 SetState<HandRotateState>();
                 return;

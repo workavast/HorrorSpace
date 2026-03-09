@@ -6,39 +6,39 @@ namespace App.Character.Hand.FSM
 {
     public abstract class HandState : StateBase
     {
-        protected readonly PlayerContext _context;
+        protected readonly HandContext _ctx;
         protected readonly IHandParams _parameters;
 
-        protected HandState(PlayerContext context, IHandParams parameters)
+        protected HandState(HandContext ctx, IHandParams parameters)
         {
-            _context = context;
+            _ctx = ctx;
             _parameters = parameters;
         }
 
         protected bool ObjectInHoldRange()
         {
-            var playerPosition = _context.Transform.position;
-            var objPosition = _context.HandledObject.Transform.position;
+            var playerPosition = _ctx.Transform.position;
+            var objPosition = _ctx.HandledObject.Transform.position;
             return playerPosition.DistanceXZ(objPosition) <= _parameters.AutoDropDistance;
         }
         
         protected void HoldObject()
         {
-            var camera = _context.CameraController.GetCamera();
-            var objTransform = _context.HandledObject.Transform;
-            var rb = _context.HandledObject.Rb;
+            var camera = _ctx.CameraController.GetCamera();
+            var objTransform = _ctx.HandledObject.Transform;
+            var rb = _ctx.HandledObject.Rb;
 
             // Handle zoom with mouse wheel
-            var scrollDelta = _context.InputManager.ZoomDelta;
+            var scrollDelta = _ctx.InputManager.ZoomDelta;
             if (scrollDelta != 0)
             {
-                var currentDistance = _context.CurrentDistance + scrollDelta * _parameters.ZoomSpeed * Time.deltaTime;
+                var currentDistance = _ctx.CurrentDistance + scrollDelta * _parameters.ZoomSpeed * Time.deltaTime;
                 currentDistance = Mathf.Clamp(currentDistance, _parameters.MinDistance, _parameters.MaxDistance);
-                _context.CurrentDistance = currentDistance;
+                _ctx.CurrentDistance = currentDistance;
             }
 
             // Apply physics forces to attract object to target position
-            var targetPosition = camera.transform.position + camera.transform.forward * _context.CurrentDistance;
+            var targetPosition = camera.transform.position + camera.transform.forward * _ctx.CurrentDistance;
             var direction = targetPosition - objTransform.position;
             var distance = direction.magnitude;
                 
@@ -56,7 +56,7 @@ namespace App.Character.Hand.FSM
 
             // Apply rotation return to target rotation relative to player
             // Compute target rotation in world space from stored relative-to-player quaternion
-            var targetWorld = _context.Transform.rotation * _context.TargetRotationRelativeToPlayer;
+            var targetWorld = _ctx.Transform.rotation * _ctx.TargetRotationRelativeToPlayer;
             var currentWorld = objTransform.rotation;
 
             // Delta that rotates current -> target: delta = target * inv(current)
@@ -92,18 +92,17 @@ namespace App.Character.Hand.FSM
         
         protected void DropObject()
         {
-            var currentHandledObject = _context.HandledObject;
+            var currentHandledObject = _ctx.HandledObject;
             if (currentHandledObject == null)
                 return;
             
             // Reset angular damping before dropping
             var rb = currentHandledObject.Rb;
-            rb.linearDamping = _context.DefaultObjectLinearDamping;
-            rb.angularDamping = _context.DefaultObjectAngularDamping;
+            rb.linearDamping = _ctx.DefaultObjectLinearDamping;
+            rb.angularDamping = _ctx.DefaultObjectAngularDamping;
 
             currentHandledObject.OnDrop();
-            _context.HandledObject = null;
-            // Re-enable interaction system
+            _ctx.HandledObject = null;
         }
     }
 }

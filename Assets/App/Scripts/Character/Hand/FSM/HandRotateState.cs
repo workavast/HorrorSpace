@@ -4,38 +4,38 @@ namespace App.Character.Hand.FSM
 {
     public class HandRotateState : HandState
     {
-        public HandRotateState(PlayerContext context, IHandParams parameters)
-            : base(context, parameters)
+        public HandRotateState(HandContext ctx, IHandParams parameters)
+            : base(ctx, parameters)
         {
         }
 
         public override void Enter(string[] args)
         {
-            _context.CameraController.SetCameraRotationEnabled(false);
-            _context.CursorViewToggler.SetState(true);
+            _ctx.CameraController.SetCameraRotationEnabled(false);
+            _ctx.CursorViewToggler.SetState(true);
         }
 
         public override void Exit()
         {
-            _context.CameraController.SetCameraRotationEnabled(true);
+            _ctx.CameraController.SetCameraRotationEnabled(true);
         }
 
         public override void ManualUpdate()
         {
-            if (!_context.HasHandledObject)
+            if (!_ctx.HasHandledObject)
             {
                 SetState<HandEmptyState>();
                 return;
             }
             
-            if (!_context.InputManager.IsPickupPressed || !ObjectInHoldRange())
+            if (!_ctx.InputManager.IsPickupPressed || !ObjectInHoldRange())
             {
                 DropObject();
                 SetState<HandEmptyState>();
                 return;
             }
 
-            if (!_context.InputManager.IsRotatePressed)
+            if (!_ctx.InputManager.IsRotatePressed)
             {
                 SetState<HandHoldState>();
                 return;
@@ -51,19 +51,19 @@ namespace App.Character.Hand.FSM
 
         private void RotateObject()
         {
-            var objTransform = _context.HandledObject.Transform;
-            var rb = _context.HandledObject.Rb;
+            var objTransform = _ctx.HandledObject.Transform;
+            var rb = _ctx.HandledObject.Rb;
 
-            var mouseDelta = _context.InputManager.LookInput;
+            var mouseDelta = _ctx.InputManager.LookInput;
             
             // Apply manual rotation relative to player orientation
             var localTorque = new Vector3(-mouseDelta.y, mouseDelta.x, 0) * _parameters.ManualRotationSpeed;
-            var worldTorque = _context.Transform.TransformVector(localTorque);
+            var worldTorque = _ctx.Transform.TransformVector(localTorque);
             rb.AddTorque(worldTorque);
                 
             // Update target rotation based on new orientation
-            var targetRotationRelativeToPlayer = Quaternion.Inverse(_context.Transform.rotation) * objTransform.rotation;
-            _context.TargetRotationRelativeToPlayer = targetRotationRelativeToPlayer;
+            var targetRotationRelativeToPlayer = Quaternion.Inverse(_ctx.Transform.rotation) * objTransform.rotation;
+            _ctx.TargetRotationRelativeToPlayer = targetRotationRelativeToPlayer;
         }
 
     }

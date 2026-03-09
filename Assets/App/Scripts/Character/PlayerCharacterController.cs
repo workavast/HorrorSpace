@@ -50,7 +50,8 @@ namespace App.Character
 
         private void Initialize()
         {
-            _ctx = new PlayerContext(motor,cameraController, transform, cursorViewToggler, inputManager);
+            var handCtx = new HandContext(inputManager, cameraController, transform, cursorViewToggler);
+            _ctx = new PlayerContext(motor,cameraController, transform, handCtx);
 
             // Movement FSM
             var moveStates = new List<StateBase>
@@ -74,10 +75,10 @@ namespace App.Character
             // Hand FSM
             var handStates = new List<StateBase>
             {
-                new HandEmptyState(_ctx, handParams),
-                new HandHoldState(_ctx, handParams),
-                new HandRotateState(_ctx, handParams),
-                new HandDragState(_ctx, handParams)
+                new HandEmptyState(handCtx, handParams),
+                new HandHoldState(handCtx, handParams),
+                new HandRotateState(handCtx, handParams),
+                new HandDragState(handCtx, handParams)
             };
             _handFsm = new StateMachine(handStates);
             _handFsm.Init<HandEmptyState>();

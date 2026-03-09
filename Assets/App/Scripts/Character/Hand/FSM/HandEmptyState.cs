@@ -6,15 +6,15 @@ namespace App.Character.Hand.FSM
 {
     public class HandEmptyState : HandState
     {
-        public HandEmptyState(PlayerContext context, IHandParams parameters) 
-            : base(context, parameters)
+        public HandEmptyState(HandContext ctx, IHandParams parameters) 
+            : base(ctx, parameters)
         {
         }
 
         public override void Enter(string[] args)
         {
-            _context.CursorViewToggler.SetState(false);
-            _context.DraggedObjMass = 0;
+            _ctx.CursorViewToggler.SetState(false);
+            _ctx.DraggedObjMass = 0;
         }
 
         public override void Exit()
@@ -23,13 +23,13 @@ namespace App.Character.Hand.FSM
 
         public override void ManualUpdate()
         {
-            if (_context.InputManager.IsPickupPressed)
+            if (_ctx.InputManager.IsPickupPressed)
             {
                 TryPickupObject();
-                if (_context.HasHandledObject)
+                if (_ctx.HasHandledObject)
                 {
                     // Check if the object can be dragged
-                    if (IsDraggable(_context.HandledObject))
+                    if (IsDraggable(_ctx.HandledObject))
                         SetState<HandDragState>();
                     else
                         SetState<HandHoldState>();
@@ -43,7 +43,7 @@ namespace App.Character.Hand.FSM
 
         private void TryPickupObject()
         {
-            var camera = _context.CameraController.GetCamera();
+            var camera = _ctx.CameraController.GetCamera();
             var ray = new Ray(camera.transform.position, camera.transform.forward);
 
             if (Physics.Raycast(ray, out var hit, _parameters.PickupRange, _parameters.HandleLayerMask))
@@ -58,28 +58,27 @@ namespace App.Character.Hand.FSM
 
         private void PickupObject(IHandleObject handleObject, Vector3 pickupPoint)
         {
-            _context.HandledObject = handleObject;
+            _ctx.HandledObject = handleObject;
             handleObject.OnPickup();
             
             var objTransform = handleObject.Transform;
 
             // store pickup point and local offset for dragging
-            _context.DragPoint = pickupPoint;
-            _context.PickupOffsetLocal = objTransform.InverseTransformPoint(pickupPoint);
+            _ctx.DragPoint = pickupPoint;
 
             // Calculate initial distance and offset
-            var camera = _context.CameraController.GetCamera();
+            var camera = _ctx.CameraController.GetCamera();
             var currentDistance = Vector3.Distance(camera.transform.position, pickupPoint);
             currentDistance = Mathf.Clamp(currentDistance, _parameters.MinDistance, _parameters.MaxDistance);
-            _context.CurrentDistance = currentDistance;
+            _ctx.CurrentDistance = currentDistance;
 
             // Store target rotation relative to player (not camera)
-            var targetRotationRelativeToPlayer = Quaternion.Inverse(_context.Transform.rotation) * objTransform.rotation;
-            _context.TargetRotationRelativeToPlayer = targetRotationRelativeToPlayer;
+            var targetRotationRelativeToPlayer = Quaternion.Inverse(_ctx.Transform.rotation) * objTransform.rotation;
+            _ctx.TargetRotationRelativeToPlayer = targetRotationRelativeToPlayer;
             
             // Increase angular damping for picked up object
             var rb = handleObject.Rb;
-            _context.SetDefaultObjectDampings(rb.linearDamping, rb.angularDamping);
+            _ctx.SetDefaultObjectDampings(rb.linearDamping, rb.angularDamping);
             rb.angularDamping = _parameters.AngularDampingPickup;
             rb.linearDamping = _parameters.LinerDampingPickup;
         }
