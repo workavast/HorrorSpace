@@ -99,7 +99,7 @@ namespace App.Character
 
             if (Physics.Raycast(origin, dir, out var hit, interactRange, interactLayerMask))
             {
-                var interactable = hit.collider.GetComponent<IUsable>() ?? hit.collider.GetComponentInParent<IUsable>();
+                var interactable = hit.collider.GetComponent<IUsable>();
                 interactable?.Interact(_ctx);
             }
         }

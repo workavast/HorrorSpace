@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 8283049636832814359}
   - component: {fileID: 6826271514777142057}
   - component: {fileID: 7123870955884638770}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DoorKeyTriggerZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 3598801810994843456}
   - component: {fileID: 1817964643878698604}
   - component: {fileID: 1283209382944220692}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DoorKeyTriggerZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -764,6 +764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff2a8bdc6ba46cb85be95b300f5047f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.InteractiveObjects.InteractiveObj
+  isActive: 1
   isInteractable: 1
 --- !u!114 &2944400269225986201
 MonoBehaviour:
@@ -2816,6 +2817,10 @@ PrefabInstance:
     - target: {fileID: 1876512206958445118, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
       propertyPath: <IsUnLocked>k__BackingField
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2923772430099895253, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5215275450408914094, guid: edf52aa0d5b0e2249b80848e79930e15, type: 3}
       propertyPath: m_LocalPosition.x

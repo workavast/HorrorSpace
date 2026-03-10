@@ -17,7 +17,7 @@ namespace App.Lockers
 		private LockerContext _context;
 		private StateMachine _fsm;
 		
-		private void Awake()
+		private void Start()
 		{
 			_context = new LockerContext(view, door);
 

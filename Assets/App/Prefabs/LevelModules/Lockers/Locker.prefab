@@ -585,6 +585,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3459719569072454387}
     m_Modifications:
+    - target: {fileID: 299676372264750774, guid: 2a409d2d98cf8954987885c31d8dd067, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3443257213867172465, guid: 2a409d2d98cf8954987885c31d8dd067, type: 3}
       propertyPath: m_Name
       value: LockerButton
