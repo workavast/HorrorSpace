@@ -35,9 +35,9 @@ namespace App.Character.Hand.FSM
                     return;
                 }
 
-                if (TryDragObj(out var pickupPoint))
+                if (TryDragObj(out var grabPoint))
                 {
-                    SetState<HandDragState>(new() { { HandDragState.DragPointKey, pickupPoint } });
+                    SetState<HandDragState>(new() { { HandDragState.DragPointKey, grabPoint } });
                     return;
                 }
             }
@@ -55,23 +55,23 @@ namespace App.Character.Hand.FSM
             if (!handleObj.TryCast(out IHoldableObj holdableObj))
                 return false;
             
-            PickupObject(holdableObj, hitPoint);
+            GrabObject(holdableObj, hitPoint);
             return true;
         }
 
-        private bool TryDragObj(out Vector3 dragPoint)
+        private bool TryDragObj(out Vector3 grabPoint)
         {
-            if (!TryHandleObj(out var handleObj, out dragPoint))
+            if (!TryHandleObj(out var handleObj, out grabPoint))
                 return false;
 
             if (!handleObj.TryCast(out IDraggable draggable))
                 return false;
             
-            PickupObject(draggable, dragPoint);
+            GrabObject(draggable, grabPoint);
             return true;
         }
         
-        private bool TryHandleObj(out IHandleObject handleObj, out Vector3 hitPoint)
+        private bool TryHandleObj(out IHandleObject handleObj, out Vector3 grabPoint)
         {
             var camera = _ctx.CameraController.GetCamera();
             var ray = new Ray(camera.transform.position, camera.transform.forward);
@@ -83,24 +83,24 @@ namespace App.Character.Hand.FSM
 
                 if (handleObj != null && handleObj.CanBeHandled)
                 {
-                    hitPoint = hit.point;
+                    grabPoint = hit.point;
                     return true;
                 }
             }
 
             handleObj = null;
-            hitPoint = default;
+            grabPoint = default;
             return false;
         }
         
-        private void PickupObject(IHoldableObj holdableObj, Vector3 pickupPoint)
+        private void GrabObject(IHoldableObj holdableObj, Vector3 grabPoint)
         {
             _ctx.HandledObj = holdableObj;
             holdableObj.OnPickup();
             
             // Calculate initial distance
             var camera = _ctx.CameraController.GetCamera();
-            var currentDistance = Vector3.Distance(camera.transform.position, pickupPoint);
+            var currentDistance = Vector3.Distance(camera.transform.position, grabPoint);
             currentDistance = Mathf.Clamp(currentDistance, _params.MinDistance, _params.MaxDistance);
             _ctx.CurrentDistance = currentDistance;
 
@@ -116,13 +116,13 @@ namespace App.Character.Hand.FSM
             rb.linearDamping = _params.LinerDampingPickup;
         }
 
-        private void PickupObject(IDraggable draggable, Vector3 pickupPoint)
+        private void GrabObject(IDraggable draggable, Vector3 grabPoint)
         {
             _ctx.HandledObj = draggable;
             
             // Calculate initial distance
             var camera = _ctx.CameraController.GetCamera();
-            var currentDistance = Vector3.Distance(camera.transform.position, pickupPoint);
+            var currentDistance = Vector3.Distance(camera.transform.position, grabPoint);
             currentDistance = Mathf.Clamp(currentDistance, _params.MinDistance, _params.MaxDistance);
             _ctx.CurrentDistance = currentDistance;
 

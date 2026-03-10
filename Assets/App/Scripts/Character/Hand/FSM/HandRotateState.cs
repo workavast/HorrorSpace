@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using App.HandlingObjects.HoldableObjects;
+using Avastrad.Libs.CheckOnNullLib;
 using UnityEngine;
 
 namespace App.Character.Hand.FSM
@@ -42,17 +43,19 @@ namespace App.Character.Hand.FSM
                 SetState<HandHoldState>();
                 return;
             }
-
-            HoldObject(_ctx.HandledObj as IHoldableObj);
-            RotateObject();
         }
 
         public override void ManualFixedUpdate()
         {
+            HoldObject(_ctx.HandledObj as IHoldableObj);
+            RotateObject();
         }
 
         private void RotateObject()
         {
+            if (_ctx.HandledObj.IsAnyNull())
+                return;
+            
             var objTransform = _ctx.HandledObj.Transform;
             var rb = _ctx.HandledObj.Rb;
 

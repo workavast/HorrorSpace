@@ -40,12 +40,11 @@ namespace App.Character.Hand.FSM
                 SetState<HandRotateState>();
                 return;
             }
-
-            HoldObject(_ctx.HandledObj as IHoldableObj);
         }
 
         public override void ManualFixedUpdate()
         {
+            HoldObject(_ctx.HandledObj as IHoldableObj);
         }
     }
 }

@@ -1,7 +1,7 @@
-﻿using App.HandlingObjects;
-using App.HandlingObjects.HoldableObjects;
+﻿using App.HandlingObjects.HoldableObjects;
 using Avastrad.Extensions;
 using Avastrad.FSM;
+using Avastrad.Libs.CheckOnNullLib;
 using UnityEngine;
 
 namespace App.Character.Hand.FSM
@@ -24,8 +24,14 @@ namespace App.Character.Hand.FSM
             return playerPosition.DistanceXZ(objPosition) <= _params.AutoDropDistance;
         }
         
+        /// <summary>
+        /// Update in fixed update
+        /// </summary>
         protected void HoldObject(IHoldableObj holdableObj)
         {
+            if (holdableObj.IsAnyNull())
+                return;
+            
             var camera = _ctx.CameraController.GetCamera();
             var objTransform = holdableObj.Transform;
             var rb = holdableObj.Rb;
