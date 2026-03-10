@@ -1,3 +1,17 @@
 {
-	"name": "Avastrad.Utils"
+    "name": "Avastrad.Utils",
+    "rootNamespace": "",
+    "references": [
+        "GUID:84b0f776cd08b904eb3ef924a02077a0",
+        "GUID:0a32ed53c4ce72140881ce74092fc667"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

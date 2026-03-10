@@ -1,0 +1,18 @@
+{
+    "name": "Avastrad.Utils.PolymorphicAttributeDrawing.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0a32ed53c4ce72140881ce74092fc667"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

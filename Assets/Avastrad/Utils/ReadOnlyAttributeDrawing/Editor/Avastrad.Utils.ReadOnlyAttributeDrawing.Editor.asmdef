@@ -1,0 +1,16 @@
+{
+    "name": "Avastrad.Utils.ReadOnlyAttributeDrawing.Editor",
+    "rootNamespace": "",
+    "references": ["GUID:84b0f776cd08b904eb3ef924a02077a0"],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
