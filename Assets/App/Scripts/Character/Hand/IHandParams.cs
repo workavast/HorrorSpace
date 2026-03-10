@@ -24,5 +24,7 @@ namespace App.Character.Hand
         
         public float AngularDampingDrag { get; }
         public float LinerDampingDrag { get; }
+        public float DragDampingDistance { get; }
+        public bool DragDebug { get; }
     }
 }

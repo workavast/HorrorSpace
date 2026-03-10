@@ -59,7 +59,7 @@ namespace App.Character.Hand.FSM
             var mouseDelta = _ctx.InputManager.LookInput;
             
             // Apply manual rotation relative to player orientation
-            var localTorque = new Vector3(-mouseDelta.y, mouseDelta.x, 0) * _parameters.ManualRotationSpeed;
+            var localTorque = new Vector3(-mouseDelta.y, mouseDelta.x, 0) * _params.ManualRotationSpeed;
             var worldTorque = _ctx.Transform.TransformVector(localTorque);
             rb.AddTorque(worldTorque);
                 

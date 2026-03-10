@@ -9,19 +9,19 @@ namespace App.Character.Hand.FSM
     public abstract class HandState : StateBase
     {
         protected readonly HandContext _ctx;
-        protected readonly IHandParams _parameters;
+        protected readonly IHandParams _params;
 
         protected HandState(HandContext ctx, IHandParams parameters)
         {
             _ctx = ctx;
-            _parameters = parameters;
+            _params = parameters;
         }
 
         protected bool ObjInHandleRange(Transform objTransform)
         {
             var playerPosition = _ctx.Transform.position;
             var objPosition = objTransform.position;
-            return playerPosition.DistanceXZ(objPosition) <= _parameters.AutoDropDistance;
+            return playerPosition.DistanceXZ(objPosition) <= _params.AutoDropDistance;
         }
         
         protected void HoldObject(IHoldableObj holdableObj)
@@ -34,8 +34,8 @@ namespace App.Character.Hand.FSM
             var scrollDelta = _ctx.InputManager.ZoomDelta;
             if (scrollDelta != 0)
             {
-                var currentDistance = _ctx.CurrentDistance + scrollDelta * _parameters.ZoomSpeed * Time.deltaTime;
-                currentDistance = Mathf.Clamp(currentDistance, _parameters.MinDistance, _parameters.MaxDistance);
+                var currentDistance = _ctx.CurrentDistance + scrollDelta * _params.ZoomSpeed * Time.deltaTime;
+                currentDistance = Mathf.Clamp(currentDistance, _params.MinDistance, _params.MaxDistance);
                 _ctx.CurrentDistance = currentDistance;
             }
 
@@ -47,11 +47,11 @@ namespace App.Character.Hand.FSM
             if (distance > 0.01f)
             {
                 // Apply attraction force proportional to distance
-                var force = direction.normalized * (_parameters.AttractionForce * distance);
+                var force = direction.normalized * (_params.AttractionForce * distance);
                     
                 // Limit maximum speed
-                if (rb.linearVelocity.magnitude > _parameters.MaxAttractionSpeed)
-                    rb.linearVelocity = rb.linearVelocity.normalized * _parameters.MaxAttractionSpeed;
+                if (rb.linearVelocity.magnitude > _params.MaxAttractionSpeed)
+                    rb.linearVelocity = rb.linearVelocity.normalized * _params.MaxAttractionSpeed;
                     
                 rb.AddForce(force * Time.deltaTime);
             }
@@ -78,14 +78,14 @@ namespace App.Character.Hand.FSM
                 var angleRad = angleDeg * Mathf.Deg2Rad;
 
                 // Proportional target angular velocity (PD-style)
-                var desiredAngVel = axis.normalized * (angleRad * _parameters.RotationReturnSpeed);
+                var desiredAngVel = axis.normalized * (angleRad * _params.RotationReturnSpeed);
 
                 // Compute corrective torque: proportional to velocity error and some damping
                 var angVelError = desiredAngVel - rb.angularVelocity;
 
                 // Scale torque by approximate inertia (use inertiaTensor average) to respect object's shape
                 var inertiaAvg = (rb.inertiaTensor.x + rb.inertiaTensor.y + rb.inertiaTensor.z) * 0.3333333f;
-                var torque = angVelError * (inertiaAvg * _parameters.TorqueMultiplier);
+                var torque = angVelError * (inertiaAvg * _params.TorqueMultiplier);
 
                 // Apply torque
                 rb.AddTorque(torque);

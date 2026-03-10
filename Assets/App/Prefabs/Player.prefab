@@ -193,7 +193,7 @@ MonoBehaviour:
     torqueMultiplier: 1
     dragAttractionForce: 100000
     angularDampingDrag: 4
-    linerDampingDrag: 12
+    linerDampingDrag: 4
   interactRange: 3
   interactLayerMask:
     serializedVersion: 2

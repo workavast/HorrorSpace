@@ -47,6 +47,11 @@ namespace App.Character
         private void Update() 
             => _mainFsm.ManualUpdate();
 
+        private void FixedUpdate()
+        {
+            _mainFsm.ManualFixedUpdate();
+        }
+
         private void Initialize()
         {
             var handCtx = new HandContext(inputManager, cameraController, transform, cursorViewToggler);
@@ -146,7 +151,13 @@ namespace App.Character
 
             public override void Enter(Dictionary<string, object> args) { }
             public override void Exit() { }
-            public override void ManualFixedUpdate() { }
+
+            public override void ManualFixedUpdate()
+            {
+                _movementFsm.ManualFixedUpdate();
+                _jumpFsm.ManualFixedUpdate();
+                _handFsm.ManualFixedUpdate();
+            }
 
             public override void ManualUpdate()
             {

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using App.HandlingObjects.DraggedObjects;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace App.Character.Hand.FSM
 {
@@ -64,12 +63,11 @@ namespace App.Character.Hand.FSM
                 SetState<HandEmptyState>();
                 return;
             }
-
-            DragObject();
         }
 
         public override void ManualFixedUpdate()
         {
+            DragObject();
         }
 
         /// <summary>
@@ -79,29 +77,40 @@ namespace App.Character.Hand.FSM
         /// </summary>
         private void DragObject()
         {
+            if (_draggableObject == null)
+                return;
+            
             var objTransform = _draggableObject.Transform;
             var rb = _draggableObject.Rb;
             var camera = _ctx.CameraController.GetCamera();
 
-            // compute target point along cursor ray at fixed pickup distance
-            var ray = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
-            var targetPointOnRay = ray.origin + ray.direction * _ctx.CurrentDistance;
+            // compute target point along camera forward at fixed pickup distance
+            var targetPointOnRay = camera.transform.position + camera.transform.forward * _ctx.CurrentDistance;
 
             // offset of grab point in world space
             var offsetWorld = objTransform.TransformVector(_pickupOffsetLocal);
-            var targetPosition = targetPointOnRay - offsetWorld;
+            var currentGrabPoint = objTransform.position + offsetWorld;
 
             // apply attraction force to move object to target position
-            var direction = targetPosition - objTransform.position;
+            var direction = targetPointOnRay - currentGrabPoint;
             var distance = direction.magnitude;
-            if (distance > 0.01f)
-            {
-                var force = direction.normalized * (_parameters.DragAttractionForce);
 
-                // calculate world point that was grabbed
-                var pickupWorld = objTransform.position + offsetWorld;
-                rb.AddForceAtPosition(force * Time.deltaTime, pickupWorld);
+            //TODO import DebugX tool
+            if (_params.DragDebug)
+            {
+                Physics.CheckSphere(currentGrabPoint, 0.1f);
+                Physics.CheckSphere(targetPointOnRay, 0.1f);
+                Physics.Linecast(currentGrabPoint, targetPointOnRay);
             }
+
+            Vector3 force;
+            if (distance > _params.DragDampingDistance)
+                 force = direction.normalized * (_params.DragAttractionForce);
+            else
+                 force = direction.normalized * ((_params.DragAttractionForce) * (distance / _params.DragDampingDistance));
+
+            // calculate world point that was grabbed
+            rb.AddForceAtPosition(force * Time.fixedDeltaTime, currentGrabPoint);
         }
     }
 }

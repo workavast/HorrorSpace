@@ -28,6 +28,8 @@ namespace App.Character.Hand
         [SerializeField] private float dragAttractionForce = 100f;
         [SerializeField] private float angularDampingDrag = 5f;
         [SerializeField] private float linerDampingDrag = 5f;
+        [SerializeField] private float dampingDistance = 0.02f;
+        [SerializeField] private bool dragDebug = false;
         
         public LayerMask HandleLayerMask => handleLayerMask;
         public float PickupRange => pickupRange;
@@ -46,5 +48,7 @@ namespace App.Character.Hand
         
         public float AngularDampingDrag => angularDampingDrag;
         public float LinerDampingDrag => linerDampingDrag;
+        public float DragDampingDistance => dampingDistance;
+        public bool DragDebug => dragDebug;
     }
 }

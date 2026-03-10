@@ -76,7 +76,7 @@ namespace App.Character.Hand.FSM
             var camera = _ctx.CameraController.GetCamera();
             var ray = new Ray(camera.transform.position, camera.transform.forward);
 
-            if (Physics.Raycast(ray, out var hit, _parameters.PickupRange, _parameters.HandleLayerMask))
+            if (Physics.Raycast(ray, out var hit, _params.PickupRange, _params.HandleLayerMask))
             {
                 handleObj = hit.collider.GetComponent<IHandleObject>() ??
                             hit.collider.GetComponentInParent<IHandleObject>();
@@ -101,7 +101,7 @@ namespace App.Character.Hand.FSM
             // Calculate initial distance
             var camera = _ctx.CameraController.GetCamera();
             var currentDistance = Vector3.Distance(camera.transform.position, pickupPoint);
-            currentDistance = Mathf.Clamp(currentDistance, _parameters.MinDistance, _parameters.MaxDistance);
+            currentDistance = Mathf.Clamp(currentDistance, _params.MinDistance, _params.MaxDistance);
             _ctx.CurrentDistance = currentDistance;
 
             // Store target rotation relative to player (not camera)
@@ -112,8 +112,8 @@ namespace App.Character.Hand.FSM
             // Increase angular damping for picked up object
             var rb = holdableObj.Rb;
             _ctx.SetDefaultObjectDampings(rb.linearDamping, rb.angularDamping);
-            rb.angularDamping = _parameters.AngularDampingPickup;
-            rb.linearDamping = _parameters.LinerDampingPickup;
+            rb.angularDamping = _params.AngularDampingPickup;
+            rb.linearDamping = _params.LinerDampingPickup;
         }
 
         private void PickupObject(IDraggable draggable, Vector3 pickupPoint)
@@ -123,7 +123,7 @@ namespace App.Character.Hand.FSM
             // Calculate initial distance
             var camera = _ctx.CameraController.GetCamera();
             var currentDistance = Vector3.Distance(camera.transform.position, pickupPoint);
-            currentDistance = Mathf.Clamp(currentDistance, _parameters.MinDistance, _parameters.MaxDistance);
+            currentDistance = Mathf.Clamp(currentDistance, _params.MinDistance, _params.MaxDistance);
             _ctx.CurrentDistance = currentDistance;
 
             // Store target rotation relative to player (not camera)
@@ -132,8 +132,8 @@ namespace App.Character.Hand.FSM
             // Increase angular damping for picked up object
             var rb = draggable.Rb;
             _ctx.SetDefaultObjectDampings(rb.linearDamping, rb.angularDamping);
-            rb.angularDamping = _parameters.AngularDampingDrag;
-            rb.linearDamping = _parameters.LinerDampingDrag;
+            rb.angularDamping = _params.AngularDampingDrag;
+            rb.linearDamping = _params.LinerDampingDrag;
         }
     }
 }
