@@ -50,7 +50,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1874831117739747665, guid: 7411125df532a3249b6744dc20bc82b8, type: 3}
       propertyPath: m_Name
-      value: InsulationBlock
+      value: IsolationBlock
       objectReference: {fileID: 0}
     - target: {fileID: 2139946447940425409, guid: 7411125df532a3249b6744dc20bc82b8, type: 3}
       propertyPath: m_LocalPosition.x

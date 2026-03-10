@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952135830324962451}
   - component: {fileID: 8105753015344507608}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: CloseCheckCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3734431233900957447}
   - component: {fileID: 1580659695802036436}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: CloseCheckCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
