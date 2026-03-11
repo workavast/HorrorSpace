@@ -1,6 +1,5 @@
 ﻿using System;
 using App.Character;
-using App.DraggedDoors;
 using App.Usable;
 using UnityEngine;
 
@@ -8,8 +7,10 @@ namespace App.IsolationBlock
 {
 	public class IsolationBlockController : MonoBehaviour, IUsable
 	{
-		[SerializeField] private DraggedDoor[] draggedDoors;
+		[SerializeField] private CellsManager cellsManager;
+		[SerializeField] private IsolationTable[] tables;
 
+		private bool CellsIsOpen => !cellsManager.CellsIsClosed;
 		public bool IsUsable { get; private set; } = true;
 		
 		public event Action OnUse;
@@ -18,8 +19,9 @@ namespace App.IsolationBlock
 
 		private void Start()
 		{
-			foreach (var draggedDoor in draggedDoors)
-				draggedDoor.SetState(false);
+			cellsManager.Initialize();
+			
+			SetState(false);
 		}
 
 		public void Interact(PlayerContext playerContext)
@@ -29,14 +31,29 @@ namespace App.IsolationBlock
 				OnTryUse?.Invoke(false);
 				return;
 			}
+
+
+			if (!SetState(!CellsIsOpen))
+			{
+				OnTryUse?.Invoke(false);
+				return;
+			}
 			
-			foreach (var draggedDoor in draggedDoors)
-				draggedDoor.SetState(true);
-			
-			IsUsable = false;
 			OnUse?.Invoke();
 			OnTryUse?.Invoke(true);
 			OnUsableStateChanged?.Invoke();
+		}
+
+		private bool SetState(bool isOpen)
+		{
+			if (!isOpen && !cellsManager.AllCellsCanBeClosed())
+				return false;
+			
+			cellsManager.SetState(isOpen);
+			foreach (var table in tables) 
+				table.SetState(isOpen);
+			
+			return true;
 		}
 	}
 }

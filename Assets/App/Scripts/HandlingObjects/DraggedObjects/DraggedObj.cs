@@ -1,5 +1,4 @@
-﻿using App.HandlingObjects.HoldableObjects;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace App.HandlingObjects.DraggedObjects
 {
@@ -24,6 +23,12 @@ namespace App.HandlingObjects.DraggedObjects
 		{
 			CanBeDragged = CanBeHandled = isDragged;
 			Rb.isKinematic = !isDragged;
+		}
+		
+		public void SetState(bool isDragged, bool isPhysical)
+		{
+			CanBeDragged = CanBeHandled = isDragged;
+			Rb.isKinematic = !isPhysical;
 		}
 	}
 }

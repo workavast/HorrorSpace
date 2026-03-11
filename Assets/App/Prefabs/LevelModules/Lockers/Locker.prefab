@@ -365,6 +365,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.DraggedDoors.DraggedDoor
   draggedObj: {fileID: 5735432922244311765}
   interactiveObj: {fileID: 7661551946611959354}
+  doorHingeJoint: {fileID: 6689585289912578102}
+  IsClosed: 0
 --- !u!114 &5735432922244311765
 MonoBehaviour:
   m_ObjectHideFlags: 0

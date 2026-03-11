@@ -8,6 +8,9 @@ namespace App.TriggerZones
         public event Action<TComponent> OnTriggerEnterEvent;
         public event Action<TComponent> OnTriggerExitEvent;
         
+        public void SetActive(bool isActive) 
+            => gameObject.SetActive(isActive);
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out TComponent component)) 

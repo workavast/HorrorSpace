@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7311785736896772537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8408063518054289258}
+  - component: {fileID: 455059694929552828}
+  m_Layer: 2
+  m_Name: ObstacleCheckZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8408063518054289258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7311785736896772537}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.09, y: 1.731, z: -0.57}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5194003158464285382}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &455059694929552828
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7311785736896772537}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.6, y: 3.6, z: 1.5}
+  m_Center: {x: 0.37, y: 0, z: -0.100000024}
 --- !u!1001 &5194003158464141100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64,14 +117,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 435530, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9575016, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 417258, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8408063518054289258}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 141970, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 3}
       insertIndex: 1
-      addedObject: {fileID: 6515075014930280316}
+      addedObject: {fileID: 285820218323011389}
     - targetCorrespondingSourceObject: {fileID: 141970, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2620698434491713136}
@@ -93,7 +153,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 141970, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 3}
   m_PrefabInstance: {fileID: 5194003158464141100}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6515075014930280316
+--- !u!114 &285820218323011389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,11 +162,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5194003158464019902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c44a7a040534a56abee371cecedcf70, type: 3}
+  m_Script: {fileID: 11500000, guid: 6bf949ab561243f79828245c57130e5e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.DraggedDoors.DraggedDoor
+  m_EditorClassIdentifier: Assembly-CSharp::App.IsolationBlock.Cells.CellDoor
   draggedObj: {fileID: 5701087200651486607}
   interactiveObj: {fileID: 2160499656435076103}
+  doorHingeJoint: {fileID: 4823870246600271458}
+  IsClosed: 0
+  obstaclesCheckZone: {fileID: 455059694929552828}
+  obstaclesLayerMask:
+    serializedVersion: 2
+    m_Bits: 59
 --- !u!54 &2620698434491713136
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -208,8 +274,8 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 0
   m_Spring:
-    spring: 0
-    damper: 0
+    spring: 100
+    damper: 10
     targetPosition: 0
   m_UseMotor: 0
   m_Motor:
@@ -231,3 +297,8 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!4 &5194003158464285382 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 417258, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 3}
+  m_PrefabInstance: {fileID: 5194003158464141100}
+  m_PrefabAsset: {fileID: 0}
