@@ -2,7 +2,7 @@
 
 namespace App.KeySystem
 {
-    public class KeyObjectTriggerZone : TriggerZoneProvider<IKeyObject>
+    public class KeyObjectTriggerZone : TriggerZoneProviderT<IKeyObject>
     {
         
     }

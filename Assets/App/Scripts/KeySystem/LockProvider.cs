@@ -16,13 +16,13 @@ namespace App.KeySystem
         private void Awake()
         {
             foreach (var triggerZone in triggerZones) 
-                triggerZone.OnTriggerEnterEvent += TryUnlock;
+                triggerZone.OnEnter += TryUnlock;
         }
 
         private void OnDestroy()
         {
             foreach (var triggerZone in triggerZones) 
-                triggerZone.OnTriggerEnterEvent -= TryUnlock;
+                triggerZone.OnEnter -= TryUnlock;
         }
 
         public void SetActivityState(bool state)

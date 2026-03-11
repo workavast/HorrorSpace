@@ -24,8 +24,8 @@ namespace App.IsolationBlock.Cells
 
 		public void Initialize()
 		{
-			triggerZone.OnTriggerEnterEvent += TargetEnter;
-			triggerZone.OnTriggerExitEvent += TargetExit;
+			triggerZone.OnEnter += TargetEnter;
+			triggerZone.OnExit += TargetExit;
 			
 			_ctx = new CellContext(door, triggerZone);
 			var states = new List<StateBase>()
@@ -40,8 +40,8 @@ namespace App.IsolationBlock.Cells
 
 		private void OnDestroy()
 		{
-			triggerZone.OnTriggerEnterEvent -= TargetEnter;
-			triggerZone.OnTriggerExitEvent -= TargetExit;
+			triggerZone.OnEnter -= TargetEnter;
+			triggerZone.OnExit -= TargetExit;
 		}
 		
 		private void Update()
