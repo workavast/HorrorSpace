@@ -77,6 +77,22 @@ namespace App.InteractiveObjects
                 return;
             }
 
+            // Clamp rect to screen to ensure UI bounds are always visible
+            float screenW = Screen.width;
+            float screenH = Screen.height;
+            
+            minX = Mathf.Clamp(minX, 0f, screenW);
+            maxX = Mathf.Clamp(maxX, 0f, screenW);
+            minY = Mathf.Clamp(minY, 0f, screenH);
+            maxY = Mathf.Clamp(maxY, 0f, screenH);
+            
+            if (minX >= maxX || minY >= maxY)
+            {
+                highlightImage.gameObject.SetActive(false);
+                nonInteractableImage.gameObject.SetActive(false);
+                return;
+            }
+
             // Choose which image to use based on IsInteractable
             RectTransform targetRect;
             if (interactiveObj.IsInteractable)
