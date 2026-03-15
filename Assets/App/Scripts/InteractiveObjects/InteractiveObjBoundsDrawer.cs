@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Avastrad.Libs.CheckOnNullLib;
 using UnityEngine;
 
@@ -35,8 +36,11 @@ namespace App.InteractiveObjects
                 return;
             }
             
-            // Get bounds from renderer or collider
-            var bounds = GetBounds(target);
+            // Get bounds from mesh vertices (world-space, includes rotation/scale) or fallback to renderer/collider
+            Bounds bounds;
+            if (!TryGetWorldBoundsFromMesh(target, out bounds))
+                bounds = GetBounds(target);
+
             if (bounds.size == Vector3.zero)
             {
                 highlightImage.gameObject.SetActive(false);
@@ -44,12 +48,12 @@ namespace App.InteractiveObjects
                 return;
             }
 
-            // Project bounds corners to screen space
-            var worldCorners = GetWorldCorners(bounds);
-            var screenPoints = new Vector3[worldCorners.Length];
+            // Project actual object world points to screen space (mesh vertices, or fallback AABB corners)
+            var worldPoints = GetWorldPoints(target, bounds);
+            var screenPoints = new Vector3[worldPoints.Length];
 
-            for (var i = 0; i < worldCorners.Length; i++) 
-                screenPoints[i] = mainCamera.WorldToScreenPoint(worldCorners[i]);
+            for (var i = 0; i < worldPoints.Length; i++)
+                screenPoints[i] = mainCamera.WorldToScreenPoint(worldPoints[i]);
 
             // Calculate screen rect
             float minX = float.MaxValue, maxX = float.MinValue;
@@ -93,6 +97,37 @@ namespace App.InteractiveObjects
             targetRect.gameObject.SetActive(true);
         }
 
+        private static bool TryGetWorldBoundsFromMesh(GameObject target, out Bounds bounds)
+        {
+            bounds = new Bounds();
+            if (target == null)
+                return false;
+
+            var meshFilter = target.GetComponent<MeshFilter>() ?? target.GetComponentInChildren<MeshFilter>();
+            if (meshFilter == null || meshFilter.sharedMesh == null || meshFilter.sharedMesh.vertexCount == 0)
+                return false;
+
+            var mesh = meshFilter.sharedMesh;
+            var vertices = mesh.vertices;
+            if (vertices == null || vertices.Length == 0)
+                return false;
+
+            var min = new Vector3(float.MaxValue, float.MaxValue, float.MaxValue);
+            var max = new Vector3(float.MinValue, float.MinValue, float.MinValue);
+            var mfTransform = meshFilter.transform;
+
+            foreach (var vertex in vertices)
+            {
+                var worldPoint = mfTransform.TransformPoint(vertex);
+                min = Vector3.Min(min, worldPoint);
+                max = Vector3.Max(max, worldPoint);
+            }
+
+            var center = (min + max) * 0.5f;
+            bounds = new Bounds(center, max - min);
+            return bounds.size != Vector3.zero;
+        }
+
         private static Bounds GetBounds(GameObject target)
         {
             // Try to get bounds from renderer first
@@ -112,6 +147,41 @@ namespace App.InteractiveObjects
                 return collider.bounds;
 
             return new Bounds();
+        }
+
+        private static Vector3[] GetWorldPoints(GameObject target, Bounds bounds)
+        {
+            if (TryGetWorldPointsFromMesh(target, out var worldPoints))
+                return worldPoints;
+
+            return GetWorldCorners(bounds);
+        }
+
+        private static bool TryGetWorldPointsFromMesh(GameObject target, out Vector3[] worldPoints)
+        {
+            worldPoints = null;
+            if (target == null)
+                return false;
+
+            var meshFilters = target.GetComponentsInChildren<MeshFilter>();
+            if (meshFilters == null || meshFilters.Length == 0)
+                return false;
+
+            var pointList = new List<Vector3>();
+            foreach (var mf in meshFilters)
+            {
+                if (mf == null || mf.sharedMesh == null)
+                    continue;
+
+                foreach (var vertex in mf.sharedMesh.vertices)
+                    pointList.Add(mf.transform.TransformPoint(vertex));
+            }
+
+            if (pointList.Count == 0)
+                return false;
+
+            worldPoints = pointList.ToArray();
+            return true;
         }
 
         private static Vector3[] GetWorldCorners(Bounds bounds)
