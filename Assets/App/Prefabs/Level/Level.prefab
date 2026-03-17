@@ -32,12 +32,15 @@ Transform:
   - {fileID: 7777230548585846789}
   - {fileID: 3903644730907519710}
   - {fileID: 1426044365624820792}
+  - {fileID: 7120475734040506375}
   - {fileID: 6684906327767693709}
   - {fileID: 1745969429035360430}
   - {fileID: 1168785209384880587}
   - {fileID: 2006693114963098945}
   - {fileID: 7675650053283926712}
   - {fileID: 6524177032875763867}
+  - {fileID: 8527335898156666360}
+  - {fileID: 3079732038603716319}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &462649433063025536
@@ -164,6 +167,233 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7260181637157655014, guid: 1f4ad4c56813c3d40b0e2054b6f2258c, type: 3}
   m_PrefabInstance: {fileID: 1028012266771628894}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1321183507921159417
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4175960694369177057}
+    m_Modifications:
+    - target: {fileID: 1967240354458788282, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_Name
+      value: SecurityCheckPoint Entrance
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+--- !u!114 &2284668313796416074 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1000094733463443123, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+  m_PrefabInstance: {fileID: 1321183507921159417}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8b5af6fd5a4374b931131fbcc95d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.SecurityCheckpoint.SecurityCheckpointController
+--- !u!4 &7120475734040506375 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+  m_PrefabInstance: {fileID: 1321183507921159417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2302310796776955309
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4175960694369177057}
+    m_Modifications:
+    - target: {fileID: 4695101757771782367, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+      propertyPath: m_Name
+      value: SecurityRoom Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612312252313456725, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 72.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612312252313456725, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612312252313456725, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612312252313456725, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0000028461216
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612312252313456725, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612312252313456725, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612312252313456725, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612312252313456725, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612312252313456725, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612312252313456725, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+--- !u!4 &8527335898156666360 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7612312252313456725, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
+  m_PrefabInstance: {fileID: 2302310796776955309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6501417108816396833
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4175960694369177057}
+    m_Modifications:
+    - target: {fileID: 1967240354458788282, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_Name
+      value: SecurityCheckPoint Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7950697760652044071, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: exitDoor
+      value: 
+      objectReference: {fileID: 3657315169928373464}
+    - target: {fileID: 7950697760652044071, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: entranceDoor
+      value: 
+      objectReference: {fileID: 1491795343350007696}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 67
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0000029504295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+--- !u!114 &1491795343350007696 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5659414633834055089, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+  m_PrefabInstance: {fileID: 6501417108816396833}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f685ab8f4d7e03a4fa3e009051c13a3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
+--- !u!4 &3079732038603716319 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+  m_PrefabInstance: {fileID: 6501417108816396833}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3657315169928373464 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7564016228459374329, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+  m_PrefabInstance: {fileID: 6501417108816396833}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f685ab8f4d7e03a4fa3e009051c13a3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
 --- !u!1001 &6515535459315396840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -288,17 +518,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7760671337751658530, guid: 95c450d295dfa7d46a601bf592323685, type: 3}
   m_PrefabInstance: {fileID: 6746384843890699004}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5877432639850903325 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 868962306392219105, guid: 95c450d295dfa7d46a601bf592323685, type: 3}
-  m_PrefabInstance: {fileID: 6746384843890699004}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c8f118e43ec4b85833e49c2a6f10eae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.InspectionPoints.InspectionBtn
 --- !u!1001 &7377594523534553167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -495,7 +714,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4695101757771782367, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
       propertyPath: m_Name
-      value: SecurityRoom
+      value: SecurityRoom Enterance
       objectReference: {fileID: 0}
     - target: {fileID: 7612312252313456725, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -540,7 +759,7 @@ PrefabInstance:
     - target: {fileID: 8488995788083161920, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
       propertyPath: securityCheckpointBtn
       value: 
-      objectReference: {fileID: 5877432639850903325}
+      objectReference: {fileID: 2284668313796416074}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

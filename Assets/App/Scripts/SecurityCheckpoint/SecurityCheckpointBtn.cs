@@ -52,7 +52,7 @@ namespace App.SecurityCheckpoint
 		
 		public void SetAvailableState(bool isAvailableState)
 		{
-			this.isAvailable = isAvailableState;
+			isAvailable = isAvailableState;
 			OnUsableStateChanged?.Invoke();
 		}
 	}

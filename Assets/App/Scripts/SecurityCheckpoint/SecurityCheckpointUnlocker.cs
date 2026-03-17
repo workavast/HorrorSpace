@@ -1,6 +1,5 @@
 ﻿using System;
 using App.Character;
-using App.InteractiveObjects;
 using App.Usable;
 using UnityEngine;
 
@@ -8,7 +7,7 @@ namespace App.SecurityCheckpoint
 {
 	public class SecurityCheckpointUnlocker : MonoBehaviour, IUsable
 	{
-		[SerializeField] private SecurityCheckpointBtn securityCheckpointBtn;
+		[SerializeField] private SecurityCheckpointController securityCheckpointBtn;
 
 		public bool IsUsable { get; private set; } = true;
 		
