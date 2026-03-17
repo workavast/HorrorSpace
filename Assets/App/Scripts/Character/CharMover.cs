@@ -32,37 +32,48 @@ namespace App.Character
 
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
-            {//decelerate old velocity
-                const int targetSpeed = 0;
-                var decelerationScale = (_params.Deceleration * deltaTime);
-
-                if (currentVelocity.XZ().magnitude - targetSpeed < decelerationScale) 
-                    decelerationScale = currentVelocity.XZ().magnitude - targetSpeed;
-                
-                var decelerationResult = currentVelocity.X0Z().normalized * decelerationScale;
-                currentVelocity -= decelerationResult;
-            }
-            
-            if (_ctx.VelocityInput != Vector2.zero)
+            if (_ctx.IsInAirJump)
             {
-                var targetSpeed = _ctx.TargetSpeed * _params.VelocityModifierPerGrabObjMass.Evaluate(_ctx.DraggedObjMass);
                 var moveDirection = _ctx.Transform.right * _ctx.VelocityInput.x + 
-                                    _ctx.Transform.forward * _ctx.VelocityInput.y;    
+                                    _ctx.Transform.forward * _ctx.VelocityInput.y;
                 
-                //add deceleration to the acceleration need cus in prev block we decelerate old velocity
-                var velocityDelta = moveDirection * ((_params.Acceleration + _params.Deceleration) * deltaTime);
-                currentVelocity += velocityDelta;
-                
-                if (currentVelocity.XZ().magnitude > targetSpeed)
-                {
-                    //add acceleration to the deceleration need cus in prev block we use sum of them
-                    var deceleration = _params.Deceleration + _params.Acceleration;
-                    var decelerationScale = (deceleration * deltaTime);
+                currentVelocity += moveDirection * _params.AirAcceleration * deltaTime;
+                currentVelocity -= currentVelocity * _params.AirDrag * deltaTime;
+            }
+            else
+            {
+                {//decelerate old velocity
+                    const int targetSpeed = 0;
+                    var decelerationScale = (_params.Deceleration * deltaTime);
+
                     if (currentVelocity.XZ().magnitude - targetSpeed < decelerationScale) 
                         decelerationScale = currentVelocity.XZ().magnitude - targetSpeed;
                 
-                    var dec = currentVelocity.X0Z().normalized * decelerationScale;
-                    currentVelocity -= dec;
+                    var decelerationResult = currentVelocity.X0Z().normalized * decelerationScale;
+                    currentVelocity -= decelerationResult;
+                }
+
+                if (_ctx.VelocityInput != Vector2.zero)
+                {
+                    var targetSpeed = _ctx.TargetSpeed * _params.VelocityModifierPerGrabObjMass.Evaluate(_ctx.DraggedObjMass);
+                    var moveDirection = _ctx.Transform.right * _ctx.VelocityInput.x + 
+                                        _ctx.Transform.forward * _ctx.VelocityInput.y;    
+                
+                    //add deceleration to the acceleration need cus in prev block we decelerate old velocity
+                    var velocityDelta = moveDirection * ((_params.Acceleration + _params.Deceleration) * deltaTime);
+                    currentVelocity += velocityDelta;
+                
+                    if (currentVelocity.XZ().magnitude > targetSpeed)
+                    {
+                        //add acceleration to the deceleration need cus in prev block we use sum of them
+                        var deceleration = _params.Deceleration + _params.Acceleration;
+                        var decelerationScale = (deceleration * deltaTime);
+                        if (currentVelocity.XZ().magnitude - targetSpeed < decelerationScale) 
+                            decelerationScale = currentVelocity.XZ().magnitude - targetSpeed;
+                
+                        var dec = currentVelocity.X0Z().normalized * decelerationScale;
+                        currentVelocity -= dec;
+                    }
                 }
             }
 

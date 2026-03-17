@@ -18,13 +18,6 @@ namespace App.Character.FSM.Movement
 
         protected void HandleMovementInput(Vector2 moveInput, float targetSpeed)
         {
-            // If we are in an in-air jump phase, keep horizontal velocity locked
-            if (!_ctx.IsGrounded && _ctx.IsInAirJump)
-            {
-                _ctx.VelocityInput *= (1f / (1f + (_params.AirDrag * Time.deltaTime)));
-                return;
-            }
-
             _ctx.VelocityInput = moveInput;
             _ctx.TargetSpeed = targetSpeed;
         }

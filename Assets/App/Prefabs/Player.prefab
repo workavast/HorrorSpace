@@ -163,18 +163,19 @@ MonoBehaviour:
     JumpForce: 5
     Gravity: 9.81
     AirDrag: 0.2
+    AirAcceleration: 5
     CrouchHeight: 1.3
     CrouchSpeed: 2
     CrouchHeightSpeed: 5
     HeadCollisionDistance: 0.1
     ObstacleLayer:
       serializedVersion: 2
-      m_Bits: 119
+      m_Bits: 83
     StandCheckDistance: 1.35
     StandCheckOffset: -0.1
-    CollisionCheckRadius: 0.59
     NormalCameraHeight: 2.1
     CrouchCameraHeight: 0.9
+    CollisionCheckRadius: 0.59
   handParams:
     handleLayerMask:
       serializedVersion: 2
@@ -194,6 +195,8 @@ MonoBehaviour:
     dragAttractionForce: 100000
     angularDampingDrag: 4
     linerDampingDrag: 4
+    dampingDistance: 0.02
+    dragDebug: 0
   interactRange: 3
   interactLayerMask:
     serializedVersion: 2
@@ -281,7 +284,7 @@ MonoBehaviour:
   MaxStableSlopeAngle: 60
   StableGroundLayers:
     serializedVersion: 2
-    m_Bits: 87
+    m_Bits: 83
   DiscreteCollisionEvents: 0
   StepHandling: 1
   MaxStepHeight: 0.5
