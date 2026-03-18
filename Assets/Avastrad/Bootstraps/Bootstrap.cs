@@ -2,6 +2,8 @@
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
+using VContainer;
+using VContainer.Unity;
 
 namespace Avastrad.Bootstraps
 {
@@ -9,16 +11,16 @@ namespace Avastrad.Bootstraps
     {
         private readonly CancellationTokenSource _cancellationTokenSource = new();
         
-        protected async Task Initialize(CancellationToken externalToken)
+        protected async Task Initialize(CancellationToken externalToken, LifetimeScope lifetimeScope)
         {
             using var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(_cancellationTokenSource.Token, externalToken);
             var linkedToken = linkedCts.Token;
             
-            await SelfInitialization(linkedToken);
+            await SelfInitialization(linkedToken, lifetimeScope);
 
             linkedToken.ThrowIfCancellationRequested();
             
-            await InitializeChildren(linkedToken);
+            await InitializeChildren(linkedToken, lifetimeScope);
         }
 
         protected virtual void OnDestroy()
@@ -27,14 +29,14 @@ namespace Avastrad.Bootstraps
             _cancellationTokenSource.Dispose();
         }
 
-        protected abstract Task SelfInitialization(CancellationToken cancellationToken);
+        protected abstract Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope);
         
-        private async Task InitializeChildren(CancellationToken cancellationToken)
+        private async Task InitializeChildren(CancellationToken cancellationToken, LifetimeScope lifetimeScope)
         {
             var children = GetChildrenBootstraps();
             foreach (var child in children)
             {
-                await child.Initialize(cancellationToken);
+                await child.Initialize(cancellationToken, lifetimeScope);
                 cancellationToken.ThrowIfCancellationRequested();
             }
         }

@@ -1,16 +1,19 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
+using VContainer.Unity;
 
 namespace Avastrad.Bootstraps
 {
     public class RootBootstrap : Bootstrap
     {
+        [SerializeField] private LifetimeScope lifetimeScope;
+        
         public async void Start()
         {
             try
             {
-                await Initialize(CancellationToken.None);
+                await Initialize(CancellationToken.None, lifetimeScope);
             }
             catch (TaskCanceledException e)
             {
@@ -18,7 +21,7 @@ namespace Avastrad.Bootstraps
             }
         }
 
-        protected override Task SelfInitialization(CancellationToken cancellationToken) 
+        protected override Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope) 
             => Task.CompletedTask;
     }
 }

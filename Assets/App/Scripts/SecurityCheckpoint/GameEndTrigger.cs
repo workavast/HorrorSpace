@@ -8,6 +8,7 @@ namespace App.SecurityCheckpoint
 {
 	public class GameEndTrigger : MonoBehaviour
 	{
+		[SerializeField] private LoadingConfig loadingConfig;
 		[SerializeField] private SceneReference sceneRef;
 		[SerializeField] private UsableObj usableObj;
 
@@ -25,8 +26,7 @@ namespace App.SecurityCheckpoint
 
 		private void EndGame()
 		{
-			Debug.Log("Game ended");
-			_sceneLoader.LoadScene(sceneRef.SceneIndex, 1);
+			_sceneLoader.LoadScene(sceneRef.SceneIndex, loadingConfig.ShowDuration);
 		}
 	}
 }

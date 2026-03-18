@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2950317762567788776, guid: 7411125df532a3249b6744dc20bc82b8, type: 3}
+      propertyPath: securityCheckpointController
+      value: 
+      objectReference: {fileID: 6329985982405137554}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -362,10 +366,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2760724988019437395, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1967240354458788282, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7551542138364530560}
   m_SourcePrefab: {fileID: 100100000, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
 --- !u!114 &1491795343350007696 stripped
 MonoBehaviour:
@@ -394,6 +402,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f685ab8f4d7e03a4fa3e009051c13a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
+--- !u!1 &4716578087300653979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1967240354458788282, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+  m_PrefabInstance: {fileID: 6501417108816396833}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7551542138364530560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4716578087300653979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d1cb8e48a746c1a1ca096cf1ac7250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.SecurityCheckpoint.GameEndTrigger
+  loadingConfig: {fileID: 11400000, guid: dbc4a6a60347e874a8a49487f0d9b811, type: 2}
+  sceneRef: {fileID: 11400000, guid: a14681b07f43ea140bfd4da4cf712932, type: 2}
+  usableObj: {fileID: 7961783662824990870}
+--- !u!114 &6329985982405137554 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1000094733463443123, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+  m_PrefabInstance: {fileID: 6501417108816396833}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4716578087300653979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8b5af6fd5a4374b931131fbcc95d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.SecurityCheckpoint.SecurityCheckpointController
+--- !u!114 &7961783662824990870 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3766236776219749047, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+  m_PrefabInstance: {fileID: 6501417108816396833}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4716578087300653979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4b110399bd4a7297d234ae559f6672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Usable.UsableObj
 --- !u!1001 &6515535459315396840
 PrefabInstance:
   m_ObjectHideFlags: 0

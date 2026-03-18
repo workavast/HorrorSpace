@@ -451,10 +451,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 933297099609397042, guid: d82376ab082505d4fb7cb68fb9360c2a, type: 3}
-      propertyPath: lifetimeScope
-      value: 
-      objectReference: {fileID: 1187271889}
     - target: {fileID: 1885521009434821985, guid: d82376ab082505d4fb7cb68fb9360c2a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -500,6 +496,10 @@ PrefabInstance:
       value: Bootstrap-Bootstrap
       objectReference: {fileID: 0}
     - target: {fileID: 8553596438513238020, guid: d82376ab082505d4fb7cb68fb9360c2a, type: 3}
+      propertyPath: lifetimeScope
+      value: 
+      objectReference: {fileID: 1187271889}
+    - target: {fileID: 8692146411165850442, guid: d82376ab082505d4fb7cb68fb9360c2a, type: 3}
       propertyPath: lifetimeScope
       value: 
       objectReference: {fileID: 1187271889}

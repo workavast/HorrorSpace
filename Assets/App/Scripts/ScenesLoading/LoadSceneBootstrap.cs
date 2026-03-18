@@ -13,11 +13,10 @@ namespace App.ScenesLoading
 	{
 		[SerializeField] private LoadingConfig loadingConfig;
 		[SerializeField] private SceneReference sceneRef;
-		[SerializeField] private LifetimeScope lifetimeScope;
 		
-		protected override Task SelfInitialization(CancellationToken cancellationToken)
+		protected override Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope)
 		{
-			var sceneLoader = lifetimeScope.Container.Resolve<ISceneLoader>();
+			var sceneLoader = lifeTimeScope.Container.Resolve<ISceneLoader>();
 			sceneLoader.LoadScene(sceneRef.SceneIndex, loadingConfig.ShowDuration);
 			
 			return Task.CompletedTask;

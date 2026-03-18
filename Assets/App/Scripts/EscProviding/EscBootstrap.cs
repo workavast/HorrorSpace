@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using Avastrad.Bootstraps;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using VContainer;
+using VContainer.Unity;
 
 namespace App.EscProviding
 {
@@ -12,7 +14,7 @@ namespace App.EscProviding
 		
 		private EscTrigger _escTrigger;
 		
-		protected override Task SelfInitialization(CancellationToken cancellationToken)
+		protected override Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope)
 		{
 			// _escTrigger = new EscTrigger(escRef);
 			return Task.CompletedTask;

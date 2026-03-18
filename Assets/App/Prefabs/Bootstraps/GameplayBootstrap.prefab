@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45009f4e8c19401597f897aa7150ba8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Lockers.LockersBootstrap
-  lifetimeScope: {fileID: 0}
 --- !u!1 &2811678139560338713
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4484d12f164830bd3249c9a77c4c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorsBootstrap
-  lifetimeScope: {fileID: 0}
 --- !u!1 &2978683914674210137
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcaa310278a411fb76246cd87e6dff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Usable.TryUseSoundPlayerBootstrap
-  lifetimeScope: {fileID: 0}
 --- !u!1 &6014012980325495198
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51a5a2110184f149fef6e386b7177bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Avastrad.Bootstraps::Avastrad.Bootstraps.RootBootstrap
+  lifetimeScope: {fileID: 0}
 --- !u!1 &6589465493829556597
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710df20c8cf94d9291b657e4a7ae8f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Global.GameEndInitializer
-  lifetimeScope: {fileID: 0}
 --- !u!1 &8684834973618314523
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,4 +317,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Global.LoadingScreenHider
   loadingConfig: {fileID: 11400000, guid: dbc4a6a60347e874a8a49487f0d9b811, type: 2}
-  lifetimeScope: {fileID: 0}

@@ -10,13 +10,11 @@ namespace App.Lockers
 {
 	public class LockersBootstrap : Bootstrap
 	{
-		[SerializeField] private LifetimeScope lifetimeScope;
-		
-		protected override Task SelfInitialization(CancellationToken cancellationToken)
+		protected override Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope)
 		{
 			var lockerLocks = FindObjectsByType<LockerLock>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 			foreach (var lockerLock in lockerLocks)
-				lockerLock.Initialize(lifetimeScope.Container.Resolve<AudioFactory>());
+				lockerLock.Initialize(lifeTimeScope.Container.Resolve<AudioFactory>());
 			
 			return Task.CompletedTask;
 		}

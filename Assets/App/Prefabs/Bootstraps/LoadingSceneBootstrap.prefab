@@ -89,7 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a24291a8444be5ad107ed59d110f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Global.LoadTargetSceneBootstrap
-  lifetimeScope: {fileID: 0}
 --- !u!1 &4880214105318896795
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,3 +135,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51a5a2110184f149fef6e386b7177bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Avastrad.Bootstraps::Avastrad.Bootstraps.RootBootstrap
+  lifetimeScope: {fileID: 0}

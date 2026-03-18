@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Avastrad.Bootstraps;
 using UnityEngine;
+using VContainer;
 using VContainer.Unity;
 
 namespace App.LifetimeScopes
@@ -10,7 +11,7 @@ namespace App.LifetimeScopes
 	{
 		[SerializeField] private LifetimeScope lifetimeScope;
 		
-		protected override Task SelfInitialization(CancellationToken cancellationToken)
+		protected override Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope)
 		{
 			lifetimeScope.Build();
 			
