@@ -30,7 +30,7 @@ namespace App.Doors
                 return;
             }
             
-            var result = door.Interact(playerContext);
+            var result = door.TryToggle();
 
             OnTryUse?.Invoke(result);
             if (result) 

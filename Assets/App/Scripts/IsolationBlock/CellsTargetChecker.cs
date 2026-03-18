@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using App.IsolationBlock.Cells;
+using App.SecurityCheckpoint;
 using UnityEngine;
 
 namespace App.IsolationBlock
 {
 	public class CellsTargetChecker : MonoBehaviour
 	{
+		[SerializeField] private SecurityCheckpointController securityCheckpointController;
 		[SerializeField] private List<IsolationCell> cells;
 
 		public bool IsTargetInside { get; private set; }
@@ -32,12 +34,14 @@ namespace App.IsolationBlock
 		{
 			Debug.Log("CellsTargetChecker.TargetEnter");
 			IsTargetInside = true;
+			securityCheckpointController.SetAvailableState(true);
 		}
 
 		private void TargetExit(Target obj)
 		{
 			Debug.Log("CellsTargetChecker.TargetExit");
 			IsTargetInside = false;
+			securityCheckpointController.SetAvailableState(false);
 		}
 	}
 }

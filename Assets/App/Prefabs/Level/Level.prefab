@@ -314,11 +314,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SecurityCheckPoint Exit
       objectReference: {fileID: 0}
-    - target: {fileID: 7950697760652044071, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+    - target: {fileID: 2760724988019437395, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
       propertyPath: exitDoor
       value: 
       objectReference: {fileID: 3657315169928373464}
-    - target: {fileID: 7950697760652044071, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+    - target: {fileID: 2760724988019437395, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
       propertyPath: entranceDoor
       value: 
       objectReference: {fileID: 1491795343350007696}

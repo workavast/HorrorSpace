@@ -31,7 +31,7 @@ namespace App.Doors
             OnLockStateChanged?.Invoke();
         }
         
-        public bool Interact(PlayerContext playerContext)
+        public bool TryToggle()
         {
             if (!IsUnLocked)
             {
@@ -40,7 +40,7 @@ namespace App.Doors
             }
 
             var targetIsOpen = !isOpen;
-            if (!targetIsOpen && !CanBeLocked())
+            if (!targetIsOpen && !CanBeClosed())
                 return false;
             
             isOpen = targetIsOpen;
@@ -52,7 +52,7 @@ namespace App.Doors
             return true;
         }
         
-        private bool CanBeLocked() 
+        private bool CanBeClosed() 
             => !Physics.CheckBox(closeCheckCollider.transform.position, closeCheckCollider.size / 2, 
                 closeCheckCollider.transform.rotation, checkLayers, QueryTriggerInteraction.Ignore);
     }

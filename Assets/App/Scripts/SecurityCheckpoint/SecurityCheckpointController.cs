@@ -1,14 +1,15 @@
-﻿using UnityEngine;
+﻿using App.Usable;
+using UnityEngine;
 
 namespace App.SecurityCheckpoint
 {
 	public class SecurityCheckpointController : MonoBehaviour
 	{
-		[SerializeField] private SecurityCheckpointBtn securityCheckpointBtn;
+		[SerializeField] private UsableObj securityCheckpointBtn;
 		
 		public void SetAvailableState(bool isAvailable)
 		{
-			securityCheckpointBtn.SetAvailableState(isAvailable);
+			securityCheckpointBtn.SetState(isAvailable);
 		}
 	}
 }

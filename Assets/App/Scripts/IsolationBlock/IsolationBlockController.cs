@@ -32,7 +32,6 @@ namespace App.IsolationBlock
 				return;
 			}
 
-
 			if (!SetState(!CellsIsOpen))
 			{
 				OnTryUse?.Invoke(false);
