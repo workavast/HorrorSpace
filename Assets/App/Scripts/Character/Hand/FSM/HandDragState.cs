@@ -104,10 +104,11 @@ namespace App.Character.Hand.FSM
             }
 
             Vector3 force;
+            var rawDragForce = _params.DragAttractionForce * _params.DragForceScaleByMass.Evaluate(_draggableObject.Mass);
             if (distance > _params.DragDampingDistance)
-                 force = direction.normalized * (_params.DragAttractionForce);
+                 force = direction.normalized * (rawDragForce);
             else
-                 force = direction.normalized * ((_params.DragAttractionForce) * (distance / _params.DragDampingDistance));
+                 force = direction.normalized * (rawDragForce * (distance / _params.DragDampingDistance));
 
             // calculate world point that was grabbed
             rb.AddForceAtPosition(force * Time.fixedDeltaTime, currentGrabPoint);
