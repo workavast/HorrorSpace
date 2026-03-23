@@ -77,7 +77,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff2a8bdc6ba46cb85be95b300f5047f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.InteractiveObjects.InteractiveObj
+  isActive: 1
   isInteractable: 1
+  meshFilters:
+  - {fileID: 2843164006974041497}
 --- !u!65 &2698902211357632096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -194,5 +197,10 @@ PrefabInstance:
 --- !u!4 &1214609658301522492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4f91a0ab2e23cc0499387eb022a55713, type: 3}
+  m_PrefabInstance: {fileID: 1680282955176429015}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &2843164006974041497 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: 4f91a0ab2e23cc0499387eb022a55713, type: 3}
   m_PrefabInstance: {fileID: 1680282955176429015}
   m_PrefabAsset: {fileID: 0}

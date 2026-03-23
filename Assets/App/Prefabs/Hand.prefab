@@ -68,6 +68,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.InteractiveObj
   isActive: 1
   isInteractable: 1
+  meshFilters:
+  - {fileID: 5801752100588339978}
 --- !u!65 &1364726675075848819
 BoxCollider:
   m_ObjectHideFlags: 0

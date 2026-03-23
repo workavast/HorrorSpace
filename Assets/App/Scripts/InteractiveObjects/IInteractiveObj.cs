@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace App.InteractiveObjects
 {
@@ -7,5 +8,6 @@ namespace App.InteractiveObjects
         public bool IsInteractable { get; }
         public bool IsActive { get; }
         public GameObject Go { get; }
+        public IReadOnlyList<MeshFilter> MeshFilters { get; }
     }
 }

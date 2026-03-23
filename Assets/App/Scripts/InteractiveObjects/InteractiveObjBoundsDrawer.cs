@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Avastrad.Libs.CheckOnNullLib;
 using UnityEngine;
@@ -28,28 +29,15 @@ namespace App.InteractiveObjects
                 return;
             }
 
-            var target = interactiveObj.Go;
-            if (target == null)
+            var meshFilters = interactiveObj.MeshFilters;
+            if (meshFilters == null || meshFilters.Count == 0)
             {
                 highlightImage.gameObject.SetActive(false);
                 nonInteractableImage.gameObject.SetActive(false);
                 return;
             }
             
-            // Get bounds from mesh vertices (world-space, includes rotation/scale) or fallback to renderer/collider
-            Bounds bounds;
-            if (!TryGetWorldBoundsFromMesh(target, out bounds))
-                bounds = GetBounds(target);
-
-            if (bounds.size == Vector3.zero)
-            {
-                highlightImage.gameObject.SetActive(false);
-                nonInteractableImage.gameObject.SetActive(false);
-                return;
-            }
-
-            // Project actual object world points to screen space (mesh vertices, or fallback AABB corners)
-            var worldPoints = GetWorldPoints(target, bounds);
+            var worldPoints = GetWorldPointsFromMeshes(meshFilters);
             var screenPoints = new Vector3[worldPoints.Length];
 
             for (var i = 0; i < worldPoints.Length; i++)
@@ -144,44 +132,10 @@ namespace App.InteractiveObjects
             return bounds.size != Vector3.zero;
         }
 
-        private static Bounds GetBounds(GameObject target)
+        private static Vector3[] GetWorldPointsFromMeshes(IReadOnlyList<MeshFilter> meshFilters)
         {
-            // Try to get bounds from renderer first
-            var renderer = target.GetComponent<Renderer>();
-            if (renderer == null)
-                renderer = target.GetComponentInChildren<Renderer>();
-
-            if (renderer != null)
-                return renderer.bounds;
-
-            // Fallback to collider bounds
-            var collider = target.GetComponent<Collider>();
-            if (collider == null)
-                collider = target.GetComponentInChildren<Collider>();
-
-            if (collider != null)
-                return collider.bounds;
-
-            return new Bounds();
-        }
-
-        private static Vector3[] GetWorldPoints(GameObject target, Bounds bounds)
-        {
-            if (TryGetWorldPointsFromMesh(target, out var worldPoints))
-                return worldPoints;
-
-            return GetWorldCorners(bounds);
-        }
-
-        private static bool TryGetWorldPointsFromMesh(GameObject target, out Vector3[] worldPoints)
-        {
-            worldPoints = null;
-            if (target == null)
-                return false;
-
-            var meshFilters = target.GetComponentsInChildren<MeshFilter>();
-            if (meshFilters == null || meshFilters.Length == 0)
-                return false;
+            if (meshFilters == null || meshFilters.Count == 0)
+                return Array.Empty<Vector3>();
 
             var pointList = new List<Vector3>();
             foreach (var mf in meshFilters)
@@ -194,25 +148,9 @@ namespace App.InteractiveObjects
             }
 
             if (pointList.Count == 0)
-                return false;
+                return Array.Empty<Vector3>();
 
-            worldPoints = pointList.ToArray();
-            return true;
-        }
-
-        private static Vector3[] GetWorldCorners(Bounds bounds)
-        {
-            return new Vector3[]
-            {
-                bounds.min,
-                new Vector3(bounds.min.x, bounds.min.y, bounds.max.z),
-                new Vector3(bounds.min.x, bounds.max.y, bounds.min.z),
-                new Vector3(bounds.min.x, bounds.max.y, bounds.max.z),
-                new Vector3(bounds.max.x, bounds.min.y, bounds.min.z),
-                new Vector3(bounds.max.x, bounds.min.y, bounds.max.z),
-                new Vector3(bounds.max.x, bounds.max.y, bounds.min.z),
-                bounds.max
-            };
+            return pointList.ToArray();
         }
     }
 }

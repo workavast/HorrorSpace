@@ -269,13 +269,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6032343764352609099}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.006, y: 1.26, z: 1.0611}
-  m_LocalScale: {x: 0.75564903, y: 0.12640373, z: 0.23612157}
+  m_LocalRotation: {x: 0.14545822, y: -0, z: -0, w: 0.98936445}
+  m_LocalPosition: {x: 0.006, y: 1.2326, z: 1.0566}
+  m_LocalScale: {x: 0.75564903, y: 0.08, z: 0.23612157}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6323568799533638544}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 16.728, y: 0, z: 0}
 --- !u!33 &6691274299693463529
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -400,6 +400,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.InteractiveObjects.InteractiveObj
   isActive: 1
   isInteractable: 1
+  meshFilters:
+  - {fileID: 6691274299693463529}
 --- !u!1 &6292993345506967235
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +550,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 153876, guid: 14f2f01264616214ba79f88c8f46c15f, type: 3}
       propertyPath: m_Name
-      value: desk Variant 1
+      value: desk SecurityRoom
       objectReference: {fileID: 0}
     - target: {fileID: 445452, guid: 14f2f01264616214ba79f88c8f46c15f, type: 3}
       propertyPath: m_LocalPosition.x

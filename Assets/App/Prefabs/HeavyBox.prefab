@@ -62,7 +62,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff2a8bdc6ba46cb85be95b300f5047f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.InteractiveObjects.InteractiveObj
+  isActive: 1
   isInteractable: 1
+  meshFilters:
+  - {fileID: 2439989540038903197}
 --- !u!33 &2439989540038903197
 MeshFilter:
   m_ObjectHideFlags: 0

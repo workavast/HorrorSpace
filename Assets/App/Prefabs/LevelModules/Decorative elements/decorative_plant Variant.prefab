@@ -66,6 +66,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3974932792540144430}
   m_SourcePrefab: {fileID: 100100000, guid: 83a919b0e630c394780833b59a51ab4f, type: 3}
+--- !u!33 &7856035002945020274 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: 3358942, guid: 83a919b0e630c394780833b59a51ab4f, type: 3}
+  m_PrefabInstance: {fileID: 7856035002946019756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7856035002946087312 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 198716, guid: 83a919b0e630c394780833b59a51ab4f, type: 3}
@@ -85,6 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.InteractiveObjects.InteractiveObj
   isActive: 1
   isInteractable: 1
+  meshFilters:
+  - {fileID: 7856035002945020274}
 --- !u!114 &3656527570783766787
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -219,6 +219,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.InteractiveObjects.InteractiveObj
   isActive: 1
   isInteractable: 1
+  meshFilters:
+  - {fileID: 5194003158467100736}
 --- !u!114 &5701087200651486607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,5 +302,10 @@ HingeJoint:
 --- !u!4 &5194003158464285382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 417258, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 3}
+  m_PrefabInstance: {fileID: 5194003158464141100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &5194003158467100736 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: 3364716, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 3}
   m_PrefabInstance: {fileID: 5194003158464141100}
   m_PrefabAsset: {fileID: 0}

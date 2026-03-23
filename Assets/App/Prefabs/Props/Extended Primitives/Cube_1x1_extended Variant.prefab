@@ -97,6 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.InteractiveObjects.InteractiveObj
   isActive: 1
   isInteractable: 1
+  meshFilters:
+  - {fileID: 1262216757166664633}
 --- !u!114 &6052892150710027662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,3 +138,8 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!33 &1262216757166664633 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: 3372482, guid: 1b9426746a4365c40b24a81f6ad2daea, type: 3}
+  m_PrefabInstance: {fileID: 1262216757163433595}
+  m_PrefabAsset: {fileID: 0}

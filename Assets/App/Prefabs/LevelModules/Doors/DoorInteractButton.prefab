@@ -458,8 +458,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72953c5e64894768a423a472858fbf2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.InteractiveUsableObj
+  isActive: 1
   usable:
     underlyingValue: {fileID: 7128153375829360339}
+  meshFilters:
+  - {fileID: 3443257213868105519}
 --- !u!114 &1892360506500254086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,8 +493,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.Doors.TryUseSoundPlayer
   usable:
     underlyingValue: {fileID: 7128153375829360339}
-  successSound: []
-  failSound: []
   successAudios:
   - audioPrefab: {fileID: 4921214974907067017, guid: 9c6818a887fb42f42b25ec2397400487, type: 3}
     point: {fileID: 3443257213867313399}
@@ -501,5 +502,10 @@ MonoBehaviour:
 --- !u!4 &3443257213867313399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3783367454032417063, guid: 750a7fdb61ab8e0428125a311a7fd6bd, type: 3}
+  m_PrefabInstance: {fileID: 1966332058724506064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &3443257213868105519 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: 3783367454031628031, guid: 750a7fdb61ab8e0428125a311a7fd6bd, type: 3}
   m_PrefabInstance: {fileID: 1966332058724506064}
   m_PrefabAsset: {fileID: 0}
