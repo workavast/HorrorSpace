@@ -11,6 +11,13 @@
       },
       "hash": "a174f0ace85831bc6790d497d2d683a64fc513dd"
     },
+    "com.dcfa_pixels.debugx": {
+      "version": "https://github.com/DCFApixels/Unity-DebugX.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "2de8dae2f9a9e94d488fd73d60c767d3a94a5734"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
