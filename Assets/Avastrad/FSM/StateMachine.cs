@@ -26,12 +26,13 @@ namespace Avastrad.FSM
         {
             _activeState = _states[typeof(TState)];
             _activeState.Enter(args);
+            OnStateSwitched?.Invoke(typeof(TState));
         }
         
-        public void ManualUpdate() 
+        public void Update() 
             => _activeState.ManualUpdate();
 
-        public void ManualFixedUpdate()
+        public void FixedUpdate()
             => _activeState.ManualFixedUpdate();
 
         public void SetState<TState>(Dictionary<string, object> args = null) 

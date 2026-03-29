@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 8450550693926369004}
   - component: {fileID: 5438028260905461622}
   - component: {fileID: 3548465234966692427}
+  - component: {fileID: 8225460231289988859}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -179,7 +180,7 @@ MonoBehaviour:
   handParams:
     handleLayerMask:
       serializedVersion: 2
-      m_Bits: 83
+      m_Bits: 211
     pickupRange: 3
     autoDropDistance: 6
     minDistance: 1.5
@@ -224,7 +225,7 @@ MonoBehaviour:
   interactRange: 3
   interactLayerMask:
     serializedVersion: 2
-    m_Bits: 83
+    m_Bits: 211
   jumpDebugStates:
     queue:
     - 
@@ -308,7 +309,7 @@ MonoBehaviour:
   MaxStableSlopeAngle: 60
   StableGroundLayers:
     serializedVersion: 2
-    m_Bits: 83
+    m_Bits: 211
   DiscreteCollisionEvents: 0
   StepHandling: 1
   MaxStepHeight: 0.5
@@ -352,3 +353,30 @@ CapsuleCollider:
   m_Height: 2.6
   m_Direction: 1
   m_Center: {x: 0, y: 1.3, z: 0}
+--- !u!54 &8225460231289988859
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712057721741398327}
+  serializedVersion: 5
+  m_Mass: 80
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

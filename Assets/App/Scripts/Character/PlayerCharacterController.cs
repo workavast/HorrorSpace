@@ -10,9 +10,11 @@ using Avastrad.FSM;
 using KinematicCharacterController;
 using UnityEngine;
 
+using App.Mutant;
+
 namespace App.Character
 {
-    public class PlayerCharacterController : MonoBehaviour
+    public class PlayerCharacterController : MonoBehaviour, IMutantTarget
     {
         [SerializeField] private CharMover charMover;
         [SerializeField] private KinematicCharacterMotor motor;
@@ -32,6 +34,9 @@ namespace App.Character
         [SerializeField] private ReadOnlyQueue<string> jumpDebugStates;
 
         private PlayerContext _ctx;
+
+        public Vector3 Position => transform.position;
+        public Vector3 MiddlePoint => transform.position + Vector3.up * motor.Capsule.height / 2f;
         
         private StateMachine _movementFsm;
         private StateMachine _jumpFsm;
@@ -45,11 +50,11 @@ namespace App.Character
         }
 
         private void Update() 
-            => _mainFsm.ManualUpdate();
-
+            => _mainFsm.Update();
+        
         private void FixedUpdate()
         {
-            _mainFsm.ManualFixedUpdate();
+            _mainFsm.FixedUpdate();
         }
 
         private void Initialize()
@@ -57,7 +62,7 @@ namespace App.Character
             var handCtx = new HandContext(inputManager, cameraController, transform, cursorViewToggler);
             _ctx = new PlayerContext(motor,cameraController, transform, handCtx);
 
-            // Movement FSM
+            //Movement FSM
             var moveStates = new List<StateBase>
             {
                 new MovementStandState(playerParams, inputManager, _ctx),
@@ -65,7 +70,7 @@ namespace App.Character
             };
             _movementFsm = new StateMachine(moveStates);
             _movementFsm.Init<MovementStandState>();
-
+            
             // Jump FSM
             var jumpStates = new List<StateBase>
             {
@@ -75,7 +80,7 @@ namespace App.Character
             _jumpFsm = new StateMachine(jumpStates);
             _jumpFsm.Init<JumpGroundedState>();
             _jumpFsm.OnStateSwitched += (state) => jumpDebugStates.Enqueue(state.Name + " " + Time.time);
-
+            
             // Hand FSM
             var handStates = new List<StateBase>
             {
@@ -154,16 +159,16 @@ namespace App.Character
 
             public override void ManualFixedUpdate()
             {
-                _movementFsm.ManualFixedUpdate();
-                _jumpFsm.ManualFixedUpdate();
-                _handFsm.ManualFixedUpdate();
+                _movementFsm.FixedUpdate();
+                _jumpFsm.FixedUpdate();
+                _handFsm.FixedUpdate();
             }
 
             public override void ManualUpdate()
             {
-                _movementFsm.ManualUpdate();
-                _jumpFsm.ManualUpdate();
-                _handFsm.ManualUpdate();
+                _movementFsm.Update();
+                _jumpFsm.Update();
+                _handFsm.Update();
                 
                 var isHoldingObject = _owner._ctx.HasHandledObject;
                 _owner.CheckInteractionHighlight(!isHoldingObject);

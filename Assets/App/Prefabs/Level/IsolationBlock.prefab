@@ -149,8 +149,6 @@ Transform:
   - {fileID: 7117062165115283463}
   - {fileID: 296114516408637198}
   - {fileID: 3983559075488859774}
-  - {fileID: 1900636716113577345}
-  - {fileID: 4742654434697308123}
   - {fileID: 7631643618346547490}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -198,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c822d78b533441b38087c51f11783501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.IsolationBlock.CellsTargetChecker
+  securityCheckpointController: {fileID: 0}
   cells:
   - {fileID: 7969407381169039717}
   - {fileID: 2354519214553550835}
@@ -377,7 +376,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1900636716113577345}
+  - {fileID: 4742654434697308123}
   m_Father: {fileID: 2139946447940425409}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7243453176179553513
@@ -1814,7 +1815,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2139946447940425409}
+    m_TransformParent: {fileID: 3983559075488859774}
     m_Modifications:
     - target: {fileID: 969384781411155260, guid: 7a358834c88457540aa941a949a4f371, type: 3}
       propertyPath: interactableSource.underlyingValue
@@ -4269,7 +4270,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2139946447940425409}
+    m_TransformParent: {fileID: 3983559075488859774}
     m_Modifications:
     - target: {fileID: 969384781411155260, guid: 7a358834c88457540aa941a949a4f371, type: 3}
       propertyPath: interactableSource.underlyingValue

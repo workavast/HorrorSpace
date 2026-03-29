@@ -16,7 +16,6 @@ namespace App.Character
         [SerializeField] private float cameraHeightSpeed = 5f;
 
         private float _currentPitch;
-        private float _currentYaw;
         private float _currentCameraHeight;
         private float _targetCameraHeight;
 
@@ -57,9 +56,6 @@ namespace App.Character
             _currentPitch -= lookDelta.y * lookSensitivity;
             _currentPitch = Mathf.Clamp(_currentPitch, minPitch, maxPitch);
 
-            // Yaw - поворот влево/вправо (Y ось)
-            _currentYaw += lookDelta.x * lookSensitivity;
-
             // Применяем pitch к камере (X ось локальная)
             cameraRig.localRotation = Quaternion.Euler(_currentPitch, 0, 0);
             charMover.SetLookDeltaRotation(new Vector3(0, lookDelta.x * lookSensitivity, 0));
@@ -93,13 +89,9 @@ namespace App.Character
         public float GetCurrentPitch()
             => _currentPitch;
 
-        public float GetCurrentYaw()
-            => _currentYaw;
-
         public void ResetRotation()
         {
             _currentPitch = 0f;
-            _currentYaw = 0f;
             cameraRig.localRotation = Quaternion.identity;
         }
 

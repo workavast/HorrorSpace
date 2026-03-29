@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using App.DraggedDoors;
 using App.IsolationBlock.Cells.FSM;
-using App.Utils;
-using App.Utils.ReadOnlyAttributeDrawing;
 using Avastrad.FSM;
+using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace App.IsolationBlock.Cells
 {
@@ -46,7 +45,7 @@ namespace App.IsolationBlock.Cells
 		
 		private void Update()
 		{
-			_fsm.ManualUpdate();
+			_fsm.Update();
 		}
 
 		public void SetState(bool isOpen)

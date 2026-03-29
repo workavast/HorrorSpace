@@ -1,18 +1,20 @@
 ﻿using System;
 using App.DraggedDoors;
+using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace App.IsolationBlock.Cells
 {
 	[Serializable]
 	public class CellContext
 	{
-		public readonly DraggedDoor Door;
+		public readonly CellDoor Door;
 		public readonly IsolationCellTriggerZone TriggerZone;
 
 		public bool IsClosed;
 		
-		public CellContext(DraggedDoor door, IsolationCellTriggerZone triggerZone)
+		public CellContext(CellDoor door, IsolationCellTriggerZone triggerZone)
 		{
 			Door = door;
 			TriggerZone = triggerZone;

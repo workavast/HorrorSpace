@@ -12,6 +12,7 @@ namespace App.IsolationBlock.Cells.FSM
 		{
 			_ctx.IsClosed = false;
 			_ctx.Door.SetState(false, true, true);
+			_ctx.Door.SetDoorObstacle(true);
 			_ctx.TriggerZone.SetActive(false);
 		}
 
