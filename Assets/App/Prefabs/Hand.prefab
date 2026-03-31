@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5960978815734872824}
+  - component: {fileID: 8223339778993333399}
   - component: {fileID: 7849808031873560332}
   - component: {fileID: 1533110555778935859}
   - component: {fileID: 1364726675075848819}
@@ -39,6 +40,19 @@ Transform:
   - {fileID: 2984092908704373943}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8223339778993333399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3337645776344553251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20884a2f227c93d48b5a6a2814647e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyObject
+  config: {fileID: 11400000, guid: 4d90853ea0b62dd45b49e6d2a8155917, type: 2}
 --- !u!114 &7849808031873560332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3536717745214649819}
-  - component: {fileID: 7109701436512376900}
+  - component: {fileID: 3149310316075987084}
   - component: {fileID: 3491857750306079207}
   m_Layer: 0
   m_Name: KeyCollider
@@ -151,7 +165,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5960978815734872824}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7109701436512376900
+--- !u!114 &3149310316075987084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,10 +174,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3353144890836834046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20884a2f227c93d48b5a6a2814647e58, type: 3}
+  m_Script: {fileID: 11500000, guid: a7309ca3d9c04fb0966fec0942807e72, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KeyObject
-  config: {fileID: 11400000, guid: 4d90853ea0b62dd45b49e6d2a8155917, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::App.TriggerZones.TriggerObj
+  owner: {fileID: 3337645776344553251}
 --- !u!65 &3491857750306079207
 BoxCollider:
   m_ObjectHideFlags: 0

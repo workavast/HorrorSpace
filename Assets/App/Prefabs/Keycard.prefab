@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3465610336207876828}
   - component: {fileID: 570165212770136411}
   - component: {fileID: 5123380302046244418}
+  - component: {fileID: 3501401468782021317}
   - component: {fileID: 2698902211357632096}
   - component: {fileID: 5748924480343859587}
   m_Layer: 0
@@ -81,6 +82,19 @@ MonoBehaviour:
   isInteractable: 1
   meshFilters:
   - {fileID: 2843164006974041497}
+--- !u!114 &3501401468782021317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769898568336556687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7309ca3d9c04fb0966fec0942807e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.TriggerZones.TriggerObj
+  owner: {fileID: 6769898568336556687}
 --- !u!65 &2698902211357632096
 BoxCollider:
   m_ObjectHideFlags: 0

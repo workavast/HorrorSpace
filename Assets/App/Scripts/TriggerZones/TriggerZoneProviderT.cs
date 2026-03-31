@@ -22,17 +22,19 @@ namespace App.TriggerZones
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent(out TComponent component))
-            {
-                _enters.Add(component);
-                OnEnter?.Invoke(component);
-            }
+            if (other.TryGetComponent(out TriggerObj triggerObj))
+                if (triggerObj.Owner.TryGetComponent(out TComponent component))
+                {
+                    _enters.Add(component);
+                    OnEnter?.Invoke(component);                    
+                }
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.TryGetComponent(out TComponent component))
-                OnTriggerExit(component);
+            if (other.TryGetComponent(out TriggerObj triggerObj))
+                if (triggerObj.Owner.TryGetComponent(out TComponent component))
+                    OnTriggerExit(component);
         }
         
         private void OnTriggerExit(TComponent component)

@@ -24,5 +24,8 @@ namespace App.HandlingObjects.HoldableObjects
             // Re-enable gravity
             rb.useGravity = true;
         }
+        
+        public void SetState(bool isCanBeHandled) 
+            => canBeHandled = isCanBeHandled;
     }
 }

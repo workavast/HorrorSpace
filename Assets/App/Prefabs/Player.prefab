@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 7483723162105313711}
   - component: {fileID: 8450550693926369004}
   - component: {fileID: 5438028260905461622}
+  - component: {fileID: 5681252777497126584}
   - component: {fileID: 3548465234966692427}
   - component: {fileID: 8225460231289988859}
   m_Layer: 3
@@ -330,6 +331,19 @@ MonoBehaviour:
   CheckMovementInitialOverlaps: 1
   KillVelocityWhenExceedMaxMovementIterations: 1
   KillRemainingMovementWhenExceedMaxMovementIterations: 1
+--- !u!114 &5681252777497126584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712057721741398327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7309ca3d9c04fb0966fec0942807e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.TriggerZones.TriggerObj
+  owner: {fileID: 8712057721741398327}
 --- !u!136 &3548465234966692427
 CapsuleCollider:
   m_ObjectHideFlags: 8
