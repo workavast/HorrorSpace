@@ -18,8 +18,8 @@ namespace App.IsolationBlock.Cells
 		
 		public bool IsClosed => _ctx.IsClosed;
 		public bool IsTargetInside { get; private set; }
-		public event Action<Target> OnTargetEnter;
-		public event Action<Target> OnTargetExit;
+		public event Action<TargetToIsolate> OnTargetEnter;
+		public event Action<TargetToIsolate> OnTargetExit;
 
 		public void Initialize()
 		{
@@ -67,16 +67,18 @@ namespace App.IsolationBlock.Cells
 		public bool HasObstacles() 
 			=> door.HasObstacles();
 
-		private void TargetEnter(Target target)
+		private void TargetEnter(TargetToIsolate targetToIsolate)
 		{
+			Debug.Log("Target enter");
+			
 			IsTargetInside = true;
-			OnTargetEnter?.Invoke(target);
+			OnTargetEnter?.Invoke(targetToIsolate);
 		}
 
-		private void TargetExit(Target target)
+		private void TargetExit(TargetToIsolate targetToIsolate)
 		{
 			IsTargetInside = false;
-			OnTargetExit?.Invoke(target);
+			OnTargetExit?.Invoke(targetToIsolate);
 		}
 	}
 }

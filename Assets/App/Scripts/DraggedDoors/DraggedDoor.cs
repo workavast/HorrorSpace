@@ -11,7 +11,7 @@ namespace App.DraggedDoors
 		[SerializeField] private HingeJoint doorHingeJoint;
 
 		private const float AngleError = 0.001f;
-		public bool IsClosed ;
+		public bool IsClosed { get; private set; }
 		
 		public void SetState(bool isDragged)
 		{

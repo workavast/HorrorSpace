@@ -11,9 +11,14 @@ namespace App.IsolationBlock.Cells
 		[SerializeField] private LayerMask obstaclesLayerMask;
 		[SerializeField] private NavMeshObstacle doorObstacle;
 		
-		public bool HasObstacles() 
-			=> obstaclesCheckZone.CheckBox(obstaclesLayerMask);
-		
+		public bool HasObstacles()
+		{
+			if (IsClosed)
+				return false;
+			
+			return obstaclesCheckZone.CheckBox(obstaclesLayerMask);
+		}
+
 		public void SetDoorObstacle(bool isEnabled)
 			=> doorObstacle.enabled = isEnabled;
 	}

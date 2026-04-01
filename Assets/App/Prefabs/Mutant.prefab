@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 4716108509136232677}
   - component: {fileID: 3733743979984572866}
   - component: {fileID: 5711160492314479408}
+  - component: {fileID: 3962263215170984738}
+  - component: {fileID: 8719972261366302024}
+  - component: {fileID: 1267978699790278386}
   m_Layer: 8
   m_Name: Mutant
   m_TagString: Untagged
@@ -57,14 +60,6 @@ MonoBehaviour:
   mutantParams:
     chaseSpeed: 2
     wanderSpeed: 2
-    viewDistance: 20
-    viewAngle: 90
-    vewLayerMask:
-      serializedVersion: 2
-      m_Bits: 73
-    wanderRadius: 10
-    attackDistance: 2
-    waitTime: 5
     velocityModifierPerGrabObjMass:
       serializedVersion: 2
       m_Curve:
@@ -93,6 +88,14 @@ MonoBehaviour:
     deceleration: 10
     airDrag: 0
     airAcceleration: 0
+    viewDistance: 20
+    viewAngle: 90
+    vewLayerMask:
+      serializedVersion: 2
+      m_Bits: 73
+    wanderRadius: 10
+    attackDistance: 2
+    waitTime: 5
   lookPoint: {fileID: 8826850462236880271}
   mutantTriggerZone: {fileID: 4823144015885413207}
   DebugQueue:
@@ -205,6 +208,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Character.MutantMove
   motor: {fileID: 3733743979984572866}
+--- !u!114 &3962263215170984738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798286393779484552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a369d9f7d2234530ba449f73a246a8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.IsolationBlock.TargetToIsolate
+--- !u!114 &8719972261366302024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798286393779484552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7309ca3d9c04fb0966fec0942807e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.TriggerZones.TriggerObj
+  owner: {fileID: 1798286393779484552}
+--- !u!54 &1267978699790278386
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798286393779484552}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3713399716569438343
 GameObject:
   m_ObjectHideFlags: 0

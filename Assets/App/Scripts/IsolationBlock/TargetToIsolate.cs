@@ -2,7 +2,7 @@
 
 namespace App.IsolationBlock
 {
-	public class Target : MonoBehaviour
+	public class TargetToIsolate : MonoBehaviour
 	{
 		
 	}

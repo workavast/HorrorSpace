@@ -30,14 +30,14 @@ namespace App.IsolationBlock
 			}
 		}
 
-		private void TargetEnter(Target obj)
+		private void TargetEnter(TargetToIsolate obj)
 		{
 			Debug.Log("CellsTargetChecker.TargetEnter");
 			IsTargetInside = true;
 			securityCheckpointController.SetAvailableState(true);
 		}
 
-		private void TargetExit(Target obj)
+		private void TargetExit(TargetToIsolate obj)
 		{
 			Debug.Log("CellsTargetChecker.TargetExit");
 			IsTargetInside = false;

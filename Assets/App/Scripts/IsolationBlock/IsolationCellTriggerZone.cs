@@ -2,7 +2,7 @@
 
 namespace App.IsolationBlock
 {
-	public class IsolationCellTriggerZone : TriggerZoneProviderT<Target>
+	public class IsolationCellTriggerZone : TriggerZoneProviderT<TargetToIsolate>
 	{
 		
 	}
