@@ -16,7 +16,7 @@ namespace App.Mutant
 		
 		[SerializeField] private MutantParams mutantParams;
 		[SerializeField] private Transform lookPoint;
-		[SerializeField] private MutantTriggerZone mutantTriggerZone;
+		[SerializeField] private MutantTargetTriggerZone mutantTriggerZone;
 	
 		public ReadOnlyQueue<string> DebugQueue = new(8);
 		
@@ -51,11 +51,11 @@ namespace App.Mutant
 		
 		private void TryAcquireTargetFromZone()
 		{
-			if (_ctx.Target != null)
-				return;
-
 			var candidate = mutantTriggerZone.CurrentTarget;
 			if (candidate == null)
+				return;
+
+			if (_ctx.Target != null && _ctx.Target.Priority >= candidate.Priority)
 				return;
 
 			if (MutantExt.CanSeeTarget(candidate, _ctx, mutantParams, true))
@@ -65,10 +65,22 @@ namespace App.Mutant
 			}
 		}
 
+		public void AttractAttention(IMutantTarget target)
+		{
+			_ctx.AttractAttentionTarget = target;
+		}
+		
 		private void Update()
 		{
 			TryAcquireTargetFromZone();
+			TryAcquireTargetFromAttention();
 			_fsm.Update();
+		}
+
+		private void TryAcquireTargetFromAttention()
+		{
+			if (_ctx.AttractAttentionTarget != null && (_ctx.Target == null || _ctx.AttractAttentionTarget.Priority > _ctx.Target.Priority))
+				_ctx.Target = _ctx.AttractAttentionTarget;
 		}
 
 		private void FixedUpdate() 

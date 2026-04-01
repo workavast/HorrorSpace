@@ -34,7 +34,8 @@ namespace App.Character
         [SerializeField] private ReadOnlyQueue<string> jumpDebugStates;
 
         private PlayerContext _ctx;
-
+        public int Priority => 100;
+        public MutantTargetType Type => MutantTargetType.See;
         public Vector3 Position => transform.position;
         public Vector3 MiddlePoint => transform.position + Vector3.up * motor.Capsule.height / 2f;
         

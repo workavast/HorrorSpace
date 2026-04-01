@@ -22,14 +22,17 @@ namespace App.Mutant
 		[SerializeField] private float wanderRadius = 10f;
 		[SerializeField] private float attackDistance = 2f;
 		[SerializeField] private float waitTime = 5f;
-		
+		[SerializeField] private LayerMask attackObstaclesLayerMask = ~1;
+
 		public float ViewDistance => viewDistance;
 		public float ViewAngle => viewAngle;
+		public LayerMask ViewLayerMask => vewLayerMask;
+		public LayerMask AttackObstaclesLayerMask => attackObstaclesLayerMask;
+
 		public float AttackDistance => attackDistance;
 		public float ChaseSpeed => chaseSpeed;
 		public float WanderSpeed => wanderSpeed;
 		public float WaitTime  => waitTime;
-		public LayerMask ViewLayerMask => vewLayerMask;
 		public float WanderRadius => wanderRadius;
 
 		public AnimationCurve VelocityModifierPerGrabObjMass => velocityModifierPerGrabObjMass;

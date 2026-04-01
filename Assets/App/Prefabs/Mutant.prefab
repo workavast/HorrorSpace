@@ -96,6 +96,9 @@ MonoBehaviour:
     wanderRadius: 10
     attackDistance: 2
     waitTime: 5
+    attackObstaclesLayerMask:
+      serializedVersion: 2
+      m_Bits: 192
   lookPoint: {fileID: 8826850462236880271}
   mutantTriggerZone: {fileID: 4823144015885413207}
   DebugQueue:

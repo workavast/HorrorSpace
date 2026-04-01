@@ -31,13 +31,16 @@ namespace App.Mutant.FSM
 			return true;
 		}
 
-		protected bool IsTargetInAttackRange()
+		protected bool TargetCanBeAttacked()
 		{
 			if (_ctx.Target == null)
 				return false;
 
-			var distance = Vector3.Distance(_ctx.Transform.position, _ctx.Target.MiddlePoint);
-			return distance <= _params.AttackDistance;
+			var distance = Vector3.Distance(_ctx.Transform.position, _ctx.Target.Position);
+			if (distance > _params.AttackDistance)
+				return false;
+			
+			return !Physics.Linecast(_ctx.LookPoint.position, _ctx.Target.MiddlePoint, _params.AttackObstaclesLayerMask);
 		}
 
 		protected void CalculatePath(Vector3 targetPosition, NavMeshPath path) 

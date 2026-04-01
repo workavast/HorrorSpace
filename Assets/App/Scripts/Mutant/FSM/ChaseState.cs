@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using Avastrad.FSM;
-using UnityEngine;
 
 namespace App.Mutant.FSM
 {
@@ -32,7 +30,7 @@ namespace App.Mutant.FSM
 			{
 				_ctx.LastSeenPlayerPosition = _ctx.Target.Position;
 
-				if (IsTargetInAttackRange())
+				if (TargetCanBeAttacked())
 				{
 					SetState<AttackState>();
 					return;

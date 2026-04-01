@@ -2,7 +2,7 @@ using App.Mutant;
 
 namespace App.TriggerZones
 {
-	public class MutantTriggerZone : TriggerZoneProviderT<IMutantTarget>
+	public class MutantTargetTriggerZone : TriggerZoneProviderT<IMutantTarget>
 	{
 		public IMutantTarget CurrentTarget { get; private set; }
 

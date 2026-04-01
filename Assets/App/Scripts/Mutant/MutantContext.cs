@@ -15,12 +15,13 @@ namespace App.Mutant
 		public KinematicCharacterMotor Motor { get; }
 		public Vector3 MoveDirection { get; set; }
 		public Quaternion TargetRotation { get; set; }
-		public float GravityVelocity { get; set; }
+		public float GravityVelocity { get; set; } = -0.98f;
 		public float TargetSpeed { get; set; }
 		public bool IsInAirJump { get; } = false;
 		public float DraggedObjMass { get; } = 0;
 		
 		
+		public IMutantTarget AttractAttentionTarget { get; set; }
 		public IMutantTarget Target { get; set; }
 		public Vector3 LastSeenPlayerPosition { get; set; }
 

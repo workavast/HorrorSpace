@@ -25,7 +25,7 @@ namespace App.Mutant.FSM
 				return;
 			}
 
-			if (!IsTargetInAttackRange())
+			if (!TargetCanBeAttacked())
 			{
 				if (CanSeeTarget())
 				{
