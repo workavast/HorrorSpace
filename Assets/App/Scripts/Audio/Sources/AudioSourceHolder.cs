@@ -14,11 +14,13 @@ namespace App.Audio.Sources
         protected virtual void Awake()
         {
             _audioSource = GetComponent<AudioSource>();
+            if (_audioSource.playOnAwake) 
+                _isPlayingAtALstFrame = true;
         }
 
         private void Update()
         {
-            if (_isPlayingAtALstFrame && !_audioSource.isPlaying)
+            if (_isPlayingAtALstFrame && !_audioSource.isPlaying && (_audioSource.time <= 0f || _audioSource.time >= _audioSource.clip.length))
             {
                 _isPlayingAtALstFrame = false;
                 OnPlayOver?.Invoke();

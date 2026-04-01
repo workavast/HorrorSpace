@@ -1,4 +1,5 @@
-﻿using App.KeySystem;
+﻿using System;
+using App.KeySystem;
 using UnityEngine;
 
 namespace App.ElectricPanels
@@ -8,6 +9,8 @@ namespace App.ElectricPanels
 		[SerializeField] private Transform fuseHoldPoint;
 		[SerializeField] private KeyObjLockProvider lockProvider;
 
+		public event Action OnFix;
+		
 		private void Awake()
 		{
 			lockProvider.OnUnlocked += OnFuseEnter;
@@ -26,6 +29,7 @@ namespace App.ElectricPanels
 			lockProvider.SetActivityState(false);
 			fuse.SetState(false);
 			fuse.transform.SetPositionAndRotation(fuseHoldPoint.position, fuseHoldPoint.rotation);
+			OnFix?.Invoke();
 		}
 	}
 }

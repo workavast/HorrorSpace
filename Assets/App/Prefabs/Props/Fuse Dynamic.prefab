@@ -171,9 +171,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &7071921162397863654 stripped
 CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 6993033108855862122, guid: 009ec36cdc5d44e469a0a8f00fe5e270, type: 3}

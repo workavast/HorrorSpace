@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/App/Scenes/LoadingScene.unity
     guid: c7d39f5b21bebaa469b2dd49358e63c8
   - enabled: 1
+    path: Assets/App/Scenes/Train.unity
+    guid: 68cc1d0c2b3616c4587b230b6be736a0
+  - enabled: 1
     path: Assets/App/Scenes/Gameplay.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
