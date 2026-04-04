@@ -31,7 +31,6 @@ Transform:
   m_Children:
   - {fileID: 7567189893623309558}
   - {fileID: 2182896012016267884}
-  - {fileID: 3829179117299585767}
   - {fileID: 6268509969665378663}
   - {fileID: 5735805377186256770}
   - {fileID: 6689745223502888004}
@@ -220,7 +219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2275805612137559088, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.92
+      value: 5.79
       objectReference: {fileID: 0}
     - target: {fileID: 2275805612137559088, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1055,68 +1054,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7923671937156190616, guid: 04e357e78b5fb024d9edfc47c1b95295, type: 3}
   m_PrefabInstance: {fileID: 2862536027388294938}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3077844461518120663
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4759677332287943969}
-    m_Modifications:
-    - target: {fileID: 2275805612137331950, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
-      propertyPath: m_Name
-      value: hydroponic Variant_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275805612137559088, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275805612137559088, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275805612137559088, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275805612137559088, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.70710784
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275805612137559088, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275805612137559088, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.70710576
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275805612137559088, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275805612137559088, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275805612137559088, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275805612137559088, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
---- !u!4 &3829179117299585767 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2275805612137559088, guid: 5139806f6d66b3541a02c7e3862f575e, type: 3}
-  m_PrefabInstance: {fileID: 3077844461518120663}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3430987293334418153
 PrefabInstance:
