@@ -301,7 +301,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 658524715672275466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f685ab8f4d7e03a4fa3e009051c13a3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0178a437eed3e244ba0d36df00a34854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
   <IsUnLocked>k__BackingField: 1
