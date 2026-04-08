@@ -14,6 +14,7 @@ namespace App.Mutant.FSM
 		{
 			StopMovement();
 			_ctx.AnimationController.SetIsWalk(false);
+			_ctx.AnimationController.SetIsRun(false);
 		}
 
 		public override void Exit()

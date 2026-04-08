@@ -11,14 +11,12 @@ namespace App.Mutant.FSM
 		public override void Enter(Dictionary<string, object> args)
 		{
 			_ctx.TargetSpeed = _params.ChaseSpeed;
-			_ctx.AnimationController.SetIsWalk(false);
 			_ctx.AnimationController.SetIsRun(true);
 			CalculatePath(_ctx.Target.Position, _ctx.Path);
 		}
 
 		public override void Exit()
 		{
-			_ctx.AnimationController.SetIsRun(false);
 		}
 
 		public override void ManualUpdate()
@@ -44,10 +42,12 @@ namespace App.Mutant.FSM
 				SetState<CheckState>();
 				return;
 			}
-			
-			var targetPosition = GetTargetPosition(_ctx.Path);
-			RotateTowards(targetPosition);
-			MoveTowards(targetPosition);
+
+			if (TryGetTargetPosition(_ctx.Path, out var targetPosition))
+			{
+				RotateTowards(targetPosition);
+				MoveTowards(targetPosition);
+			}
 		}
 
 		public override void ManualFixedUpdate()

@@ -14,7 +14,6 @@ namespace App.Mutant.FSM
 		public override void Enter(Dictionary<string, object> args)
 		{
 			_ctx.TargetSpeed = _params.ChaseSpeed;
-			_ctx.AnimationController.SetIsWalk(false);
 			_ctx.AnimationController.SetIsRun(true);
 			CalculatePath(_ctx.LastSeenPlayerPosition, _ctx.Path);
 		}
@@ -49,9 +48,11 @@ namespace App.Mutant.FSM
 
 			DrawPath(_ctx.Path);
 
-			var targetPosition = GetTargetPosition(_ctx.Path);
-			RotateTowards(targetPosition);
-			MoveTowards(targetPosition);
+			if (TryGetTargetPosition(_ctx.Path, out var targetPosition))
+			{
+				RotateTowards(targetPosition);
+				MoveTowards(targetPosition);
+			}
 		}
 
 		public override void ManualFixedUpdate()

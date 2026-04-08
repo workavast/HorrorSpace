@@ -18,7 +18,6 @@ namespace App.Mutant.FSM
 		{
 			_ctx.TargetSpeed = _params.WanderSpeed;
 			_ctx.AnimationController.SetIsWalk(true);
-			_ctx.AnimationController.SetIsRun(false);
 			PickNewWanderPoint();
 		}
 
@@ -46,9 +45,11 @@ namespace App.Mutant.FSM
 			if (Vector3.Distance(_ctx.Transform.position, _point) <= 0.1f)
 				PickNewWanderPoint();
 			
-			var targetPosition = GetTargetPosition(_ctx.Path);
-			MoveTowards(targetPosition);
-			RotateTowards(targetPosition);
+			if (TryGetTargetPosition(_ctx.Path, out var targetPosition))
+			{
+				RotateTowards(targetPosition);
+				MoveTowards(targetPosition);
+			}
 		}
 
 		public override void ManualFixedUpdate()

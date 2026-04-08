@@ -46,9 +46,15 @@ namespace App.Mutant.FSM
 		protected void CalculatePath(Vector3 targetPosition, NavMeshPath path) 
 			=> NavMesh.CalculatePath(_ctx.Transform.position, targetPosition, NavMesh.AllAreas, path);
 
-		protected static Vector3 GetTargetPosition(NavMeshPath path)
+		protected static bool TryGetTargetPosition(NavMeshPath path, out Vector3 targetPos)
 		{
-			var targetPos = path.corners[0];
+			if (path.corners.Length <= 0)
+			{
+				targetPos = default;
+				return false;
+			}
+			
+			targetPos = path.corners[0];
 			DebugX.Draw(Color.red).Sphere(targetPos, 0.25f);
 			if (path.corners.Length > 1)
 			{
@@ -57,7 +63,7 @@ namespace App.Mutant.FSM
 				DebugX.Draw(Color.blue).Sphere(targetPos, 0.25f);
 			}
 			
-			return targetPos;
+			return true;
 		}
 
 		protected void DrawPath(NavMeshPath path)
