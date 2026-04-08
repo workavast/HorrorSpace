@@ -11,6 +11,7 @@ namespace App.Mutant
 		public readonly Transform LookPoint;
 		public readonly MutantMove AgentMove;
 		public readonly NavMeshPath Path = new NavMeshPath();
+		public readonly MutantAnimationController AnimationController;
 		
 		public KinematicCharacterMotor Motor { get; }
 		public Vector3 MoveDirection { get; set; }
@@ -26,12 +27,13 @@ namespace App.Mutant
 		public Vector3 LastSeenPlayerPosition { get; set; }
 
 		public MutantContext(Transform transform, Transform lookPoint, 
-			KinematicCharacterMotor motor, MutantMove agentMove)
+			KinematicCharacterMotor motor, MutantMove agentMove, MutantAnimationController animationController)
 		{
 			Transform = transform;
 			Motor = motor;
 			AgentMove = agentMove;
 			LookPoint = lookPoint ?? transform;
+			AnimationController = animationController;
 			LastSeenPlayerPosition = transform.position;
 		}
 

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Avastrad.Extensions;
-using Avastrad.FSM;
 using DCFApixels;
 using UnityEngine;
 using UnityEngine.AI;
@@ -18,6 +17,8 @@ namespace App.Mutant.FSM
 		public override void Enter(Dictionary<string, object> args)
 		{
 			_ctx.TargetSpeed = _params.WanderSpeed;
+			_ctx.AnimationController.SetIsWalk(true);
+			_ctx.AnimationController.SetIsRun(false);
 			PickNewWanderPoint();
 		}
 

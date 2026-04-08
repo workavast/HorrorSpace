@@ -11,6 +11,8 @@ namespace App.Mutant.FSM
 		public override void Enter(Dictionary<string, object> args)
 		{
 			StopMovement();
+			_ctx.AnimationController.SetIsWalk(false);
+			_ctx.AnimationController.TriggerAttack();
 		}
 
 		public override void Exit()

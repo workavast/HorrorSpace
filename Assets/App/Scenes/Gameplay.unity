@@ -2088,10 +2088,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mutant
       objectReference: {fileID: 0}
-    - target: {fileID: 1798286393779484552, guid: c7a37340b70e0664fa3adaff7910cc0d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2326967156123193894, guid: c7a37340b70e0664fa3adaff7910cc0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.08

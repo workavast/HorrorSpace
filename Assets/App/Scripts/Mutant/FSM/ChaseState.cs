@@ -11,11 +11,14 @@ namespace App.Mutant.FSM
 		public override void Enter(Dictionary<string, object> args)
 		{
 			_ctx.TargetSpeed = _params.ChaseSpeed;
+			_ctx.AnimationController.SetIsWalk(false);
+			_ctx.AnimationController.SetIsRun(true);
 			CalculatePath(_ctx.Target.Position, _ctx.Path);
 		}
 
 		public override void Exit()
 		{
+			_ctx.AnimationController.SetIsRun(false);
 		}
 
 		public override void ManualUpdate()

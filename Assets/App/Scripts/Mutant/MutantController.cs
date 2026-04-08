@@ -13,6 +13,7 @@ namespace App.Mutant
 	{
 		[SerializeField] private MutantMove agentMove;
 		[SerializeField] private KinematicCharacterMotor motor;
+		[SerializeField] private MutantAnimationController animationController;
 		
 		[SerializeField] private MutantParams mutantParams;
 		[SerializeField] private Transform lookPoint;
@@ -31,7 +32,7 @@ namespace App.Mutant
 
 		public void Initialize()
 		{
-			_ctx = new MutantContext(transform, lookPoint, motor, agentMove);
+			_ctx = new MutantContext(transform, lookPoint, motor, agentMove, animationController);
 			_ctx.TargetSpeed = mutantParams.ChaseSpeed;
 
 			var states = new List<StateBase>
