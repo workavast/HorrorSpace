@@ -1,7 +1,8 @@
+using Avastrad.Extensions;
 using Avastrad.FSM;
 using UnityEngine;
 
-namespace App.RobotVacuumCleaner
+namespace App.RobotVacuumCleaner.FSM
 {
     public abstract class RvcBaseState : StateBase
     {
@@ -17,13 +18,8 @@ namespace App.RobotVacuumCleaner
         }
 
         protected bool IsOccupied() 
-        {
-            var center = _ctx.OccupationCheckCollider.transform.TransformPoint(_ctx.OccupationCheckCollider.center);
-            var extents = Vector3.Scale(_ctx.OccupationCheckCollider.size * 0.5f, _ctx.OccupationCheckCollider.transform.lossyScale);
-            var rotation = _ctx.OccupationCheckCollider.transform.rotation;
-            return Physics.CheckBox(center, extents, rotation, _params.OccupiedLayer, QueryTriggerInteraction.Ignore);
-        }
-        
+            => _ctx.OccupationCheckCollider.CheckBox(_params.OccupiedLayer);
+
         protected bool IsObstacleAhead() 
         {
             var distance = _params.ObstacleCheckDistance;
