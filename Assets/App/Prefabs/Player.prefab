@@ -172,7 +172,7 @@ MonoBehaviour:
     HeadCollisionDistance: 0.1
     ObstacleLayer:
       serializedVersion: 2
-      m_Bits: 83
+      m_Bits: 595
     StandCheckDistance: 1.35
     StandCheckOffset: -0.1
     NormalCameraHeight: 2.1
@@ -181,7 +181,7 @@ MonoBehaviour:
   handParams:
     handleLayerMask:
       serializedVersion: 2
-      m_Bits: 211
+      m_Bits: 723
     pickupRange: 3
     autoDropDistance: 6
     minDistance: 1.5
@@ -226,7 +226,7 @@ MonoBehaviour:
   interactRange: 3
   interactLayerMask:
     serializedVersion: 2
-    m_Bits: 211
+    m_Bits: 723
   jumpDebugStates:
     queue:
     - 
@@ -310,7 +310,7 @@ MonoBehaviour:
   MaxStableSlopeAngle: 60
   StableGroundLayers:
     serializedVersion: 2
-    m_Bits: 211
+    m_Bits: 723
   DiscreteCollisionEvents: 0
   StepHandling: 1
   MaxStepHeight: 0.5

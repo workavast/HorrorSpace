@@ -84,13 +84,18 @@ PrefabInstance:
       propertyPath: m_StaticShadowCaster
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6560686, guid: 5b3cc55650f95e34797ed0af9c57110a, type: 3}
+    - {fileID: 6521056, guid: 5b3cc55650f95e34797ed0af9c57110a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 113938, guid: 5b3cc55650f95e34797ed0af9c57110a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5724752651091549323}
+    - targetCorrespondingSourceObject: {fileID: 113938, guid: 5b3cc55650f95e34797ed0af9c57110a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8195597305784934140}
   m_SourcePrefab: {fileID: 100100000, guid: 5b3cc55650f95e34797ed0af9c57110a, type: 3}
 --- !u!1 &5102875953106632233 stripped
 GameObject:
@@ -109,3 +114,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700114e3a2f5e5b4db36d878320bbe07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.SelectionBaseScript
+--- !u!65 &8195597305784934140
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102875953106632233}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 0.2, z: 4}
+  m_Center: {x: 0, y: 0.1, z: 0}
