@@ -85,6 +85,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4095698566600033491}
   - component: {fileID: 4247805323651797999}
+  - component: {fileID: 2314519830986179946}
+  - component: {fileID: 5016530322388052958}
   - component: {fileID: 1287651065015622182}
   - component: {fileID: 7483723162105313711}
   - component: {fileID: 8450550693926369004}
@@ -133,7 +135,9 @@ MonoBehaviour:
   inputManager: {fileID: 7483723162105313711}
   cursorViewToggler: {fileID: 0}
   interactiveObjBoundsDrawer: {fileID: 0}
+  healthComp: {fileID: 2314519830986179946}
   playerParams:
+    Health: 100
     VelocityModifierPerGrabObjMass:
       serializedVersion: 2
       m_Curve:
@@ -234,6 +238,37 @@ MonoBehaviour:
     - 
     - 
     - 
+--- !u!114 &2314519830986179946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712057721741398327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e73914e2ab412e8c299252fc47acc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Health.HealthComp
+  maxHealth: 100
+  health: 0
+--- !u!114 &5016530322388052958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712057721741398327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f62638d241045519fe9cd987b5e56ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Health.Heal.HealthHeal
+  healthParams:
+    HealPerSecond: 2
+    FrequencyInSeconds: 1
+    DelayBeforeHealing: 10
+  healthModel: {fileID: 2314519830986179946}
 --- !u!114 &1287651065015622182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,6 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 526b187e338733645a7a1ca7953695a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Character.CameraController
+  healthComp: {fileID: 2314519830986179946}
   charMover: {fileID: 8450550693926369004}
   characterRoot: {fileID: 4095698566600033491}
   cameraRig: {fileID: 6734760262169552703}

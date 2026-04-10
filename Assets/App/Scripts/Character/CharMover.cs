@@ -28,6 +28,7 @@ namespace App.Character
         {
             var angle = currentRotation.eulerAngles + _delta;
             currentRotation = Quaternion.Euler(angle);
+            _delta = Vector3.zero;
         }
 
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)

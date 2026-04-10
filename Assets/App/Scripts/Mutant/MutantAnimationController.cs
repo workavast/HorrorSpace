@@ -8,6 +8,7 @@ namespace App.Mutant
 		[SerializeField] private string isWalkParam = "IsWalk";
 		[SerializeField] private string attackTriggerParam = "Attack";
 		[SerializeField] private string isRunParam = "IsRun";
+		[SerializeField] private string attackAnimationTag = "Attack";
 
 		public void StopMovement()
 		{
@@ -32,6 +33,12 @@ namespace App.Mutant
 			
 			if (isRunning)
 				animator.SetBool(isWalkParam, false);
+		}
+
+		public bool AttackAnimationIsPlaing()
+		{
+			return animator.GetNextAnimatorStateInfo(1).IsTag(attackAnimationTag) ||
+			       animator.GetCurrentAnimatorStateInfo(1).IsTag(attackAnimationTag);
 		}
 	}
 }

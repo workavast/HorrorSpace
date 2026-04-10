@@ -1,6 +1,6 @@
-using App.Mutant;
+using App.TriggerZones;
 
-namespace App.TriggerZones
+namespace App.Mutant
 {
 	public class MutantTargetTriggerZone : TriggerZoneProviderT<IMutantTarget>
 	{

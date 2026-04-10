@@ -6,8 +6,9 @@ namespace App.Mutant
     {
         public int Priority { get; }
         public MutantTargetType Type { get; }
-        Vector3 Position { get; }
-        Vector3 MiddlePoint { get; }
+        public GameObject gameObject { get; }
+        public Vector3 Position { get; }
+        public Vector3 MiddlePoint { get; }
     }
 
     public enum MutantTargetType

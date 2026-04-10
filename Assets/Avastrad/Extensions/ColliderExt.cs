@@ -21,5 +21,13 @@ namespace Avastrad.Extensions
             var rotation = checkCollider.transform.rotation;
             return Physics.CheckBox(center, extents, rotation, layerMask, queryTriggerInteraction);
         }
+        
+        public static bool BoxCast(this BoxCollider checkCollider, LayerMask layerMask, out RaycastHit hitInfo)
+        {
+            var center = checkCollider.transform.TransformPoint(checkCollider.center);
+            var extents = Vector3.Scale(checkCollider.size * 0.5f, checkCollider.transform.lossyScale);
+            var rotation = checkCollider.transform.rotation;
+            return Physics.BoxCast(center, extents, Vector3.one, out hitInfo, rotation, 0, layerMask);
+        }
     }
 }

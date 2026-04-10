@@ -1,5 +1,6 @@
 using System;
 using App.Character.Hand;
+using App.Health;
 using KinematicCharacterController;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ namespace App.Character
         public readonly KinematicCharacterMotor Motor;
         public readonly CameraController CameraController;
         public readonly Transform Transform;
+        public readonly HealthModel HealthComp;
         public readonly float DefaultHeight;
         
         public Vector2 VelocityInput;
@@ -28,12 +30,13 @@ namespace App.Character
         public bool HasHandledObject => _handContext.HasHandledObject;
         public float DraggedObjMass => _handContext.DraggedObjMass;
 
-        public PlayerContext(KinematicCharacterMotor motor, CameraController cameraController, Transform t, HandContext handContext)
+        public PlayerContext(KinematicCharacterMotor motor, CameraController cameraController, Transform t, HandContext handContext, HealthModel healthComp)
         {
             Motor = motor;
             CameraController = cameraController;
             Transform = t;
             _handContext = handContext;
+            HealthComp = healthComp;
 
             DefaultHeight = Motor.Capsule.height;
         }

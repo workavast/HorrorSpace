@@ -1,3 +1,4 @@
+using App.Health;
 using UnityEngine;
 using Unity.Cinemachine;
 
@@ -5,6 +6,7 @@ namespace App.Character
 {
     public class CameraController : MonoBehaviour
     {
+        [SerializeField] private HealthModel healthComp;
         [SerializeField] private CharMover charMover;
         [SerializeField] private Transform characterRoot;
         [SerializeField] private Transform cameraRig;
@@ -32,6 +34,9 @@ namespace App.Character
 
         private void Update()
         {
+            if (!healthComp.IsAlive)
+                return;
+            
             HandleCameraRotation();
             HandleCameraHeight();
         }

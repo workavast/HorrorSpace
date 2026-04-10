@@ -61,6 +61,18 @@ MonoBehaviour:
   mutantParams:
     chaseSpeed: 4
     wanderSpeed: 2
+    viewDistance: 20
+    viewAngle: 90
+    vewLayerMask:
+      serializedVersion: 2
+      m_Bits: 73
+    damage: 20
+    attackDistance: 2
+    wanderRadius: 10
+    waitTime: 5
+    attackObstaclesLayerMask:
+      serializedVersion: 2
+      m_Bits: 192
     velocityModifierPerGrabObjMass:
       serializedVersion: 2
       m_Curve:
@@ -89,17 +101,6 @@ MonoBehaviour:
     deceleration: 10
     airDrag: 0
     airAcceleration: 0
-    viewDistance: 20
-    viewAngle: 90
-    vewLayerMask:
-      serializedVersion: 2
-      m_Bits: 73
-    wanderRadius: 10
-    attackDistance: 2
-    waitTime: 5
-    attackObstaclesLayerMask:
-      serializedVersion: 2
-      m_Bits: 192
   lookPoint: {fileID: 8826850462236880271}
   mutantTriggerZone: {fileID: 4823144015885413207}
   DebugQueue:
@@ -128,6 +129,7 @@ MonoBehaviour:
   isWalkParam: IsWalk
   attackTriggerParam: Attack
   isRunParam: IsRun
+  attackAnimationTag: Attack
 --- !u!195 &5785799860759370268
 NavMeshAgent:
   m_ObjectHideFlags: 0

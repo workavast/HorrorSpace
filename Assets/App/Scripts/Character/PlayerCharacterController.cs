@@ -3,6 +3,7 @@ using App.Character.FSM.Jump;
 using App.Character.FSM.Movement;
 using App.Character.Hand;
 using App.Character.Hand.FSM;
+using App.Health;
 using App.InteractiveObjects;
 using App.Usable;
 using App.Utils.Debug;
@@ -22,10 +23,11 @@ namespace App.Character
         [SerializeField] private PlayerInputManager inputManager;
         [SerializeField] private CursorViewToggler cursorViewToggler;
         [SerializeField] private InteractiveObjBoundsDrawer interactiveObjBoundsDrawer;
+        [SerializeField] private HealthModel healthComp;
         [Space]
         [SerializeField] private PlayerParams playerParams = new();
         [SerializeField] private HandParams handParams = new();
-
+        
         [Header("Interaction")]
         [SerializeField] private float interactRange = 3f;
         [SerializeField] private LayerMask interactLayerMask = ~0;
@@ -53,15 +55,15 @@ namespace App.Character
         private void Update() 
             => _mainFsm.Update();
         
-        private void FixedUpdate()
-        {
-            _mainFsm.FixedUpdate();
-        }
+        private void FixedUpdate() 
+            => _mainFsm.FixedUpdate();
 
         private void Initialize()
         {
+            healthComp.Initialize();
+            
             var handCtx = new HandContext(inputManager, cameraController, transform, cursorViewToggler);
-            _ctx = new PlayerContext(motor,cameraController, transform, handCtx);
+            _ctx = new PlayerContext(motor,cameraController, transform, handCtx, healthComp);
 
             //Movement FSM
             var moveStates = new List<StateBase>
@@ -101,7 +103,7 @@ namespace App.Character
             _mainFsm = new StateMachine(mainStates);
             _mainFsm.Init<PlayerMainState>();
         }
-
+        
         private void TryUseObject()
         {
             var cam = Camera.main;
@@ -160,6 +162,9 @@ namespace App.Character
 
             public override void ManualFixedUpdate()
             {
+                if (!_owner.healthComp.IsAlive)
+                    return;
+                
                 _movementFsm.FixedUpdate();
                 _jumpFsm.FixedUpdate();
                 _handFsm.FixedUpdate();
@@ -167,6 +172,9 @@ namespace App.Character
 
             public override void ManualUpdate()
             {
+                if (!_owner.healthComp.IsAlive)
+                    return;
+                
                 _movementFsm.Update();
                 _jumpFsm.Update();
                 _handFsm.Update();

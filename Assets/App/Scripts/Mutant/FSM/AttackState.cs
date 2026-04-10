@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using App.Health;
 
 namespace App.Mutant.FSM
 {
@@ -12,7 +13,6 @@ namespace App.Mutant.FSM
 		{
 			StopMovement();
 			_ctx.AnimationController.StopMovement();
-			_ctx.AnimationController.TriggerAttack();
 		}
 
 		public override void Exit()
@@ -44,11 +44,31 @@ namespace App.Mutant.FSM
 			{
 				_ctx.LastSeenPlayerPosition = _ctx.Target.Position;
 				RotateTowards(_ctx.Target.Position);
+
+				TryAttack();
 			}
 		}
 
 		public override void ManualFixedUpdate()
 		{
+		}
+
+		private void TryAttack()
+		{
+			if(_ctx.Target == null)
+				return;
+			
+			if (_ctx.AnimationController.AttackAnimationIsPlaing())
+				return;
+
+			if (_ctx.Target.gameObject.TryGetComponent(out IDamageable damageable))
+			{
+				if (!damageable.CanBeDamaged())
+					return;
+				
+				damageable.TakeDamage(_params.Damage);
+				_ctx.AnimationController.TriggerAttack();
+			}
 		}
 	}
 }
