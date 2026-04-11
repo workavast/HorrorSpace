@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8107829060588745982}
   - component: {fileID: 1000094733463443123}
   - component: {fileID: 2760724988019437395}
-  - component: {fileID: 3766236776219749047}
   m_Layer: 0
   m_Name: SecurityCheckPoint
   m_TagString: Untagged
@@ -57,7 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8b5af6fd5a4374b931131fbcc95d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.SecurityCheckpoint.SecurityCheckpointController
-  securityCheckpointBtn: {fileID: 3766236776219749047}
+  securityCheckpointBtn: {fileID: 3172114474470711510}
 --- !u!114 &2760724988019437395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,21 +69,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8f118e43ec4b85833e49c2a6f10eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.InspectionPoints.InspectionBtn
-  usableObj: {fileID: 3766236776219749047}
+  usableObj: {fileID: 3172114474470711510}
   entranceDoor: {fileID: 7564016228459374329}
   exitDoor: {fileID: 5659414633834055089}
---- !u!114 &3766236776219749047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967240354458788282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc4b110399bd4a7297d234ae559f6672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.Usable.UsableObj
 --- !u!1 &5936843071043356076
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Usable.UsableProvider
   interactableSource:
-    underlyingValue: {fileID: 5445266454295354813}
+    underlyingValue: {fileID: 3172114474470711510}
 --- !u!114 &3977256881561469413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6349253329676568604}
-  - component: {fileID: 5445266454295354813}
+  - component: {fileID: 3172114474470711510}
   m_Layer: 0
   m_Name: Console
   m_TagString: Untagged
@@ -329,7 +316,7 @@ Transform:
   - {fileID: 7417011728753315279}
   m_Father: {fileID: 8107829060588745982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5445266454295354813
+--- !u!114 &3172114474470711510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,11 +325,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7758307843941008719}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1adcc8593cd418bbc3808df7a476cea, type: 3}
+  m_Script: {fileID: 11500000, guid: bc4b110399bd4a7297d234ae559f6672, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.Usable.UsableProvider
-  interactableSource:
-    underlyingValue: {fileID: 3766236776219749047}
+  m_EditorClassIdentifier: Assembly-CSharp::App.Usable.UsableObj
 --- !u!1 &7991567337249060724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,7 +1083,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f685ab8f4d7e03a4fa3e009051c13a3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0178a437eed3e244ba0d36df00a34854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
 --- !u!1001 &6184207282003221227
@@ -1295,7 +1280,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f685ab8f4d7e03a4fa3e009051c13a3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0178a437eed3e244ba0d36df00a34854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
 --- !u!1001 &8984323370321458747
