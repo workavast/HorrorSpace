@@ -36,9 +36,9 @@ MonoBehaviour:
       style: 1
       displayHorizontal: 0
   styleData:
-    displayTags: 1
-    displayLayers: 1
-    displayIcons: 1
+    displayTags: 0
+    displayLayers: 0
+    displayIcons: 0
     styles:
     - prefix: =
       noSpaceAfterPrefix: 1
@@ -122,15 +122,15 @@ MonoBehaviour:
         m_StretchWidth: 1
         m_StretchHeight: 0
       capturedGroups: []
-    - prefix: '-'
+    - prefix: --
       noSpaceAfterPrefix: 0
       isRegex: 0
       name: Subheader
       font: {fileID: 0}
-      fontSize: 10
+      fontSize: 11
       fontAlignment: 3
       fontStyle: 1
-      textFormatting: 0
+      textFormatting: 2
       modes:
       - fontColour: {r: 0.245283, g: 0.245283, b: 0.245283, a: 1}
         backgroundColour: {r: 0.7960785, g: 0.7960785, b: 0.7960785, a: 1}
@@ -353,19 +353,6 @@ MonoBehaviour:
           m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
           m_Tooltip: AsynchronousLoading
           m_TextWithWhitespace: "AsynchronousLoading\u200B"
-        shown: 0
-        excluded: 0
-        isBuiltIn: 1
-        script: {fileID: 0}
-        hasToggle: 1
-      - displayName: BezierShape
-        name: UnityEngine.ProBuilder.BezierShape, Unity.ProBuilder, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        content:
-          m_Text: BezierShape
-          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
-          m_Tooltip: BezierShape
-          m_TextWithWhitespace: "BezierShape\u200B"
         shown: 0
         excluded: 0
         isBuiltIn: 1
@@ -1307,6 +1294,32 @@ MonoBehaviour:
         isBuiltIn: 1
         script: {fileID: 0}
         hasToggle: 1
+      - displayName: CustomPlayableGraphEvaluator
+        name: DocCodeExamples.CustomPlayableGraphEvaluator, Unity.Animation.Rigging.DocCodeExamples,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: CustomPlayableGraphEvaluator
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: CustomPlayableGraphEvaluator
+          m_TextWithWhitespace: "CustomPlayableGraphEvaluator\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: CustomRigBuilderEvaluator
+        name: DocCodeExamples.CustomRigBuilderEvaluator, Unity.Animation.Rigging.DocCodeExamples,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: CustomRigBuilderEvaluator
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: CustomRigBuilderEvaluator
+          m_TextWithWhitespace: "CustomRigBuilderEvaluator\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
       - displayName: DebugUIHandlerBitField
         name: UnityEngine.Rendering.UI.DebugUIHandlerBitField, Unity.RenderPipelines.Core.Runtime,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -1796,19 +1809,6 @@ MonoBehaviour:
           m_Image: {fileID: 8779834242249542326, guid: 0000000000000000d000000000000000, type: 0}
           m_Tooltip: DropdownItem
           m_TextWithWhitespace: "DropdownItem\u200B"
-        shown: 0
-        excluded: 0
-        isBuiltIn: 1
-        script: {fileID: 0}
-        hasToggle: 1
-      - displayName: Entity
-        name: UnityEngine.ProBuilder.Entity, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral,
-          PublicKeyToken=null
-        content:
-          m_Text: Entity
-          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
-          m_Tooltip: Entity
-          m_TextWithWhitespace: "Entity\u200B"
         shown: 0
         excluded: 0
         isBuiltIn: 1
@@ -2516,6 +2516,19 @@ MonoBehaviour:
         isBuiltIn: 1
         script: {fileID: 0}
         hasToggle: 1
+      - displayName: PhysicsVisualizer
+        name: CCG.CastVisualizer.PhysicsVisualizer, Unity.CastVisualizer.Runtime,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: PhysicsVisualizer
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: PhysicsVisualizer
+          m_TextWithWhitespace: "PhysicsVisualizer\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
       - displayName: PixelPerfectCamera
         name: UnityEngine.Rendering.Universal.PixelPerfectCamera, Unity.RenderPipelines.Universal.2D.Runtime,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -2607,19 +2620,6 @@ MonoBehaviour:
         isBuiltIn: 1
         script: {fileID: 0}
         hasToggle: 1
-      - displayName: PolyShape
-        name: UnityEngine.ProBuilder.PolyShape, Unity.ProBuilder, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        content:
-          m_Text: PolyShape
-          m_Image: {fileID: 2800000, guid: 554ec42bef6520444a25f7e2d3c26878, type: 3}
-          m_Tooltip: PolyShape
-          m_TextWithWhitespace: "PolyShape\u200B"
-        shown: 0
-        excluded: 0
-        isBuiltIn: 1
-        script: {fileID: 0}
-        hasToggle: 1
       - displayName: Preload
         name: AddressableAssets.DocExampleCode.Preload, Unity.Addressables.DocExampleCode.Editor.Tests,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -2706,19 +2706,6 @@ MonoBehaviour:
           m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
           m_Tooltip: ProbeVolumePerSceneData
           m_TextWithWhitespace: "ProbeVolumePerSceneData\u200B"
-        shown: 0
-        excluded: 0
-        isBuiltIn: 1
-        script: {fileID: 0}
-        hasToggle: 1
-      - displayName: ProBuilderShape
-        name: UnityEngine.ProBuilder.Shapes.ProBuilderShape, Unity.ProBuilder, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        content:
-          m_Text: ProBuilderShape
-          m_Image: {fileID: 2800000, guid: 554ec42bef6520444a25f7e2d3c26878, type: 3}
-          m_Tooltip: ProBuilderShape
-          m_TextWithWhitespace: "ProBuilderShape\u200B"
         shown: 0
         excluded: 0
         isBuiltIn: 1
@@ -3010,19 +2997,6 @@ MonoBehaviour:
         isBuiltIn: 1
         script: {fileID: 0}
         hasToggle: 0
-      - displayName: TriggerBehaviour
-        name: UnityEngine.ProBuilder.TriggerBehaviour, Unity.ProBuilder, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        content:
-          m_Text: TriggerBehaviour
-          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
-          m_Tooltip: TriggerBehaviour
-          m_TextWithWhitespace: "TriggerBehaviour\u200B"
-        shown: 0
-        excluded: 0
-        isBuiltIn: 1
-        script: {fileID: 0}
-        hasToggle: 1
       - displayName: UIDocument
         name: UnityEngine.UIElements.UIDocument, UnityEngine.UIElementsModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
@@ -3045,7 +3019,7 @@ MonoBehaviour:
           m_Tooltip: UniversalAdditionalCameraData
           m_TextWithWhitespace: "UniversalAdditionalCameraData\u200B"
         shown: 0
-        excluded: 1
+        excluded: 0
         isBuiltIn: 1
         script: {fileID: 0}
         hasToggle: 1
@@ -3058,7 +3032,7 @@ MonoBehaviour:
           m_Tooltip: UniversalAdditionalLightData
           m_TextWithWhitespace: "UniversalAdditionalLightData\u200B"
         shown: 0
-        excluded: 1
+        excluded: 0
         isBuiltIn: 1
         script: {fileID: 0}
         hasToggle: 1
@@ -3181,6 +3155,58 @@ MonoBehaviour:
         isBuiltIn: 1
         script: {fileID: 0}
         hasToggle: 1
+      - displayName: BlendConstraint
+        name: UnityEngine.Animations.Rigging.BlendConstraint, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: BlendConstraint
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: BlendConstraint
+          m_TextWithWhitespace: "BlendConstraint\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: BoneRenderer
+        name: UnityEngine.Animations.Rigging.BoneRenderer, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: BoneRenderer
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: BoneRenderer
+          m_TextWithWhitespace: "BoneRenderer\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: ChainIKConstraint
+        name: UnityEngine.Animations.Rigging.ChainIKConstraint, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: ChainIKConstraint
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: ChainIKConstraint
+          m_TextWithWhitespace: "ChainIKConstraint\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: DampedTransform
+        name: UnityEngine.Animations.Rigging.DampedTransform, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: DampedTransform
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: DampedTransform
+          m_TextWithWhitespace: "DampedTransform\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
       - displayName: LookAtConstraint
         name: UnityEngine.Animations.LookAtConstraint, UnityEngine.AnimationModule,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -3189,6 +3215,84 @@ MonoBehaviour:
           m_Image: {fileID: 369954582749368496, guid: 0000000000000000d000000000000000, type: 0}
           m_Tooltip: LookAtConstraint
           m_TextWithWhitespace: "LookAtConstraint\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: MultiAimConstraint
+        name: UnityEngine.Animations.Rigging.MultiAimConstraint, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: MultiAimConstraint
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: MultiAimConstraint
+          m_TextWithWhitespace: "MultiAimConstraint\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: MultiParentConstraint
+        name: UnityEngine.Animations.Rigging.MultiParentConstraint, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: MultiParentConstraint
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: MultiParentConstraint
+          m_TextWithWhitespace: "MultiParentConstraint\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: MultiPositionConstraint
+        name: UnityEngine.Animations.Rigging.MultiPositionConstraint, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: MultiPositionConstraint
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: MultiPositionConstraint
+          m_TextWithWhitespace: "MultiPositionConstraint\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: MultiReferentialConstraint
+        name: UnityEngine.Animations.Rigging.MultiReferentialConstraint, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: MultiReferentialConstraint
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: MultiReferentialConstraint
+          m_TextWithWhitespace: "MultiReferentialConstraint\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: MultiRotationConstraint
+        name: UnityEngine.Animations.Rigging.MultiRotationConstraint, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: MultiRotationConstraint
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: MultiRotationConstraint
+          m_TextWithWhitespace: "MultiRotationConstraint\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: OverrideTransform
+        name: UnityEngine.Animations.Rigging.OverrideTransform, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: OverrideTransform
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: OverrideTransform
+          m_TextWithWhitespace: "OverrideTransform\u200B"
         shown: 0
         excluded: 0
         isBuiltIn: 1
@@ -3215,6 +3319,58 @@ MonoBehaviour:
           m_Image: {fileID: -7343420614739014117, guid: 0000000000000000d000000000000000, type: 0}
           m_Tooltip: PositionConstraint
           m_TextWithWhitespace: "PositionConstraint\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: Rig
+        name: UnityEngine.Animations.Rigging.Rig, Unity.Animation.Rigging, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: Rig
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: Rig
+          m_TextWithWhitespace: "Rig\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: RigBuilder
+        name: UnityEngine.Animations.Rigging.RigBuilder, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: RigBuilder
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: RigBuilder
+          m_TextWithWhitespace: "RigBuilder\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: RigConstraint`3
+        name: UnityEngine.Animations.Rigging.RigConstraint`3, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: RigConstraint`3
+          m_Image: {fileID: 8779834242249542326, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: RigConstraint`3
+          m_TextWithWhitespace: "RigConstraint`3\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: RigTransform
+        name: UnityEngine.Animations.Rigging.RigTransform, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: RigTransform
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: RigTransform
+          m_TextWithWhitespace: "RigTransform\u200B"
         shown: 0
         excluded: 0
         isBuiltIn: 1
@@ -3267,6 +3423,45 @@ MonoBehaviour:
           m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
           m_Tooltip: TMP_SpriteAnimator
           m_TextWithWhitespace: "TMP_SpriteAnimator\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: TwistChainConstraint
+        name: UnityEngine.Animations.Rigging.TwistChainConstraint, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: TwistChainConstraint
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: TwistChainConstraint
+          m_TextWithWhitespace: "TwistChainConstraint\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: TwistCorrection
+        name: UnityEngine.Animations.Rigging.TwistCorrection, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: TwistCorrection
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: TwistCorrection
+          m_TextWithWhitespace: "TwistCorrection\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: TwoBoneIKConstraint
+        name: UnityEngine.Animations.Rigging.TwoBoneIKConstraint, Unity.Animation.Rigging,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: TwoBoneIKConstraint
+          m_Image: {fileID: 2800000, guid: ca41524ec86f0d84ab5675c9622cc1a2, type: 3}
+          m_Tooltip: TwoBoneIKConstraint
+          m_TextWithWhitespace: "TwoBoneIKConstraint\u200B"
         shown: 0
         excluded: 0
         isBuiltIn: 1
@@ -3542,6 +3737,19 @@ MonoBehaviour:
           m_Image: {fileID: 8958925463535290616, guid: 0000000000000000d000000000000000, type: 0}
           m_Tooltip: Physics2DRaycaster
           m_TextWithWhitespace: "Physics2DRaycaster\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 1
+        script: {fileID: 0}
+        hasToggle: 1
+      - displayName: Physics2DVisualizer
+        name: CCG.CastVisualizer.Physics2DVisualizer, Unity.CastVisualizer.Runtime,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: Physics2DVisualizer
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: Physics2DVisualizer
+          m_TextWithWhitespace: "Physics2DVisualizer\u200B"
         shown: 0
         excluded: 0
         isBuiltIn: 1
@@ -4710,19 +4918,6 @@ MonoBehaviour:
         isBuiltIn: 1
         script: {fileID: 0}
         hasToggle: 1
-      - displayName: ProBuilderMesh
-        name: UnityEngine.ProBuilder.ProBuilderMesh, Unity.ProBuilder, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        content:
-          m_Text: ProBuilderMesh
-          m_Image: {fileID: 2800000, guid: 432b3086cebdc438d9d33de3669fb063, type: 2}
-          m_Tooltip: ProBuilderMesh
-          m_TextWithWhitespace: "ProBuilderMesh\u200B"
-        shown: 0
-        excluded: 0
-        isBuiltIn: 1
-        script: {fileID: 0}
-        hasToggle: 1
       - displayName: Renderer
         name: UnityEngine.Renderer, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
           PublicKeyToken=null
@@ -4959,19 +5154,6 @@ MonoBehaviour:
         isBuiltIn: 1
         script: {fileID: 0}
         hasToggle: 1
-      - displayName: ColliderBehaviour
-        name: UnityEngine.ProBuilder.ColliderBehaviour, Unity.ProBuilder, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        content:
-          m_Text: ColliderBehaviour
-          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
-          m_Tooltip: ColliderBehaviour
-          m_TextWithWhitespace: "ColliderBehaviour\u200B"
-        shown: 0
-        excluded: 0
-        isBuiltIn: 1
-        script: {fileID: 0}
-        hasToggle: 1
       - displayName: ConfigurableJoint
         name: UnityEngine.ConfigurableJoint, UnityEngine.PhysicsModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
@@ -5092,6 +5274,838 @@ MonoBehaviour:
     customGroups: []
     allCustomComponents:
       name: All
-      components: []
-    unityVersion: 6000.3.8f1
-    unityCount: 367
+      components:
+      - displayName: GameplayScope
+        name: App.Scopes.GameplayScope, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: GameplayScope
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: GameplayScope
+          m_TextWithWhitespace: "GameplayScope\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 6f3e39ff70954fa7bbc53facfbd453ae, type: 3}
+        hasToggle: 1
+      - displayName: RootBootstrap
+        name: Avastrad.Bootstraps.RootBootstrap, Avastrad.Bootstraps, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: RootBootstrap
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: RootBootstrap
+          m_TextWithWhitespace: "RootBootstrap\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: f51a5a2110184f149fef6e386b7177bc, type: 3}
+        hasToggle: 1
+      - displayName: FpsLimiter
+        name: App.FpsLimiter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: FpsLimiter
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: FpsLimiter
+          m_TextWithWhitespace: "FpsLimiter\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 723981cde5484e5a878f07d157ef8c04, type: 3}
+        hasToggle: 1
+      - displayName: HealthHud
+        name: App.Health.HealthHud, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: HealthHud
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: HealthHud
+          m_TextWithWhitespace: "HealthHud\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: cfa10acd4c2849729d04a2578ac4e9f3, type: 3}
+        hasToggle: 1
+      - displayName: PlayerCharacterController
+        name: App.Character.PlayerCharacterController, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: PlayerCharacterController
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: PlayerCharacterController
+          m_TextWithWhitespace: "PlayerCharacterController\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 205fd2d947281a4459fa24ee15e44094, type: 3}
+        hasToggle: 1
+      - displayName: HealthModel
+        name: App.Health.HealthModel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: HealthModel
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: HealthModel
+          m_TextWithWhitespace: "HealthModel\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: f9e73914e2ab412e8c299252fc47acc4, type: 3}
+        hasToggle: 1
+      - displayName: HealthHeal
+        name: App.Health.Heal.HealthHeal, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: HealthHeal
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: HealthHeal
+          m_TextWithWhitespace: "HealthHeal\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 0f62638d241045519fe9cd987b5e56ee, type: 3}
+        hasToggle: 1
+      - displayName: CameraController
+        name: App.Character.CameraController, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: CameraController
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: CameraController
+          m_TextWithWhitespace: "CameraController\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 526b187e338733645a7a1ca7953695a0, type: 3}
+        hasToggle: 1
+      - displayName: PlayerInputManager
+        name: App.Character.PlayerInputManager, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: PlayerInputManager
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: PlayerInputManager
+          m_TextWithWhitespace: "PlayerInputManager\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: dac3c3fadafc0ab45b5247983953b30e, type: 3}
+        hasToggle: 1
+      - displayName: CharMover
+        name: App.Character.CharMover, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: CharMover
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: CharMover
+          m_TextWithWhitespace: "CharMover\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 8b7e2015e3694ca49e494017ee782c66, type: 3}
+        hasToggle: 1
+      - displayName: KinematicCharacterMotor
+        name: KinematicCharacterController.KinematicCharacterMotor, Assembly-CSharp,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: KinematicCharacterMotor
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: KinematicCharacterMotor
+          m_TextWithWhitespace: "KinematicCharacterMotor\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 4d1bc5515e3ab954e80599c538834774, type: 3}
+        hasToggle: 1
+      - displayName: TriggerObj
+        name: App.TriggerZones.TriggerObj, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: TriggerObj
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: TriggerObj
+          m_TextWithWhitespace: "TriggerObj\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: a7309ca3d9c04fb0966fec0942807e72, type: 3}
+        hasToggle: 1
+      - displayName: KeyObject
+        name: App.KeySystem.KeyObject, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: KeyObject
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: KeyObject
+          m_TextWithWhitespace: "KeyObject\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 20884a2f227c93d48b5a6a2814647e58, type: 3}
+        hasToggle: 1
+      - displayName: HoldableObj
+        name: App.HandlingObjects.HoldableObjects.HoldableObj, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: HoldableObj
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: HoldableObj
+          m_TextWithWhitespace: "HoldableObj\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 015e8e82769e3c24da9fa196ee888e9e, type: 3}
+        hasToggle: 1
+      - displayName: InteractiveObj
+        name: App.InteractiveObjects.InteractiveObj, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: InteractiveObj
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: InteractiveObj
+          m_TextWithWhitespace: "InteractiveObj\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: cff2a8bdc6ba46cb85be95b300f5047f, type: 3}
+        hasToggle: 1
+      - displayName: MutantController
+        name: App.Mutant.MutantController, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: MutantController
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: MutantController
+          m_TextWithWhitespace: "MutantController\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: b8aabcef64ad4146a54959c24a7306f0, type: 3}
+        hasToggle: 1
+      - displayName: MutantAnimationController
+        name: App.Mutant.MutantAnimationController, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: MutantAnimationController
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: MutantAnimationController
+          m_TextWithWhitespace: "MutantAnimationController\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 6478bfc6205f4ff47b82f858b4b6243f, type: 3}
+        hasToggle: 1
+      - displayName: MutantMove
+        name: App.Character.MutantMove, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: MutantMove
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: MutantMove
+          m_TextWithWhitespace: "MutantMove\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 8069f76c20bd46b98cf24348b49b0d95, type: 3}
+        hasToggle: 1
+      - displayName: TargetToIsolate
+        name: App.IsolationBlock.TargetToIsolate, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: TargetToIsolate
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: TargetToIsolate
+          m_TextWithWhitespace: "TargetToIsolate\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: a369d9f7d2234530ba449f73a246a8fc, type: 3}
+        hasToggle: 1
+      - displayName: GameOverDetector
+        name: App.GameOverDetector, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: GameOverDetector
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: GameOverDetector
+          m_TextWithWhitespace: "GameOverDetector\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: bf6e96aa4c0a480bb8185bc8c4112586, type: 3}
+        hasToggle: 1
+      - displayName: SecurityCheckpointController
+        name: App.SecurityCheckpoint.SecurityCheckpointController, Assembly-CSharp,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: SecurityCheckpointController
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: SecurityCheckpointController
+          m_TextWithWhitespace: "SecurityCheckpointController\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 4d8b5af6fd5a4374b931131fbcc95d8a, type: 3}
+        hasToggle: 1
+      - displayName: SecurityCheckpointDoorsToggler
+        name: App.SecurityCheckpoint.SecurityCheckpointDoorsToggler, Assembly-CSharp,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: SecurityCheckpointDoorsToggler
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: SecurityCheckpointDoorsToggler
+          m_TextWithWhitespace: "SecurityCheckpointDoorsToggler\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 1c8f118e43ec4b85833e49c2a6f10eae, type: 3}
+        hasToggle: 1
+      - displayName: SecurityCheckPointPasPlayer
+        name: App.SecurityCheckpoint.SecurityCheckPointPasPlayer, Assembly-CSharp,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: SecurityCheckPointPasPlayer
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: SecurityCheckPointPasPlayer
+          m_TextWithWhitespace: "SecurityCheckPointPasPlayer\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 60c40db321b74577aa6ea2cacbd83351, type: 3}
+        hasToggle: 1
+      - displayName: IsolationBlockController
+        name: App.IsolationBlock.IsolationBlockController, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: IsolationBlockController
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: IsolationBlockController
+          m_TextWithWhitespace: "IsolationBlockController\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 72bd6514cbd94082abf6b4dbc2159cfb, type: 3}
+        hasToggle: 1
+      - displayName: CellsManager
+        name: App.IsolationBlock.CellsManager, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: CellsManager
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: CellsManager
+          m_TextWithWhitespace: "CellsManager\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 46281eb5397742d0bc2cd316e1a0d1cc, type: 3}
+        hasToggle: 1
+      - displayName: CellsTargetChecker
+        name: App.IsolationBlock.CellsTargetChecker, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: CellsTargetChecker
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: CellsTargetChecker
+          m_TextWithWhitespace: "CellsTargetChecker\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: c822d78b533441b38087c51f11783501, type: 3}
+        hasToggle: 1
+      - displayName: GameEndTrigger
+        name: App.SecurityCheckpoint.GameEndTrigger, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: GameEndTrigger
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: GameEndTrigger
+          m_TextWithWhitespace: "GameEndTrigger\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 66d1cb8e48a746c1a1ca096cf1ac7250, type: 3}
+        hasToggle: 1
+      - displayName: PublicAddressSystem
+        name: App.Audio.PublicAddressSystem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: PublicAddressSystem
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: PublicAddressSystem
+          m_TextWithWhitespace: "PublicAddressSystem\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 944a9c87d854459cb14ca41304348a46, type: 3}
+        hasToggle: 1
+      - displayName: AudioQueuePlayer
+        name: App.Audio.AudioQueuePlayer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: AudioQueuePlayer
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: AudioQueuePlayer
+          m_TextWithWhitespace: "AudioQueuePlayer\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
+        hasToggle: 1
+      - displayName: UsableObj
+        name: App.Usable.UsableObj, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: UsableObj
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: UsableObj
+          m_TextWithWhitespace: "UsableObj\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: bc4b110399bd4a7297d234ae559f6672, type: 3}
+        hasToggle: 1
+      - displayName: DoorController
+        name: App.Doors.DoorController, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: DoorController
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: DoorController
+          m_TextWithWhitespace: "DoorController\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 0178a437eed3e244ba0d36df00a34854, type: 3}
+        hasToggle: 1
+      - displayName: SelectionBaseScript
+        name: App.SelectionBaseScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: SelectionBaseScript
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: SelectionBaseScript
+          m_TextWithWhitespace: "SelectionBaseScript\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 700114e3a2f5e5b4db36d878320bbe07, type: 3}
+        hasToggle: 1
+      - displayName: TrainLevel
+        name: App.Train.TrainLevel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: TrainLevel
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: TrainLevel
+          m_TextWithWhitespace: "TrainLevel\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: bb39698e4a774ae58a868563e89c7367, type: 3}
+        hasToggle: 1
+      - displayName: EscScopeConfig
+        name: App.EscProviding.EscScopeConfig, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: EscScopeConfig
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: EscScopeConfig
+          m_TextWithWhitespace: "EscScopeConfig\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 1ac85af570f24f7294c0c57fdae8caee, type: 3}
+        hasToggle: 1
+      - displayName: CursorScopeConfig
+        name: App.CursorBehaviour.CursorScopeConfig, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: CursorScopeConfig
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: CursorScopeConfig
+          m_TextWithWhitespace: "CursorScopeConfig\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 00cc22ca16694fc9a5c304f37ebb8d66, type: 3}
+        hasToggle: 1
+      - displayName: AudioScopeConfig
+        name: App.Audio.Sources.AudioScopeConfig, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: AudioScopeConfig
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: AudioScopeConfig
+          m_TextWithWhitespace: "AudioScopeConfig\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 3e40ee0c09a04e9bb3f643d77076a4b4, type: 3}
+        hasToggle: 1
+      - displayName: PortableRadioScopeConfig
+        name: App.PortableRadioSystem.PortableRadioScopeConfig, Assembly-CSharp,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: PortableRadioScopeConfig
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: PortableRadioScopeConfig
+          m_TextWithWhitespace: "PortableRadioScopeConfig\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: b80863b5f6dc405b83eb69ad19be252a, type: 3}
+        hasToggle: 1
+      - displayName: DisableOnStartInNonDebugBuild
+        name: App.DisableOnStartInNonDebugBuild, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: DisableOnStartInNonDebugBuild
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: DisableOnStartInNonDebugBuild
+          m_TextWithWhitespace: "DisableOnStartInNonDebugBuild\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 931884ca451b4d76910e321ab581a4ec, type: 3}
+        hasToggle: 1
+      - displayName: PortableRadio
+        name: App.PortableRadioSystem.PortableRadio, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: PortableRadio
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: PortableRadio
+          m_TextWithWhitespace: "PortableRadio\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: e70f724d694844f0aba4291fa8bc423b, type: 3}
+        hasToggle: 1
+      - displayName: LifetimeScopeBootstrap
+        name: App.LifetimeScopes.LifetimeScopeBootstrap, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: LifetimeScopeBootstrap
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: LifetimeScopeBootstrap
+          m_TextWithWhitespace: "LifetimeScopeBootstrap\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: e850b1e2dc804871a62c236232f09833, type: 3}
+        hasToggle: 1
+      - displayName: DoorsBootstrap
+        name: App.Doors.DoorsBootstrap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: DoorsBootstrap
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: DoorsBootstrap
+          m_TextWithWhitespace: "DoorsBootstrap\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 2a4484d12f164830bd3249c9a77c4c90, type: 3}
+        hasToggle: 1
+      - displayName: TryUseSoundPlayerBootstrap
+        name: App.Usable.TryUseSoundPlayerBootstrap, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: TryUseSoundPlayerBootstrap
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: TryUseSoundPlayerBootstrap
+          m_TextWithWhitespace: "TryUseSoundPlayerBootstrap\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 0fcaa310278a411fb76246cd87e6dff2, type: 3}
+        hasToggle: 1
+      - displayName: LockersBootstrap
+        name: App.Lockers.LockersBootstrap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: LockersBootstrap
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: LockersBootstrap
+          m_TextWithWhitespace: "LockersBootstrap\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 45009f4e8c19401597f897aa7150ba8f, type: 3}
+        hasToggle: 1
+      - displayName: RadioPlayersBootstrap
+        name: App.PortableRadioSystem.RadioPlayersBootstrap, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: RadioPlayersBootstrap
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: RadioPlayersBootstrap
+          m_TextWithWhitespace: "RadioPlayersBootstrap\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 6f72cf9b3bde4cbcaa71f1950cc65060, type: 3}
+        hasToggle: 1
+      - displayName: GameEndInitializer
+        name: App.Global.GameEndInitializer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: GameEndInitializer
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: GameEndInitializer
+          m_TextWithWhitespace: "GameEndInitializer\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 710df20c8cf94d9291b657e4a7ae8f3b, type: 3}
+        hasToggle: 1
+      - displayName: LoadingScreenHider
+        name: App.ScenesLoading.LoadingScreenHider, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: LoadingScreenHider
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: LoadingScreenHider
+          m_TextWithWhitespace: "LoadingScreenHider\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: b63622fc5c5f41d982902e6c9e006428, type: 3}
+        hasToggle: 1
+      - displayName: BootstrapSceneLifetimeScope
+        name: App.BootstrapScene.BootstrapSceneLifetimeScope, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: BootstrapSceneLifetimeScope
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: BootstrapSceneLifetimeScope
+          m_TextWithWhitespace: "BootstrapSceneLifetimeScope\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 36b390c31c59464aa1a484b03e402fc6, type: 3}
+        hasToggle: 1
+      - displayName: DoorAnimator
+        name: App.Doors.DoorAnimator, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: DoorAnimator
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: DoorAnimator
+          m_TextWithWhitespace: "DoorAnimator\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: ec893924dee591e41ac47c2e0678fad6, type: 3}
+        hasToggle: 1
+      - displayName: RadioTrigger
+        name: App.PortableRadioSystem.RadioTrigger, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: RadioTrigger
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: RadioTrigger
+          m_TextWithWhitespace: "RadioTrigger\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 655bbc76014e43a39afc7bcc3f7893a2, type: 3}
+        hasToggle: 1
+      - displayName: RadioPlayer
+        name: App.PortableRadioSystem.RadioPlayer, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: RadioPlayer
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: RadioPlayer
+          m_TextWithWhitespace: "RadioPlayer\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 5433ca6091af44d58dd86574defbc933, type: 3}
+        hasToggle: 1
+      - displayName: GameplayScope
+        name: App.Scopes.GameplayScope, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: GameplayScope
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: GameplayScope
+          m_TextWithWhitespace: "GameplayScope\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 6f3e39ff70954fa7bbc53facfbd453ae, type: 3}
+        hasToggle: 1
+      - displayName: RootBootstrap
+        name: Avastrad.Bootstraps.RootBootstrap, Avastrad.Bootstraps, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: RootBootstrap
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: RootBootstrap
+          m_TextWithWhitespace: "RootBootstrap\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: f51a5a2110184f149fef6e386b7177bc, type: 3}
+        hasToggle: 1
+      - displayName: HealthHud
+        name: App.Health.HealthHud, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: HealthHud
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: HealthHud
+          m_TextWithWhitespace: "HealthHud\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: cfa10acd4c2849729d04a2578ac4e9f3, type: 3}
+        hasToggle: 1
+      - displayName: PlayerCharacterController
+        name: App.Character.PlayerCharacterController, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: PlayerCharacterController
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: PlayerCharacterController
+          m_TextWithWhitespace: "PlayerCharacterController\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 205fd2d947281a4459fa24ee15e44094, type: 3}
+        hasToggle: 1
+      - displayName: HealthModel
+        name: App.Health.HealthModel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: HealthModel
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: HealthModel
+          m_TextWithWhitespace: "HealthModel\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: f9e73914e2ab412e8c299252fc47acc4, type: 3}
+        hasToggle: 1
+      - displayName: HealthHeal
+        name: App.Health.Heal.HealthHeal, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: HealthHeal
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: HealthHeal
+          m_TextWithWhitespace: "HealthHeal\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 0f62638d241045519fe9cd987b5e56ee, type: 3}
+        hasToggle: 1
+      - displayName: CameraController
+        name: App.Character.CameraController, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: CameraController
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: CameraController
+          m_TextWithWhitespace: "CameraController\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 526b187e338733645a7a1ca7953695a0, type: 3}
+        hasToggle: 1
+      - displayName: PlayerInputManager
+        name: App.Character.PlayerInputManager, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: PlayerInputManager
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: PlayerInputManager
+          m_TextWithWhitespace: "PlayerInputManager\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: dac3c3fadafc0ab45b5247983953b30e, type: 3}
+        hasToggle: 1
+      - displayName: CharMover
+        name: App.Character.CharMover, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: CharMover
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: CharMover
+          m_TextWithWhitespace: "CharMover\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 8b7e2015e3694ca49e494017ee782c66, type: 3}
+        hasToggle: 1
+      - displayName: KinematicCharacterMotor
+        name: KinematicCharacterController.KinematicCharacterMotor, Assembly-CSharp,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: KinematicCharacterMotor
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: KinematicCharacterMotor
+          m_TextWithWhitespace: "KinematicCharacterMotor\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 4d1bc5515e3ab954e80599c538834774, type: 3}
+        hasToggle: 1
+      - displayName: TriggerObj
+        name: App.TriggerZones.TriggerObj, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: TriggerObj
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: TriggerObj
+          m_TextWithWhitespace: "TriggerObj\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: a7309ca3d9c04fb0966fec0942807e72, type: 3}
+        hasToggle: 1
+      - displayName: KeyObject
+        name: App.KeySystem.KeyObject, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: KeyObject
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: KeyObject
+          m_TextWithWhitespace: "KeyObject\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 20884a2f227c93d48b5a6a2814647e58, type: 3}
+        hasToggle: 1
+      - displayName: HoldableObj
+        name: App.HandlingObjects.HoldableObjects.HoldableObj, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: HoldableObj
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: HoldableObj
+          m_TextWithWhitespace: "HoldableObj\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 015e8e82769e3c24da9fa196ee888e9e, type: 3}
+        hasToggle: 1
+      - displayName: InteractiveObj
+        name: App.InteractiveObjects.InteractiveObj, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: InteractiveObj
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: InteractiveObj
+          m_TextWithWhitespace: "InteractiveObj\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: cff2a8bdc6ba46cb85be95b300f5047f, type: 3}
+        hasToggle: 1
+    unityVersion: 6000.3.10f1
+    unityCount: 381

@@ -1,7 +1,6 @@
-﻿using App.Character;
-using App.TriggerZones;
+﻿using App.TriggerZones;
 
-namespace App
+namespace App.Character
 {
 	public class PlayerTriggerZone : TriggerZoneProviderT<PlayerCharacterController>
 	{

@@ -2,7 +2,7 @@
 using UnityEngine;
 using VContainer;
 
-namespace App
+namespace App.PortableRadioSystem
 {
 	public class RadioPlayer : MonoBehaviour
 	{

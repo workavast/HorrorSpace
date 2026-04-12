@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 139801898394637807}
   - component: {fileID: 369529016653121871}
   m_Layer: 0
-  m_Name: Train
+  m_Name: Level-Train
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,7 +178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2060954689573802693, guid: c897743d5cf60b845a556f47ca87a7e8, type: 3}
       propertyPath: m_Name
-      value: Hallway
+      value: Train-Hallway
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

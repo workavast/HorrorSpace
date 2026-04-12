@@ -1,12 +1,13 @@
 ﻿using App.Audio.Sources;
 using App.ElectricPanels;
+using App.PortableRadioSystem;
 using App.ScenesLoading;
 using Avastrad.ScenesLoading;
 using Avastrad.Utils.ScenesReferencing;
 using UnityEngine;
 using VContainer;
 
-namespace App
+namespace App.Train
 {
 	public class TrainLevel : MonoBehaviour
 	{

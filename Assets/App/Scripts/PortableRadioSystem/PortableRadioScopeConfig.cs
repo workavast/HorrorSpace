@@ -1,13 +1,16 @@
 ﻿using App.LifetimeScopes;
+using UnityEngine;
 using VContainer;
 
-namespace App
+namespace App.PortableRadioSystem
 {
 	public class PortableRadioScopeConfig : ScopeConfig
 	{
+		[SerializeField] private PortableRadio portableRadio;
+		
 		public override void Configure(CoreLifetimeScope scope, IContainerBuilder builder)
 		{
-			builder.Register<PortableRadio>(Lifetime.Singleton).NonLazySelf();
+			builder.RegisterInstance(portableRadio);
 		}
 	}
 }

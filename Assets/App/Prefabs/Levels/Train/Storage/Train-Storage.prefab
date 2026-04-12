@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6695832247075307443}
   m_Layer: 0
-  m_Name: Storage
+  m_Name: Train-Storage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

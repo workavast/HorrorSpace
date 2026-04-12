@@ -1,7 +1,7 @@
 ﻿using App.Character;
 using UnityEngine;
 
-namespace App
+namespace App.PortableRadioSystem
 {
 	public class RadioTrigger : MonoBehaviour
 	{
