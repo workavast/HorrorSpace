@@ -37,6 +37,51 @@ Transform:
   - {fileID: 1925243208332696644}
   m_Father: {fileID: 4175960694369177057}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1588251007921742492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4676888348999305428}
+  - component: {fileID: 6540079489262640739}
+  m_Layer: 0
+  m_Name: SystemVoice_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4676888348999305428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588251007921742492}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.8, y: 0, z: -21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1190382511270060470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6540079489262640739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588251007921742492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
+  playPoint: {fileID: 4676888348999305428}
 --- !u!1 &2439171709799970437
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,6 +180,96 @@ MonoBehaviour:
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 1
   m_AffectedAgents: ffffffff
+--- !u!1 &3074467410198542621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2147727998872815511}
+  - component: {fileID: 2392145573419413587}
+  m_Layer: 0
+  m_Name: SystemVoice_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2147727998872815511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3074467410198542621}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.5, y: 0, z: 7.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1190382511270060470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2392145573419413587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3074467410198542621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
+  playPoint: {fileID: 2147727998872815511}
+--- !u!1 &3352375431984305121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2006333878620386145}
+  - component: {fileID: 5321791997016128417}
+  m_Layer: 0
+  m_Name: SystemVoice_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2006333878620386145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3352375431984305121}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -27.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1190382511270060470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5321791997016128417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3352375431984305121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
+  playPoint: {fileID: 2006333878620386145}
 --- !u!1 &3445632538521929892
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +368,51 @@ MonoBehaviour:
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 1
   m_AffectedAgents: ffffffff
+--- !u!1 &4250907590914390738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1478598133954994376}
+  - component: {fileID: 8307073583303894008}
+  m_Layer: 0
+  m_Name: SystemVoice_7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1478598133954994376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4250907590914390738}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.1, y: 0, z: -13.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1190382511270060470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8307073583303894008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4250907590914390738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
+  playPoint: {fileID: 1478598133954994376}
 --- !u!1 &4565690647758721045
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +462,157 @@ MonoBehaviour:
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 1
   m_AffectedAgents: ffffffff
+--- !u!1 &4783267795511558680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1190382511270060470}
+  - component: {fileID: 4485454736891786356}
+  m_Layer: 0
+  m_Name: PublicAddressSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1190382511270060470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4783267795511558680}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 50, y: 3, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5972117695741854683}
+  - {fileID: 2006333878620386145}
+  - {fileID: 2147727998872815511}
+  - {fileID: 6528744540929166585}
+  - {fileID: 4676888348999305428}
+  - {fileID: 965591530528480744}
+  - {fileID: 2552395917928611644}
+  - {fileID: 1478598133954994376}
+  m_Father: {fileID: 4175960694369177057}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4485454736891786356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4783267795511558680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944a9c87d854459cb14ca41304348a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.SystemPlayer
+  audioPlayers:
+  - {fileID: 6339573613665399401}
+  - {fileID: 5321791997016128417}
+  - {fileID: 2392145573419413587}
+  - {fileID: 8554701659300187770}
+  - {fileID: 6540079489262640739}
+  - {fileID: 7523156339987048808}
+  - {fileID: 4848922773036021971}
+  - {fileID: 8307073583303894008}
+--- !u!1 &5493303224153558943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2552395917928611644}
+  - component: {fileID: 4848922773036021971}
+  m_Layer: 0
+  m_Name: SystemVoice_6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2552395917928611644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5493303224153558943}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.3, y: 0, z: -6.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1190382511270060470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4848922773036021971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5493303224153558943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
+  playPoint: {fileID: 2552395917928611644}
+--- !u!1 &6585365723358842669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5972117695741854683}
+  - component: {fileID: 6339573613665399401}
+  m_Layer: 0
+  m_Name: SystemVoice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5972117695741854683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585365723358842669}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1190382511270060470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6339573613665399401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585365723358842669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
+  playPoint: {fileID: 5972117695741854683}
 --- !u!1 &8068634642266696196
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,8 +705,99 @@ Transform:
   - {fileID: 8527335898156666360}
   - {fileID: 3079732038603716319}
   - {fileID: 2219203268362377119}
+  - {fileID: 1190382511270060470}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8494444759385550848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 965591530528480744}
+  - component: {fileID: 7523156339987048808}
+  m_Layer: 0
+  m_Name: SystemVoice_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &965591530528480744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8494444759385550848}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.7, y: 0, z: -20.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1190382511270060470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7523156339987048808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8494444759385550848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
+  playPoint: {fileID: 965591530528480744}
+--- !u!1 &9013838764945994643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6528744540929166585}
+  - component: {fileID: 8554701659300187770}
+  m_Layer: 0
+  m_Name: SystemVoice_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6528744540929166585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013838764945994643}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.8, y: 0, z: 7.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1190382511270060470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8554701659300187770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013838764945994643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
+  playPoint: {fileID: 6528744540929166585}
 --- !u!1001 &462649433063025536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -428,6 +850,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2950317762567788776, guid: 7411125df532a3249b6744dc20bc82b8, type: 3}
+      propertyPath: publicAddressSystem
+      value: 
+      objectReference: {fileID: 4485454736891786356}
+    - target: {fileID: 2950317762567788776, guid: 7411125df532a3249b6744dc20bc82b8, type: 3}
+      propertyPath: systemNotificationPlayer
+      value: 
+      objectReference: {fileID: 4485454736891786356}
     - target: {fileID: 2950317762567788776, guid: 7411125df532a3249b6744dc20bc82b8, type: 3}
       propertyPath: securityCheckpointController
       value: 
@@ -699,14 +1129,38 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4220466742274386025, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5135045155135270938}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1967240354458788282, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5473870948782591612}
   m_SourcePrefab: {fileID: 100100000, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+--- !u!1 &655489024507159875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1967240354458788282, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+  m_PrefabInstance: {fileID: 1321183507921159417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5473870948782591612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655489024507159875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c40db321b74577aa6ea2cacbd83351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.SecurityCheckpoint.SecurityCheckPointAudioPlayer
+  securityCheckpointDoorsToggler: {fileID: 3748641792527936426}
+  publicAddressSystem: {fileID: 4485454736891786356}
+  audioSourceEntranceOpen: {fileID: 0}
+  audioSourceExitOpen: {fileID: 2185415165806572418, guid: ffb0d9ee67c1d394489ebc3c0c5b5c4a, type: 3}
 --- !u!114 &2284668313796416074 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1000094733463443123, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
   m_PrefabInstance: {fileID: 1321183507921159417}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 655489024507159875}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d8b5af6fd5a4374b931131fbcc95d8a, type: 3}
@@ -717,6 +1171,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4220466742274386025, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
   m_PrefabInstance: {fileID: 1321183507921159417}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3748641792527936426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2760724988019437395, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+  m_PrefabInstance: {fileID: 1321183507921159417}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655489024507159875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8f118e43ec4b85833e49c2a6f10eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.InspectionPoints.InspectionBtn
 --- !u!4 &7120475734040506375 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
@@ -1182,8 +1647,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2760724988019437395, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

@@ -44,6 +44,9 @@ namespace Avastrad.Extensions
             return distanceFromCenter < radius;
         }
         
+        public static float GetRandom(this Vector2 range) 
+            => Random.Range(range.x, range.y);
+
         public static Vector2 GetRandom(Vector2 min, Vector2 max)
         {
             float xRandom = Random.Range(min.x, max.x);

@@ -202,6 +202,9 @@ MonoBehaviour:
   - {fileID: 7969407381169039717}
   - {fileID: 2354519214553550835}
   - {fileID: 2187107182881425162}
+  systemNotificationPlayer: {fileID: 0}
+  systemVoiceOnTargetIsolated: {fileID: 2185415165806572418, guid: 875062c48f2f83243bd4ed48e7cfa807, type: 3}
+  systemVoiceOnTargetEscaped: {fileID: 2185415165806572418, guid: ffb0d9ee67c1d394489ebc3c0c5b5c4a, type: 3}
 --- !u!1 &3571260772416732143
 GameObject:
   m_ObjectHideFlags: 0
