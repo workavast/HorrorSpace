@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Train SceneReference
   m_EditorClassIdentifier: ScenesReferencing::Avastrad.Utils.ScenesReferencing.SceneReference
   sceneAsset: {fileID: 102900000, guid: 68cc1d0c2b3616c4587b230b6be736a0, type: 3}
-  bakedSceneIndex: 2
+  bakedSceneIndex: 3

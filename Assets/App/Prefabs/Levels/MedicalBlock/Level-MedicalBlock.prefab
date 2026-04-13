@@ -959,6 +959,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 337637175296
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:4094499edf6f3a7418fa5571a7d0eb63
+      objectReference: {fileID: 0}
     - target: {fileID: 8921442200996249503, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
       propertyPath: m_Name
       value: DoorRoadMarker
@@ -1024,6 +1032,14 @@ PrefabInstance:
     - target: {fileID: 5551583513551148581, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 186784837632
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:4094499edf6f3a7418fa5571a7d0eb63
       objectReference: {fileID: 0}
     - target: {fileID: 8921442200996249503, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
       propertyPath: m_Name
@@ -1528,6 +1544,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 122540683264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:4094499edf6f3a7418fa5571a7d0eb63
+      objectReference: {fileID: 0}
     - target: {fileID: 8921442200996249503, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
       propertyPath: m_Name
       value: DoorRoadMarker
@@ -1659,6 +1683,14 @@ PrefabInstance:
     - target: {fileID: 5551583513551148581, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 147333214208
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:4094499edf6f3a7418fa5571a7d0eb63
       objectReference: {fileID: 0}
     - target: {fileID: 8921442200996249503, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
       propertyPath: m_Name
@@ -1922,6 +1954,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 167574925312
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:4094499edf6f3a7418fa5571a7d0eb63
+      objectReference: {fileID: 0}
     - target: {fileID: 8921442200996249503, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
       propertyPath: m_Name
       value: DoorRoadMarker
@@ -1987,6 +2027,14 @@ PrefabInstance:
     - target: {fileID: 5551583513551148581, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 78265610240
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:4094499edf6f3a7418fa5571a7d0eb63
       objectReference: {fileID: 0}
     - target: {fileID: 8921442200996249503, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
       propertyPath: m_Name
@@ -2276,6 +2324,14 @@ PrefabInstance:
     - target: {fileID: 5551583513551148581, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 51413676032
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223231936491670019, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:4094499edf6f3a7418fa5571a7d0eb63
       objectReference: {fileID: 0}
     - target: {fileID: 8921442200996249503, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
       propertyPath: m_Name

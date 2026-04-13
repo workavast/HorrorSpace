@@ -7,7 +7,7 @@ namespace Avastrad.Settings.Localization
 {
     public class LocalizationSettingView : MonoBehaviour, ISettingView
     {
-        [SerializeField] private TMP_Dropdown fpsDropdown;
+        [SerializeField] private TMP_Dropdown dropdown;
         [SerializeField] private LocalizationSettingViewModel viewModel;
 
         public IReadOnlyList<Locale> Options => viewModel.Options;
@@ -15,29 +15,29 @@ namespace Avastrad.Settings.Localization
 
         public void Initialize()
         {
-            fpsDropdown.ClearOptions();
+            dropdown.ClearOptions();
             foreach (var option in Options)
-                fpsDropdown.options.Add(new TMP_Dropdown.OptionData(option.LocaleName));
+                dropdown.options.Add(new TMP_Dropdown.OptionData(option.LocaleName));
             UpdateView();
         }
 
         public void OnEnabledManual()
         {
             viewModel.OnChanged += UpdateView;
-            fpsDropdown.onValueChanged.AddListener(SetValue);
+            dropdown.onValueChanged.AddListener(SetValue);
             UpdateView();
         }
 
         public void OnDisabledManual()
         {
             viewModel.OnChanged -= UpdateView;
-            fpsDropdown.onValueChanged.RemoveListener(SetValue);
+            dropdown.onValueChanged.RemoveListener(SetValue);
         }
 
         private void UpdateView()
         {
-            fpsDropdown.SetValueWithoutNotify(SelectedOptionIndex);
-            fpsDropdown.RefreshShownValue();
+            dropdown.SetValueWithoutNotify(SelectedOptionIndex);
+            dropdown.RefreshShownValue();
         }
 
         private void SetValue(int optionIndex)

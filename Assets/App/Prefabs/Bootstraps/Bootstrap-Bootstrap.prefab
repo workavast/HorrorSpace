@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.ScenesLoading.LoadSceneBootstrap
   loadingConfig: {fileID: 11400000, guid: 59d29f1e1c1794749b9f6d090be80c40, type: 2}
-  sceneRef: {fileID: 11400000, guid: 724acf29d0e6aed4796b33a047c8a916, type: 2}
+  sceneRef: {fileID: 11400000, guid: 6f8dc5148cd61104a9594bde649e53f7, type: 2}
 --- !u!1 &6351333303284584899
 GameObject:
   m_ObjectHideFlags: 0

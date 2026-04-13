@@ -77,6 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.SpeakersSystem.SpeakersTriggers.SpeakerTriggerPlayer
   speakerConfig: {fileID: 0}
   audioSource: {fileID: 0}
+  eventNameToAdd: 
   eventsToPlay: []
 --- !u!1 &4204126380492778003
 GameObject:
@@ -89,7 +90,7 @@ GameObject:
   - component: {fileID: 7961476034678179465}
   - component: {fileID: 7893577810576112433}
   - component: {fileID: 4554060657291209835}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

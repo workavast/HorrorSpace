@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MedicalBlock-RoadMarkers_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 4094499edf6f3a7418fa5571a7d0eb63, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 51413676032
+    m_Localized: Security
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78265610240
+    m_Localized: Changing Room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 122540683264
+    m_Localized: Operating Room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 147333214208
+    m_Localized: Isolation Room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 167574925312
+    m_Localized: Generators
+    m_Metadata:
+      m_Items: []
+  - m_Id: 186784837632
+    m_Localized: Hallway
+    m_Metadata:
+      m_Items: []
+  - m_Id: 337637175296
+    m_Localized: Operating Block
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

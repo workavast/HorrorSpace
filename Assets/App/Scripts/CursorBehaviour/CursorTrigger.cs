@@ -7,10 +7,16 @@ namespace App.CursorBehaviour
     {
         [Inject] private readonly CursorVisibilityChanger _cursorVisibilityChanger;
 
-        private void OnEnable() 
-            => _cursorVisibilityChanger.AddRequest();
+        private void OnEnable()
+        {
+            Debug.Log("Cursor trigger enabled");
+            _cursorVisibilityChanger.AddRequest();
+        }
 
-        private void OnDisable() 
-            => _cursorVisibilityChanger.RemoveRequest();
+        private void OnDisable()
+        {
+            Debug.Log("Cursor trigger enabled");
+            _cursorVisibilityChanger.RemoveRequest();
+        }
     }
 }

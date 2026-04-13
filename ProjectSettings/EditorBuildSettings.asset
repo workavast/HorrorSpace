@@ -12,11 +12,16 @@ EditorBuildSettings:
     path: Assets/App/Scenes/LoadingScene.unity
     guid: c7d39f5b21bebaa469b2dd49358e63c8
   - enabled: 1
+    path: Assets/App/Scenes/MainMenu.unity
+    guid: 090913331b1dbd04cbd2919500d05713
+  - enabled: 1
     path: Assets/App/Scenes/Train.unity
     guid: 68cc1d0c2b3616c4587b230b6be736a0
   - enabled: 1
     path: Assets/App/Scenes/Gameplay.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: fadf905fc96c43744a7e96d8ec90e709, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: b5f87640c097d17488018023958f2eae, type: 2}
   m_UseUCBPForAssetBundles: 0

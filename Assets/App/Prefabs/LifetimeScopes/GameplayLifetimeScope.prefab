@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eacf961e8ad8445cb6e673741d8862ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.GamePausing.GamePauserScopeConfig
---- !u!1 &1785204203076064090
+--- !u!1 &2355635136877910166
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52,22 +52,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8235466150417076141}
-  - component: {fileID: 4449306621686882530}
+  - component: {fileID: 1534625077910059030}
+  - component: {fileID: 1082620042830617007}
   m_Layer: 0
-  m_Name: Cursor
+  m_Name: CursorEscReader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8235466150417076141
+--- !u!4 &1534625077910059030
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785204203076064090}
+  m_GameObject: {fileID: 2355635136877910166}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -76,18 +76,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7455945886363863786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4449306621686882530
+--- !u!114 &1082620042830617007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785204203076064090}
+  m_GameObject: {fileID: 2355635136877910166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00cc22ca16694fc9a5c304f37ebb8d66, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e831d0fbc9a4bfcac890fd2cc044aa3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.CursorBehaviour.CursorScopeConfig
+  m_EditorClassIdentifier: Assembly-CSharp::App.CursorBehaviour.CursorEscReaderScopeConfig
 --- !u!1 &3070361586070937345
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3657838710475264715}
-  - {fileID: 8235466150417076141}
+  - {fileID: 1534625077910059030}
   - {fileID: 1179784814021551440}
   - {fileID: 7930122312389338418}
   - {fileID: 2466888477769528441}
