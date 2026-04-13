@@ -119,17 +119,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &93064987 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4177110292154823865, guid: 18c5cee438d13aa4da3b088c07961923, type: 3}
-  m_PrefabInstance: {fileID: 3379967197789659405}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &93064988 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 369529016653121871, guid: 18c5cee438d13aa4da3b088c07961923, type: 3}
   m_PrefabInstance: {fileID: 3379967197789659405}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93064987}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb39698e4a774ae58a868563e89c7367, type: 3}
@@ -1699,10 +1694,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 307603213272999852, guid: a8fb092712e1b164c9e5a4edadd631c6, type: 3}
-      propertyPath: portableRadio
-      value: 
-      objectReference: {fileID: 2125339593}
-    - target: {fileID: 307603213272999852, guid: a8fb092712e1b164c9e5a4edadd631c6, type: 3}
       propertyPath: monologSpeakers
       value: 
       objectReference: {fileID: 703124799}
@@ -1746,14 +1737,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5507796934347194207, guid: a8fb092712e1b164c9e5a4edadd631c6, type: 3}
-      propertyPath: autoInjectGameObjects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5507796934347194207, guid: a8fb092712e1b164c9e5a4edadd631c6, type: 3}
-      propertyPath: 'autoInjectGameObjects.Array.data[0]'
-      value: 
-      objectReference: {fileID: 93064987}
     - target: {fileID: 7811440370535490671, guid: a8fb092712e1b164c9e5a4edadd631c6, type: 3}
       propertyPath: m_Name
       value: GameplayLifetimeScope
@@ -1836,22 +1819,10 @@ PrefabInstance:
       propertyPath: levels.Array.data[0].underlyingValue
       value: 
       objectReference: {fileID: 93064988}
-    - target: {fileID: 1755921818090434184, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
-      propertyPath: lifetimeScope
-      value: 
-      objectReference: {fileID: 552252199}
     - target: {fileID: 3462764578115030743, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
       propertyPath: lifetimeScope
       value: 
       objectReference: {fileID: 552252199}
-    - target: {fileID: 4925472491923363930, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
-      propertyPath: levels.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4925472491923363930, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
-      propertyPath: levels.Array.data[0].underlyingValue
-      value: 
-      objectReference: {fileID: 93064988}
     - target: {fileID: 6014012980325495198, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
       propertyPath: m_Name
       value: GameplayBootstrap

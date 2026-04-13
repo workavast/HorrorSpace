@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1675305328235684816}
-  - component: {fileID: 3611332484526328019}
-  - component: {fileID: 6659315641767396001}
+  - component: {fileID: 2092816259734064174}
+  - component: {fileID: 7285777629538835112}
+  - component: {fileID: 5008977562459811631}
   m_Layer: 0
-  m_Name: RadioTrigger
+  m_Name: SpeakerTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,14 +28,14 @@ Transform:
   m_GameObject: {fileID: 922016719007425136}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.373, y: 1.96, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7961476034678179465}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3611332484526328019
+--- !u!114 &2092816259734064174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,13 +44,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 922016719007425136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 655bbc76014e43a39afc7bcc3f7893a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f86e1a3599e4b8299dbeb77d5d178ea, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.RadioTriggerPlayer
-  audioSourceHolder: {fileID: 6885348172138856678, guid: 653b5f91ffbcc8343a6bfce13c24a5d4, type: 3}
-  playerTriggerZone: {fileID: 7822804969446510175}
-  radioPlayer: {fileID: 6659315641767396001}
---- !u!114 &6659315641767396001
+  m_EditorClassIdentifier: Assembly-CSharp::App.SpeakersSystem.SpeakersTriggers.SpeakerTrigger
+  triggerZone: {fileID: 7893577810576112433}
+  eventer: {fileID: 7285777629538835112}
+  player: {fileID: 5008977562459811631}
+--- !u!114 &7285777629538835112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,10 +59,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 922016719007425136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5433ca6091af44d58dd86574defbc933, type: 3}
+  m_Script: {fileID: 11500000, guid: eb9d0cb9e2114e51bbb2646532f08576, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.RadioPlayer
-  audioSourceHolder: {fileID: 6885348172138856678, guid: 653b5f91ffbcc8343a6bfce13c24a5d4, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::App.SpeakersSystem.SpeakersTriggers.SpeakerTriggerEvent
+  eventName: 
+--- !u!114 &5008977562459811631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922016719007425136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46187e4ce1834456b87569c019346ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.SpeakersSystem.SpeakersTriggers.SpeakerTriggerPlayer
+  speakerConfig: {fileID: 0}
+  audioSource: {fileID: 0}
+  eventsToPlay: []
 --- !u!1 &4204126380492778003
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +87,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7961476034678179465}
-  - component: {fileID: 7822804969446510175}
+  - component: {fileID: 7893577810576112433}
   - component: {fileID: 4554060657291209835}
   m_Layer: 0
   m_Name: Cube
@@ -95,7 +111,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1675305328235684816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7822804969446510175
+--- !u!114 &7893577810576112433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,9 +120,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4204126380492778003}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2921f775f075418e912c0796425ec04f, type: 3}
+  m_Script: {fileID: 11500000, guid: fdcabc18e6ef4c2596271be9f473b505, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.PlayerTriggerZone
+  m_EditorClassIdentifier: Assembly-CSharp::App.SpeakersSystem.SpeakersTriggers.SpeakerTriggerZone
 --- !u!65 &4554060657291209835
 BoxCollider:
   m_ObjectHideFlags: 0

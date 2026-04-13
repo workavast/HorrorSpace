@@ -4,13 +4,13 @@ using Avastrad.Bootstraps;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace App.PortableRadioSystem
+namespace App.SpeakersSystem.SpeakersTriggers
 {
-	public class RadioPlayersBootstrap : Bootstrap
+	public class SpeakerTriggersBootstrap : Bootstrap
 	{
 		protected override Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope)
 		{
-			var radioPlayers = FindObjectsByType<RadioPlayer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+			var radioPlayers = FindObjectsByType<SpeakerTrigger>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 			foreach (var radioPlayer in radioPlayers) 
 				radioPlayer.Initialize(lifeTimeScope.Container);
 			

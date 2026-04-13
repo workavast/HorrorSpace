@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 8450550693926369004}
   - component: {fileID: 5438028260905461622}
   - component: {fileID: 5681252777497126584}
+  - component: {fileID: 1678951050012540821}
   - component: {fileID: 3548465234966692427}
   - component: {fileID: 8225460231289988859}
   m_Layer: 3
@@ -137,7 +138,6 @@ MonoBehaviour:
   interactiveObjBoundsDrawer: {fileID: 0}
   healthComp: {fileID: 2314519830986179946}
   playerParams:
-    Health: 100
     VelocityModifierPerGrabObjMass:
       serializedVersion: 2
       m_Curve:
@@ -380,6 +380,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.TriggerZones.TriggerObj
   owner: {fileID: 8712057721741398327}
+--- !u!114 &1678951050012540821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712057721741398327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f35b2d3b604606994a02285eaae45e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.SpeakersSystem.SpeakersTriggers.SpeakerTriggerObj
 --- !u!136 &3548465234966692427
 CapsuleCollider:
   m_ObjectHideFlags: 8

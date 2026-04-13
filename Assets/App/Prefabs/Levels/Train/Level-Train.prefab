@@ -111,6 +111,14 @@ PrefabInstance:
       propertyPath: audioSourceHolder
       value: 
       objectReference: {fileID: 6885348172138856678, guid: e3629eda73805f44e9579b95fe2ac5e7, type: 3}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 6885348172138856678, guid: e3629eda73805f44e9579b95fe2ac5e7, type: 3}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: speakerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: ecbf6eaded717a24b92351fd544e5c21, type: 2}
     - target: {fileID: 6659315641767396001, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: speakerConfig
       value: 
@@ -313,6 +321,14 @@ PrefabInstance:
       propertyPath: audioSourceHolder
       value: 
       objectReference: {fileID: 6885348172138856678, guid: f5bfc522eda9bfe4d8e257c617362873, type: 3}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 6885348172138856678, guid: f5bfc522eda9bfe4d8e257c617362873, type: 3}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: speakerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: ecbf6eaded717a24b92351fd544e5c21, type: 2}
     - target: {fileID: 6659315641767396001, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: speakerConfig
       value: 
@@ -464,6 +480,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 6885348172138856678, guid: 653b5f91ffbcc8343a6bfce13c24a5d4, type: 3}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: speakerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: ecbf6eaded717a24b92351fd544e5c21, type: 2}
     - target: {fileID: 6659315641767396001, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: speakerConfig
       value: 

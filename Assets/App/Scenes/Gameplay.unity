@@ -2098,10 +2098,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 307603213272999852, guid: a8fb092712e1b164c9e5a4edadd631c6, type: 3}
-      propertyPath: portableRadio
-      value: 
-      objectReference: {fileID: 435193022}
-    - target: {fileID: 307603213272999852, guid: a8fb092712e1b164c9e5a4edadd631c6, type: 3}
       propertyPath: monologSpeakers
       value: 
       objectReference: {fileID: 1728035697}
@@ -2178,10 +2174,6 @@ PrefabInstance:
       propertyPath: levels.Array.data[0].underlyingValue
       value: 
       objectReference: {fileID: 6360879837212292873}
-    - target: {fileID: 1755921818090434184, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
-      propertyPath: lifetimeScope
-      value: 
-      objectReference: {fileID: 552252199}
     - target: {fileID: 3462764578115030743, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
       propertyPath: lifetimeScope
       value: 
