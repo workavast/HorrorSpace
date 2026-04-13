@@ -514,6 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 944a9c87d854459cb14ca41304348a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.SystemPlayer
+  speakerConfig: {fileID: 11400000, guid: a43f4fcd29c3b6749aa6a137fd5eb6ff, type: 2}
   audioPlayers:
   - {fileID: 6339573613665399401}
   - {fileID: 5321791997016128417}
@@ -671,6 +672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4175960694369177057}
+  - component: {fileID: 7358083746874687988}
   m_Layer: 0
   m_Name: Level-MedicalBlock
   m_TagString: Untagged
@@ -709,6 +711,20 @@ Transform:
   - {fileID: 7112607463185317182}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7358083746874687988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8301321735358825625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddef70809ab41c6ad60e7d5c2cc442d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Levels.DefaultLevel
+  containerInitializable:
+  - underlyingValue: {fileID: 2956755113096955056}
 --- !u!1 &8494444759385550848
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +889,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2139946447940425409, guid: 7411125df532a3249b6744dc20bc82b8, type: 3}
   m_PrefabInstance: {fileID: 462649433063025536}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2956755113096955056 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3414617100423474992, guid: 7411125df532a3249b6744dc20bc82b8, type: 3}
+  m_PrefabInstance: {fileID: 462649433063025536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72bd6514cbd94082abf6b4dbc2159cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.DraggedDoors.IsolationBlockController
 --- !u!1001 &740973626631398975
 PrefabInstance:
   m_ObjectHideFlags: 0

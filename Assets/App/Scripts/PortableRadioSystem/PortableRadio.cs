@@ -1,13 +1,17 @@
 ﻿using System;
 using App.Audio;
 using App.Audio.Sources;
+using App.SpeakersSystem;
 using UnityEngine;
 
 namespace App.PortableRadioSystem
 {
-	public class PortableRadio : MonoBehaviour
+	public class PortableRadio : MonoBehaviour, ISpeaker
 	{
+		[SerializeField] private SpeakerConfig speakerConfig;
 		[SerializeField] private AudioQueuePlayer audioPlayer;
+		
+		public string Id => speakerConfig.Id;
 		
 		public event Action OnAllAudiosPlayed;
 
@@ -20,7 +24,7 @@ namespace App.PortableRadioSystem
 		{
 			audioPlayer.OnAllAudiosPlayed -= CallOnAllAudiosPlayed;
 		}
-
+		
 		public void Play(AudioSourceHolder audioSourcePrefab) 
 			=> audioPlayer.Play(audioSourcePrefab);
 

@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb39698e4a774ae58a868563e89c7367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.TrainLevel
+  speakerConfig: {fileID: 11400000, guid: ecbf6eaded717a24b92351fd544e5c21, type: 2}
   electricPanel: {fileID: 7749616698195362586}
   audioSourceHolderPrefab: {fileID: 6885348172138856678, guid: 8baff23d3a7a68743a2c811205bb30e3, type: 3}
   sceneRef: {fileID: 11400000, guid: a14681b07f43ea140bfd4da4cf712932, type: 2}
@@ -110,6 +111,10 @@ PrefabInstance:
       propertyPath: audioSourceHolder
       value: 
       objectReference: {fileID: 6885348172138856678, guid: e3629eda73805f44e9579b95fe2ac5e7, type: 3}
+    - target: {fileID: 6659315641767396001, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: speakerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: ecbf6eaded717a24b92351fd544e5c21, type: 2}
     - target: {fileID: 6659315641767396001, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: audioSourceHolder
       value: 
@@ -309,6 +314,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6885348172138856678, guid: f5bfc522eda9bfe4d8e257c617362873, type: 3}
     - target: {fileID: 6659315641767396001, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: speakerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: ecbf6eaded717a24b92351fd544e5c21, type: 2}
+    - target: {fileID: 6659315641767396001, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: audioSourceHolder
       value: 
       objectReference: {fileID: 6885348172138856678, guid: f5bfc522eda9bfe4d8e257c617362873, type: 3}
@@ -455,6 +464,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6659315641767396001, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: speakerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: ecbf6eaded717a24b92351fd544e5c21, type: 2}
     - target: {fileID: 6659315641767396001, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: audioSourceHolderPrefab
       value: 

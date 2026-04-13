@@ -1,58 +1,18 @@
-﻿using System;
-using App.Character;
-using App.Usable;
+﻿using App.Levels;
 using UnityEngine;
+using VContainer;
 
 namespace App.IsolationBlock
 {
-	public class IsolationBlockController : MonoBehaviour, IUsable
+	public class IsolationBlockController : MonoBehaviour, IContainerInitializable
 	{
-		[SerializeField] private CellsManager cellsManager;
-		[SerializeField] private IsolationTable[] tables;
+		[SerializeField] private CellsController cellsController;
+		[SerializeField] private CellsTargetChecker cellsTargetChecker;
 
-		private bool CellsIsOpen => !cellsManager.CellsIsClosed;
-		public bool IsUsable { get; private set; } = true;
-		
-		public event Action OnUse;
-		public event Action<bool> OnTryUse;
-		public event Action OnUsableStateChanged;
-
-		private void Start()
+		public void Initialize(IObjectResolver container)
 		{
-			cellsManager.Initialize();
-			
-			SetState(false);
-		}
-
-		public void Interact(PlayerContext playerContext)
-		{
-			if (!IsUsable)
-			{
-				OnTryUse?.Invoke(false);
-				return;
-			}
-
-			if (!SetState(!CellsIsOpen))
-			{
-				OnTryUse?.Invoke(false);
-				return;
-			}
-			
-			OnUse?.Invoke();
-			OnTryUse?.Invoke(true);
-			OnUsableStateChanged?.Invoke();
-		}
-
-		private bool SetState(bool isOpen)
-		{
-			if (!isOpen && !cellsManager.AllCellsCanBeClosed())
-				return false;
-			
-			cellsManager.SetState(isOpen);
-			foreach (var table in tables) 
-				table.SetState(isOpen);
-			
-			return true;
+			cellsController.Initialize();
+			cellsTargetChecker.Initialize(container);
 		}
 	}
 }

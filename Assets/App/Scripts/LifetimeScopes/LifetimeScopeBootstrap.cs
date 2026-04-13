@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using Avastrad.Bootstraps;
 using UnityEngine;
-using VContainer;
 using VContainer.Unity;
 
 namespace App.LifetimeScopes

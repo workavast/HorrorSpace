@@ -123,7 +123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2139946447940425409}
   - component: {fileID: 3414617100423474992}
-  - component: {fileID: 5700251151212968516}
+  - component: {fileID: 852996088335698667}
   - component: {fileID: 2950317762567788776}
   m_Layer: 0
   m_Name: IsolationBlock
@@ -165,11 +165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bd6514cbd94082abf6b4dbc2159cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.DraggedDoors.IsolationBlockController
-  cellsManager: {fileID: 5700251151212968516}
-  tables:
-  - {fileID: 8524315990913262104}
-  - {fileID: 3313897446622527554}
---- !u!114 &5700251151212968516
+  cellsController: {fileID: 852996088335698667}
+  cellsTargetChecker: {fileID: 2950317762567788776}
+--- !u!114 &852996088335698667
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,13 +176,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1874831117739747665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46281eb5397742d0bc2cd316e1a0d1cc, type: 3}
+  m_Script: {fileID: 11500000, guid: d60385e6a73241209d3c622aa13b8bda, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.IsolationBlock.CellsManager
+  m_EditorClassIdentifier: Assembly-CSharp::App.IsolationBlock.CellsController
   cells:
-  - {fileID: 7969407381169039717}
-  - {fileID: 2354519214553550835}
-  - {fileID: 2187107182881425162}
+    cells:
+    - {fileID: 7969407381169039717}
+    - {fileID: 2354519214553550835}
+    - {fileID: 2187107182881425162}
+  tables:
+  - {fileID: 8524315990913262104}
+  - {fileID: 3313897446622527554}
 --- !u!114 &2950317762567788776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +204,7 @@ MonoBehaviour:
   - {fileID: 7969407381169039717}
   - {fileID: 2354519214553550835}
   - {fileID: 2187107182881425162}
-  systemNotificationPlayer: {fileID: 0}
+  speakerConfig: {fileID: 11400000, guid: a43f4fcd29c3b6749aa6a137fd5eb6ff, type: 2}
   systemVoiceOnTargetIsolated: {fileID: 2185415165806572418, guid: 875062c48f2f83243bd4ed48e7cfa807, type: 3}
   systemVoiceOnTargetEscaped: {fileID: 2185415165806572418, guid: ffb0d9ee67c1d394489ebc3c0c5b5c4a, type: 3}
 --- !u!1 &3571260772416732143
@@ -1824,7 +1826,7 @@ PrefabInstance:
     - target: {fileID: 969384781411155260, guid: 7a358834c88457540aa941a949a4f371, type: 3}
       propertyPath: interactableSource.underlyingValue
       value: 
-      objectReference: {fileID: 3414617100423474992}
+      objectReference: {fileID: 852996088335698667}
     - target: {fileID: 6323568799533638544, guid: 7a358834c88457540aa941a949a4f371, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.279999
@@ -4341,7 +4343,7 @@ PrefabInstance:
     - target: {fileID: 969384781411155260, guid: 7a358834c88457540aa941a949a4f371, type: 3}
       propertyPath: interactableSource.underlyingValue
       value: 
-      objectReference: {fileID: 3414617100423474992}
+      objectReference: {fileID: 852996088335698667}
     - target: {fileID: 6323568799533638544, guid: 7a358834c88457540aa941a949a4f371, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.279999

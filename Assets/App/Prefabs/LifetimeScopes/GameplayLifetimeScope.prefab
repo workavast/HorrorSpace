@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 5423433168648362013}
   - component: {fileID: 307603213272999852}
   m_Layer: 0
-  m_Name: PortableRadio
+  m_Name: MonologSpeakers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b80863b5f6dc405b83eb69ad19be252a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.PortableRadioScopeConfig
+  monologSpeakers: {fileID: 0}
 --- !u!1 &3558122012745921616
 GameObject:
   m_ObjectHideFlags: 0

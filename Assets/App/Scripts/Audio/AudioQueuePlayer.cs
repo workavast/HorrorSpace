@@ -28,6 +28,9 @@ namespace App.Audio
 		public bool Contains(AudioSourceHolder audioSourcePrefab) 
 			=> _audioSources.Contains(audioSourcePrefab);
 
+		public bool IsPlay() 
+			=> _activeAudioSource != null;
+
 		private void TryPlayNext()
 		{
 			if (_activeAudioSource != null)

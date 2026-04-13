@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
-using App.Audio;
 using App.Audio.Sources;
 using App.IsolationBlock.Cells;
 using App.SecurityCheckpoint;
+using App.SpeakersSystem;
 using UnityEngine;
+using VContainer;
 
 namespace App.IsolationBlock
 {
@@ -11,15 +12,19 @@ namespace App.IsolationBlock
 	{
 		[SerializeField] private SecurityCheckpointController securityCheckpointController;
 		[SerializeField] private List<IsolationCell> cells;
-		[Header("System notification")]
-		[SerializeField] private PublicAddressSystem publicAddressSystem;
+		[Header("Public Address System")]
+		[SerializeField] private SpeakerConfig speakerConfig;
 		[SerializeField] private AudioSourceHolder systemVoiceOnTargetIsolated;
 		[SerializeField] private AudioSourceHolder systemVoiceOnTargetEscaped;
 
 		public bool IsTargetInside { get; private set; }
 
-		private void Start()
+		private MonologSpeakers _monologSpeakers;
+
+		public void Initialize(IObjectResolver objResolver)
 		{
+			_monologSpeakers = objResolver.Resolve<MonologSpeakers>();	
+			
 			foreach (var cell in cells)
 			{
 				cell.OnTargetEnter += TargetEnter;
@@ -40,14 +45,14 @@ namespace App.IsolationBlock
 		{
 			IsTargetInside = true;
 			securityCheckpointController.SetAvailableState(true);
-			publicAddressSystem.Play(systemVoiceOnTargetIsolated);
+			_monologSpeakers.Play(speakerConfig, systemVoiceOnTargetIsolated);
 		}
 
 		private void TargetExit(TargetToIsolate obj)
 		{
 			IsTargetInside = false;
 			securityCheckpointController.SetAvailableState(false);
-			publicAddressSystem.Play(systemVoiceOnTargetEscaped);
+			_monologSpeakers.Play(speakerConfig, systemVoiceOnTargetEscaped);
 		}
 	}
 }
