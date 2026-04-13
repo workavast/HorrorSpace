@@ -709,6 +709,8 @@ Transform:
   - {fileID: 2219203268362377119}
   - {fileID: 1190382511270060470}
   - {fileID: 7112607463185317182}
+  - {fileID: 2726240112582024364}
+  - {fileID: 345429551238638482}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7358083746874687988
@@ -1215,6 +1217,199 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
   m_PrefabInstance: {fileID: 1321183507921159417}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1438010615285073986
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4175960694369177057}
+    m_Modifications:
+    - target: {fileID: 922016719007425136, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_Name
+      value: SpeakerTrigger_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 39.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8568273311566959338}
+    - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 8568273311566959338}
+    - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PerformEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PerformEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: App.SpeakersSystem.SpeakersTriggers.SpeakerTriggerEvent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: App.SpeakersSystem.SpeakersTriggers.SpeakerTriggerEvent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 8346621958745127898, guid: a68f9e8b2592b084f900d39d6a6e61f7, type: 3}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: speakerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 1309099f6ac19694ca926855a840110f, type: 2}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventNameToAdd
+      value: Invent Idea With Entice
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventsToPlay.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventsToPlay.Array.data[0].State
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventsToPlay.Array.data[1].State
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventsToPlay.Array.data[0].EventName
+      value: Saw Dead Body
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventsToPlay.Array.data[1].EventName
+      value: Saw Monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventsToPlay.Array.data[2].EventName
+      value: Invent Idea With Entice
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285777629538835112, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventName
+      value: Saw Monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961476034678179465, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961476034678179465, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961476034678179465, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961476034678179465, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.08
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+--- !u!4 &345429551238638482 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+  m_PrefabInstance: {fileID: 1438010615285073986}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8568273311566959338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7285777629538835112, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+  m_PrefabInstance: {fileID: 1438010615285073986}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb9d0cb9e2114e51bbb2646532f08576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.SpeakersSystem.SpeakersTriggers.SpeakerTriggerEvent
 --- !u!1001 &2302310796776955309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1478,6 +1673,136 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5551583513551148581, guid: 127e62cf19bce9649b17e08cb55a09ba, type: 3}
   m_PrefabInstance: {fileID: 3456716426487374454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3668865388077252476
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4175960694369177057}
+    m_Modifications:
+    - target: {fileID: 922016719007425136, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_Name
+      value: SpeakerTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 57.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 8346621958745127898, guid: a68f9e8b2592b084f900d39d6a6e61f7, type: 3}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: speakerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 1309099f6ac19694ca926855a840110f, type: 2}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventNameToAdd
+      value: Invent Idea With Entice
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventsToPlay.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventsToPlay.Array.data[0].State
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventsToPlay.Array.data[1].State
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventsToPlay.Array.data[0].EventName
+      value: Saw Dead Body
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventsToPlay.Array.data[1].EventName
+      value: Saw Monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventsToPlay.Array.data[2].EventName
+      value: Invent Idea With Entice
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285777629538835112, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: eventName
+      value: Saw Dead Body
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961476034678179465, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961476034678179465, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961476034678179465, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961476034678179465, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+--- !u!4 &2726240112582024364 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1675305328235684816, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
+  m_PrefabInstance: {fileID: 3668865388077252476}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4827298603884785432
 PrefabInstance:
