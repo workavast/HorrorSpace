@@ -132,51 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4484d12f164830bd3249c9a77c4c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorsBootstrap
---- !u!1 &2978683914674210137
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6425587890970675040}
-  - component: {fileID: 1755921818090434184}
-  m_Layer: 0
-  m_Name: LifetimeBootstrap
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6425587890970675040
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2978683914674210137}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7397321651032708355}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1755921818090434184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2978683914674210137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e850b1e2dc804871a62c236232f09833, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.LifetimeScopeBootstrap
-  lifetimeScope: {fileID: 0}
 --- !u!1 &3791076294054283978
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +206,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6425587890970675040}
   - {fileID: 1243372934271185558}
   - {fileID: 8787271467047987762}
   - {fileID: 6920635061384096923}

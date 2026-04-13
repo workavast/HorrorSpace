@@ -9,6 +9,9 @@ namespace App.SpeakersSystem.SpeakersTriggers
 
         public void AddEvent(string eventName)
         {
+            if (string.IsNullOrEmpty(eventName))
+                return;
+            
             if (Contains(eventName))
             {
                 Debug.LogWarning("Duplicate event: " + eventName);

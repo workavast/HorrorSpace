@@ -548,10 +548,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4757341520451811801, guid: 6b710812dafd264449c4b64a77577105, type: 3}
-      propertyPath: lifetimeScope
-      value: 
-      objectReference: {fileID: 1395504239}
     - target: {fileID: 4880214105318896795, guid: 6b710812dafd264449c4b64a77577105, type: 3}
       propertyPath: m_Name
       value: LoadingSceneBootstrap

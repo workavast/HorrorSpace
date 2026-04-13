@@ -1,5 +1,7 @@
-﻿using App.Usable;
+﻿using App.UI;
+using App.Usable;
 using Avastrad.ScenesLoading;
+using Avastrad.UI.UiSystem;
 using Avastrad.Utils.ScenesReferencing;
 using UnityEngine;
 using VContainer;
@@ -12,11 +14,11 @@ namespace App.SecurityCheckpoint
 		[SerializeField] private SceneReference sceneRef;
 		[SerializeField] private UsableObj usableObj;
 
-		private ISceneLoader _sceneLoader;
+		private ScreensController _screensController;
 		
 		public void Initialize(IObjectResolver container)
 		{
-			_sceneLoader = container.Resolve<ISceneLoader>();
+			_screensController = container.Resolve<ScreensController>();
 		}
 		
 		private void Awake()
@@ -26,7 +28,7 @@ namespace App.SecurityCheckpoint
 
 		private void EndGame()
 		{
-			_sceneLoader.LoadScene(sceneRef.SceneIndex, loadingConfig.ShowDuration);
+			_screensController.SetScreen<GameEndedScreen>();
 		}
 	}
 }

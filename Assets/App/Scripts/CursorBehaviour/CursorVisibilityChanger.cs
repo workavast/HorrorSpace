@@ -1,29 +1,28 @@
-﻿using System;
-using App.EscProviding;
-using App.LifetimeScopes;
+﻿using App.LifetimeScopes;
+using Avastrad.Utils;
 using UnityEngine;
 
 namespace App.CursorBehaviour
 {
-	public class CursorVisibilityChanger : INonLazy, IEscListener, IDisposable
+	public class CursorVisibilityChanger : INonLazy
 	{
-		private readonly EscProvider _escProvider;
+		private readonly RequestCounter _requestCounter;
 
-		public CursorVisibilityChanger(EscProvider escProvider)
+		public CursorVisibilityChanger()
 		{
-			_escProvider = escProvider;
-			_escProvider.Sub(this);
-			OnEscPressed();
+			_requestCounter = new RequestCounter(UpdateVisibility);
+			UpdateVisibility(_requestCounter.RequestMoreZero);
 		}
 
-		public void Dispose()
-		{
-			_escProvider.UnSub(this);
-		}
+		public void AddRequest() 
+			=> _requestCounter.AddRequest();
 
-		public void OnEscPressed()
+		public void RemoveRequest() 
+			=> _requestCounter.RemoveRequest();
+
+		private static void UpdateVisibility(bool isVisible)
 		{
-			Cursor.visible = !Cursor.visible;
+			Cursor.visible = isVisible;
 			Cursor.lockState = Cursor.visible ? CursorLockMode.None : CursorLockMode.Locked;
 		}
 	}

@@ -38,8 +38,9 @@ namespace Avastrad.UI.UiSystem
         public void SetScreen(Type screenType)
         {
             var newScreen = GetScreen(screenType);
-            foreach (var screen in _screenRepository.Screens) 
-                screen.SetActive(false);
+            foreach (var screen in _screenRepository.Screens)
+                if (screen.gameObject.activeSelf)
+                    screen.SetActive(false);
 
             newScreen.SetActive(true);
         }

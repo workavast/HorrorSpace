@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Global.LoadingSceneLifetimeScope
   parentReference:
-    TypeName: App.Global.GlobalLifetimeScope
-  autoRun: 0
+    TypeName: 
+  autoRun: 1
   autoInjectGameObjects: []

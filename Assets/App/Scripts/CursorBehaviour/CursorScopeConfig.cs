@@ -7,7 +7,8 @@ namespace App.CursorBehaviour
 	{
 		public override void Configure(CoreLifetimeScope scope, IContainerBuilder builder)
 		{
-			builder.Register<CursorVisibilityChanger>(Lifetime.Singleton).NonLazy();
+			builder.Register<CursorVisibilityChanger>(Lifetime.Singleton).NonLazySelf();
+			builder.Register<CursorVisibilityEscReader>(Lifetime.Singleton).NonLazySelf();
 		}
 	}
 }

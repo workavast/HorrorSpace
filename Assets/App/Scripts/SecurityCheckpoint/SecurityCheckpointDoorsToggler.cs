@@ -26,7 +26,7 @@ namespace App.SecurityCheckpoint
 		}
 
 		private void Start() 
-			=> ToggleEntrance(true, false, false);
+			=> ToggleEntrance(initialStateIsEntranceOpen, false, false);
 
 		private void Interact() 
 			=> ToggleEntrance(false, false, true);
