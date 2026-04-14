@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 7582285672114712139}
   - component: {fileID: 8346621958745127898}
   - component: {fileID: 6476809895540355337}
+  - component: {fileID: 1464338875580313736}
   m_Layer: 0
-  m_Name: VoiceAudioSource
+  m_Name: RadioVoice-AudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +55,7 @@ AudioSource:
   m_GameObject: {fileID: 523101047909256366}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3181298822530685047, guid: ad009ebb5d9b2494a8d67b5cad9dfa8c, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -142,3 +143,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!165 &1464338875580313736
+AudioHighPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523101047909256366}
+  m_Enabled: 1
+  m_CutoffFrequency: 500
+  m_HighpassResonanceQ: 5
