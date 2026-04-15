@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StorageRack_11
       objectReference: {fileID: 0}
+    - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6764022312482796642, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.993204
@@ -494,6 +498,10 @@ PrefabInstance:
     - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_Name
       value: StorageRack_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6764022312482796642, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -680,6 +688,10 @@ PrefabInstance:
     - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_Name
       value: StorageRack_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6764022312482796642, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1273,6 +1285,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4127c9f1f52fa964080b299ddc37d024, type: 3}
       propertyPath: m_Name
       value: StorageRack-Triple_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4127c9f1f52fa964080b299ddc37d024, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2400,6 +2416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StorageRack_10
       objectReference: {fileID: 0}
+    - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6764022312482796642, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.493204
@@ -2708,6 +2728,10 @@ PrefabInstance:
     - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_Name
       value: StorageRack_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6764022312482796642, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3019,6 +3043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StorageRack_5
       objectReference: {fileID: 0}
+    - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6764022312482796642, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.993204
@@ -3142,6 +3170,10 @@ PrefabInstance:
     - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_Name
       value: StorageRack_7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6764022312482796642, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4616,6 +4648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StorageRack_9
       objectReference: {fileID: 0}
+    - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6764022312482796642, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.493204
@@ -4866,6 +4902,10 @@ PrefabInstance:
     - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_Name
       value: StorageRack_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6764022312482796642, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5217,6 +5257,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StorageRack-Triple
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4127c9f1f52fa964080b299ddc37d024, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5238,6 +5282,10 @@ PrefabInstance:
     - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_Name
       value: StorageRack_8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239019131617291992, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6764022312482796642, guid: d30d6c8eddc298b439f169b9e9f52a4f, type: 3}
       propertyPath: m_LocalPosition.x

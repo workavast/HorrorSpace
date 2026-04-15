@@ -461,6 +461,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3886888565377808956}
     m_Modifications:
+    - target: {fileID: 1461857035941169109, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7737493617242578371, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.5
@@ -2755,6 +2759,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3886888565377808956}
     m_Modifications:
+    - target: {fileID: 1461857035941169109, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7737493617242578371, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.499996
@@ -3189,6 +3197,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3886888565377808956}
     m_Modifications:
+    - target: {fileID: 1461857035941169109, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7737493617242578371, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.5
@@ -3375,6 +3387,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3886888565377808956}
     m_Modifications:
+    - target: {fileID: 1461857035941169109, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7737493617242578371, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.500003
@@ -4305,6 +4321,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3886888565377808956}
     m_Modifications:
+    - target: {fileID: 1461857035941169109, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7737493617242578371, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.5

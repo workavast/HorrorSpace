@@ -368,6 +368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder_16_extended Variant_1
       objectReference: {fileID: 0}
+    - target: {fileID: 3834917585615365917, guid: db541211554b7b84a9db3d5945c59ebd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3834917585615818953, guid: db541211554b7b84a9db3d5945c59ebd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.97
@@ -432,6 +436,10 @@ PrefabInstance:
     - target: {fileID: 3834917585615365917, guid: db541211554b7b84a9db3d5945c59ebd, type: 3}
       propertyPath: m_Name
       value: Cylinder_16_extended Variant_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834917585615365917, guid: db541211554b7b84a9db3d5945c59ebd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3834917585615818953, guid: db541211554b7b84a9db3d5945c59ebd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -560,6 +568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder_16_extended Variant_3
       objectReference: {fileID: 0}
+    - target: {fileID: 3834917585615365917, guid: db541211554b7b84a9db3d5945c59ebd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3834917585615818953, guid: db541211554b7b84a9db3d5945c59ebd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.94
@@ -686,6 +698,10 @@ PrefabInstance:
     - target: {fileID: 3834917585615365917, guid: db541211554b7b84a9db3d5945c59ebd, type: 3}
       propertyPath: m_Name
       value: Cylinder_16_extended Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834917585615365917, guid: db541211554b7b84a9db3d5945c59ebd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3834917585615818953, guid: db541211554b7b84a9db3d5945c59ebd, type: 3}
       propertyPath: m_LocalPosition.x

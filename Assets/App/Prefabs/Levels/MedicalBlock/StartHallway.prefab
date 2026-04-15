@@ -1928,6 +1928,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 70649869965111868}
     m_Modifications:
+    - target: {fileID: 1461857035941169109, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7737493617242578371, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.500003
@@ -2130,7 +2134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1942298059286727166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f685ab8f4d7e03a4fa3e009051c13a3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0178a437eed3e244ba0d36df00a34854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
 --- !u!1001 &6231899845918795566
@@ -2827,6 +2831,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 70649869965111868}
     m_Modifications:
+    - target: {fileID: 1461857035941169109, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7737493617242578371, guid: 2c55e67eb41f6234e9d5dbb4a164beca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.5

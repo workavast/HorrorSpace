@@ -1,58 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4580900809180870844
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5775384946106279289}
-  - component: {fileID: 8357992589062260897}
-  m_Layer: 0
-  m_Name: FloorCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5775384946106279289
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4580900809180870844}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7923671937156190616}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8357992589062260897
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4580900809180870844}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 4, y: 0.2, z: 4}
-  m_Center: {x: 1, y: 0.1, z: 1}
 --- !u!1001 &5516835940349515524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105,6 +52,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: window_big_corner Opaque
       objectReference: {fileID: 0}
+    - target: {fileID: 2412016988073024754, guid: ab5d3cf2506dbc344bfe39fcae0e8edf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412016988074934608, guid: ab5d3cf2506dbc344bfe39fcae0e8edf, type: 3}
+      propertyPath: m_RayTracingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412016988074934608, guid: ab5d3cf2506dbc344bfe39fcae0e8edf, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412016988074934608, guid: ab5d3cf2506dbc344bfe39fcae0e8edf, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2412016988075155206, guid: ab5d3cf2506dbc344bfe39fcae0e8edf, type: 3}
       propertyPath: 'm_Materials.Array.data[3]'
       value: 
@@ -115,10 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d33631281237c3b4386854cd86ada9fe, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2412016988072773276, guid: ab5d3cf2506dbc344bfe39fcae0e8edf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5775384946106279289}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2412016988072980368, guid: ab5d3cf2506dbc344bfe39fcae0e8edf, type: 3}
       insertIndex: -1
@@ -141,8 +101,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700114e3a2f5e5b4db36d878320bbe07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.SelectionBaseScript
---- !u!4 &7923671937156190616 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2412016988072773276, guid: ab5d3cf2506dbc344bfe39fcae0e8edf, type: 3}
-  m_PrefabInstance: {fileID: 5516835940349515524}
-  m_PrefabAsset: {fileID: 0}

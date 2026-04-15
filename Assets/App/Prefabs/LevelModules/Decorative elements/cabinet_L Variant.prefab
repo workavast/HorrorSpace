@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127298, guid: 04ced07fc5a1dbb45906c40768747c8a, type: 3}
       propertyPath: m_Name
-      value: cabinet_L
+      value: cabinet_L Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 127298, guid: 04ced07fc5a1dbb45906c40768747c8a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 436802, guid: 04ced07fc5a1dbb45906c40768747c8a, type: 3}
       propertyPath: m_LocalPosition.x

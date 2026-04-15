@@ -1203,6 +1203,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 296114516408637198}
     m_Modifications:
+    - target: {fileID: 578613366766767820, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4067186392657038960, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
       propertyPath: m_Name
       value: light_wall_3 Centered_5
@@ -1246,6 +1250,10 @@ PrefabInstance:
     - target: {fileID: 8017412724398274472, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198676260767485596, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3275,6 +3283,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 296114516408637198}
     m_Modifications:
+    - target: {fileID: 578613366766767820, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4067186392657038960, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
       propertyPath: m_Name
       value: light_wall_3 Centered
@@ -3318,6 +3330,10 @@ PrefabInstance:
     - target: {fileID: 8017412724398274472, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198676260767485596, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4092,6 +4108,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 296114516408637198}
     m_Modifications:
+    - target: {fileID: 578613366766767820, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4067186392657038960, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
       propertyPath: m_Name
       value: light_wall_3 Centered_4
@@ -4135,6 +4155,10 @@ PrefabInstance:
     - target: {fileID: 8017412724398274472, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198676260767485596, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4975,6 +4999,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 296114516408637198}
     m_Modifications:
+    - target: {fileID: 578613366766767820, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4067186392657038960, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
       propertyPath: m_Name
       value: light_wall_3 Centered_2
@@ -5018,6 +5046,10 @@ PrefabInstance:
     - target: {fileID: 8017412724398274472, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198676260767485596, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5223,6 +5255,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 296114516408637198}
     m_Modifications:
+    - target: {fileID: 578613366766767820, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4067186392657038960, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
       propertyPath: m_Name
       value: light_wall_3 Centered_3
@@ -5266,6 +5302,10 @@ PrefabInstance:
     - target: {fileID: 8017412724398274472, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198676260767485596, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5781,6 +5821,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 296114516408637198}
     m_Modifications:
+    - target: {fileID: 578613366766767820, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4067186392657038960, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
       propertyPath: m_Name
       value: light_wall_3 Centered_1
@@ -5824,6 +5868,10 @@ PrefabInstance:
     - target: {fileID: 8017412724398274472, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198676260767485596, guid: 3625adf75431b8746ab85e7599ca661f, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
