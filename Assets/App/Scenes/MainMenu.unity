@@ -800,6 +800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 478934400}
   - component: {fileID: 478934401}
+  - component: {fileID: 478934402}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -839,6 +840,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035e6b23f2f354f41b3781d90e1c9f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Avastrad.Settings::Avastrad.Settings.SettingsWindow
+--- !u!114 &478934402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478934399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ebdf2c6ee1437a9d111907eee35d37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.SettingsAutoApplyer
+  viewModel: {fileID: 594918631}
+  settingsWindow: {fileID: 478934401}
 --- !u!1 &594918629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,6 +2127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.UI.MainMenuScreen
   settingsWindow: {fileID: 478934401}
+  settingsAutoApplyer: {fileID: 478934402}
 --- !u!114 &1360001459
 MonoBehaviour:
   m_ObjectHideFlags: 0

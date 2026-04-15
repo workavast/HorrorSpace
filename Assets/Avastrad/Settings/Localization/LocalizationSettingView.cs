@@ -41,6 +41,10 @@ namespace Avastrad.Settings.Localization
         }
 
         private void SetValue(int optionIndex)
-            => viewModel.Set(optionIndex, false);
+        {
+            viewModel.OnChanged -= UpdateView;
+            viewModel.Set(optionIndex, true);
+            viewModel.OnChanged += UpdateView;
+        }
     }
 }
