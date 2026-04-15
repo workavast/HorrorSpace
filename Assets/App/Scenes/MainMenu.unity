@@ -2148,6 +2148,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 594918630}
     m_Modifications:
+    - target: {fileID: -1647429337299185419, guid: 93936dba6c3b5b541884fa9de274eaec, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 8040378368
+      objectReference: {fileID: 0}
+    - target: {fileID: -1647429337299185419, guid: 93936dba6c3b5b541884fa9de274eaec, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:2922a1504283da24b8e7f77f2e96b4c6
+      objectReference: {fileID: 0}
     - target: {fileID: 2756312432188108036, guid: 93936dba6c3b5b541884fa9de274eaec, type: 3}
       propertyPath: m_text
       value: 'Language:'
