@@ -2553,6 +2553,14 @@ PrefabInstance:
       propertyPath: entranceDoor
       value: 
       objectReference: {fileID: 1491795343350007696}
+    - target: {fileID: 2955886420629123304, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 9043896594432
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955886420629123304, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:e486a2b69b5d2704680df1ed539d44e3
+      objectReference: {fileID: 0}
     - target: {fileID: 8107829060588745982, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 67

@@ -30,6 +30,10 @@ MonoBehaviour:
       Open Cells?'
     m_Metadata:
       m_Items: []
+  - m_Id: 9043896594432
+    m_Localized: Required to isolate the test subjects
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -23,6 +23,10 @@ MonoBehaviour:
     m_Key: CellsIsClose
     m_Metadata:
       m_Items: []
+  - m_Id: 9043896594432
+    m_Key: RequiredIsolateSubjects
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
