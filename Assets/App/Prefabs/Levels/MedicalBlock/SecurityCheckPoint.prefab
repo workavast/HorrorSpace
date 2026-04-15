@@ -427,6 +427,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7417011728753315279}
     m_Modifications:
+    - target: {fileID: -1647429337299185419, guid: 93936dba6c3b5b541884fa9de274eaec, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 6219833962496
+      objectReference: {fileID: 0}
+    - target: {fileID: -1647429337299185419, guid: 93936dba6c3b5b541884fa9de274eaec, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:b86487a1c89a33c4faa3f4bdd9a1b9cd
+      objectReference: {fileID: 0}
     - target: {fileID: 2756312432188108036, guid: 93936dba6c3b5b541884fa9de274eaec, type: 3}
       propertyPath: m_text
       value: "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0433\u0435\u0440\u043C\u043E\u0434\u0432\u0435\u0440\u044C"
@@ -752,6 +760,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7417011728753315279}
     m_Modifications:
+    - target: {fileID: -1647429337299185419, guid: 93936dba6c3b5b541884fa9de274eaec, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 6223009050624
+      objectReference: {fileID: 0}
+    - target: {fileID: -1647429337299185419, guid: 93936dba6c3b5b541884fa9de274eaec, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:b86487a1c89a33c4faa3f4bdd9a1b9cd
+      objectReference: {fileID: 0}
     - target: {fileID: 2756312432188108036, guid: 93936dba6c3b5b541884fa9de274eaec, type: 3}
       propertyPath: m_text
       value: "\u0422\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044F \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043D\u0438\u0435
