@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Tutorial-Prompts_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 159c32da3a390914f8e998c3c5ddb9e8, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 724729491456
+    m_Localized: 'WASD to move:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759722569728
+    m_Localized: move mouse to rotate camera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 784150196224
+    m_Localized: press E to interact
+    m_Metadata:
+      m_Items: []
+  - m_Id: 800180826112
+    m_Localized: hold LMB to pickup object
+    m_Metadata:
+      m_Items: []
+  - m_Id: 822456774656
+    m_Localized: 'move mouse while hold LMB + RMB to rotate object:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 855465947136
+    m_Localized: scroll mouse wheel to change object distance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2511054204928
+    m_Localized: hold left ctrl or C to crouch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2734266675200
+    m_Localized: hold LMB to drag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2836351840256
+    m_Localized: drag to open
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (en)
   m_GUID: 002481e7fd78d734d9ba89a5b9ff5ddd
   m_SerializeEntries:
+  - m_GUID: 0487044a668b2354fa6a7f4e1788d638
+    m_Address: Tutorial-Prompts_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 05c76aedf411b7d4491c072872840d0e
     m_Address: MainMenu_en
     m_ReadOnly: 1
@@ -26,6 +32,7 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6c7fab9d21e257646bea0b1c2df395c1
     m_Address: MedicalBlock-RoadMarkers_en

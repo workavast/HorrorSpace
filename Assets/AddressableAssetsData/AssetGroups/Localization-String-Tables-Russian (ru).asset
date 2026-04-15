@@ -21,11 +21,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 670c33514587dba47b9080be4626c5ac
+    m_Address: Tutorial-Prompts_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a629528ff790e2945a45f037472056be
     m_Address: GameEndScreen_ru
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a8e8f624dd4d71943bafbf8c3b583590
     m_Address: MedicalBlock-RoadMarkers_ru

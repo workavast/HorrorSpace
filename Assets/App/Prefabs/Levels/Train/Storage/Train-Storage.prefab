@@ -817,6 +817,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train-hold-scrolling
       objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 855465947136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:159c32da3a390914f8e998c3c5ddb9e8
+      objectReference: {fileID: 0}
     - target: {fileID: 6725186381442022577, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_text
       value: "\u041F\u0440\u0438\u0431\u043B\u0438\u0437\u0438\u0442\u044C, \u043E\u0442\u0434\u0430\u043B\u0438\u0442\u044C:\n\u043A\u043E\u043B\u0435\u0441\u0438\u043A\u043E
@@ -1870,6 +1878,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train-hold-rotation
       objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 822456774656
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:159c32da3a390914f8e998c3c5ddb9e8
+      objectReference: {fileID: 0}
     - target: {fileID: 6725186381442022577, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_text
       value: "\u041F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u044C \u0432 \u0440\u0443\u043A\u0430\u0445:\n\u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0442\u044C
@@ -2605,6 +2621,18 @@ PrefabInstance:
     - target: {fileID: 23505058817670018, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_Name
       value: Train-drag
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 2734266675200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:159c32da3a390914f8e998c3c5ddb9e8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982376874806421303, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6725186381442022577, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_text
@@ -3919,6 +3947,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train-hold-main
       objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 800180826112
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:159c32da3a390914f8e998c3c5ddb9e8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982376874806421303, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6725186381442022577, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_text
       value: "\u0412\u0437\u044F\u0442\u044C \u043E\u0431\u044A\u0435\u043A\u0442:\n\u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0439\u0442\u0435
@@ -4091,6 +4131,18 @@ PrefabInstance:
     - target: {fileID: 23505058817670018, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_Name
       value: Train-drag_door
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 2836351840256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:159c32da3a390914f8e998c3c5ddb9e8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982376874806421303, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6725186381442022577, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_text
@@ -4276,6 +4328,18 @@ PrefabInstance:
     - target: {fileID: 23505058817670018, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_Name
       value: Train-crouch
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 2511054204928
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:159c32da3a390914f8e998c3c5ddb9e8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982376874806421303, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6725186381442022577, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_text

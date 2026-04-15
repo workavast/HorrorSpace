@@ -1309,7 +1309,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 23505058817670018, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_Name
-      value: Train-rotation_1
+      value: Train-interaction
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 784150196224
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:159c32da3a390914f8e998c3c5ddb9e8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982376874806421303, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6725186381442022577, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_text
@@ -1346,7 +1358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7571284600701751740, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 317.9248
       objectReference: {fileID: 0}
     - target: {fileID: 7571284600701751740, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1362,7 +1374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7571284600701751740, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.55
+      value: -5.5468
       objectReference: {fileID: 0}
     - target: {fileID: 7571284600701751740, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1382,7 +1394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7571284600701751740, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 9.24
+      value: 9.2277
       objectReference: {fileID: 0}
     - target: {fileID: 7571284600701751740, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1607,6 +1619,18 @@ PrefabInstance:
     - target: {fileID: 23505058817670018, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_Name
       value: Train-movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 724729491456
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:159c32da3a390914f8e998c3c5ddb9e8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982376874806421303, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6725186381442022577, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_text
@@ -3147,6 +3171,18 @@ PrefabInstance:
     - target: {fileID: 23505058817670018, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_Name
       value: Train-rotation
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 759722569728
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312778758566723904, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:159c32da3a390914f8e998c3c5ddb9e8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982376874806421303, guid: 70f016897552d44409a163542f47e262, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6725186381442022577, guid: 70f016897552d44409a163542f47e262, type: 3}
       propertyPath: m_text

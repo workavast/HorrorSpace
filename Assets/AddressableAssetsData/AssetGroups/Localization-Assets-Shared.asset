@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 054d399c1541c7c44ba83c30b75a438d
   m_SerializeEntries:
+  - m_GUID: 159c32da3a390914f8e998c3c5ddb9e8
+    m_Address: Assets/App/Settings/Localization/Tables/Tutorial-Prompts Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1b60a691920e7264e815844c673cef22
     m_Address: Assets/App/Settings/Localization/Tables/GameEndScreen Shared Data.asset
     m_ReadOnly: 1

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Tutorial-Prompts Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Tutorial-Prompts
+  m_TableCollectionNameGuidString: 159c32da3a390914f8e998c3c5ddb9e8
+  m_Entries:
+  - m_Id: 724729491456
+    m_Key: Moving
+    m_Metadata:
+      m_Items: []
+  - m_Id: 759722569728
+    m_Key: CameraRotation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 784150196224
+    m_Key: Interaction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 800180826112
+    m_Key: Pickup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 822456774656
+    m_Key: Pickup-Rotate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 855465947136
+    m_Key: Pickup-Scroll
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2511054204928
+    m_Key: Crouch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2734266675200
+    m_Key: Drag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2836351840256
+    m_Key: OpenDoor
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4585631244276465752
+  references:
+    version: 2
+    RefIds:
+    - rid: 4585631244276465752
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1776262358173
