@@ -203,6 +203,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6473736, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2624203830108004195, guid: e59bda7352eeb5f48931f43d936b5629, type: 3}
     m_RemovedComponents:
     - {fileID: 9573410, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
     - {fileID: 9535380, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
@@ -448,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0178a437eed3e244ba0d36df00a34854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
-  <IsUnLocked>k__BackingField: 1
+  <IsLocked>k__BackingField: 0
   doorAnimator: {fileID: 6894020754276829346}
   isOpen: 0
   closeCheckCollider: {fileID: 7672683789926895136}
@@ -494,7 +498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443257213867313399, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 3443257213867313399, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
       propertyPath: m_LocalRotation.w
@@ -560,7 +564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443257213867313399, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: 3443257213867313399, guid: bf08b228e0763134a9660cb2fa737982, type: 3}
       propertyPath: m_LocalRotation.w
