@@ -14,7 +14,7 @@ namespace App.Doors
 
         public bool InProcess { get; private set; }
 
-        private MotionHandle? _rightHandle;
+        private MotionHandle? _motionHandle;
         private Vector3 _initialPosition;
         private bool _inInitialPosition;
 
@@ -26,6 +26,16 @@ namespace App.Doors
             _initialPosition = objToMove.localPosition;
         }
 
+        private void OnDestroy()
+        {
+            if (_motionHandle.HasValue)
+            {
+                var handle = _motionHandle.Value;
+                if (handle.IsActive()) 
+                    handle.Cancel();
+            }
+        }
+
         public void Move()
         {
             if (!_inInitialPosition) 
@@ -33,7 +43,7 @@ namespace App.Doors
             
             _inInitialPosition = false;
             if (objToMove != null)
-                StartPanelMotion(ref _rightHandle, objToMove, objToMove.localPosition, _initialPosition + moveOffset, animationDuration, toMoveEasing);
+                StartPanelMotion(ref _motionHandle, objToMove, objToMove.localPosition, _initialPosition + moveOffset, animationDuration, toMoveEasing);
         }
 
         public void Back()
@@ -43,7 +53,7 @@ namespace App.Doors
             
             _inInitialPosition = true;
             if (objToMove != null) 
-                StartPanelMotion(ref _rightHandle, objToMove, objToMove.localPosition, _initialPosition, animationDuration, backMoveEasing);
+                StartPanelMotion(ref _motionHandle, objToMove, objToMove.localPosition, _initialPosition, animationDuration, backMoveEasing);
         }
         
         public void SetState(bool toPosition)

@@ -85,6 +85,9 @@ namespace App.Mutant.FSM
 		protected void RotateTowards(Vector3 targetPosition)
 		{
 			var direction = (targetPosition - _ctx.Transform.position).X0Z().normalized;
+			if (direction == Vector3.zero)
+				return;
+			
 			var targetRotation = Quaternion.LookRotation(direction);
 			_ctx.TargetRotation = targetRotation;
 		}
