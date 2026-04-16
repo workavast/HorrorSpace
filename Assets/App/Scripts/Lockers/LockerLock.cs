@@ -8,28 +8,28 @@ namespace App.Lockers
 	public class LockerLock : MonoBehaviour
 	{
 		[SerializeField] private Locker locker;
-		[SerializeField] private LockProvider lockProvider;
+		[SerializeField] private KeyReader keyReader;
 		[SerializeField] private AudioPlayer audioPlayer;
 		
 		public void Initialize(AudioFactory audioFactory)
 		{
 			audioPlayer.Initialize(audioFactory);
 			
-			lockProvider.OnUnlocked += Unlock;
-			lockProvider.OnInvalidKey += InvalidKey;
+			keyReader.OnValidKey += Unlock;
+			keyReader.OnInvalidKey += InvalidKey;
 		}
         
 		private void OnDestroy()
 		{
-			lockProvider.OnUnlocked -= Unlock;
-			lockProvider.OnInvalidKey -= InvalidKey;
+			keyReader.OnValidKey -= Unlock;
+			keyReader.OnInvalidKey -= InvalidKey;
 		}
 
 		private void Unlock()
 		{
 			audioPlayer.Play();
 			locker.SetUnLockState(true);
-			lockProvider.SetActivityState(false);
+			keyReader.SetActivityState(false);
 		}
         
 		private void InvalidKey() 

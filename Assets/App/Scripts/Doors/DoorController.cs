@@ -5,9 +5,10 @@ namespace App.Doors
 {
     public class DoorController : MonoBehaviour
     {
-        [field: SerializeField] public bool IsUnLocked { get; private set; } = true;
+        [field: SerializeField] public bool IsLocked { get; private set; }
         [SerializeField] private DoorAnimator doorAnimator;
         [SerializeField] private bool isOpen;
+        [Header("Check obstacles in door")]
         [SerializeField] private BoxCollider closeCheckCollider;
         [SerializeField] private LayerMask checkLayers;
         
@@ -22,15 +23,15 @@ namespace App.Doors
             doorAnimator.SetOpen(isOpen);
         }
         
-        public void SetUnLockState(bool isUnLocked)
+        public void SetLockState(bool isLocked)
         {
-            IsUnLocked = isUnLocked;
+            IsLocked = isLocked;
             OnLockStateChanged?.Invoke();
         }
         
         public bool TryToggle()
         {
-            if (!IsUnLocked)
+            if (IsLocked)
             {
                 OnTryUse?.Invoke(false);
                 return false;

@@ -10,7 +10,7 @@ namespace App.Doors
         [SerializeField] private DoorController door;
         [SerializeField] private bool isSelfUsable = true;
 
-        public bool IsUsable => door.IsUnLocked && isSelfUsable;
+        public bool IsUsable => !door.IsLocked && isSelfUsable;
 
         public event Action OnUse;
         public event Action<bool> OnTryUse;

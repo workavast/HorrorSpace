@@ -35,8 +35,8 @@ namespace App.SecurityCheckpoint
 		{
 			_isEntranceOpen = isEntranceOpenState;
 			
-			entranceDoor.SetUnLockState(_isEntranceOpen);
-			exitDoor.SetUnLockState(!_isEntranceOpen);
+			entranceDoor.SetLockState(!_isEntranceOpen);
+			exitDoor.SetLockState(_isEntranceOpen);
 
 			usableObj.SetState(isUsable);
 

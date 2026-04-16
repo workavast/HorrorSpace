@@ -3334,6 +3334,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1732517341701538721}
     m_Modifications:
     - target: {fileID: 2568076600815093854, guid: 367329bad2dd1e94ba41f538e4ebb72f, type: 3}
+      propertyPath: <IsLocked>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2568076600815093854, guid: 367329bad2dd1e94ba41f538e4ebb72f, type: 3}
       propertyPath: <IsUnLocked>k__BackingField
       value: 0
       objectReference: {fileID: 0}

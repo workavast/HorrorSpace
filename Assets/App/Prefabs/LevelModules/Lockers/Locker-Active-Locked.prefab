@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Lockers.LockerLock
   locker: {fileID: 5634112965621257179}
-  lockProvider: {fileID: 4799871048984243391}
+  keyReader: {fileID: 4799871048984243391}
   audioPlayer:
     audioPrefab: {fileID: 17870534725371654, guid: 7a9810cea6c524249813946357e021d7, type: 3}
     point: {fileID: 5168692528565946270}

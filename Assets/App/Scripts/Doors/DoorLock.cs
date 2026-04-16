@@ -6,27 +6,27 @@ namespace App.Doors
     public class DoorLock : MonoBehaviour
     {
         [SerializeField] private DoorController door;
-        [SerializeField] private LockProvider lockProvider;
+        [SerializeField] private KeyReader keyReader;
 
         private void Awake() 
             => Initialize();
 
         private void Initialize()
         {
-            lockProvider.OnUnlocked += Unlock;
-            lockProvider.OnInvalidKey += InvalidKey;
+            keyReader.OnValidKey += Unlock;
+            keyReader.OnInvalidKey += InvalidKey;
         }
         
         private void OnDestroy()
         {
-            lockProvider.OnUnlocked -= Unlock;
-            lockProvider.OnInvalidKey -= InvalidKey;
+            keyReader.OnValidKey -= Unlock;
+            keyReader.OnInvalidKey -= InvalidKey;
         }
 
         private void Unlock()
         {
-            door.SetUnLockState(true);
-            lockProvider.SetActivityState(false);
+            door.SetLockState(false);
+            keyReader.SetActivityState(false);
         }
         
         private void InvalidKey() 

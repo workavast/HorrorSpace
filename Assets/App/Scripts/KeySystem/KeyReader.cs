@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace App.KeySystem
 {
-    public class LockProvider : MonoBehaviour
+    public class KeyReader : MonoBehaviour
     {
         [SerializeField] private bool isActive;
         [SerializeField] private KeyConfig requiredConfig;
@@ -11,7 +11,7 @@ namespace App.KeySystem
 
         public event Action OnInvalidType;
         public event Action OnInvalidKey;
-        public event Action OnUnlocked;
+        public event Action OnValidKey;
 
         private void Awake()
         {
@@ -47,7 +47,7 @@ namespace App.KeySystem
                 return;
             }
             
-            OnUnlocked?.Invoke();
+            OnValidKey?.Invoke();
         }
     }
 }

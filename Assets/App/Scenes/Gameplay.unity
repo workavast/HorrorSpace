@@ -2883,6 +2883,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1885751572}
     - target: {fileID: 4247805323651797999, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
+      propertyPath: playerParams.CrouchSpeed
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247805323651797999, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
       propertyPath: interactiveObjBoundsDrawer
       value: 
       objectReference: {fileID: 1282911820}
