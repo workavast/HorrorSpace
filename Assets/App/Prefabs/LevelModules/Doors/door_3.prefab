@@ -53,6 +53,64 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.6, y: 3.5, z: 0.75}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &7825885488114003301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2772011794107140880}
+  - component: {fileID: 672907524455162334}
+  - component: {fileID: 7969456630244188124}
+  m_Layer: 0
+  m_Name: OcclusionPortal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2772011794107140880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7825885488114003301}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5215275450408914094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &672907524455162334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7825885488114003301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004e334178684ca0a995c9db3a5e5ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.OcclusionPortalToggler
+  occlusionPortal: {fileID: 7969456630244188124}
+  doorController: {fileID: 1876512206958445118}
+  doorAnimator: {fileID: 6894020754276829346}
+--- !u!41 &7969456630244188124
+OcclusionPortal:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7825885488114003301}
+  m_Open: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.5, y: 4.5, z: 0.5}
 --- !u!1001 &5215275450409316502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198422, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
       propertyPath: m_Name
-      value: door_3 Variant
+      value: door_3
       objectReference: {fileID: 0}
     - target: {fileID: 198422, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
       propertyPath: m_Layer
@@ -161,25 +219,37 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 408632, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3377758103507816130}
+    - targetCorrespondingSourceObject: {fileID: 408632, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2772011794107140880}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 198422, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
       insertIndex: 1
       addedObject: {fileID: 1876512206958445118}
+    - targetCorrespondingSourceObject: {fileID: 198422, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 6894020754276829346}
     - targetCorrespondingSourceObject: {fileID: 156806, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
       insertIndex: 1
-      addedObject: {fileID: 3864992626787003666}
+      addedObject: {fileID: 4511833445709540266}
     - targetCorrespondingSourceObject: {fileID: 156806, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7280621526899090746}
+    - targetCorrespondingSourceObject: {fileID: 158700, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 393125328069354291}
     - targetCorrespondingSourceObject: {fileID: 158700, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7578361046871824346}
     - targetCorrespondingSourceObject: {fileID: 164122, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
       insertIndex: 1
-      addedObject: {fileID: 7487930147633405185}
+      addedObject: {fileID: 9152818023720812558}
     - targetCorrespondingSourceObject: {fileID: 164122, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5252658923431576933}
+    - targetCorrespondingSourceObject: {fileID: 133102, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1527767341566955555}
     - targetCorrespondingSourceObject: {fileID: 133102, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4398443500320568435}
@@ -214,7 +284,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 156806, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
   m_PrefabInstance: {fileID: 5215275450409316502}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3864992626787003666
+--- !u!114 &4511833445709540266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,16 +293,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5215275450409161744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec893924dee591e41ac47c2e0678fad6, type: 3}
+  m_Script: {fileID: 11500000, guid: 07284030e12d44c3b74adcd47ad01896, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorAnimator
-  leftPanel: {fileID: 5215275450408914006}
-  rightPanel: {fileID: 5215275450408896968}
-  leftOpenOffset: {x: 0, y: 1, z: 0}
-  rightOpenOffset: {x: 0, y: 1, z: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.MoveAnimation
+  objToMove: {fileID: 5215275450408914006}
+  moveOffset: {x: 0, y: 1, z: 0}
   animationDuration: 0.5
-  openEase: 5
-  closeEase: 5
+  toMoveEasing: 5
+  backMoveEasing: 5
 --- !u!208 &7280621526899090746
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -254,6 +322,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 158700, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
   m_PrefabInstance: {fileID: 5215275450409316502}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &393125328069354291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5215275450409163642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07284030e12d44c3b74adcd47ad01896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.MoveAnimation
+  objToMove: {fileID: 5215275450408896968}
+  moveOffset: {x: 0, y: 1, z: 0}
+  animationDuration: 0.5
+  toMoveEasing: 5
+  backMoveEasing: 5
 --- !u!208 &7578361046871824346
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -275,6 +360,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 133102, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
   m_PrefabInstance: {fileID: 5215275450409316502}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1527767341566955555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5215275450409187192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07284030e12d44c3b74adcd47ad01896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.MoveAnimation
+  objToMove: {fileID: 5215275450408931808}
+  moveOffset: {x: 0, y: -1, z: 0}
+  animationDuration: 0.5
+  toMoveEasing: 5
+  backMoveEasing: 5
 --- !u!208 &4398443500320568435
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -296,7 +398,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 164122, guid: 2d927feb0fbf1a7429c095369d395de7, type: 3}
   m_PrefabInstance: {fileID: 5215275450409316502}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7487930147633405185
+--- !u!114 &9152818023720812558
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,16 +407,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5215275450409218444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec893924dee591e41ac47c2e0678fad6, type: 3}
+  m_Script: {fileID: 11500000, guid: 07284030e12d44c3b74adcd47ad01896, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorAnimator
-  leftPanel: {fileID: 5215275450408983620}
-  rightPanel: {fileID: 5215275450408931808}
-  leftOpenOffset: {x: 0, y: -1, z: 0}
-  rightOpenOffset: {x: 0, y: -1, z: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.MoveAnimation
+  objToMove: {fileID: 5215275450408983620}
+  moveOffset: {x: 0, y: -1, z: 0}
   animationDuration: 0.5
-  openEase: 5
-  closeEase: 5
+  toMoveEasing: 5
+  backMoveEasing: 5
 --- !u!208 &5252658923431576933
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -349,14 +449,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
   <IsUnLocked>k__BackingField: 1
-  targetDoors:
-  - {fileID: 3864992626787003666}
-  - {fileID: 7487930147633405185}
+  doorAnimator: {fileID: 6894020754276829346}
   isOpen: 0
   closeCheckCollider: {fileID: 7672683789926895136}
   checkLayers:
     serializedVersion: 2
     m_Bits: 63
+--- !u!114 &6894020754276829346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5215275450409252736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4365a596ec14d479fa011d46bdd099f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorAnimatorV2
+  animations:
+  - {fileID: 4511833445709540266}
+  - {fileID: 393125328069354291}
+  - {fileID: 9152818023720812558}
+  - {fileID: 1527767341566955555}
 --- !u!1001 &6614213837154878282
 PrefabInstance:
   m_ObjectHideFlags: 0

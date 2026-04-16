@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8673466768762109188}
   - component: {fileID: 3306841329182715235}
-  - component: {fileID: 6817113681451602692}
   - component: {fileID: 907131509232347023}
+  - component: {fileID: 6149423065470356481}
   m_Layer: 0
   m_Name: VentilationDoor-IsolationBlock
   m_TagString: Untagged
@@ -35,6 +35,7 @@ Transform:
   - {fileID: 3911456375909265118}
   - {fileID: 774411112723281132}
   - {fileID: 5952135830324962451}
+  - {fileID: 6596247791233170882}
   m_Father: {fileID: 348292792338588272}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3306841329182715235
@@ -50,32 +51,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorController
   <IsUnLocked>k__BackingField: 1
-  targetDoors:
-  - {fileID: 6817113681451602692}
+  doorAnimator: {fileID: 6149423065470356481}
   isOpen: 0
   closeCheckCollider: {fileID: 8105753015344507608}
   checkLayers:
     serializedVersion: 2
     m_Bits: 63
---- !u!114 &6817113681451602692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151157758304708119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec893924dee591e41ac47c2e0678fad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorAnimator
-  leftPanel: {fileID: 774411112723281132}
-  rightPanel: {fileID: 0}
-  leftOpenOffset: {x: 0, y: 2, z: 0}
-  rightOpenOffset: {x: 0, y: 0, z: 0}
-  animationDuration: 0.5
-  openEase: 5
-  closeEase: 5
 --- !u!114 &907131509232347023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +71,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.VentilationDoor.VentilationUnlocker
   activeBtn: {fileID: 8893739904435067130}
   lockedBtn: {fileID: 3718419828847478507}
+--- !u!114 &6149423065470356481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151157758304708119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4365a596ec14d479fa011d46bdd099f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorAnimatorV2
+  animations:
+  - {fileID: 6918821227456784853}
 --- !u!1 &1472550477150291096
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,6 +94,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5667901803846589337}
+  - component: {fileID: 5600341345875885620}
   m_Layer: 0
   m_Name: DoorHolder
   m_TagString: Untagged
@@ -124,6 +120,23 @@ Transform:
   - {fileID: 1527340461525780533}
   m_Father: {fileID: 5781672474021894559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5600341345875885620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472550477150291096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07284030e12d44c3b74adcd47ad01896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.MoveAnimation
+  objToMove: {fileID: 5667901803846589337}
+  moveOffset: {x: 0, y: 2, z: 0}
+  animationDuration: 0.5
+  toMoveEasing: 5
+  backMoveEasing: 5
 --- !u!1 &1851705951556759435
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +190,122 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.5, y: 1.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2315731915905171204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1374787729527915547}
+  - component: {fileID: 5550289686570477163}
+  - component: {fileID: 215019806341126151}
+  m_Layer: 0
+  m_Name: OcclusionPortal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1374787729527915547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2315731915905171204}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5781672474021894559}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5550289686570477163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2315731915905171204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004e334178684ca0a995c9db3a5e5ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.OcclusionPortalToggler
+  occlusionPortal: {fileID: 215019806341126151}
+  doorController: {fileID: 4799320662454056110}
+  doorAnimator: {fileID: 8710542243577187700}
+--- !u!41 &215019806341126151
+OcclusionPortal:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2315731915905171204}
+  m_Open: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4, y: 3, z: 0.5}
+--- !u!1 &3156495006503455413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6596247791233170882}
+  - component: {fileID: 3820928922183693803}
+  - component: {fileID: 4746954114708795918}
+  m_Layer: 0
+  m_Name: OcclusionPortal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6596247791233170882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3156495006503455413}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8673466768762109188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3820928922183693803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3156495006503455413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004e334178684ca0a995c9db3a5e5ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.OcclusionPortalToggler
+  occlusionPortal: {fileID: 4746954114708795918}
+  doorController: {fileID: 3306841329182715235}
+  doorAnimator: {fileID: 6149423065470356481}
+--- !u!41 &4746954114708795918
+OcclusionPortal:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3156495006503455413}
+  m_Open: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4, y: 3, z: 0.5}
 --- !u!1 &3749901991665459804
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5781672474021894559}
   - component: {fileID: 4799320662454056110}
-  - component: {fileID: 8235008998994536365}
+  - component: {fileID: 8710542243577187700}
   m_Layer: 0
   m_Name: VentilationDoor-StorageRoom
   m_TagString: Untagged
@@ -245,6 +374,7 @@ Transform:
   - {fileID: 8413060683754608185}
   - {fileID: 5667901803846589337}
   - {fileID: 3734431233900957447}
+  - {fileID: 1374787729527915547}
   m_Father: {fileID: 348292792338588272}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4799320662454056110
@@ -260,14 +390,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorController
   <IsUnLocked>k__BackingField: 1
-  targetDoors:
-  - {fileID: 8235008998994536365}
+  doorAnimator: {fileID: 8710542243577187700}
   isOpen: 0
   closeCheckCollider: {fileID: 1580659695802036436}
   checkLayers:
     serializedVersion: 2
     m_Bits: 63
---- !u!114 &8235008998994536365
+--- !u!114 &8710542243577187700
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -276,16 +405,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5183663977825592471}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec893924dee591e41ac47c2e0678fad6, type: 3}
+  m_Script: {fileID: 11500000, guid: f4365a596ec14d479fa011d46bdd099f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorAnimator
-  leftPanel: {fileID: 5667901803846589337}
-  rightPanel: {fileID: 0}
-  leftOpenOffset: {x: 0, y: 2, z: 0}
-  rightOpenOffset: {x: 0, y: 0, z: 0}
-  animationDuration: 0.5
-  openEase: 5
-  closeEase: 5
+  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorAnimatorV2
+  animations:
+  - {fileID: 5600341345875885620}
 --- !u!1 &5291804172800086239
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +520,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 774411112723281132}
+  - component: {fileID: 6918821227456784853}
   m_Layer: 0
   m_Name: DoorHolder
   m_TagString: Untagged
@@ -421,6 +546,23 @@ Transform:
   - {fileID: 3612840726179293408}
   m_Father: {fileID: 8673466768762109188}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6918821227456784853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8011823007122527397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07284030e12d44c3b74adcd47ad01896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.MoveAnimation
+  objToMove: {fileID: 774411112723281132}
+  moveOffset: {x: 0, y: 2, z: 0}
+  animationDuration: 0.5
+  toMoveEasing: 5
+  backMoveEasing: 5
 --- !u!1 &8606726109494024827
 GameObject:
   m_ObjectHideFlags: 0

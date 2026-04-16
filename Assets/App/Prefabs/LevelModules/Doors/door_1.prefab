@@ -53,6 +53,64 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.6, y: 3.5, z: 0.75}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3983520716137746089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080325093499897010}
+  - component: {fileID: 3678479469302562021}
+  - component: {fileID: 1534049483632747622}
+  m_Layer: 0
+  m_Name: OcclusionPortal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080325093499897010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3983520716137746089}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 658524715671945598}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3678479469302562021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3983520716137746089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004e334178684ca0a995c9db3a5e5ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.OcclusionPortalToggler
+  occlusionPortal: {fileID: 1534049483632747622}
+  doorController: {fileID: 7902355715787095758}
+  doorAnimator: {fileID: 2776210198017023602}
+--- !u!41 &1534049483632747622
+OcclusionPortal:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3983520716137746089}
+  m_Open: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.5, y: 4.5, z: 0.5}
 --- !u!1001 &384980474851352601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,7 +191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 125588, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       propertyPath: m_Name
-      value: door_1 Variant
+      value: door_1
       objectReference: {fileID: 0}
     - target: {fileID: 125588, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       propertyPath: m_Layer
@@ -210,19 +268,28 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 451040, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8388880177632201561}
+    - targetCorrespondingSourceObject: {fileID: 451040, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1080325093499897010}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 125588, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       insertIndex: 1
       addedObject: {fileID: 7902355715787095758}
     - targetCorrespondingSourceObject: {fileID: 125588, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       insertIndex: 2
-      addedObject: {fileID: 1650411714892020667}
+      addedObject: {fileID: 2776210198017023602}
+    - targetCorrespondingSourceObject: {fileID: 174170, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 5665730388958377479}
     - targetCorrespondingSourceObject: {fileID: 174170, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1035159268734370152}
     - targetCorrespondingSourceObject: {fileID: 174170, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5483288157149830366}
+    - targetCorrespondingSourceObject: {fileID: 119082, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 2613628762549620727}
     - targetCorrespondingSourceObject: {fileID: 119082, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 268650382139525132}
@@ -250,6 +317,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 174170, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
   m_PrefabInstance: {fileID: 658524715672395934}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5665730388958377479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658524715672225988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07284030e12d44c3b74adcd47ad01896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.MoveAnimation
+  objToMove: {fileID: 658524715671904954}
+  moveOffset: {x: 1.1, y: 0, z: 0}
+  animationDuration: 0.5
+  toMoveEasing: 5
+  backMoveEasing: 5
 --- !u!65 &1035159268734370152
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -305,14 +389,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
   <IsUnLocked>k__BackingField: 1
-  targetDoors:
-  - {fileID: 1650411714892020667}
+  doorAnimator: {fileID: 2776210198017023602}
   isOpen: 0
   closeCheckCollider: {fileID: 7759516813974923644}
   checkLayers:
     serializedVersion: 2
     m_Bits: 59
---- !u!114 &1650411714892020667
+--- !u!114 &2776210198017023602
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,21 +404,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 658524715672275466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec893924dee591e41ac47c2e0678fad6, type: 3}
+  m_Script: {fileID: 11500000, guid: f4365a596ec14d479fa011d46bdd099f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.InteractButton
-  leftPanel: {fileID: 658524715671904954}
-  rightPanel: {fileID: 658524715671930426}
-  leftOpenOffset: {x: 1.1, y: 0, z: 0}
-  rightOpenOffset: {x: -1.1, y: 0, z: 0}
-  animationDuration: 0.5
-  openEase: 5
-  closeEase: 5
+  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.DoorAnimatorV2
+  animations:
+  - {fileID: 5665730388958377479}
+  - {fileID: 2613628762549620727}
 --- !u!1 &658524715672285620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 119082, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
   m_PrefabInstance: {fileID: 658524715672395934}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2613628762549620727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658524715672285620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07284030e12d44c3b74adcd47ad01896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Doors.MoveAnimation
+  objToMove: {fileID: 658524715671930426}
+  moveOffset: {x: -1.1, y: 0, z: 0}
+  animationDuration: 0.5
+  toMoveEasing: 5
+  backMoveEasing: 5
 --- !u!65 &268650382139525132
 BoxCollider:
   m_ObjectHideFlags: 0

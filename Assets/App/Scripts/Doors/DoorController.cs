@@ -1,6 +1,4 @@
 using System;
-using App.Audio;
-using App.Character;
 using UnityEngine;
 
 namespace App.Doors
@@ -8,7 +6,7 @@ namespace App.Doors
     public class DoorController : MonoBehaviour
     {
         [field: SerializeField] public bool IsUnLocked { get; private set; } = true;
-        [SerializeField] private DoorAnimator[] targetDoors;
+        [SerializeField] private DoorAnimator doorAnimator;
         [SerializeField] private bool isOpen;
         [SerializeField] private BoxCollider closeCheckCollider;
         [SerializeField] private LayerMask checkLayers;
@@ -21,8 +19,7 @@ namespace App.Doors
 
         public void Initialize()
         {
-            foreach (var door in targetDoors) 
-                door.SetOpen(isOpen);
+            doorAnimator.SetOpen(isOpen);
         }
         
         public void SetUnLockState(bool isUnLocked)
@@ -44,8 +41,7 @@ namespace App.Doors
                 return false;
             
             isOpen = targetIsOpen;
-            foreach (var door in targetDoors) 
-                door.SetOpen(isOpen);
+            doorAnimator.SetOpen(isOpen);
             
             OnUse?.Invoke();
             OnTryUse?.Invoke(true);
