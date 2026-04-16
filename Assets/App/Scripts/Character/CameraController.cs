@@ -58,11 +58,11 @@ namespace App.Character
             }
 
             // Pitch - поворот вверх/вниз (X ось)
-            _currentPitch -= lookDelta.y * lookSensitivity;
+            _currentPitch -= lookDelta.y * lookSensitivity * Time.deltaTime;
             _currentPitch = Mathf.Clamp(_currentPitch, minPitch, maxPitch);
-
             // Применяем pitch к камере (X ось локальная)
             cameraRig.localRotation = Quaternion.Euler(_currentPitch, 0, 0);
+
             charMover.SetLookDeltaRotation(new Vector3(0, lookDelta.x * lookSensitivity, 0));
         }
 
