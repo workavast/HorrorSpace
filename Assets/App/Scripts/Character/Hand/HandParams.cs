@@ -25,11 +25,10 @@ namespace App.Character.Hand
         [SerializeField] private float torqueMultiplier = 1f;
         [Space]
         [Header("Drag-Physics")]
-        [SerializeField] private float dragAttractionForce = 100f;
+        [SerializeField] private float dragForcePerKg = 100f;
+        [SerializeField] private float dragMassLimit = 100f;
         [SerializeField] private float angularDampingDrag = 5f;
         [SerializeField] private float linerDampingDrag = 5f;
-        [SerializeField] private float dampingDistance = 0.02f;
-        [SerializeField] private AnimationCurve dragForceScaleByMass;
         [SerializeField] private bool dragDebug = false;
         
         public LayerMask HandleLayerMask => handleLayerMask;
@@ -39,7 +38,8 @@ namespace App.Character.Hand
         public float MaxDistance => maxDistance;
         public float ZoomSpeed => zoomSpeed;
         public float AttractionForce => attractionForce;
-        public float DragAttractionForce => dragAttractionForce;
+        public float DragForcePerKg => dragForcePerKg;
+        public float DragMassLimit => dragMassLimit;
         public float MaxAttractionSpeed => maxAttractionSpeed;
         public float AngularDampingPickup => angularDampingPickup;
         public float LinerDampingPickup => linerDampingPickup;
@@ -49,8 +49,6 @@ namespace App.Character.Hand
         
         public float AngularDampingDrag => angularDampingDrag;
         public float LinerDampingDrag => linerDampingDrag;
-        public float DragDampingDistance => dampingDistance;
-        public AnimationCurve DragForceScaleByMass => dragForceScaleByMass;
         public bool DragDebug => dragDebug;
     }
 }

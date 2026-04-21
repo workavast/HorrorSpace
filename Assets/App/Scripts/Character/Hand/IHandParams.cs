@@ -13,7 +13,8 @@ namespace App.Character.Hand
         public float ZoomSpeed { get; }
 
         public float AttractionForce { get; }
-        public float DragAttractionForce { get; }
+        public float DragForcePerKg { get; }
+        public float DragMassLimit { get; }
         public float MaxAttractionSpeed { get; }
         public float AngularDampingPickup { get; }
         public float LinerDampingPickup { get; }
@@ -24,8 +25,6 @@ namespace App.Character.Hand
         
         public float AngularDampingDrag { get; }
         public float LinerDampingDrag { get; }
-        public float DragDampingDistance { get; }
-        public AnimationCurve DragForceScaleByMass { get; }
         public bool DragDebug { get; }
     }
 }

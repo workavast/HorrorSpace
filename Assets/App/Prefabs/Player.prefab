@@ -198,34 +198,10 @@ MonoBehaviour:
     rotationReturnSpeed: 10
     manualRotationSpeed: 0.1
     torqueMultiplier: 1
-    dragAttractionForce: 100000
-    angularDampingDrag: 4
-    linerDampingDrag: 4
-    dampingDistance: 0.02
-    dragForceScaleByMass:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.2
-        inSlope: 0.008
-        outSlope: 0.008
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 100
-        value: 1
-        inSlope: 0.008
-        outSlope: 0.008
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
+    dragForcePerKg: 55
+    dragMassLimit: 40
+    angularDampingDrag: 5
+    linerDampingDrag: 0
     dragDebug: 0
   interactRange: 3
   interactLayerMask:

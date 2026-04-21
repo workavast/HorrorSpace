@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using App.HandlingObjects.DraggedObjects;
+using DCFApixels;
 using UnityEngine;
 
 namespace App.Character.Hand.FSM
@@ -79,39 +80,46 @@ namespace App.Character.Hand.FSM
         {
             if (_draggableObject == null)
                 return;
-            
+
             var objTransform = _draggableObject.Transform;
             var rb = _draggableObject.Rb;
             var camera = _ctx.CameraController.GetCamera();
 
-            // compute target point along camera forward at fixed pickup distance
-            var targetPointOnRay = camera.transform.position + camera.transform.forward * _ctx.CurrentDistance;
-
-            // offset of grab point in world space
             var offsetWorld = objTransform.TransformVector(_pickupOffsetLocal);
             var currentGrabPoint = objTransform.position + offsetWorld;
+            var targetPointOnRay = camera.transform.position + camera.transform.forward * _ctx.CurrentDistance;
 
-            // apply attraction force to move object to target position
-            var direction = targetPointOnRay - currentGrabPoint;
-            var distance = direction.magnitude;
+            var rawForce = _params.DragForcePerKg * _draggableObject.Mass;
+            var forceLimit = _params.DragForcePerKg * _params.DragMassLimit;
+            var clampedRawForce = Mathf.Clamp(rawForce, 0, forceLimit);
+            
+            // Critical damping: c = 2 * sqrt(k * m) p.s. 2 removed to reduce damping
+            var criticalDamping = Mathf.Sqrt(clampedRawForce * rb.mass);
+            
+            var pointVelocity = rb.GetPointVelocity(currentGrabPoint);
 
-            //TODO import DebugX tool
+            // PD controller
+            var error = targetPointOnRay - currentGrabPoint;
+            var dampingForce = pointVelocity * criticalDamping;
+
+            var force = error.normalized * clampedRawForce - dampingForce;
+            if (error.magnitude < 1)
+                force = error * clampedRawForce - dampingForce;
+
+            rb.AddForceAtPosition(force, currentGrabPoint);
+            
             if (_params.DragDebug)
             {
-                Physics.CheckSphere(currentGrabPoint, 0.1f);
-                Physics.CheckSphere(targetPointOnRay, 0.1f);
-                Physics.Linecast(currentGrabPoint, targetPointOnRay);
+                DebugX.Draw(Color.red).Sphere(currentGrabPoint, 0.1f);
+                DebugX.Draw(Color.blue).Sphere(targetPointOnRay, 0.1f);
+                DebugX.Draw(Color.red).Line(currentGrabPoint, targetPointOnRay);
+                DebugX.Draw().Text(targetPointOnRay, 
+                    $"{rawForce}: raw force" +
+                    $"\n{forceLimit}: limit force" +
+                    $"\n{clampedRawForce}: clamped raw force" +
+                    $"\n{dampingForce}: damping force" +
+                    $"\n{force}: result force");
             }
-
-            Vector3 force;
-            var rawDragForce = _params.DragAttractionForce * _params.DragForceScaleByMass.Evaluate(_draggableObject.Mass);
-            if (distance > _params.DragDampingDistance)
-                 force = direction.normalized * (rawDragForce);
-            else
-                 force = direction.normalized * (rawDragForce * (distance / _params.DragDampingDistance));
-
-            // calculate world point that was grabbed
-            rb.AddForceAtPosition(force * Time.fixedDeltaTime, currentGrabPoint);
         }
     }
 }
