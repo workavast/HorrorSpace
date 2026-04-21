@@ -1379,7 +1379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1f6f6a375e4117bad97edd2659708b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.HandlingObjects.DraggedObjects.DraggedRagdollObj
-  mass: 50
+  mass: 12.5
 --- !u!136 &7629610152672542078
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1519,7 +1519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1f6f6a375e4117bad97edd2659708b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.HandlingObjects.DraggedObjects.DraggedRagdollObj
-  mass: 50
+  mass: 18.75
 --- !u!136 &6232365046809953172
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1654,7 +1654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1f6f6a375e4117bad97edd2659708b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.HandlingObjects.DraggedObjects.DraggedRagdollObj
-  mass: 50
+  mass: 12.5
 --- !u!136 &5655694821633414524
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1784,7 +1784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1f6f6a375e4117bad97edd2659708b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.HandlingObjects.DraggedObjects.DraggedRagdollObj
-  mass: 50
+  mass: 18.75
 --- !u!136 &2181681144374365036
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2108,7 +2108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1f6f6a375e4117bad97edd2659708b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.HandlingObjects.DraggedObjects.DraggedRagdollObj
-  mass: 50
+  mass: 12.5
 --- !u!136 &5917943958012667917
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2248,7 +2248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1f6f6a375e4117bad97edd2659708b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.HandlingObjects.DraggedObjects.DraggedRagdollObj
-  mass: 50
+  mass: 12.5
 --- !u!135 &5194970735857398983
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2457,7 +2457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1f6f6a375e4117bad97edd2659708b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.HandlingObjects.DraggedObjects.DraggedRagdollObj
-  mass: 50
+  mass: 12.5
 --- !u!136 &45809963670767235
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2587,7 +2587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1f6f6a375e4117bad97edd2659708b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.HandlingObjects.DraggedObjects.DraggedRagdollObj
-  mass: 50
+  mass: 18.75
 --- !u!136 &9097496695827215898
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2717,7 +2717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1f6f6a375e4117bad97edd2659708b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.HandlingObjects.DraggedObjects.DraggedRagdollObj
-  mass: 50
+  mass: 18.75
 --- !u!136 &1169423319422224535
 CapsuleCollider:
   m_ObjectHideFlags: 0
