@@ -40,6 +40,8 @@ namespace App.Character.Hand.FSM
                 SetState<HandRotateState>();
                 return;
             }
+            
+            ScrollObject();
         }
 
         public override void ManualFixedUpdate()

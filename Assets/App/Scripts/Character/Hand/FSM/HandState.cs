@@ -24,19 +24,8 @@ namespace App.Character.Hand.FSM
             return playerPosition.DistanceXZ(objPosition) <= _params.AutoDropDistance;
         }
         
-        /// <summary>
-        /// Update in fixed update
-        /// </summary>
-        protected void HoldObject(IHoldableObj holdableObj)
+        protected void ScrollObject()
         {
-            if (holdableObj.IsAnyNull())
-                return;
-            
-            var camera = _ctx.CameraController.GetCamera();
-            var objTransform = holdableObj.Transform;
-            var rb = holdableObj.Rb;
-
-            // Handle zoom with mouse wheel
             var scrollDelta = _ctx.InputManager.ZoomDelta;
             if (scrollDelta != 0)
             {
@@ -44,6 +33,28 @@ namespace App.Character.Hand.FSM
                 currentDistance = Mathf.Clamp(currentDistance, _params.MinDistance, _params.MaxDistance);
                 _ctx.CurrentDistance = currentDistance;
             }
+        }
+        
+        /// <summary>
+        /// Should be update in fixed update
+        /// </summary>
+        protected void HoldObject(IHoldableObj holdableObj)
+        {
+            if (holdableObj.IsAnyNull())
+                return;
+            
+            MoveObject(holdableObj);
+            RotateObject(holdableObj);
+        }
+
+        /// <summary>
+        /// Should be update in fixed update
+        /// </summary>
+        protected void MoveObject(IHoldableObj holdableObj)
+        {
+            var camera = _ctx.CameraController.GetCamera();
+            var objTransform = holdableObj.Transform;
+            var rb = holdableObj.Rb;
 
             // Apply physics forces to attract object to target position
             var targetPosition = camera.transform.position + camera.transform.forward * _ctx.CurrentDistance;
@@ -61,7 +72,16 @@ namespace App.Character.Hand.FSM
                     
                 rb.AddForce(force * Time.deltaTime);
             }
+        }
 
+        /// <summary>
+        /// Should be update in fixed update
+        /// </summary>
+        protected void RotateObject(IHoldableObj holdableObj)
+        {
+            var objTransform = holdableObj.Transform;
+            var rb = holdableObj.Rb;
+            
             // Apply rotation return to target rotation relative to player
             // Compute target rotation in world space from stored relative-to-player quaternion
             var targetWorld = _ctx.Transform.rotation * _ctx.TargetRotationRelativeToPlayer;
@@ -95,7 +115,7 @@ namespace App.Character.Hand.FSM
 
                 // Apply torque
                 rb.AddTorque(torque);
-            }
+            } 
         }
         
         protected void DropObject()
