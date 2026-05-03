@@ -1,5 +1,42 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4277062703536409439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64ab317b2951264ea70fe4b86ac7555, type: 3}
+  m_Name: Post Vfx
+  m_EditorClassIdentifier: Assembly-CSharp::MyRenderFeature
+  m_Active: 1
+  injectionPoint: 550
+  settings:
+    PostVfxMaterial: {fileID: 2100000, guid: 4f8f07ca1e4881245bbd1c68aa89d116, type: 2}
+    GraphicsFormat: 4
+    PassType: 2
+    FilterMode: 0
+    ShaderPass: 0
+--- !u!114 &-9638938984781140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d5b00a3cf84a5c9d74b0796b36e1cf, type: 3}
+  m_Name: SaveCameraToPngFeature
+  m_EditorClassIdentifier: Assembly-CSharp::App.SaveCameraToPngFeature
+  m_Active: 0
+  settings:
+    directoryPath: Screenshots
+    fileName: capture.png
+    renderPassEvent: 550
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,10 +63,11 @@ MonoBehaviour:
     probeVolumeBlendStatesCS: {fileID: 7200000, guid: b9a23f869c4fd45f19c5ada54dd82176, type: 3}
   m_RendererFeatures:
   - {fileID: 7833122117494664109}
-  m_RendererFeatureMap: ad6b866f10d7b46c
+  - {fileID: -4277062703536409439}
+  m_RendererFeatureMap: ad6b866f10d7b46ca1f4a3c921d2a4c4
   m_UseNativeRenderPass: 1
   xrSystemData: {fileID: 0}
-  postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
+  postProcessData: {fileID: 0}
   m_AssetVersion: 3
   m_PrepassLayerMask:
     serializedVersion: 2
