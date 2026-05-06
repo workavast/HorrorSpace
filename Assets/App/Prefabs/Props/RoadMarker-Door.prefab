@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5551583513551148581}
   m_Layer: 6
-  m_Name: DoorRoadMarker
+  m_Name: RoadMarker-Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
