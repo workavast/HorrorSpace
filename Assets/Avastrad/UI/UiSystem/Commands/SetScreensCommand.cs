@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Avastrad.UI.UiSystem.Commands
 {
     internal class SetScreensCommand : ICommand
     {
-        private readonly IReadOnlyList<Type> _targetScreens;
+        private readonly IReadOnlyList<string> _targetScreens;
         private readonly ScreensControllerInternal _screensController;
 
-        private IReadOnlyList<Type> _lastActiveScreens;
+        private IReadOnlyList<string> _lastActiveScreens;
 
         public bool IsExecuted { get; private set; }
 
-        public SetScreensCommand(IReadOnlyList<Type> targetScreens, ScreensControllerInternal screensController)
+        public SetScreensCommand(IReadOnlyList<string> targetScreens, ScreensControllerInternal screensController)
         {
             _targetScreens = targetScreens;
             _screensController = screensController;
@@ -28,7 +27,7 @@ namespace Avastrad.UI.UiSystem.Commands
             }
 
             IsExecuted = true;
-            _lastActiveScreens = new List<Type>(_screensController.GetActiveScreens());
+            _lastActiveScreens = new List<string>(_screensController.GetActiveScreens());
             _screensController.SetScreens(_targetScreens);
         }
 

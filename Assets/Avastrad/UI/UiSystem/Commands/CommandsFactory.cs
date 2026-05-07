@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Avastrad.UI.UiSystem.Commands
 {
@@ -10,19 +9,19 @@ namespace Avastrad.UI.UiSystem.Commands
         public CommandsFactory(ScreensControllerInternal screensController)
             => _screensController = screensController;
 
-        public ICommand SetScreen(Type screenType)
-            => new SetScreenCommand(screenType, _screensController);
+        public ICommand SetScreen(string screenId)
+            => new SetScreenCommand(screenId, _screensController);
 
-        public ICommand ToggleScreen(Type screenType)
-            => new ToggleScreenCommand(screenType, _screensController, ToggleType.Auto);
+        public ICommand ToggleScreen(string screenId)
+            => new ToggleScreenCommand(screenId, _screensController, ToggleType.Auto);
 
-        public ICommand SetScreens(IReadOnlyList<Type> screens)
+        public ICommand SetScreens(IReadOnlyList<string> screens)
             => new SetScreensCommand(screens, _screensController);
 
-        public ICommand ToggleScreen(Type screenType, bool show)
+        public ICommand ToggleScreen(string screenId, bool show)
         {
             var toggleType = show ? ToggleType.Show : ToggleType.Hide;
-            return new ToggleScreenCommand(screenType, _screensController, toggleType);
+            return new ToggleScreenCommand(screenId, _screensController, toggleType);
         }
     }
 }

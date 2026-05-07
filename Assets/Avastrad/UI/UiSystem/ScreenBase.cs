@@ -4,6 +4,11 @@ namespace Avastrad.UI.UiSystem
 {
     public abstract class ScreenBase : MonoBehaviour
     {
+        [SerializeField] private ScreenIdReference screenIdReference;
+
+        public string ScreenId => screenIdReference?.Id;
+        public bool HasScreenId => !string.IsNullOrEmpty(ScreenId);
+
         public virtual void Initialize() {}
         
         public void SetActive(bool isActive)

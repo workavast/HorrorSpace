@@ -1,20 +1,19 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Avastrad.UI.UiSystem.Commands
 {
     internal class ToggleScreenCommand : ICommand
     {
-        private readonly Type _targetScreenType;
+        private readonly string _targetScreenId;
         private readonly ScreensControllerInternal _screensController;
         private readonly ToggleType _toggleType;
 
         public bool IsExecuted { get; private set; }
 
-        public ToggleScreenCommand(Type targetScreenType, ScreensControllerInternal screensController,
+        public ToggleScreenCommand(string targetScreenId, ScreensControllerInternal screensController,
             ToggleType toggleType)
         {
-            _targetScreenType = targetScreenType;
+            _targetScreenId = targetScreenId;
             _screensController = screensController;
             _toggleType = toggleType;
         }
@@ -28,7 +27,7 @@ namespace Avastrad.UI.UiSystem.Commands
             }
 
             IsExecuted = true;
-            _screensController.ToggleScreen(_targetScreenType, _toggleType);
+            _screensController.ToggleScreen(_targetScreenId, _toggleType);
         }
 
         public void Undo()
@@ -40,7 +39,7 @@ namespace Avastrad.UI.UiSystem.Commands
             }
 
             IsExecuted = false;
-            _screensController.ToggleScreen(_targetScreenType, _toggleType.Inverted());
+            _screensController.ToggleScreen(_targetScreenId, _toggleType.Inverted());
         }
     }
 }

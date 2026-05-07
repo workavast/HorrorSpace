@@ -1,5 +1,4 @@
-﻿using App.UI;
-using App.Usable;
+﻿using App.Usable;
 using Avastrad.ScenesLoading;
 using Avastrad.UI.UiSystem;
 using Avastrad.Utils.ScenesReferencing;
@@ -10,6 +9,7 @@ namespace App.SecurityCheckpoint
 {
 	public class GameEndTrigger : MonoBehaviour
 	{
+		[SerializeField] private ScreenIdReference screenId;
 		[SerializeField] private LoadingConfig loadingConfig;
 		[SerializeField] private SceneReference sceneRef;
 		[SerializeField] private UsableObj usableObj;
@@ -28,7 +28,7 @@ namespace App.SecurityCheckpoint
 
 		private void EndGame()
 		{
-			_screensController.SetScreen<GameEndedScreen>();
+			_screensController.SetScreen(screenId);
 		}
 	}
 }

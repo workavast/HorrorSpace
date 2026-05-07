@@ -11,6 +11,7 @@ namespace App
 {
     public class GameOverDetector : MonoBehaviour
     {
+		[SerializeField] private ScreenIdReference screenId;
         [SerializeField] private HealthModel playerHealth;
         [SerializeField] private SceneReference sceneRef;
         [SerializeField] private LoadingConfig loadingConfig;
@@ -24,7 +25,7 @@ namespace App
             if (!playerHealth.IsAlive && !_triggered)
             {
                 _triggered = true;
-                _screensController.SetScreen<GameEndedScreen>();
+                _screensController.SetScreen(screenId);
             }
         }
     }

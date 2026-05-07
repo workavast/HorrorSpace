@@ -131,6 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5792bba09641ba8a676cd976659490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.UI.GameEndedScreen
+  screenIdReference:
+    config: {fileID: 11400000, guid: 94ce1a84e75a5bf4281cf8be7303a6e5, type: 2}
+    id: Gameplay-End
 --- !u!114 &525233144710442172
 MonoBehaviour:
   m_ObjectHideFlags: 0

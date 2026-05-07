@@ -14,30 +14,30 @@ namespace Avastrad.UI.UiSystem
             _screenRepository = GetComponentInChildren<ScreensRepository>();
             _screenRepository.Initialize();
 
-            foreach (var screen in _screenRepository.Screens) 
+            foreach (var screen in _screenRepository.Screens)
                 screen.Initialize();
         }
         
-        public IReadOnlyList<Type> GetActiveScreens()
+        public IReadOnlyList<string> GetActiveScreens()
         {
-            var screens = new List<Type>();
+            var screens = new List<string>();
 
             foreach (var screen in _screenRepository.Screens)
-                if (screen.gameObject.activeSelf) 
-                    screens.Add(screen.GetType());
+                if (screen.gameObject.activeSelf)
+                    screens.Add(screen.ScreenId);
             
             return screens;
         }
 
-        public TScreen GetScreen<TScreen>() where TScreen : ScreenBase 
-            => (TScreen)GetScreen(typeof(TScreen));
+        public ScreenBase GetScreen(string screenId) 
+            => _screenRepository.GetScreen(screenId);
 
-        public ScreenBase GetScreen(Type screenType) 
-            => _screenRepository.GetScreen(screenType);
-
-        public void SetScreen(Type screenType)
+        public void SetScreen(string screenId)
         {
-            var newScreen = GetScreen(screenType);
+            var newScreen = GetScreen(screenId);
+            if (newScreen == null)
+                return;
+
             foreach (var screen in _screenRepository.Screens)
                 if (screen.gameObject.activeSelf)
                     screen.SetActive(false);
@@ -45,54 +45,61 @@ namespace Avastrad.UI.UiSystem
             newScreen.SetActive(true);
         }
         
-        public void SetScreens(IReadOnlyList<Type> screenTypes)
+        public void SetScreens(IReadOnlyList<string> screenIds)
         {
             foreach (var screen in _screenRepository.Screens)
-                if (screen.isActiveAndEnabled && !Contains(screenTypes, screen.GetType()))
+                if (screen.isActiveAndEnabled && !Contains(screenIds, screen.ScreenId))
                     TryToggleScreen(screen, false);
 
-            foreach (var screenType in screenTypes) 
-                ToggleScreen(screenType, true);
+            foreach (var screenId in screenIds)
+                ToggleScreen(screenId, true);
         }
         
-        public void ToggleScreen(Type screenType, ToggleType toggleType)
+        public void ToggleScreen(string screenId, ToggleType toggleType)
         {
             switch (toggleType)
             {
                 case ToggleType.Auto:
-                    ToggleScreen(screenType);
+                    ToggleScreen(screenId);
                     break;
                 case ToggleType.Show:
-                    ToggleScreen(screenType, true);
+                    ToggleScreen(screenId, true);
                     break;
                 case ToggleType.Hide:
-                    ToggleScreen(screenType, false);
+                    ToggleScreen(screenId, false);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(toggleType), toggleType, null);
             }
         }
 
-        private void ToggleScreen(Type screenType)
+        private void ToggleScreen(string screenId)
         {
-            var screen = _screenRepository.GetScreen(screenType);
+            var screen = _screenRepository.GetScreen(screenId);
+            if (screen == null)
+                return;
+
             TryToggleScreen(screen, !screen.isActiveAndEnabled);
         }
 
-        private void ToggleScreen(Type screenType, bool show)
+        private void ToggleScreen(string screenId, bool show)
         {
-            var screen = _screenRepository.GetScreen(screenType);
+            var screen = _screenRepository.GetScreen(screenId);
+            if (screen == null)
+                return;
+
             TryToggleScreen(screen, show);
         }
 
         private static void TryToggleScreen(ScreenBase screen, bool show)
         {
-            if (screen.isActiveAndEnabled == show) 
+            if (screen.isActiveAndEnabled == show)
                 return;
+
             screen.SetActive(show);
         }
         
-        private static bool Contains(IReadOnlyList<Type> list, Type value) 
+        private static bool Contains(IReadOnlyList<string> list, string value) 
         {
             for (var i = 0; i < list.Count; i++)
                 if (list[i] == value)

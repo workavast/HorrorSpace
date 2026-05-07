@@ -7,6 +7,8 @@ namespace App.UI.GameplayMenu
 {
     public class GameplayMenuByEscActivator : MonoBehaviour, IEscListener
     {
+        [SerializeField] private ScreenIdReference screenId;
+        
         [Inject] private readonly EscProvider _escProvider;
         [Inject] private readonly ScreensController _screensController;
         
@@ -17,6 +19,6 @@ namespace App.UI.GameplayMenu
             => _escProvider.UnSub(this);
 
         public void OnEscPressed() 
-            => _screensController.SetScreen<GameplayMenuScreen>();
+            => _screensController.SetScreen(screenId);
     }
 }

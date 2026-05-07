@@ -7,35 +7,49 @@ namespace Avastrad.UI.UiSystem
     [DisallowMultipleComponent]
     public class ScreensRepository : MonoBehaviour
     {
-        private readonly Dictionary<Type, ScreenBase> _screens = new();
+        private readonly Dictionary<string, ScreenBase> _screens = new(StringComparer.Ordinal);
     
         public IEnumerable<ScreenBase> Screens => _screens.Values;
 
         public void Initialize()
         {
+            _screens.Clear();
+
             var screens = GetComponentsInChildren<ScreenBase>(true);
-            foreach (var screen in screens) 
-                _screens.Add(screen.GetType(), screen);
+            foreach (var screen in screens)
+            {
+                if (screen == null)
+                    continue;
+
+                if (!screen.HasScreenId)
+                {
+                    Debug.LogWarning($"Screen '{screen.name}' has missing or invalid ScreenId.");
+                    continue;
+                }
+
+                var screenId = screen.ScreenId;
+                if (_screens.ContainsKey(screenId))
+                {
+                    Debug.LogWarning($"Duplicate screen id '{screenId}' found for screen '{screen.name}'.");
+                    continue;
+                }
+
+                _screens.Add(screenId, screen);
+            }
         }
 
-        public TScreen GetScreen<TScreen>() 
-            where TScreen : ScreenBase
+        public ScreenBase GetScreen(string screenId)
         {
-            if (!_screens.TryGetValue(typeof(TScreen), out var screen))
+            if (string.IsNullOrEmpty(screenId))
             {
-                Debug.LogWarning($"Error: invalid parameter: {typeof(TScreen)}");
-                return default;
+                Debug.LogWarning("Error: screenId is null or empty.");
+                return null;
             }
 
-            return (TScreen)screen;
-        }
-        
-        public ScreenBase GetScreen(Type screenType) 
-        {
-            if (!_screens.TryGetValue(screenType, out var screen))
+            if (!_screens.TryGetValue(screenId, out var screen))
             {
-                Debug.LogWarning($"Error: invalid parameter: {screenType}");
-                return default;
+                Debug.LogWarning($"Error: invalid screen id: '{screenId}'.");
+                return null;
             }
 
             return screen;

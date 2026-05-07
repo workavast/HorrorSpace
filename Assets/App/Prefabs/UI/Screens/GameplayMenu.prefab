@@ -132,6 +132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7708cf21044ee5a026fa740d906be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.UI.GameplayMenu
+  screenIdReference:
+    config: {fileID: 11400000, guid: 94ce1a84e75a5bf4281cf8be7303a6e5, type: 2}
+    id: Gameplay-Menu
 --- !u!114 &1172630417690175238
 MonoBehaviour:
   m_ObjectHideFlags: 0

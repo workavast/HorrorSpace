@@ -841,6 +841,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf6e96aa4c0a480bb8185bc8c4112586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.GameOverDetector
+  screenId:
+    config: {fileID: 11400000, guid: 94ce1a84e75a5bf4281cf8be7303a6e5, type: 2}
+    id: Gameplay-End
   playerHealth: {fileID: 986601785}
   sceneRef: {fileID: 11400000, guid: a14681b07f43ea140bfd4da4cf712932, type: 2}
   loadingConfig: {fileID: 11400000, guid: dbc4a6a60347e874a8a49487f0d9b811, type: 2}

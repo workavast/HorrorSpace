@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Avastrad.UI.UiSystem.Commands;
 using UnityEngine;
@@ -30,65 +29,76 @@ namespace Avastrad.UI.UiSystem
                 _blockCounter.RemoveRequest();
         }
 
-        public void SetScreen<TScreen>()
+        private bool IsRequestBlocked(string screenId) 
+            => _blockCounter.RequestMoreZero || string.IsNullOrEmpty(screenId);
+        
+        private bool IsRequestBlocked(IReadOnlyList<string> screenIds) 
+            => _blockCounter.RequestMoreZero || screenIds == null || screenIds.Count == 0;
+
+        public void SetScreen(ScreenIdReference screenIdReference) 
+            => SetScreen(screenIdReference.Id);
+
+        public void SetScreen(string screenId)
         {
-            if (_blockCounter.RequestMoreZero)
+            if (IsRequestBlocked(screenId))
                 return;
             
-            var command = _commandsFactory.SetScreen(typeof(TScreen));
+            var command = _commandsFactory.SetScreen(screenId);
+            _commandsRepository.ExecuteCommand(command);
+        }
+
+        public void SetScreens(IReadOnlyList<string> screenIds)
+        {
+            if (IsRequestBlocked(screenIds))
+                return;
+            
+            var command = _commandsFactory.SetScreens(screenIds);
             _commandsRepository.ExecuteCommand(command);
         }
         
-        public void SetScreen(Type screenType)
-        {
-            if (_blockCounter.RequestMoreZero)
-                return;
-            
-            var command = _commandsFactory.SetScreen(screenType);
-            _commandsRepository.ExecuteCommand(command);
-        }
-
-        public void SetScreens(IReadOnlyList<Type> screens)
-        {
-            if (_blockCounter.RequestMoreZero)
-                return;
-            
-            var command = _commandsFactory.SetScreens(screens);
-            _commandsRepository.ExecuteCommand(command);
-        }
+        public void ToggleScreen(ScreenIdReference screenIdReference)
+            => ToggleScreen(screenIdReference.Id);
         
-        public void ToggleScreen(Type screenType)
+        public void ToggleScreen(string screenId)
         {
-            if (_blockCounter.RequestMoreZero)
+            if (IsRequestBlocked(screenId))
                 return;
             
-            var command = _commandsFactory.ToggleScreen(screenType);
+            var command = _commandsFactory.ToggleScreen(screenId);
             _commandsRepository.ExecuteCommand(command);
         }
 
-        public void ToggleScreen(Type screenType, bool show)
+        public void ToggleScreen(ScreenIdReference screenIdReference, bool show)
+            => ToggleScreen(screenIdReference.Id, show);
+        
+        public void ToggleScreen(string screenId, bool show)
         {
-            if (_blockCounter.RequestMoreZero)
+            if (IsRequestBlocked(screenId))
                 return;
             
-            var command = _commandsFactory.ToggleScreen(screenType, show);
+            var command = _commandsFactory.ToggleScreen(screenId, show);
             _commandsRepository.ExecuteCommand(command);
         }
 
-        public TScreen ToggleScreen<TScreen>(bool show)
+        public TScreen ToggleScreen<TScreen>(string screenId, bool show)
             where TScreen : ScreenBase
         {
-            if (_blockCounter.RequestMoreZero)
+            if (IsRequestBlocked(screenId))
                 return null;
             
-            var screenType = typeof(TScreen);
+            var screen = _screensControllerInternal.GetScreen(screenId) as TScreen;
+            if (screen == null)
+            {
+                Debug.LogError($"Screen {screenId} invalid or not found");
+                return null;
+            }
             
-            var command = _commandsFactory.ToggleScreen(screenType, show);
+            var command = _commandsFactory.ToggleScreen(screenId, show);
             _commandsRepository.ExecuteCommand(command);
             
-            return _screensControllerInternal.GetScreen<TScreen>();
+            return _screensControllerInternal.GetScreen(screenId) as TScreen;
         }
-
+        
         public void Revert()
         {
             if (_blockCounter.RequestMoreZero)

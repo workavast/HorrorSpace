@@ -1,21 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Avastrad.UI.UiSystem.Commands
 {
     internal class SetScreenCommand : ICommand
     {
-        private readonly Type _targetScreenType;
+        private readonly string _targetScreenId;
         private readonly ScreensControllerInternal _screensController;
 
-        private IReadOnlyList<Type> _lastActiveScreens;
+        private IReadOnlyList<string> _lastActiveScreens;
 
         public bool IsExecuted { get; private set; }
 
-        public SetScreenCommand(Type targetScreenType, ScreensControllerInternal screensController)
+        public SetScreenCommand(string targetScreenId, ScreensControllerInternal screensController)
         {
-            _targetScreenType = targetScreenType;
+            _targetScreenId = targetScreenId;
             _screensController = screensController;
         }
 
@@ -28,8 +27,8 @@ namespace Avastrad.UI.UiSystem.Commands
             }
 
             IsExecuted = true;
-            _lastActiveScreens = new List<Type>(_screensController.GetActiveScreens());
-            _screensController.SetScreen(_targetScreenType);
+            _lastActiveScreens = new List<string>(_screensController.GetActiveScreens());
+            _screensController.SetScreen(_targetScreenId);
         }
 
         public void Undo()
