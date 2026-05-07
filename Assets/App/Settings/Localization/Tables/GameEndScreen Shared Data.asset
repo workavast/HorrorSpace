@@ -27,6 +27,10 @@ MonoBehaviour:
     m_Key: MainMenu
     m_Metadata:
       m_Items: []
+  - m_Id: 8532087206510592
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
