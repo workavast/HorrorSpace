@@ -191,7 +191,7 @@ MonoBehaviour:
           m_Top: 0
           m_Bottom: 0
         m_Font: {fileID: 0}
-        m_FontSize: 10
+        m_FontSize: 11
         m_FontStyle: 1
         m_Alignment: 3
         m_WordWrap: 0
@@ -5587,19 +5587,6 @@ MonoBehaviour:
         isBuiltIn: 0
         script: {fileID: 11500000, guid: 72bd6514cbd94082abf6b4dbc2159cfb, type: 3}
         hasToggle: 1
-      - displayName: CellsManager
-        name: App.IsolationBlock.CellsManager, Assembly-CSharp, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        content:
-          m_Text: CellsManager
-          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
-          m_Tooltip: CellsManager
-          m_TextWithWhitespace: "CellsManager\u200B"
-        shown: 0
-        excluded: 0
-        isBuiltIn: 0
-        script: {fileID: 11500000, guid: 46281eb5397742d0bc2cd316e1a0d1cc, type: 3}
-        hasToggle: 1
       - displayName: CellsTargetChecker
         name: App.IsolationBlock.CellsTargetChecker, Assembly-CSharp, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
@@ -5692,7 +5679,7 @@ MonoBehaviour:
         script: {fileID: 11500000, guid: 700114e3a2f5e5b4db36d878320bbe07, type: 3}
         hasToggle: 1
       - displayName: TrainLevel
-        name: App.Train.TrainLevel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        name: App.Levels.TrainLevel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
           PublicKeyToken=null
         content:
           m_Text: TrainLevel
@@ -5743,14 +5730,14 @@ MonoBehaviour:
         isBuiltIn: 0
         script: {fileID: 11500000, guid: 3e40ee0c09a04e9bb3f643d77076a4b4, type: 3}
         hasToggle: 1
-      - displayName: PortableRadioScopeConfig
-        name: App.PortableRadioSystem.PortableRadioScopeConfig, Assembly-CSharp,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      - displayName: MonologSpeakersScopeConfig
+        name: App.SpeakersSystem.MonologSpeakersScopeConfig, Assembly-CSharp, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
         content:
-          m_Text: PortableRadioScopeConfig
+          m_Text: MonologSpeakersScopeConfig
           m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
-          m_Tooltip: PortableRadioScopeConfig
-          m_TextWithWhitespace: "PortableRadioScopeConfig\u200B"
+          m_Tooltip: MonologSpeakersScopeConfig
+          m_TextWithWhitespace: "MonologSpeakersScopeConfig\u200B"
         shown: 0
         excluded: 0
         isBuiltIn: 0
@@ -5834,14 +5821,14 @@ MonoBehaviour:
         isBuiltIn: 0
         script: {fileID: 11500000, guid: 45009f4e8c19401597f897aa7150ba8f, type: 3}
         hasToggle: 1
-      - displayName: RadioPlayersBootstrap
-        name: App.PortableRadioSystem.RadioPlayersBootstrap, Assembly-CSharp, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
+      - displayName: SpeakerTriggersBootstrap
+        name: App.SpeakersSystem.SpeakersTriggers.SpeakerTriggersBootstrap, Assembly-CSharp,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         content:
-          m_Text: RadioPlayersBootstrap
+          m_Text: SpeakerTriggersBootstrap
           m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
-          m_Tooltip: RadioPlayersBootstrap
-          m_TextWithWhitespace: "RadioPlayersBootstrap\u200B"
+          m_Tooltip: SpeakerTriggersBootstrap
+          m_TextWithWhitespace: "SpeakerTriggersBootstrap\u200B"
         shown: 0
         excluded: 0
         isBuiltIn: 0
@@ -5885,45 +5872,6 @@ MonoBehaviour:
         excluded: 0
         isBuiltIn: 0
         script: {fileID: 11500000, guid: 36b390c31c59464aa1a484b03e402fc6, type: 3}
-        hasToggle: 1
-      - displayName: DoorAnimator
-        name: App.Doors.DoorAnimator, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-          PublicKeyToken=null
-        content:
-          m_Text: DoorAnimator
-          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
-          m_Tooltip: DoorAnimator
-          m_TextWithWhitespace: "DoorAnimator\u200B"
-        shown: 0
-        excluded: 0
-        isBuiltIn: 0
-        script: {fileID: 11500000, guid: ec893924dee591e41ac47c2e0678fad6, type: 3}
-        hasToggle: 1
-      - displayName: RadioTrigger
-        name: App.PortableRadioSystem.RadioTrigger, Assembly-CSharp, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        content:
-          m_Text: RadioTrigger
-          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
-          m_Tooltip: RadioTrigger
-          m_TextWithWhitespace: "RadioTrigger\u200B"
-        shown: 0
-        excluded: 0
-        isBuiltIn: 0
-        script: {fileID: 11500000, guid: 655bbc76014e43a39afc7bcc3f7893a2, type: 3}
-        hasToggle: 1
-      - displayName: RadioPlayer
-        name: App.PortableRadioSystem.RadioPlayer, Assembly-CSharp, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        content:
-          m_Text: RadioPlayer
-          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
-          m_Tooltip: RadioPlayer
-          m_TextWithWhitespace: "RadioPlayer\u200B"
-        shown: 0
-        excluded: 0
-        isBuiltIn: 0
-        script: {fileID: 11500000, guid: 5433ca6091af44d58dd86574defbc933, type: 3}
         hasToggle: 1
       - displayName: GameplayScope
         name: App.Scopes.GameplayScope, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
@@ -6106,6 +6054,58 @@ MonoBehaviour:
         excluded: 0
         isBuiltIn: 0
         script: {fileID: 11500000, guid: cff2a8bdc6ba46cb85be95b300f5047f, type: 3}
+        hasToggle: 1
+      - displayName: ScreensController
+        name: Avastrad.UI.UiSystem.ScreensController, Avastrad.UI, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: ScreensController
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: ScreensController
+          m_TextWithWhitespace: "ScreensController\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 758683eacf0f5dd48856d7dd94b1ed11, type: 3}
+        hasToggle: 1
+      - displayName: ScreensControllerInternal
+        name: Avastrad.UI.UiSystem.ScreensControllerInternal, Avastrad.UI, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: ScreensControllerInternal
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: ScreensControllerInternal
+          m_TextWithWhitespace: "ScreensControllerInternal\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: b2552493ee214007a9e13a0833ba5f4d, type: 3}
+        hasToggle: 1
+      - displayName: ScreensRepository
+        name: Avastrad.UI.UiSystem.ScreensRepository, Avastrad.UI, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: ScreensRepository
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: ScreensRepository
+          m_TextWithWhitespace: "ScreensRepository\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: f1ef36a63a70cbf44956e189643bb2d5, type: 3}
+        hasToggle: 1
+      - displayName: SpeakerTriggerObj
+        name: App.SpeakersSystem.SpeakersTriggers.SpeakerTriggerObj, Assembly-CSharp,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: SpeakerTriggerObj
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: SpeakerTriggerObj
+          m_TextWithWhitespace: "SpeakerTriggerObj\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: e8f35b2d3b604606994a02285eaae45e, type: 3}
         hasToggle: 1
     unityVersion: 6000.3.10f1
     unityCount: 381
