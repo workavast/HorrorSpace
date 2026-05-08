@@ -1,2 +1,2 @@
-# HorrorSpace
-Little first person horror witch mostly made with vibe coding
+# Spaceship Emergency
+Little first person game with physical interaction with the environment
