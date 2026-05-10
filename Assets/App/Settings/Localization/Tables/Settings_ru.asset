@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: GameEndScreen_en
+  m_Name: Settings_ru
   m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
   m_LocaleId:
-    m_Code: en
-  m_SharedData: {fileID: 11400000, guid: 1b60a691920e7264e815844c673cef22, type: 2}
+    m_Code: ru
+  m_SharedData: {fileID: 11400000, guid: bdee16f679462aa4f932d9548bed17a5, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 6895333376
-    m_Localized: Quit
+  - m_Id: 59582382080
+    m_Localized: FPS
     m_Metadata:
       m_Items: []
-  - m_Id: 4609437696
-    m_Localized: Restart
+  - m_Id: 6063063040
+    m_Localized: Language
     m_Metadata:
       m_Items: []
-  - m_Id: 20230734508032
-    m_Localized: Main Menu
+  - m_Id: 89244499968
+    m_Localized: "\u041D\u0430\u0437\u0430\u0434"
     m_Metadata:
       m_Items: []
-  - m_Id: 8532087206510592
-    m_Localized: Continue
+  - m_Id: 45569212416
+    m_Localized: VSync
     m_Metadata:
       m_Items: []
   references:

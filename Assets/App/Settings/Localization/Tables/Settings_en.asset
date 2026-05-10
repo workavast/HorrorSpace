@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: GameEndScreen_ru
+  m_Name: Settings_en
   m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
   m_LocaleId:
-    m_Code: ru
-  m_SharedData: {fileID: 11400000, guid: 1b60a691920e7264e815844c673cef22, type: 2}
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: bdee16f679462aa4f932d9548bed17a5, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 4609437696
-    m_Localized: "\u041F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u044C"
+  - m_Id: 59582382080
+    m_Localized: FPS
     m_Metadata:
       m_Items: []
-  - m_Id: 6895333376
-    m_Localized: "\u0412\u044B\u0439\u0442\u0438"
+  - m_Id: 6063063040
+    m_Localized: "\u042F\u0437\u044B\u043A"
     m_Metadata:
       m_Items: []
-  - m_Id: 20230734508032
-    m_Localized: "\u0413\u043B\u0432\u043D\u043E\u0435 \u041C\u0435\u043D\u044E"
+  - m_Id: 89244499968
+    m_Localized: Back
     m_Metadata:
       m_Items: []
-  - m_Id: 8532087206510592
-    m_Localized: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
+  - m_Id: 45569212416
+    m_Localized: VSync
     m_Metadata:
       m_Items: []
   references:

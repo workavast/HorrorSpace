@@ -31,6 +31,10 @@ MonoBehaviour:
     m_Key: PlayMain
     m_Metadata:
       m_Items: []
+  - m_Id: 9678691380690944
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

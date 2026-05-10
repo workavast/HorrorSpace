@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -383,6 +383,11 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &617934354 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6351333303284584899, guid: d82376ab082505d4fb7cb68fb9360c2a, type: 3}
+  m_PrefabInstance: {fileID: 1311425141416941746}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +565,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BootstrapLifeTimeScope
       objectReference: {fileID: 0}
+    - target: {fileID: 5940832527837744630, guid: d3dc36426ba77254487e199372ab86cc, type: 3}
+      propertyPath: autoInjectGameObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940832527837744630, guid: d3dc36426ba77254487e199372ab86cc, type: 3}
+      propertyPath: 'autoInjectGameObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 617934354}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

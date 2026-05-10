@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
-  m_Name: GameEndScreen
+  m_Name: Gameplay-Menu
   m_EditorClassIdentifier: Unity.Localization.Editor::UnityEditor.Localization.StringTableCollection
-  m_SharedTableData: {fileID: 11400000, guid: 1b60a691920e7264e815844c673cef22, type: 2}
+  m_SharedTableData: {fileID: 11400000, guid: 2ab0ff847c3a45b498bf8f7955f8ea61, type: 2}
   m_Tables:
-  - {fileID: 11400000, guid: 3ed790fb10ff97a48b94678ccd9b0c63, type: 2}
-  - {fileID: 11400000, guid: a629528ff790e2945a45f037472056be, type: 2}
+  - {fileID: 11400000, guid: 4a961d708ea2014478d0ed81f2ce7ab3, type: 2}
+  - {fileID: 11400000, guid: ee96d3a277178a742aa27d3ccfe13fd9, type: 2}
   m_Extensions: []
   m_Group: String Table
   references:

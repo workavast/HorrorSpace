@@ -30,6 +30,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ab0ff847c3a45b498bf8f7955f8ea61
+    m_Address: Assets/App/Settings/Localization/Tables/Gameplay-Menu Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4094499edf6f3a7418fa5571a7d0eb63
     m_Address: Assets/App/Settings/Localization/Tables/MedicalBlock-RoadMarkers Shared
       Data.asset
@@ -39,6 +44,11 @@ MonoBehaviour:
   - m_GUID: b86487a1c89a33c4faa3f4bdd9a1b9cd
     m_Address: Assets/App/Settings/Localization/Tables/SecurityCheckPoint Shared
       Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdee16f679462aa4f932d9548bed17a5
+    m_Address: Assets/App/Settings/Localization/Tables/Settings Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

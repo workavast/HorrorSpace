@@ -15,7 +15,7 @@ namespace App.CursorBehaviour
 
         private void OnDisable()
         {
-            Debug.Log("Cursor trigger enabled");
+            Debug.Log("Cursor trigger disabled");
             _cursorVisibilityChanger.RemoveRequest();
         }
     }

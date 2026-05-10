@@ -28,14 +28,25 @@ MonoBehaviour:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3ed790fb10ff97a48b94678ccd9b0c63
-    m_Address: GameEndScreen_en
+    m_Address: Gameplay-EndScreen_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
-    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a961d708ea2014478d0ed81f2ce7ab3
+    m_Address: Gameplay-Menu_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6c7fab9d21e257646bea0b1c2df395c1
     m_Address: MedicalBlock-RoadMarkers_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8841aa204016f3b4182fc71fc72f14c9
+    m_Address: Settings_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

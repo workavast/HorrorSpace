@@ -33,12 +33,17 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a629528ff790e2945a45f037472056be
-    m_Address: GameEndScreen_ru
+  - m_GUID: 9327448f362f94d46b8367236b790d53
+    m_Address: Settings_ru
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru
-    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a629528ff790e2945a45f037472056be
+    m_Address: Gameplay-EndScreen_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a8e8f624dd4d71943bafbf8c3b583590
     m_Address: MedicalBlock-RoadMarkers_ru
@@ -48,6 +53,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ee35f10df1027e84f8714dfa20251279
     m_Address: SecurityCheckPoint_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee96d3a277178a742aa27d3ccfe13fd9
+    m_Address: Gameplay-Menu_ru
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru

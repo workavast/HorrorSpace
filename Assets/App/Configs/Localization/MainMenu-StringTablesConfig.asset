@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.Localization.StringTablesConfig
   tableReferences:
   - m_TableCollectionName: MainMenu
+  - m_TableCollectionName: Settings
   tables:
   - {fileID: 11400000, guid: 8b9a25dc00c6db34d9804389f757de38, type: 2}
+  - {fileID: 11400000, guid: 774919bc459b67242ad5647ff4d6410e, type: 2}

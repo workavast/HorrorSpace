@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: GameEndScreen Shared Data
+  m_Name: Gameplay-EndScreen Shared Data
   m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
-  m_TableCollectionName: GameEndScreen
+  m_TableCollectionName: Gameplay-EndScreen
   m_TableCollectionNameGuidString: 1b60a691920e7264e815844c673cef22
   m_Entries:
   - m_Id: 4609437696
@@ -25,10 +25,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 20230734508032
     m_Key: MainMenu
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8532087206510592
-    m_Key: Continue
     m_Metadata:
       m_Items: []
   m_Metadata:

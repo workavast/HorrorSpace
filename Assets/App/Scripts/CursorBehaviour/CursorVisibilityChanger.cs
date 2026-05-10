@@ -1,16 +1,18 @@
 ﻿using App.LifetimeScopes;
 using Avastrad.Utils;
 using UnityEngine;
+using VContainer.Unity;
 
 namespace App.CursorBehaviour
 {
-	public class CursorVisibilityChanger : INonLazy
+	public class CursorVisibilityChanger : INonLazy, IPostLateTickable
 	{
 		private readonly RequestCounter _requestCounter;
-
+		private bool _lastValueRequestMoreZero;
+		
 		public CursorVisibilityChanger()
 		{
-			_requestCounter = new RequestCounter(UpdateVisibility);
+			_requestCounter = new RequestCounter(null);
 			UpdateVisibility(_requestCounter.RequestMoreZero);
 		}
 
@@ -19,7 +21,16 @@ namespace App.CursorBehaviour
 
 		public void RemoveRequest() 
 			=> _requestCounter.RemoveRequest();
-
+		
+		public void PostLateTick()
+		{
+			if (_lastValueRequestMoreZero != _requestCounter.RequestMoreZero)
+			{
+				UpdateVisibility(_requestCounter.RequestMoreZero);
+				_lastValueRequestMoreZero = _requestCounter.RequestMoreZero;
+			}
+		}
+		
 		private static void UpdateVisibility(bool isVisible)
 		{
 			Cursor.visible = isVisible;
