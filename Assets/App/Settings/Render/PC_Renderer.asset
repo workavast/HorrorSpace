@@ -32,11 +32,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d5b00a3cf84a5c9d74b0796b36e1cf, type: 3}
   m_Name: SaveCameraToPngFeature
   m_EditorClassIdentifier: Assembly-CSharp::App.SaveCameraToPngFeature
-  m_Active: 0
-  settings:
-    directoryPath: Screenshots
-    fileName: capture.png
-    renderPassEvent: 550
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

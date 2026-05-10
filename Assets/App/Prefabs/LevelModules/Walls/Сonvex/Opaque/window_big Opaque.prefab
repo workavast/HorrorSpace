@@ -13,6 +13,10 @@ PrefabInstance:
       value: window_big Opaque
       objectReference: {fileID: 0}
     - target: {fileID: 5039809439067758853, guid: 4f20f457473558e4f88c07bfce6d7bb0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039809439067758853, guid: 4f20f457473558e4f88c07bfce6d7bb0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 126
       objectReference: {fileID: 0}
