@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 966491709720473163}
   - component: {fileID: 1845782844208136455}
   - component: {fileID: 7599963164265203881}
-  - component: {fileID: 4409340889400594421}
+  - component: {fileID: 1212532675000538580}
   m_Layer: 5
   m_Name: BuildVersion
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!114 &4409340889400594421
+  m_PresetInfoIsWorld: 1
+--- !u!114 &1212532675000538580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,9 +94,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4016748112417329132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 169a1f95d81c4ec8ac89cd93ed79d695, type: 3}
+  m_Script: {fileID: 11500000, guid: 1754d891679f423bb783b4d564c6cc4d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Avastrad.BuildVersion::Avastrad.BuildVersion.Standalone.BuildVersionView
   tmpText: {fileID: 771118537254743196}
 --- !u!1 &8390465187258246149
 GameObject:
@@ -165,8 +165,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: V-0.13.6-11
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 866b31a902b471f4ba19a20dc3162ad9, type: 2}
+  m_sharedMaterial: {fileID: -3854878497656055772, guid: 866b31a902b471f4ba19a20dc3162ad9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -201,6 +201,7 @@ MonoBehaviour:
   m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
