@@ -5,7 +5,7 @@ using Avastrad.Utils.ScenesReferencing;
 using UnityEngine;
 using VContainer;
 
-namespace App.SecurityCheckpoint
+namespace App
 {
 	public class GameEndTrigger : MonoBehaviour
 	{
@@ -16,9 +16,10 @@ namespace App.SecurityCheckpoint
 
 		private ScreensController _screensController;
 		
-		public void Initialize(IObjectResolver container)
+		[Inject]
+		public void Construct(ScreensController screensController)
 		{
-			_screensController = container.Resolve<ScreensController>();
+			_screensController = screensController;
 		}
 		
 		private void Awake()

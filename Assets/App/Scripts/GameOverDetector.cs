@@ -1,6 +1,4 @@
-﻿using System;
-using App.Health;
-using App.UI;
+﻿using App.Health;
 using Avastrad.ScenesLoading;
 using Avastrad.UI.UiSystem;
 using Avastrad.Utils.ScenesReferencing;
@@ -13,14 +11,22 @@ namespace App
     {
 		[SerializeField] private ScreenIdReference screenId;
         [SerializeField] private HealthModel playerHealth;
-        [SerializeField] private SceneReference sceneRef;
-        [SerializeField] private LoadingConfig loadingConfig;
         
         [Inject] private ScreensController _screensController;
 
         private bool _triggered;
 
-        private void FixedUpdate()
+        private void Awake()
+        {
+            playerHealth.OnHealthChanged += CheckHealthStatus;
+        }
+
+        private void OnDestroy()
+        {
+            playerHealth.OnHealthChanged -= CheckHealthStatus;
+        }
+
+        private void CheckHealthStatus()
         {
             if (!playerHealth.IsAlive && !_triggered)
             {

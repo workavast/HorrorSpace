@@ -806,6 +806,11 @@ MonoBehaviour:
   speakers:
   - underlyingValue: {fileID: 435193022}
   - underlyingValue: {fileID: 285102530}
+--- !u!1 &1793596135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8301321735358825625, guid: 0099e13e81e9df04a85419db47e64348, type: 3}
+  m_PrefabInstance: {fileID: 6360879837212292872}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1885751572 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6013031588363911544, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
@@ -850,8 +855,6 @@ MonoBehaviour:
     config: {fileID: 11400000, guid: 94ce1a84e75a5bf4281cf8be7303a6e5, type: 2}
     id: Gameplay-End
   playerHealth: {fileID: 986601785}
-  sceneRef: {fileID: 11400000, guid: a14681b07f43ea140bfd4da4cf712932, type: 2}
-  loadingConfig: {fileID: 11400000, guid: dbc4a6a60347e874a8a49487f0d9b811, type: 2}
 --- !u!4 &2117402431
 Transform:
   m_ObjectHideFlags: 0
@@ -1080,12 +1083,12 @@ PrefabInstance:
       objectReference: {fileID: 1668685080}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: autoInjectGameObjects.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[0]'
       value: 
-      objectReference: {fileID: 128675475}
+      objectReference: {fileID: 273758814}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[1]'
       value: 
@@ -1093,7 +1096,11 @@ PrefabInstance:
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[2]'
       value: 
-      objectReference: {fileID: 273758814}
+      objectReference: {fileID: 1793596135}
+    - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
+      propertyPath: 'autoInjectGameObjects.Array.data[3]'
+      value: 
+      objectReference: {fileID: 128675475}
     - target: {fileID: 3602036169860498026, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: m_Name
       value: LifetimeScope-Gameplay
@@ -1285,7 +1292,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7358083746874687988, guid: 0099e13e81e9df04a85419db47e64348, type: 3}
   m_PrefabInstance: {fileID: 6360879837212292872}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1793596135}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ddef70809ab41c6ad60e7d5c2cc442d, type: 3}

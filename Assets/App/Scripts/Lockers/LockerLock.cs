@@ -1,7 +1,9 @@
-﻿using App.Audio;
+﻿using System;
+using App.Audio;
 using App.Audio.Sources;
 using App.KeySystem;
 using UnityEngine;
+using VContainer;
 
 namespace App.Lockers
 {
@@ -11,14 +13,18 @@ namespace App.Lockers
 		[SerializeField] private KeyReader keyReader;
 		[SerializeField] private AudioPlayer audioPlayer;
 		
-		public void Initialize(AudioFactory audioFactory)
+		[Inject]
+		public void Construct(AudioFactory audioFactory)
 		{
-			audioPlayer.Initialize(audioFactory);
-			
+			audioPlayer.Construct(audioFactory);
+		}
+
+		private void Start()
+		{
 			keyReader.OnValidKey += Unlock;
 			keyReader.OnInvalidKey += InvalidKey;
 		}
-        
+
 		private void OnDestroy()
 		{
 			keyReader.OnValidKey -= Unlock;

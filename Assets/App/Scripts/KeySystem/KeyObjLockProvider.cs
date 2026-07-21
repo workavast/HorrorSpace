@@ -1,8 +1,7 @@
 ﻿using System;
-using App.KeySystem;
 using UnityEngine;
 
-namespace App.ElectricPanels
+namespace App.KeySystem
 {
 	public class KeyObjLockProvider : MonoBehaviour
 	{

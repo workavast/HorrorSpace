@@ -1,5 +1,4 @@
 ﻿using System;
-using App.Character;
 using App.Usable;
 using UnityEngine;
 
@@ -22,7 +21,7 @@ namespace App.Doors
         private void OnDestroy() 
             => door.OnLockStateChanged -= UsableStateChanged;
 
-        public void Interact(PlayerContext playerContext)
+        public void Interact()
         {
             if (!isSelfUsable)
             {

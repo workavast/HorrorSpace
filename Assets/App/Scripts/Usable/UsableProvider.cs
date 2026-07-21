@@ -1,5 +1,4 @@
 ﻿using System;
-using App.Character;
 using UnityEngine;
 
 namespace App.Usable
@@ -28,8 +27,8 @@ namespace App.Usable
             interactableSource.Value.OnUse -= Use;
         }
         
-        public void Interact(PlayerContext playerContext) 
-            => interactableSource.Value.Interact(playerContext);
+        public void Interact() 
+            => interactableSource.Value.Interact();
         
         private void Use()
             => OnUse?.Invoke();

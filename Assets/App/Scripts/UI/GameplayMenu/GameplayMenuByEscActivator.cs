@@ -1,5 +1,4 @@
 ﻿using App.EscProviding;
-using App.Initialization;
 using Avastrad.UI.UiSystem;
 using UnityEngine;
 using VContainer;
@@ -14,15 +13,13 @@ namespace App.UI.GameplayMenu
         private ScreensController _screensController;
 
         [Inject]
-        public void Construct(ILateInitializer lateInitializer, EscProvider  escProvider, ScreensController  screensController)
+        public void Construct(EscProvider  escProvider, ScreensController  screensController)
         {
             _escProvider = escProvider;
             _screensController = screensController;
-            
-            lateInitializer.Register(Initialize);
         }
 
-        private void Initialize() 
+        private void Start() 
             => _escProvider.Sub(this);
 
         private void OnDestroy() 

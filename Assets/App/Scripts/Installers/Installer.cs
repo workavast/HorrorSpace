@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using VContainer;
 
-namespace App.LifetimeScopes
+namespace App.Installers
 {
 	public abstract class Installer : MonoBehaviour
 	{

@@ -1,4 +1,5 @@
 ﻿using App.Audio.Settings;
+using App.Installers;
 using App.LifetimeScopes;
 using Avastrad.Settings.Volume;
 using UnityEngine;

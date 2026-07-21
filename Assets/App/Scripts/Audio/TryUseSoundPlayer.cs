@@ -1,8 +1,9 @@
-﻿using App.Audio;
-using App.Audio.Sources;
+﻿using App.Audio.Sources;
+using App.Usable;
 using UnityEngine;
+using VContainer;
 
-namespace App.Usable
+namespace App.Audio
 {
     public class TryUseSoundPlayer : MonoBehaviour
     {
@@ -10,13 +11,14 @@ namespace App.Usable
         [SerializeField] private AudioPlayer[] successAudios;
         [SerializeField] private AudioPlayer[] failAudios;
         
-        public void Initialize(AudioFactory audioFactory)
+        [Inject]
+        public void Construct(AudioFactory audioFactory)
         {
             foreach (var audioPlayer in successAudios)
-                audioPlayer.Initialize(audioFactory);
+                audioPlayer.Construct(audioFactory);
             
             foreach (var audioPlayer in failAudios)
-                audioPlayer.Initialize(audioFactory);
+                audioPlayer.Construct(audioFactory);
         }
         
         private void Awake()

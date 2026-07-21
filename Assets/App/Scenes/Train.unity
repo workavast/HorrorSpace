@@ -135,7 +135,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 369529016653121871, guid: 18c5cee438d13aa4da3b088c07961923, type: 3}
   m_PrefabInstance: {fileID: 3379967197789659405}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3379967197789659406}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb39698e4a774ae58a868563e89c7367, type: 3}
@@ -768,16 +768,24 @@ PrefabInstance:
       objectReference: {fileID: 1715594491}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: autoInjectGameObjects.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[0]'
       value: 
-      objectReference: {fileID: 1710458440}
+      objectReference: {fileID: 3764594451247493192}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[1]'
       value: 
-      objectReference: {fileID: 3764594451247493192}
+      objectReference: {fileID: 1710458440}
+    - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
+      propertyPath: 'autoInjectGameObjects.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3379967197789659406}
+    - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
+      propertyPath: 'autoInjectGameObjects.Array.data[3]'
+      value: 
+      objectReference: {fileID: 650815683}
     - target: {fileID: 3602036169860498026, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: m_Name
       value: LifetimeScope-Gameplay
@@ -959,6 +967,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18c5cee438d13aa4da3b088c07961923, type: 3}
+--- !u!1 &3379967197789659406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4177110292154823865, guid: 18c5cee438d13aa4da3b088c07961923, type: 3}
+  m_PrefabInstance: {fileID: 3379967197789659405}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3764594451247493191
 PrefabInstance:
   m_ObjectHideFlags: 0

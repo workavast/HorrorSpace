@@ -1,4 +1,4 @@
-﻿using App.LifetimeScopes;
+﻿using App.Installers;
 using VContainer;
 
 namespace App.CursorBehaviour

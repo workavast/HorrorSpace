@@ -1,5 +1,4 @@
 ﻿using System;
-using App.Character;
 using UnityEngine;
 
 namespace App.Usable
@@ -14,7 +13,7 @@ namespace App.Usable
 		public event Action<bool> OnTryUse;
 		public event Action OnUsableStateChanged;
 		
-		public void Interact(PlayerContext playerContext)
+		public void Interact()
 		{
 			if (!IsUsable)
 			{

@@ -1,6 +1,6 @@
-﻿using App.LifetimeScopes;
+﻿using App.Installers;
 
-namespace App.Global
+namespace App.LifetimeScopes
 {
 	public class GlobalLifetimeScope : CoreLifetimeScope
 	{

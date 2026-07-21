@@ -7,7 +7,7 @@ using VContainer;
 
 namespace App.ScenesLoading
 {
-	public class LoadingScreenHider : Bootstrap
+	public class HideLoadingScreenBootstrap : Bootstrap
 	{
 		[SerializeField] private LoadingConfig loadingConfig;
 		

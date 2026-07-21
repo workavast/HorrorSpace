@@ -9,11 +9,15 @@ namespace App.SpeakersSystem.SpeakersTriggers
         [SerializeField] private SpeakerTriggerEvent eventer;
         [SerializeField] private SpeakerTriggerPlayer player;
 
-        public void Initialize(IObjectResolver container)
+        [Inject]
+        public void Construct(SpeakerEventsDatabase database, MonologSpeakers monologSpeakers)
         {
-            eventer.Initialize(container);
-            player.Initialize(container);
-            
+            eventer.Construct(database);
+            player.Construct(database, monologSpeakers);
+        }
+
+        private void Start()
+        {
             triggerZone.OnEnter += OnSpeakerEnter;
         }
 

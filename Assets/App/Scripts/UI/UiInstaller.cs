@@ -1,4 +1,4 @@
-﻿using App.LifetimeScopes;
+﻿using App.Installers;
 using Avastrad.UI.UiSystem;
 using UnityEngine;
 using VContainer;

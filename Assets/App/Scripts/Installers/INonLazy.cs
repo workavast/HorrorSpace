@@ -1,4 +1,4 @@
-﻿namespace App.LifetimeScopes
+﻿namespace App.Installers
 {
 	public interface INonLazy
 	{

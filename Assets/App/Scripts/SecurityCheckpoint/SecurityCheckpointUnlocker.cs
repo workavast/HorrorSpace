@@ -1,5 +1,4 @@
 ﻿using System;
-using App.Character;
 using App.Usable;
 using UnityEngine;
 
@@ -15,7 +14,7 @@ namespace App.SecurityCheckpoint
 		public event Action<bool> OnTryUse;
 		public event Action OnUsableStateChanged;
 		
-		public void Interact(PlayerContext playerContext)
+		public void Interact()
 		{
 			if (!IsUsable)
 			{

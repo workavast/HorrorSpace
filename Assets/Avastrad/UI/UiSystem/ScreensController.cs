@@ -13,7 +13,7 @@ namespace Avastrad.UI.UiSystem
 
         private readonly RequestCounter _blockCounter = new();
 
-        public void Initialize()
+        public void Awake()
         {
             _screensControllerInternal = GetComponentInChildren<ScreensControllerInternal>();
             _screensControllerInternal.Initialize();

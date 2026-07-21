@@ -1,3 +1,4 @@
+using App.Installers;
 using App.LifetimeScopes;
 using VContainer;
 

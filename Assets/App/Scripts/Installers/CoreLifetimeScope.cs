@@ -2,7 +2,7 @@
 using VContainer;
 using VContainer.Unity;
 
-namespace App.LifetimeScopes
+namespace App.Installers
 {
 	public abstract class CoreLifetimeScope : LifetimeScope
 	{

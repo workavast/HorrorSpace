@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using App.Character;
 using App.IsolationBlock.Cells;
 using App.Usable;
 using UnityEngine;
@@ -25,7 +24,7 @@ namespace App.IsolationBlock
             SetState(false);
         }
 
-        public void Interact(PlayerContext playerContext)
+        public void Interact()
         {
             if (!IsUsable)
             {

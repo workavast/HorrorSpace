@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using App.Audio.Sources;
 using UnityEngine;
-using VContainer;
 
 namespace App.SpeakersSystem.SpeakersTriggers
 {
@@ -15,10 +14,10 @@ namespace App.SpeakersSystem.SpeakersTriggers
         private MonologSpeakers _monologSpeakers;
         private SpeakerEventsDatabase _database;
 
-        public void Initialize(IObjectResolver container)
+        public void Construct(SpeakerEventsDatabase database, MonologSpeakers monologSpeakers)
         {
-            _monologSpeakers = container.Resolve<MonologSpeakers>();
-            _database = container.Resolve<SpeakerEventsDatabase>();
+            _monologSpeakers = monologSpeakers;
+            _database = database;
         }
 
         public bool TryPlayAudio()

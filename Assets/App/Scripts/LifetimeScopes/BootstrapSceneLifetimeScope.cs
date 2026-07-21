@@ -1,6 +1,6 @@
-﻿using App.LifetimeScopes;
+﻿using App.Installers;
 
-namespace App.BootstrapScene
+namespace App.LifetimeScopes
 {
 	public class BootstrapSceneLifetimeScope : CoreLifetimeScope
 	{

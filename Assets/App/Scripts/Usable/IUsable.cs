@@ -1,5 +1,4 @@
 using System;
-using App.Character;
 
 namespace App.Usable
 {
@@ -11,6 +10,6 @@ namespace App.Usable
         public event Action<bool> OnTryUse; 
         public event Action OnUsableStateChanged; 
         
-        public void Interact(PlayerContext playerContext);
+        public void Interact();
     }
 }

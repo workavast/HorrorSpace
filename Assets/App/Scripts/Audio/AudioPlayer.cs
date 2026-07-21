@@ -13,7 +13,7 @@ namespace App.Audio
 		private AudioSourceHolderPoolable _lastAudio;
 		private AudioFactory _audioFactory;
 		
-		public void Initialize(AudioFactory audioFactory)
+		public void Construct(AudioFactory audioFactory)
 		{
 			_audioFactory = audioFactory;
 		}

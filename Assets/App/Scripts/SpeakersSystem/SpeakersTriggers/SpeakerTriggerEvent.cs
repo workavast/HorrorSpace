@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using VContainer;
 
 namespace App.SpeakersSystem.SpeakersTriggers
 {
@@ -9,9 +8,9 @@ namespace App.SpeakersSystem.SpeakersTriggers
         
         private SpeakerEventsDatabase _database;
 
-        public void Initialize(IObjectResolver container)
+        public void Construct(SpeakerEventsDatabase database)
         {
-            _database = container.Resolve<SpeakerEventsDatabase>();
+            _database = database;
         }
 
         public void PerformEvent()

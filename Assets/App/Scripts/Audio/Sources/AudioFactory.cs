@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using App.Installers;
 using App.LifetimeScopes;
 using Avastrad.PoolSystem.LiteDynamic;
 using UnityEngine;

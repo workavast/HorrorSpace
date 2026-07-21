@@ -1,6 +1,6 @@
 ﻿using VContainer;
 
-namespace App.LifetimeScopes
+namespace App.Installers
 {
 	public static class ObjectResolverExtensions
 	{
