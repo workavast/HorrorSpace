@@ -4,17 +4,18 @@ using App.Audio.Sources;
 using Avastrad.Bootstraps;
 using UnityEngine;
 using VContainer;
-using VContainer.Unity;
 
 namespace App.Lockers
 {
 	public class LockersBootstrap : Bootstrap
 	{
-		protected override Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope)
+		[Inject] private AudioFactory _audioFactory;
+
+		protected override Task SelfInitialization(CancellationToken cancellationToken)
 		{
 			var lockerLocks = FindObjectsByType<LockerLock>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 			foreach (var lockerLock in lockerLocks)
-				lockerLock.Initialize(lifeTimeScope.Container.Resolve<AudioFactory>());
+				lockerLock.Initialize(_audioFactory);
 			
 			return Task.CompletedTask;
 		}

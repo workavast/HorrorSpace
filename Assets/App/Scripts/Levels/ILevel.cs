@@ -1,6 +1,4 @@
-﻿using VContainer;
-
-namespace App.Levels
+﻿namespace App.Levels
 {
     public interface ILevel : IContainerInitializable
     {

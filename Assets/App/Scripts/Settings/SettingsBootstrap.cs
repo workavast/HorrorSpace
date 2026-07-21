@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Avastrad.Bootstraps;
 using Avastrad.Settings;
 using VContainer;
-using VContainer.Unity;
 
 namespace App.Settings
 {
@@ -11,7 +10,7 @@ namespace App.Settings
     {
         [Inject] private SettingsRepository _settingsRepository;
         
-        protected override Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope)
+        protected override Task SelfInitialization(CancellationToken cancellationToken)
         {
             _settingsRepository.TryLoad();
             _settingsRepository.Apply(true);

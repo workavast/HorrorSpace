@@ -155,6 +155,11 @@ Transform:
   - {fileID: 2117402431}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &273758814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6014012980325495198, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
+  m_PrefabInstance: {fileID: 3764594451247493191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &285102530 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4485454736891786356, guid: 0099e13e81e9df04a85419db47e64348, type: 3}
@@ -1008,13 +1013,9 @@ PrefabInstance:
       propertyPath: levels.Array.data[0].underlyingValue
       value: 
       objectReference: {fileID: 6360879837212292873}
-    - target: {fileID: 3462764578115030743, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
-      propertyPath: lifetimeScope
-      value: 
-      objectReference: {fileID: 4833783173586733025}
     - target: {fileID: 6014012980325495198, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
       propertyPath: m_Name
-      value: GameplayBootstrap
+      value: Bootstrap-Gameplay
       objectReference: {fileID: 0}
     - target: {fileID: 7397321651032708355, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1056,6 +1057,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9124082113564744102, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
+      propertyPath: _lifeTimeScope
+      value: 
+      objectReference: {fileID: 4833783173586733025}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1075,7 +1080,7 @@ PrefabInstance:
       objectReference: {fileID: 1668685080}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: autoInjectGameObjects.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[0]'
@@ -1085,9 +1090,13 @@ PrefabInstance:
       propertyPath: 'autoInjectGameObjects.Array.data[1]'
       value: 
       objectReference: {fileID: 1668685076}
+    - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
+      propertyPath: 'autoInjectGameObjects.Array.data[2]'
+      value: 
+      objectReference: {fileID: 273758814}
     - target: {fileID: 3602036169860498026, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: m_Name
-      value: GameplayLifetimeScope
+      value: LifetimeScope-Gameplay
       objectReference: {fileID: 0}
     - target: {fileID: 7455945886363863786, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: m_LocalPosition.x

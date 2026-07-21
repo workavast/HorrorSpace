@@ -2,8 +2,6 @@
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
-using VContainer;
-using VContainer.Unity;
 
 namespace Avastrad.Bootstraps
 {
@@ -11,32 +9,36 @@ namespace Avastrad.Bootstraps
     {
         private readonly CancellationTokenSource _cancellationTokenSource = new();
         
-        protected async Task Initialize(CancellationToken externalToken, LifetimeScope lifetimeScope)
+        protected async Task Initialize(CancellationToken externalToken)
         {
             using var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(_cancellationTokenSource.Token, externalToken);
             var linkedToken = linkedCts.Token;
             
-            await SelfInitialization(linkedToken, lifetimeScope);
+            await SelfInitialization(linkedToken);
 
             linkedToken.ThrowIfCancellationRequested();
             
-            await InitializeChildren(linkedToken, lifetimeScope);
+            await InitializeChildren(linkedToken);
         }
 
-        protected virtual void OnDestroy()
+        private void OnDestroy()
         {
             _cancellationTokenSource.Cancel();
             _cancellationTokenSource.Dispose();
+            
+            OnDestroyCallback();
         }
-
-        protected abstract Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope);
         
-        private async Task InitializeChildren(CancellationToken cancellationToken, LifetimeScope lifetimeScope)
+        protected virtual void OnDestroyCallback() { }
+
+        protected abstract Task SelfInitialization(CancellationToken cancellationToken);
+        
+        private async Task InitializeChildren(CancellationToken cancellationToken)
         {
             var children = GetChildrenBootstraps();
             foreach (var child in children)
             {
-                await child.Initialize(cancellationToken, lifetimeScope);
+                await child.Initialize(cancellationToken);
                 cancellationToken.ThrowIfCancellationRequested();
             }
         }

@@ -3,7 +3,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Avastrad.Bootstraps;
 using UnityEngine;
-using VContainer.Unity;
 
 namespace App.Localization
 {
@@ -11,18 +10,17 @@ namespace App.Localization
     public class StringTablesPreloadBootstrap : Bootstrap
     {
         [SerializeField] private StringTablesPreloader preloader;
-
-        protected override Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope)
+        
+        protected override Task SelfInitialization(CancellationToken cancellationToken)
         {
             preloader.Initialize();
             return preloader.Preload();
         }
 
-        protected override void OnDestroy()
+        protected override void OnDestroyCallback()
         {
             preloader.Release();
             preloader.Dispose();
-            base.OnDestroy();
         }
     }
 }

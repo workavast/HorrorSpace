@@ -4,17 +4,18 @@ using App.SecurityCheckpoint;
 using Avastrad.Bootstraps;
 using UnityEngine;
 using VContainer;
-using VContainer.Unity;
 
 namespace App.Global
 {
 	public class GameEndInitializer : Bootstrap
 	{
-		protected override Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope)
+		[Inject] private IObjectResolver _objectResolver;
+		
+		protected override Task SelfInitialization(CancellationToken cancellationToken)
 		{
 			var all = FindObjectsByType<GameEndTrigger>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 			foreach (var gameEndTrigger in all)
-				gameEndTrigger.Initialize(lifeTimeScope.Container);
+				gameEndTrigger.Initialize(_objectResolver);
 			
 			return Task.CompletedTask;
 		}

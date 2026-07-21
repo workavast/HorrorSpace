@@ -460,14 +460,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3440386871060518731, guid: cf75b418827ad824883bdcdb183f877d, type: 3}
-      propertyPath: lifetimeScope
-      value: 
-      objectReference: {fileID: 2081316092489367355}
     - target: {fileID: 7093475070198962074, guid: cf75b418827ad824883bdcdb183f877d, type: 3}
       propertyPath: m_Name
-      value: MainMenuBootstrap
+      value: Bootstrap-MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 7332822750013921199, guid: cf75b418827ad824883bdcdb183f877d, type: 3}
+      propertyPath: _lifeTimeScope
+      value: 
+      objectReference: {fileID: 2081316092489367355}
     - target: {fileID: 7889618423683651099, guid: cf75b418827ad824883bdcdb183f877d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -513,6 +513,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf75b418827ad824883bdcdb183f877d, type: 3}
+--- !u!1 &2450856693186761418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7093475070198962074, guid: cf75b418827ad824883bdcdb183f877d, type: 3}
+  m_PrefabInstance: {fileID: 2450856693186761417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3163227174243696745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -523,7 +528,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1806748550855000154, guid: 8903166f4e8cbc24db11ec8ad9a530fc, type: 3}
       propertyPath: autoInjectGameObjects.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1806748550855000154, guid: 8903166f4e8cbc24db11ec8ad9a530fc, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[0]'
@@ -532,7 +537,7 @@ PrefabInstance:
     - target: {fileID: 1806748550855000154, guid: 8903166f4e8cbc24db11ec8ad9a530fc, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[1]'
       value: 
-      objectReference: {fileID: 1978668892}
+      objectReference: {fileID: 2450856693186761418}
     - target: {fileID: 2763938078710303843, guid: 8903166f4e8cbc24db11ec8ad9a530fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -579,7 +584,7 @@ PrefabInstance:
       objectReference: {fileID: 1978668893}
     - target: {fileID: 6149050768284719662, guid: 8903166f4e8cbc24db11ec8ad9a530fc, type: 3}
       propertyPath: m_Name
-      value: MainMenuLifetimeScope
+      value: LifetimeScope-MainMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

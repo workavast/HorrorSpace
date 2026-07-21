@@ -12,13 +12,13 @@ namespace Avastrad.UI.UiSystem
         private CommandsFactory _commandsFactory;
 
         private readonly RequestCounter _blockCounter = new();
-        
-        private void Awake()
+
+        public void Initialize()
         {
             _screensControllerInternal = GetComponentInChildren<ScreensControllerInternal>();
             _screensControllerInternal.Initialize();
             
-            _commandsFactory = new CommandsFactory(_screensControllerInternal);
+            _commandsFactory = new CommandsFactory(_screensControllerInternal); 
         }
 
         public void BlockRequest(bool block)

@@ -451,9 +451,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1966019554196201547, guid: 9555062d681ce0e4a93002a0afe7f5d0, type: 3}
+      propertyPath: autoInjectGameObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966019554196201547, guid: 9555062d681ce0e4a93002a0afe7f5d0, type: 3}
+      propertyPath: 'autoInjectGameObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2403029748726803829}
     - target: {fileID: 3074527658743310147, guid: 9555062d681ce0e4a93002a0afe7f5d0, type: 3}
       propertyPath: m_Name
-      value: LoadingSceneLifetimeScope
+      value: LifetimeScope-LoadingScene
       objectReference: {fileID: 0}
     - target: {fileID: 3676611581137605656, guid: 9555062d681ce0e4a93002a0afe7f5d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -548,25 +556,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4880214105318896795, guid: 6b710812dafd264449c4b64a77577105, type: 3}
-      propertyPath: m_Name
-      value: LoadingSceneBootstrap
-      objectReference: {fileID: 0}
-    - target: {fileID: 6864661437707193514, guid: 6b710812dafd264449c4b64a77577105, type: 3}
-      propertyPath: lifetimeScope
+    - target: {fileID: 2639660780297994830, guid: 6b710812dafd264449c4b64a77577105, type: 3}
+      propertyPath: _lifeTimeScope
       value: 
       objectReference: {fileID: 1395504239}
+    - target: {fileID: 4880214105318896795, guid: 6b710812dafd264449c4b64a77577105, type: 3}
+      propertyPath: m_Name
+      value: Bootstrap-LoadingScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b710812dafd264449c4b64a77577105, type: 3}
+--- !u!1 &2403029748726803829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4880214105318896795, guid: 6b710812dafd264449c4b64a77577105, type: 3}
+  m_PrefabInstance: {fileID: 2403029748726803828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1315851756445873043}
+  - {fileID: 2403029748726803828}
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 1315851756445873043}
-  - {fileID: 2403029748726803828}

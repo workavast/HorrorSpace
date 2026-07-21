@@ -768,7 +768,7 @@ PrefabInstance:
       objectReference: {fileID: 1715594491}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: autoInjectGameObjects.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[0]'
@@ -777,10 +777,10 @@ PrefabInstance:
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[1]'
       value: 
-      objectReference: {fileID: 1710458440}
+      objectReference: {fileID: 3764594451247493192}
     - target: {fileID: 3602036169860498026, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: m_Name
-      value: GameplayLifetimeScope
+      value: LifetimeScope-Gameplay
       objectReference: {fileID: 0}
     - target: {fileID: 7455945886363863786, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: m_LocalPosition.x
@@ -975,13 +975,9 @@ PrefabInstance:
       propertyPath: levels.Array.data[0].underlyingValue
       value: 
       objectReference: {fileID: 93064988}
-    - target: {fileID: 3462764578115030743, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
-      propertyPath: lifetimeScope
-      value: 
-      objectReference: {fileID: 2060512592}
     - target: {fileID: 6014012980325495198, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
       propertyPath: m_Name
-      value: GameplayBootstrap
+      value: Bootstrap-Gameplay
       objectReference: {fileID: 0}
     - target: {fileID: 7397321651032708355, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1023,11 +1019,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9124082113564744102, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
+      propertyPath: _lifeTimeScope
+      value: 
+      objectReference: {fileID: 2060512592}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
+--- !u!1 &3764594451247493192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6014012980325495198, guid: 3ad9d27b1903dd641a3383b77c143a22, type: 3}
+  m_PrefabInstance: {fileID: 3764594451247493191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5652629365689262437
 PrefabInstance:
   m_ObjectHideFlags: 0

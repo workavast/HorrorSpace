@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Avastrad.Bootstraps;
 using UnityEngine;
-using VContainer.Unity;
+using VContainer;
 
 namespace App.Levels
 {
@@ -10,11 +10,13 @@ namespace App.Levels
     {
         [SerializeField] private InterfaceReference<ILevel>[] levels;
         
-        protected override Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope)
+        [Inject] private IObjectResolver _objectResolver;
+
+        protected override Task SelfInitialization(CancellationToken cancellationToken)
         {
             if (levels != null && levels.Length > 0)
                 foreach (var level in levels) 
-                    level.Value.Initialize(lifeTimeScope.Container);                
+                    level.Value.Initialize(_objectResolver);                
             
             return Task.CompletedTask;
         }

@@ -1,27 +1,24 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using UnityEngine;
-using VContainer.Unity;
+﻿using UnityEngine;
 
 namespace Avastrad.Bootstraps
 {
-    public class RootBootstrap : Bootstrap
+    [DefaultExecutionOrder(-4000)]
+    public class RootBootstrap : MonoBehaviour
     {
-        [SerializeField] private LifetimeScope lifetimeScope;
-        
-        public async void Start()
+        public void Awake()
         {
-            try
-            {
-                await Initialize(CancellationToken.None, lifetimeScope);
-            }
-            catch (TaskCanceledException e)
-            {
-                Debug.Log(e);
-            }
+            var bootstraps = gameObject.GetChildrenBootstraps<RootOrderedBootstrap>
+                (rb => rb._order == Order.Awake);
+            foreach (var bootstrap in bootstraps)
+                bootstrap.StartInitialization();
         }
 
-        protected override Task SelfInitialization(CancellationToken cancellationToken, LifetimeScope lifeTimeScope) 
-            => Task.CompletedTask;
+        public void Start()
+        {
+            var bootstraps = gameObject.GetChildrenBootstraps<RootOrderedBootstrap>
+                (rb => rb._order == Order.Start);
+            foreach (var bootstrap in bootstraps)
+                bootstrap.StartInitialization();
+        }
     }
 }
