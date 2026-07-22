@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 3414617100423474992}
   - component: {fileID: 852996088335698667}
   - component: {fileID: 2950317762567788776}
+  - component: {fileID: 4863691851607239945}
   m_Layer: 0
   m_Name: IsolationBlock
   m_TagString: Untagged
@@ -179,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60385e6a73241209d3c622aa13b8bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.IsolationBlock.CellsController
+  usableObj: {fileID: 4863691851607239945}
   cells:
     cells:
     - {fileID: 7969407381169039717}
@@ -207,6 +209,19 @@ MonoBehaviour:
   speakerConfig: {fileID: 11400000, guid: a43f4fcd29c3b6749aa6a137fd5eb6ff, type: 2}
   systemVoiceOnTargetIsolated: {fileID: 2185415165806572418, guid: 875062c48f2f83243bd4ed48e7cfa807, type: 3}
   systemVoiceOnTargetEscaped: {fileID: 2185415165806572418, guid: ffb0d9ee67c1d394489ebc3c0c5b5c4a, type: 3}
+--- !u!114 &4863691851607239945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874831117739747665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4b110399bd4a7297d234ae559f6672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Usable.UsableObj
+  <IsUsable>k__BackingField: 1
 --- !u!1 &3571260772416732143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,7 +1849,7 @@ PrefabInstance:
     - target: {fileID: 969384781411155260, guid: 7a358834c88457540aa941a949a4f371, type: 3}
       propertyPath: interactableSource.underlyingValue
       value: 
-      objectReference: {fileID: 852996088335698667}
+      objectReference: {fileID: 4863691851607239945}
     - target: {fileID: 6323568799533638544, guid: 7a358834c88457540aa941a949a4f371, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.279999
@@ -4367,7 +4382,7 @@ PrefabInstance:
     - target: {fileID: 969384781411155260, guid: 7a358834c88457540aa941a949a4f371, type: 3}
       propertyPath: interactableSource.underlyingValue
       value: 
-      objectReference: {fileID: 852996088335698667}
+      objectReference: {fileID: 4863691851607239945}
     - target: {fileID: 6323568799533638544, guid: 7a358834c88457540aa941a949a4f371, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.279999

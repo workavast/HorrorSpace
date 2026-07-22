@@ -101,7 +101,7 @@ MonoBehaviour:
   isUsableGo: {fileID: 2801466563123793216}
   isUnUsableGo: {fileID: 4202472119284065832}
   doorBtn:
-    underlyingValue: {fileID: 2005877615986433299}
+    underlyingValue: {fileID: 7664461712748676254}
 --- !u!1 &6032343764352609099
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 940053511059400081}
   - component: {fileID: 8859067812367396073}
   - component: {fileID: 1003525087039701876}
+  - component: {fileID: 8388465180108610501}
   m_Layer: 0
   m_Name: InteractCollider
   m_TagString: Untagged
@@ -230,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Usable.UsableProvider
   interactableSource:
-    underlyingValue: {fileID: 2005877615986433299}
+    underlyingValue: {fileID: 7664461712748676254}
 --- !u!114 &8859067812367396073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +266,18 @@ MonoBehaviour:
   isInteractable: 1
   meshFilters:
   - {fileID: 6691274299693463529}
+--- !u!114 &8388465180108610501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032343764352609099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae3ff27213f4f6e8d9da121a53380e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.BoxColliderDrawer
 --- !u!1001 &4630736704898230498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -473,6 +486,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 153876, guid: 14f2f01264616214ba79f88c8f46c15f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2005877615986433299}
+    - targetCorrespondingSourceObject: {fileID: 153876, guid: 14f2f01264616214ba79f88c8f46c15f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7664461712748676254}
   m_SourcePrefab: {fileID: 100100000, guid: 14f2f01264616214ba79f88c8f46c15f, type: 3}
 --- !u!4 &6323568799533638544 stripped
 Transform:
@@ -496,7 +512,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade3af58db514cdd9d3808b541f22665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.InspectionPoints.InspectionPointUnlocker
+  usableObj: {fileID: 7664461712748676254}
   securityCheckpointBtn: {fileID: 0}
+--- !u!114 &7664461712748676254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323568799533938312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4b110399bd4a7297d234ae559f6672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.Usable.UsableObj
+  <IsUsable>k__BackingField: 1
 --- !u!1001 &6697220574249894794
 PrefabInstance:
   m_ObjectHideFlags: 0

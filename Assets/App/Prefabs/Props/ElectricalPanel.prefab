@@ -221,7 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 583353637172384154}
-  - component: {fileID: 1375836246346653262}
+  - component: {fileID: 4462435073044265046}
   - component: {fileID: 6820408949175498724}
   - component: {fileID: 6319434856322740569}
   - component: {fileID: 7776986979049717714}
@@ -248,7 +248,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2701663139862651986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1375836246346653262
+--- !u!114 &4462435073044265046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,9 +257,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4438041056213939495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d126f3d3047e4df1a8b2d6d38b17db82, type: 3}
+  m_Script: {fileID: 11500000, guid: b2fe86d266a28c945b8ca88241400dd9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.ElectricPanels.KeyObjLockProvider
+  m_EditorClassIdentifier: Assembly-CSharp::App.KeySystem.KeyReader
   isActive: 1
   requiredConfig: {fileID: 11400000, guid: 02b6226427aad8b47be424c39c5f445a, type: 2}
   triggerZones:
@@ -806,7 +806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.ElectricPanels.ElectricPanel
   fuseHoldPoint: {fileID: 2023352859784650991}
-  lockProvider: {fileID: 1375836246346653262}
+  keyReader: {fileID: 4462435073044265046}
 --- !u!1 &3674080696632611156 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8068073526183931155, guid: 9dd987a17cec01c4a885760c3d322b85, type: 3}

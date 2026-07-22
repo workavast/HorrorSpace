@@ -3050,7 +3050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6323568799533938312, guid: 1d3e8d76cc66afe4d83b898693e104ab, type: 3}
       propertyPath: m_Name
-      value: desk
+      value: desk SecurityRoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

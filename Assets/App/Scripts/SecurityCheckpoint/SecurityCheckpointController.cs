@@ -9,7 +9,7 @@ namespace App.SecurityCheckpoint
 		
 		public void SetAvailableState(bool isAvailable)
 		{
-			securityCheckpointBtn.SetState(isAvailable);
+			securityCheckpointBtn.SetUsableState(isAvailable);
 		}
 	}
 }

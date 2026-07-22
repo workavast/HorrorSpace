@@ -6,8 +6,19 @@ namespace App.Usable
     {
         public bool IsUsable { get; }
         
-        public event Action OnUse; 
-        public event Action<bool> OnTryUse; 
+        /// <summary>
+        /// call only on success use
+        /// </summary>
+        public event Action OnUse;
+        
+        /// <summary>
+        /// return use result (success or not)
+        /// </summary>
+        public event Action<bool> OnTryUse;
+        
+        /// <summary>
+        /// calls when <see cref="IsUsable"/> changed
+        /// </summary>
         public event Action OnUsableStateChanged; 
         
         public void Interact();

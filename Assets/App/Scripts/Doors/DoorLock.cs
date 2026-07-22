@@ -23,13 +23,13 @@ namespace App.Doors
             keyReader.OnInvalidKey -= InvalidKey;
         }
 
-        private void Unlock()
+        private void Unlock(IKeyObject _)
         {
             door.SetLockState(false);
             keyReader.SetActivityState(false);
         }
         
-        private void InvalidKey() 
+        private void InvalidKey(IKeyObject _) 
             => Debug.Log("Invalid key");
     }
 }

@@ -1,32 +1,27 @@
-﻿using System;
-using App.Usable;
+﻿using App.Usable;
 using UnityEngine;
 
 namespace App.SecurityCheckpoint
 {
-	public class SecurityCheckpointUnlocker : MonoBehaviour, IUsable
+	public class SecurityCheckpointUnlocker : MonoBehaviour
 	{
+		[SerializeField] private UsableObj usableObj;
 		[SerializeField] private SecurityCheckpointController securityCheckpointBtn;
 
-		public bool IsUsable { get; private set; } = true;
-		
-		public event Action OnUse;
-		public event Action<bool> OnTryUse;
-		public event Action OnUsableStateChanged;
-		
-		public void Interact()
+		private void Start()
 		{
-			if (!IsUsable)
-			{
-				OnTryUse?.Invoke(false);
-				return;
-			}
+			usableObj.OnUse += Unlock;
+		}
 
-			IsUsable = false;
+		private void OnDestroy()
+		{
+			usableObj.OnUse -= Unlock;
+		}
+
+		private void Unlock()
+		{
 			securityCheckpointBtn.SetAvailableState(true);
-			OnUse?.Invoke();
-			OnTryUse?.Invoke(true);
-			OnUsableStateChanged?.Invoke();
+			usableObj.SetUsableState(false);
 		}
 	}
 }

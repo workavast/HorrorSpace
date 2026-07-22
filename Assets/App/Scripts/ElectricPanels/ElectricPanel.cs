@@ -7,13 +7,13 @@ namespace App.ElectricPanels
 	public class ElectricPanel : MonoBehaviour
 	{
 		[SerializeField] private Transform fuseHoldPoint;
-		[SerializeField] private KeyObjLockProvider lockProvider;
+		[SerializeField] private KeyReader keyReader;
 
 		public event Action OnFix;
 		
 		private void Awake()
 		{
-			lockProvider.OnUnlocked += OnFuseEnter;
+			keyReader.OnValidKey += OnFuseEnter;
 		}
 
 		private void OnFuseEnter(IKeyObject obj)
@@ -26,7 +26,7 @@ namespace App.ElectricPanels
 				return;
 			}
 			
-			lockProvider.SetActivityState(false);
+			keyReader.SetActivityState(false);
 			fuse.SetState(false);
 			fuse.transform.SetPositionAndRotation(fuseHoldPoint.position, fuseHoldPoint.rotation);
 			OnFix?.Invoke();

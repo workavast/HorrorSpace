@@ -21,7 +21,7 @@ namespace App.SecurityCheckpoint
 		
 		private void Awake()
 		{
-			usableObj.AddCheck(CheckEntranceDoor);
+			usableObj.AddExternalUsableCheck(CheckEntranceDoor);
 			usableObj.OnUse += Interact;
 		}
 
@@ -38,7 +38,7 @@ namespace App.SecurityCheckpoint
 			entranceDoor.SetLockState(!_isEntranceOpen);
 			exitDoor.SetLockState(_isEntranceOpen);
 
-			usableObj.SetState(isUsable);
+			usableObj.SetUsableState(isUsable);
 
 			if (notify)
 				OnStateChanged?.Invoke(_isEntranceOpen);

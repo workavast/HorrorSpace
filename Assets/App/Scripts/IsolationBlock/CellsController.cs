@@ -6,53 +6,53 @@ using UnityEngine;
 
 namespace App.IsolationBlock
 {
-    public class CellsController : MonoBehaviour, IUsable
+    public class CellsController : MonoBehaviour
     {
+        [SerializeField] private UsableObj usableObj;
         [SerializeField] private CellsWrapper cells;
         [SerializeField] private IsolationTable[] tables;
 
         private bool CellsIsOpen => !cells.CellsIsClosed;
-        public bool IsUsable { get; private set; } = true;
-
-        public event Action OnUse;
-        public event Action<bool> OnTryUse;
-        public event Action OnUsableStateChanged;
 
         public void Initialize()
         {
             cells.Initialize();
-            SetState(false);
+            TryToggleDoors(false);
+            
+            usableObj.AddExternalUsableCheck(CanToggleDoors);
+            usableObj.OnUse += ToggleDoors;
         }
 
-        public void Interact()
+        private void OnDestroy()
         {
-            if (!IsUsable)
-            {
-                OnTryUse?.Invoke(false);
-                return;
-            }
-
-            if (!SetState(!CellsIsOpen))
-            {
-                OnTryUse?.Invoke(false);
-                return;
-            }
-
-            OnUse?.Invoke();
-            OnTryUse?.Invoke(true);
-            OnUsableStateChanged?.Invoke();
+            usableObj.OnUse -= ToggleDoors;
         }
 
-        private bool SetState(bool isOpen)
+        private void TryToggleDoors(bool openCells)
+        {
+            if (CanToggleDoors(openCells))
+                ToggleDoors(openCells);
+        }
+        
+        private bool CanToggleDoors() 
+            => CanToggleDoors(!CellsIsOpen);
+
+        private bool CanToggleDoors(bool isOpen)
         {
             if (!isOpen && !cells.AllCellsCanBeClosed())
                 return false;
-
-            cells.SetState(isOpen);
-            foreach (var table in tables)
-                table.SetState(isOpen);
-
+            
             return true;
+        }
+
+        private void ToggleDoors() 
+            => ToggleDoors(!CellsIsOpen);
+
+        private void ToggleDoors(bool openCells)
+        {
+            cells.SetState(openCells);
+            foreach (var table in tables)
+                table.SetState(openCells);
         }
 
         [Serializable]

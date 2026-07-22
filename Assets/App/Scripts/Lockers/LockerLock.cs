@@ -1,5 +1,4 @@
-﻿using System;
-using App.Audio;
+﻿using App.Audio;
 using App.Audio.Sources;
 using App.KeySystem;
 using UnityEngine;
@@ -31,14 +30,14 @@ namespace App.Lockers
 			keyReader.OnInvalidKey -= InvalidKey;
 		}
 
-		private void Unlock()
+		private void Unlock(IKeyObject _)
 		{
 			audioPlayer.Play();
 			locker.SetUnLockState(true);
 			keyReader.SetActivityState(false);
 		}
         
-		private void InvalidKey() 
+		private void InvalidKey(IKeyObject _) 
 			=> Debug.Log("Invalid key");
 	}
 }

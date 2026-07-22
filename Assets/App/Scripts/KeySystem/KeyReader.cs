@@ -9,9 +9,9 @@ namespace App.KeySystem
         [SerializeField] private KeyConfig requiredConfig;
         [SerializeField] private KeyObjectTriggerZone[] triggerZones;
 
-        public event Action OnInvalidType;
-        public event Action OnInvalidKey;
-        public event Action OnValidKey;
+        public event Action<IKeyObject> OnInvalidType;
+        public event Action<IKeyObject> OnInvalidKey;
+        public event Action<IKeyObject> OnValidKey;
 
         private void Awake()
         {
@@ -37,17 +37,17 @@ namespace App.KeySystem
             
             if (keyObject.GetKeyType() != requiredConfig.KeyType)
             {
-                OnInvalidType?.Invoke();
+                OnInvalidType?.Invoke(keyObject);
                 return;
             }
             
             if (keyObject.GetKey() != requiredConfig.Key)
             {
-                OnInvalidKey?.Invoke();
+                OnInvalidKey?.Invoke(keyObject);
                 return;
             }
             
-            OnValidKey?.Invoke();
+            OnValidKey?.Invoke(keyObject);
         }
     }
 }

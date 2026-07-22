@@ -5,9 +5,9 @@ namespace App.Usable
 {
 	public class UsableObj : MonoBehaviour, IUsable
 	{
-		public bool IsUsable { get; private set; }
+		[field: SerializeField] public bool IsUsable { get; private set; }
 		
-		private Func<bool> _check;
+		private Func<bool> _externalUsableCheck;
 		
 		public event Action OnUse;
 		public event Action<bool> OnTryUse;
@@ -21,7 +21,7 @@ namespace App.Usable
 				return;
 			}
 			
-			if (_check != null && !_check())
+			if (_externalUsableCheck != null && !_externalUsableCheck())
 			{
 				OnTryUse?.Invoke(false);
 				return;
@@ -31,12 +31,10 @@ namespace App.Usable
 			OnTryUse?.Invoke(true);
 		}
 
-		public void AddCheck(Func<bool> check)
-		{
-			_check = check;
-		}
-		
-		public void SetState(bool isUsable)
+		public void AddExternalUsableCheck(Func<bool> usableCheck) 
+			=> _externalUsableCheck = usableCheck;
+
+		public void SetUsableState(bool isUsable)
 		{
 			IsUsable = isUsable;
 			OnUsableStateChanged?.Invoke();

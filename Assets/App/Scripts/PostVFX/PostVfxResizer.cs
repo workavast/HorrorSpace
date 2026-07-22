@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace App.PostVfx
 {
+    /// <summary>
+    /// legacy script which used with ui and render texture based post vfx
+    /// </summary>
     public class PostVfxResizer : MonoBehaviour
     {
         [SerializeField] private Camera postVfxCamera;

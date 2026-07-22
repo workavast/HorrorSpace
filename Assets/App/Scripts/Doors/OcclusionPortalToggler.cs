@@ -1,7 +1,6 @@
-﻿using App.Doors;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace App
+namespace App.Doors
 {
     public class OcclusionPortalToggler : MonoBehaviour
     {

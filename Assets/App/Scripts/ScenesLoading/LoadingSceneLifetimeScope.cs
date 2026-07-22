@@ -1,5 +1,4 @@
 ﻿using App.Installers;
-using App.LifetimeScopes;
 
 namespace App.ScenesLoading
 {

@@ -8,6 +8,7 @@ namespace App.Doors
         [field: SerializeField] public bool IsLocked { get; private set; }
         [SerializeField] private DoorAnimator doorAnimator;
         [SerializeField] private bool isOpen;
+        
         [Header("Check obstacles in door")]
         [SerializeField] private BoxCollider closeCheckCollider;
         [SerializeField] private LayerMask checkLayers;
