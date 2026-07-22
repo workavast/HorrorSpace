@@ -1,5 +1,4 @@
 ﻿using App.Installers;
-using App.LifetimeScopes;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using VContainer;

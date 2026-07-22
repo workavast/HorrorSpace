@@ -27,6 +27,7 @@ namespace App.ElectricPanels
 			}
 			
 			keyReader.SetActivityState(false);
+			
 			fuse.SetState(false);
 			fuse.transform.SetPositionAndRotation(fuseHoldPoint.position, fuseHoldPoint.rotation);
 			OnFix?.Invoke();

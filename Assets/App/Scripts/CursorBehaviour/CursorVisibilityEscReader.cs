@@ -1,7 +1,6 @@
 ﻿using System;
 using App.EscProviding;
 using App.Installers;
-using App.LifetimeScopes;
 
 namespace App.CursorBehaviour
 {
