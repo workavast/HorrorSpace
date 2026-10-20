@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PostVfx-RenderFeature
-  m_Shader: {fileID: -6465566751694194690, guid: 3dbf554a17c91ec448ffde5e71412f77, type: 3}
+  m_Name: PostVfx-RF
+  m_Shader: {fileID: -6465566751694194690, guid: 416adac1b3ff787499aeaa05649f57f0, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BlitTexture:
-        m_Texture: {fileID: 2800000, guid: c66dd60bfeecc264eafd897826e3de8a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4c5f637586d9402489b2c8467b884535, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BlitTexture2:
@@ -65,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 8400000, guid: 852d09dbfd8527b488f1f1cfe6da00c3, type: 2}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainText:

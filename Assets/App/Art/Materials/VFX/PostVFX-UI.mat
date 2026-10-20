@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PostVFX-UI
-  m_Shader: {fileID: -6465566751694194690, guid: 9943befb0b0677648be5e7c4b792ebaf, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 23e53659e48cb8f46b2c6ad4b3664505, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -26,6 +26,10 @@ Material:
     m_TexEnvs:
     - _BaseMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BlitTexture:
+        m_Texture: {fileID: 2800000, guid: 4c5f637586d9402489b2c8467b884535, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -112,6 +116,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
+    - _Neutral_Saturation: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _Quantization_Level: 128

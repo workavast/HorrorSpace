@@ -2441,7 +2441,7 @@
     "m_Title": "Adding Dither to Render",
     "m_Position": {
         "x": -2250.400146484375,
-        "y": 57.60009765625
+        "y": 57.5999870300293
     }
 }
 
@@ -6194,8 +6194,8 @@
     "m_ObjectId": "6556bd740cc944a6903ce4cf0d068b05",
     "m_Title": "Remove lines in dark areas",
     "m_Position": {
-        "x": 1876.0,
-        "y": -2122.39990234375
+        "x": 1876.0001220703125,
+        "y": -2122.400146484375
     }
 }
 
@@ -8672,8 +8672,8 @@
     "m_ObjectId": "94ac9e6861134697ac414f1fd283bb9d",
     "m_Title": "Dithering",
     "m_Position": {
-        "x": -4076.7998046875,
-        "y": -174.39990234375
+        "x": -4076.800048828125,
+        "y": -174.40000915527345
     }
 }
 
@@ -9301,6 +9301,7 @@
     "isMainTexture": false,
     "useTilingAndOffset": false,
     "useTexelSize": true,
+    "isHDR": false,
     "m_Modifiable": true,
     "m_DefaultType": 0
 }
@@ -9333,7 +9334,7 @@
     "m_Title": "Quantization",
     "m_Position": {
         "x": -1138.4000244140625,
-        "y": 14.4000244140625
+        "y": 14.39999008178711
     }
 }
 
@@ -9903,6 +9904,7 @@
     "isMainTexture": false,
     "useTilingAndOffset": false,
     "useTexelSize": true,
+    "isHDR": false,
     "m_Modifiable": true,
     "m_DefaultType": 0
 }
@@ -10363,7 +10365,7 @@
     "m_ObjectId": "bb6cdb4154d94b0d9ed0695bc2c8efb1",
     "m_Title": "Palette - Prod",
     "m_Position": {
-        "x": 1323.199951171875,
+        "x": 1323.2000732421875,
         "y": -1043.199951171875
     }
 }
@@ -11061,6 +11063,7 @@
     "isMainTexture": false,
     "useTilingAndOffset": false,
     "useTexelSize": true,
+    "isHDR": false,
     "m_Modifiable": true,
     "m_DefaultType": 0
 }
