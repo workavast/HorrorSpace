@@ -663,7 +663,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2314519830986179946, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
   m_PrefabInstance: {fileID: 5652629365689262437}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5652629365689262438}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9e73914e2ab412e8c299252fc47acc4, type: 3}
@@ -717,10 +717,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2276165681539805006, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 330585545}
     - target: {fileID: 4029832887357033157, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
       propertyPath: healthModel
       value: 
@@ -768,28 +764,32 @@ PrefabInstance:
       objectReference: {fileID: 1715594491}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: autoInjectGameObjects.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[0]'
       value: 
-      objectReference: {fileID: 3764594451247493192}
+      objectReference: {fileID: 5652629365689262438}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[1]'
       value: 
-      objectReference: {fileID: 1710458440}
+      objectReference: {fileID: 3764594451247493192}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[2]'
       value: 
-      objectReference: {fileID: 3379967197789659406}
+      objectReference: {fileID: 1710458440}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[3]'
       value: 
-      objectReference: {fileID: 650815683}
+      objectReference: {fileID: 3379967197789659406}
     - target: {fileID: 3602036169860498026, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: m_Name
       value: LifetimeScope-Gameplay
       objectReference: {fileID: 0}
+    - target: {fileID: 5303501557354464261, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
+      propertyPath: _mainCamera
+      value: 
+      objectReference: {fileID: 330585545}
     - target: {fileID: 7455945886363863786, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: m_LocalPosition.x
       value: 960
@@ -1111,6 +1111,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
+--- !u!1 &5652629365689262438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8712057721741398327, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
+  m_PrefabInstance: {fileID: 5652629365689262437}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

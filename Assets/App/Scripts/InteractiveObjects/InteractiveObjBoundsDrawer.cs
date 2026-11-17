@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using App.CameraStuff;
 using Avastrad.Libs.CheckOnNullLib;
 using UnityEngine;
+using VContainer;
 
 namespace App.InteractiveObjects
 {
@@ -9,20 +11,36 @@ namespace App.InteractiveObjects
     {
         [SerializeField] private RectTransform highlightImage;
         [SerializeField] private RectTransform nonInteractableImage;
-        [SerializeField] private Camera mainCamera;
 
+        [Inject] private readonly MainCameraProvider _mainCameraProvider;
+        [Inject] private readonly InteractionContext _interactionContext;
+        
         private void Awake()
         {
-            if (mainCamera == null)
-                mainCamera = Camera.main;
-
             highlightImage.gameObject.SetActive(false);
             nonInteractableImage.gameObject.SetActive(false);
         }
 
-        public void SetTarget(IInteractiveObj interactiveObj)
+        private void OnEnable()
         {
-            if (interactiveObj.IsAnyNull() || !interactiveObj.ShouldDraw())
+            _interactionContext.OnInteractiveObjChanged += SetTarget;
+            _mainCameraProvider.OnMainCameraChanged += WhenCameraChanged;
+            SetTarget(_interactionContext.InteractiveObj);
+        }
+
+        private void OnDisable()
+        {
+            _interactionContext.OnInteractiveObjChanged -= SetTarget;
+            _mainCameraProvider.OnMainCameraChanged -= WhenCameraChanged;
+        }
+
+        private void WhenCameraChanged(Camera _) 
+            => SetTarget(_interactionContext.InteractiveObj);
+
+        private void SetTarget(IInteractiveObj interactiveObj)
+        {
+            var mainCamera = _mainCameraProvider.MainCamera;
+            if (interactiveObj.IsAnyNull() || !interactiveObj.ShouldDraw() || mainCamera == null)
             {
                 highlightImage.gameObject.SetActive(false);
                 nonInteractableImage.gameObject.SetActive(false);

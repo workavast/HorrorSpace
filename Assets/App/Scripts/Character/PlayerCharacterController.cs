@@ -12,6 +12,7 @@ using KinematicCharacterController;
 using UnityEngine;
 
 using App.Mutant;
+using VContainer;
 
 namespace App.Character
 {
@@ -22,7 +23,6 @@ namespace App.Character
         [SerializeField] private CameraController cameraController;
         [SerializeField] private PlayerInputManager inputManager;
         [SerializeField] private CursorViewToggler cursorViewToggler;
-        [SerializeField] private InteractiveObjBoundsDrawer interactiveObjBoundsDrawer;
         [SerializeField] private HealthModel healthComp;
         [Space]
         [SerializeField] private PlayerParams playerParams = new();
@@ -35,6 +35,8 @@ namespace App.Character
         [Header("Debug")]
         [SerializeField] private ReadOnlyQueue<string> jumpDebugStates;
 
+        [Inject] private readonly InteractionContext _interactionContext;
+        
         private PlayerContext _ctx;
         public int Priority => 100;
         public MutantTargetType Type => MutantTargetType.See;
@@ -121,7 +123,7 @@ namespace App.Character
         {
             if (!show)
             {
-                interactiveObjBoundsDrawer.SetTarget(null);
+                _interactionContext.SetInteractiveObj(null);
                 return;
             }
             
@@ -132,11 +134,11 @@ namespace App.Character
             if (Physics.Raycast(origin, dir, out var hit, interactRange, interactLayerMask))
             {
                 var interactive = hit.collider.GetComponent<IInteractiveObj>() ?? hit.collider.GetComponentInParent<IInteractiveObj>();
-                interactiveObjBoundsDrawer.SetTarget(interactive);
+                _interactionContext.SetInteractiveObj(interactive);
             }
             else
             {
-                interactiveObjBoundsDrawer.SetTarget(null);
+                _interactionContext.SetInteractiveObj(null);
             }
         }
         
