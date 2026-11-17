@@ -22,7 +22,6 @@ namespace App.Character
         [SerializeField] private KinematicCharacterMotor motor;
         [SerializeField] private CameraController cameraController;
         [SerializeField] private PlayerInputManager inputManager;
-        [SerializeField] private CursorViewToggler cursorViewToggler;
         [SerializeField] private HealthModel healthComp;
         [Space]
         [SerializeField] private PlayerParams playerParams = new();
@@ -34,7 +33,7 @@ namespace App.Character
         
         [Header("Debug")]
         [SerializeField] private ReadOnlyQueue<string> jumpDebugStates;
-
+        
         [Inject] private readonly InteractionContext _interactionContext;
         
         private PlayerContext _ctx;
@@ -64,7 +63,7 @@ namespace App.Character
         {
             healthComp.Initialize();
             
-            var handCtx = new HandContext(inputManager, cameraController, transform, cursorViewToggler);
+            var handCtx = new HandContext(inputManager, cameraController, transform, _interactionContext);
             _ctx = new PlayerContext(motor,cameraController, transform, handCtx, healthComp);
 
             //Movement FSM

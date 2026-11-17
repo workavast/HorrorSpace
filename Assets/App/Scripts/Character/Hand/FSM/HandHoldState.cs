@@ -12,7 +12,7 @@ namespace App.Character.Hand.FSM
 
         public override void Enter(Dictionary<string, object> args)
         {
-            _ctx.CursorViewToggler.SetState(true);
+            _ctx.InteractionContext.SetGrabState(true);
             _ctx.DraggedObjMass = 0;
         }
 

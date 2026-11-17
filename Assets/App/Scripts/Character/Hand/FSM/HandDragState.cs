@@ -35,7 +35,7 @@ namespace App.Character.Hand.FSM
                 return;
             }
 
-            _ctx.CursorViewToggler.SetState(true);
+            _ctx.InteractionContext.SetGrabState(true);
             _ctx.DraggedObjMass = _draggableObject.Mass;
 
             var dragPoint = (Vector3)args[DragPointKey];

@@ -15,7 +15,7 @@ namespace App.Character.Hand.FSM
         public override void Enter(Dictionary<string, object> args)
         {
             _ctx.CameraController.SetCameraRotationEnabled(false);
-            _ctx.CursorViewToggler.SetState(true);
+            _ctx.InteractionContext.SetGrabState(true);
         }
 
         public override void Exit()

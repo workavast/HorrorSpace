@@ -1,5 +1,6 @@
 ﻿using App.HandlingObjects;
 using App.HandlingObjects.HoldableObjects;
+using App.InteractiveObjects;
 using UnityEngine;
 
 namespace App.Character.Hand
@@ -9,7 +10,7 @@ namespace App.Character.Hand
 		public readonly PlayerInputManager InputManager;
 		public readonly CameraController CameraController;
 		public readonly Transform Transform;
-		public readonly CursorViewToggler CursorViewToggler;
+		public readonly InteractionContext InteractionContext;
 		
 		public bool HasHandledObject => HandledObj != null;
 		public IHandleObject HandledObj;
@@ -19,12 +20,12 @@ namespace App.Character.Hand
 		public float DefaultObjectLinearDamping;
 		public float DefaultObjectAngularDamping;
 
-		public HandContext(PlayerInputManager inputManager, CameraController cameraController, Transform transform, CursorViewToggler cursorViewToggler)
+		public HandContext(PlayerInputManager inputManager, CameraController cameraController, Transform transform, InteractionContext interactionContext)
 		{
 			InputManager = inputManager;
 			CameraController = cameraController;
 			Transform = transform;
-			CursorViewToggler = cursorViewToggler;
+			InteractionContext = interactionContext;
 		}
 
 		public void SetDefaultObjectDampings(float defaultObjectLinearDamping, float defaultObjectAngularDamping)

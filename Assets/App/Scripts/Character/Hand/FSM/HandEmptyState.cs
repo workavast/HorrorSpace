@@ -3,7 +3,6 @@ using App.HandlingObjects;
 using App.HandlingObjects.DraggedObjects;
 using App.HandlingObjects.HoldableObjects;
 using Avastrad.Libs.CastLib;
-using Avastrad.Libs.CheckOnNullLib;
 using UnityEngine;
 
 namespace App.Character.Hand.FSM
@@ -17,7 +16,7 @@ namespace App.Character.Hand.FSM
 
         public override void Enter(Dictionary<string, object> args)
         {
-            _ctx.CursorViewToggler.SetState(false);
+            _ctx.InteractionContext.SetGrabState(false);
             _ctx.DraggedObjMass = 0;
         }
 
