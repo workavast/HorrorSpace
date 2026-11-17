@@ -11,6 +11,13 @@
       },
       "hash": "a174f0ace85831bc6790d497d2d683a64fc513dd"
     },
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask#2.5.11",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "2e993ff18f28c931602a07292df0b0804eebef99"
+    },
     "com.dcfa_pixels.debugx": {
       "version": "https://github.com/DCFApixels/Unity-DebugX.git",
       "depth": 0,
@@ -26,7 +33,7 @@
     },
     "com.unity.addressables": {
       "version": "2.9.1",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.profiling.core": "1.0.2",
@@ -173,7 +180,7 @@
     },
     "com.unity.profiling.core": {
       "version": "1.0.3",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -212,7 +219,7 @@
     },
     "com.unity.scriptablebuildpipeline": {
       "version": "2.6.1",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.4.5",

@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "com.annulusgames.lit-motion": "https://github.com/annulusgames/LitMotion.git?path=src/LitMotion/Assets/LitMotion",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask#2.5.11",
     "com.dcfa_pixels.debugx": "https://github.com/DCFApixels/Unity-DebugX.git",
     "com.unity.2d.sprite": "1.0.0",
+    "com.unity.addressables": "2.9.1",
     "com.unity.ai.navigation": "2.0.13",
     "com.unity.animation.rigging": "1.4.1",
     "com.unity.cinemachine": "3.1.5",
