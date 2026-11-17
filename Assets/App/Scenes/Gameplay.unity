@@ -979,10 +979,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4029832887357033157, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
-      propertyPath: healthModel
-      value: 
-      objectReference: {fileID: 986601785}
     - target: {fileID: 4312683133350546686, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
       propertyPath: m_Name
       value: UI-Root-Gameplay

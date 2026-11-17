@@ -1,26 +1,32 @@
 ﻿using System;
 using UnityEngine;
+using VContainer;
 
 namespace App.Health
 {
     public class HealthHud : MonoBehaviour
     {
         [SerializeField] private CanvasGroup canvasGroup;
-        [SerializeField] private HealthModel healthModel;
         [SerializeField] private float showSpeed;
         [SerializeField] private float hideSpeed;
 
         private float _targetValue;
         
-        private void Awake()
+        [Inject] private readonly HealthContext _healthContext; 
+        
+        private void OnEnable()
         {
-            Initialize();
+            _healthContext.OnMaxHealthChanged += UpdateTargetValue;
+            _healthContext.OnHealthChanged += UpdateTargetValue;
+            canvasGroup.alpha = 0;
+            
+            SetTargetValue();
         }
 
-        public void Initialize()
+        private void OnDisable()
         {
-            healthModel.OnHealthChanged += SetTargetValue;
-            canvasGroup.alpha = 0;
+            _healthContext.OnMaxHealthChanged -= UpdateTargetValue;
+            _healthContext.OnHealthChanged -= UpdateTargetValue;
         }
 
         private void Update()
@@ -34,9 +40,12 @@ namespace App.Health
                 canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, _targetValue, hideSpeed * Time.deltaTime);
         }
 
+        private void UpdateTargetValue(float _) 
+            => SetTargetValue();
+
         private void SetTargetValue()
         {
-            var rounded = (float)Math.Round(1 - healthModel.FillPercentage, 1); // → 3.1f
+            var rounded = (float)Math.Round(1 - _healthContext.FillPercentage, 1); // → 3.1f
             SetTargetValue(rounded);
         }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using App.Utils.ReadOnlyAttributeDrawing;
 using UnityEngine;
+using VContainer;
 
 namespace App.Health
 {
@@ -9,6 +10,8 @@ namespace App.Health
         [SerializeField] private float maxHealth = 100f;
         [SerializeField, ReadOnly]  private float health;
 
+        [Inject] private readonly HealthContext _healthContext;
+        
         public float MaxHealth => maxHealth;
         public float Health { get => health; private set => health = value; }
         public float FillPercentage => Health / MaxHealth;
@@ -20,6 +23,7 @@ namespace App.Health
         public void Initialize()
         {
             Heal(MaxHealth, true);
+            _healthContext.SetAllHealth(MaxHealth, Health);
         }
 
         public void TakeDamage(float damage)
@@ -28,6 +32,7 @@ namespace App.Health
                 return;
             
             Health = Mathf.Clamp(Health - damage, 0f, MaxHealth);
+            _healthContext.SetHealth(Health);
             OnHealthChanged?.Invoke();
             OnTakeDamage?.Invoke();
         }
@@ -38,6 +43,7 @@ namespace App.Health
                 return;
             
             Health = Mathf.Clamp(Health + healAmount, 0f, MaxHealth);
+            _healthContext.SetHealth(Health);
             OnHealthChanged?.Invoke();
         }
         

@@ -658,17 +658,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1214864050 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2314519830986179946, guid: 79ae302eaa214dd49a6375a014c3e0f7, type: 3}
-  m_PrefabInstance: {fileID: 5652629365689262437}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5652629365689262438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e73914e2ab412e8c299252fc47acc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.Health.HealthComp
 --- !u!1001 &1710458439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -717,10 +706,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4029832887357033157, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
-      propertyPath: healthModel
-      value: 
-      objectReference: {fileID: 1214864050}
     - target: {fileID: 4312683133350546686, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
       propertyPath: m_Name
       value: UI-Root-Gameplay
