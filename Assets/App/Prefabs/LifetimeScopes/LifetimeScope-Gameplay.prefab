@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eacf961e8ad8445cb6e673741d8862ae, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.GamePausing.GamePauserScopeConfig
 --- !u!1 &3070361586070937345
 GameObject:
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e40ee0c09a04e9bb3f643d77076a4b4, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.Audio.Sources.AudioSceneInstaller
 --- !u!1 &3602036169860498026
 GameObject:
@@ -138,10 +138,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f3e39ff70954fa7bbc53facfbd453ae, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.Scopes.GameplayScope
   parentReference:
-    TypeName: 
+    TypeName:
   autoRun: 0
   autoInjectGameObjects: []
 --- !u!1 &4221092490637031766
@@ -186,9 +186,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 778cba9965a040fcaf10be5e13eab4e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.UI.UiScopeConfig
-  screensController: {fileID: 0}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::App.UI.UiInstaller
+  uiRoot: {fileID: 0}
 --- !u!1 &5514609619428296919
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2b87eba25f54fb19addec685e85dc48, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.CameraStuff.MainCameraInstaller
   _mainCamera: {fileID: 0}
 --- !u!1 &6977182666299816809
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73a5340d745c40d29731cb3ebd9ffc70, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.InteractiveObjects.InteractionInstaller
 --- !u!1 &7039945380369577015
 GameObject:
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b80863b5f6dc405b83eb69ad19be252a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.PortableRadioScopeConfig
   monologSpeakers: {fileID: 0}
 --- !u!1 &7066729369790371960
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 807d8bda72e74f9d80a299eddbbcef9b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.Health.HealthInstaller
 --- !u!1 &8168854043350974246
 GameObject:
@@ -409,5 +409,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb318945431a457ea043cd2cc6ab9bbf, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.SpeakersSystem.SpeakersTriggers.SpeakerEventsDataBaseScopeConfig

@@ -1,6 +1,7 @@
 ﻿using App.Usable;
 using Avastrad.ScenesLoading;
 using Avastrad.UI.UiSystem;
+using Avastrad.UI.UiSystem.Ids;
 using Avastrad.Utils.ScenesReferencing;
 using UnityEngine;
 using VContainer;
@@ -14,12 +15,12 @@ namespace App
 		[SerializeField] private SceneReference sceneRef;
 		[SerializeField] private UsableObj usableObj;
 
-		private ScreensController _screensController;
+		private UiRoot _uiRoot;
 		
 		[Inject]
-		public void Construct(ScreensController screensController)
+		public void Construct(UiRoot uiRoot)
 		{
-			_screensController = screensController;
+			_uiRoot = uiRoot;
 		}
 		
 		private void Awake()
@@ -29,7 +30,7 @@ namespace App
 
 		private void EndGame()
 		{
-			_screensController.SetScreen(screenId);
+			_uiRoot.Set(screenId);
 		}
 	}
 }

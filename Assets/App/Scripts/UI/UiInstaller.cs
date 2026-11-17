@@ -7,11 +7,11 @@ namespace App.UI
 {
     public class UiInstaller : Installer
     {
-        [SerializeField] private ScreensController screensController;
+        [SerializeField] private UiRoot uiRoot;
         
         public override void Configure(BaseLifetimeScope scope, IContainerBuilder builder)
         {
-            builder.RegisterInstance(screensController);
+            builder.RegisterInstance(uiRoot);
         }
     }
 }

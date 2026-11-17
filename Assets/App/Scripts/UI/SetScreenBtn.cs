@@ -1,4 +1,5 @@
 ﻿using Avastrad.UI.UiSystem;
+using Avastrad.UI.UiSystem.Ids;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
@@ -10,7 +11,7 @@ namespace App.UI
     {
         [SerializeField] private ScreenIdReference screenId;
         
-        [Inject] private readonly ScreensController _screensController;
+        [Inject] private UiRoot _uiRoot;
         
         private void Awake() 
             => GetComponent<Button>().onClick.AddListener(SetScreen);
@@ -19,6 +20,6 @@ namespace App.UI
             => GetComponent<Button>().onClick.RemoveListener(SetScreen);
 
         private void SetScreen() 
-            => _screensController.SetScreen(screenId);
+            => _uiRoot.Set(screenId);
     }
 }

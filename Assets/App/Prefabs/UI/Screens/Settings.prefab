@@ -1597,6 +1597,7 @@ GameObject:
   - component: {fileID: 3472512480142698745}
   - component: {fileID: 5853145466636497427}
   - component: {fileID: 4371469357311791342}
+  - component: {fileID: 1131502108632132872}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -1638,9 +1639,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e9c386198c4fecba80d1b7a3f7af31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.Settings.SettingsScreen
-  screenIdReference:
-    config: {fileID: 11400000, guid: 94ce1a84e75a5bf4281cf8be7303a6e5, type: 2}
-    id: Core-Settings
   settingsWindow: {fileID: 7427426070600627226}
 --- !u!114 &7427426070600627226
 MonoBehaviour:
@@ -1719,6 +1717,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1131502108632132872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6627932926255140002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d63e5259175314782dd9e8deca5aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.UI.ScreenScope
+  parentReference:
+    TypeName: 
+  autoRun: 0
+  autoInjectGameObjects: []
 --- !u!1 &6675125687712408208
 GameObject:
   m_ObjectHideFlags: 0

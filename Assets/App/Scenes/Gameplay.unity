@@ -747,17 +747,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4312683133350546686, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
   m_PrefabInstance: {fileID: 2953801110599279690}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1668685080 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6125289676362701475, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
-  m_PrefabInstance: {fileID: 2953801110599279690}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668685076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 758683eacf0f5dd48856d7dd94b1ed11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Avastrad.UI::Avastrad.UI.UiSystem.ScreensController
 --- !u!1 &1728035695
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,8 +841,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.GameOverDetector
   screenId:
-    config: {fileID: 11400000, guid: 94ce1a84e75a5bf4281cf8be7303a6e5, type: 2}
-    id: Gameplay-End
+    _config: {fileID: 11400000, guid: 94ce1a84e75a5bf4281cf8be7303a6e5, type: 2}
+    _id: Gameplay-End
   playerHealth: {fileID: 986601785}
 --- !u!4 &2117402431
 Transform:
@@ -979,6 +968,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 861320407371272306, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
+      propertyPath: parentReference.TypeName
+      value: App.LifetimeScopes.GameplayLifetimeScope
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116784978703878572, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116784978703878572, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116784978703878572, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4312683133350546686, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
       propertyPath: m_Name
       value: UI-Root-Gameplay
@@ -987,11 +992,37 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 330585545}
+    - target: {fileID: 6874519831015413949, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
+      propertyPath: _rootScope
+      value: 
+      objectReference: {fileID: 2953801110599279692}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
+--- !u!114 &2953801110599279691 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 878376700260779080, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
+  m_PrefabInstance: {fileID: 2953801110599279690}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c2319b9659fde4c9bccb709ac23504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Avastrad.UI::Avastrad.UI.UiSystem.UiRoot
+--- !u!114 &2953801110599279692 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 861320407371272306, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
+  m_PrefabInstance: {fileID: 2953801110599279690}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a358629528f3d2d4589103329607014b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.UI.UiScope
 --- !u!1001 &3764594451247493191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1070,9 +1101,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1717524346027635567, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
-      propertyPath: screensController
+      propertyPath: uiRoot
       value: 
-      objectReference: {fileID: 1668685080}
+      objectReference: {fileID: 2953801110599279691}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: autoInjectGameObjects.Array.size
       value: 5

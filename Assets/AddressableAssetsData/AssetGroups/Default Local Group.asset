@@ -14,7 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Default Local Group
   m_GUID: 71dc6b4e93de5e04bbdab18cf7658af0
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 7b137123a9b3eaf42b16a2ed7f9ca6d3
+    m_Address: Settings
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af1d4b5c31ff37b4693034cd41f194b5
+    m_Address: GameEndScreen
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f3d98f63473f1c4498970abd18eaeb49
+    m_Address: Assets/App/Prefabs/UI/Screens/Settings Core.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7e29923a43badd4fa2c738b1a41f084
+    m_Address: MainMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f9f22b827cf440041a9e5bc5dae82b63
+    m_Address: GameplayMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1eb2155c352a7fb4a94cc9cc69fb0726, type: 2}
   m_SchemaSet:

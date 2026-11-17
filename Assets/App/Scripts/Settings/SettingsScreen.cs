@@ -11,7 +11,7 @@ namespace App.Settings
         [SerializeField] private SettingsWindow settingsWindow;
         
         [Inject] private readonly SettingsRepository _settingsRepository;
-        [Inject] private readonly ScreensController _screensController;
+        [Inject] private UiRoot _uiRoot;
         [Inject] private readonly EscProvider _escProvider;
         
         public override void Initialize()
@@ -19,13 +19,13 @@ namespace App.Settings
             settingsWindow.Initialize(_settingsRepository);
         }
 
-        private void OnEnable() 
+        protected override void OnEnable() 
             => _escProvider.Sub(this);
 
-        private void OnDisable() 
+        protected override void OnDisable() 
             => _escProvider.UnSub(this);
 
         public void OnEscPressed() 
-            => _screensController.Revert();
+            => _uiRoot.Undo();
     }
 }

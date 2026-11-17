@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
   playPoint: {fileID: 4676888348999305428}
 --- !u!1 &2253803895041992057
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
   m_Size: {x: 20, y: 10, z: 5}
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
   m_Size: {x: 35, y: 10, z: 60}
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
   playPoint: {fileID: 2147727998872815511}
 --- !u!1 &3352375431984305121
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
   playPoint: {fileID: 2006333878620386145}
 --- !u!1 &3445632538521929892
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
   m_Size: {x: 15, y: 10, z: 15}
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
   m_Size: {x: 100, y: 1, z: 100}
@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
   playPoint: {fileID: 1478598133954994376}
 --- !u!1 &4283561800946946690
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
   m_Size: {x: 15, y: 10, z: 15}
@@ -692,7 +692,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 944a9c87d854459cb14ca41304348a46, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.SystemPlayer
   speakerConfig: {fileID: 11400000, guid: a43f4fcd29c3b6749aa6a137fd5eb6ff, type: 2}
   audioPlayers:
@@ -962,7 +962,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
   playPoint: {fileID: 2552395917928611644}
 --- !u!1 &6585365723358842669
@@ -1007,7 +1007,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
   playPoint: {fileID: 5972117695741854683}
 --- !u!1 &8068634642266696196
@@ -1052,7 +1052,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
   m_Size: {x: 12, y: 10, z: 40}
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ddef70809ab41c6ad60e7d5c2cc442d, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.Levels.DefaultLevel
   containerInitializable:
   - underlyingValue: {fileID: 2956755113096955056}
@@ -1256,7 +1256,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
   playPoint: {fileID: 965591530528480744}
 --- !u!1 &9013838764945994643
@@ -1301,7 +1301,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbeda7bddb2c4ea7abf12d9d0645084a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.AudioQueuePlayer
   playPoint: {fileID: 6528744540929166585}
 --- !u!1001 &462649433063025536
@@ -1358,7 +1358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2950317762567788776, guid: 7411125df532a3249b6744dc20bc82b8, type: 3}
       propertyPath: securityCheckpointController
-      value: 
+      value:
       objectReference: {fileID: 6329985982405137554}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1379,7 +1379,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72bd6514cbd94082abf6b4dbc2159cfb, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.DraggedDoors.IsolationBlockController
 --- !u!1001 &740973626631398975
 PrefabInstance:
@@ -1674,7 +1674,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60c40db321b74577aa6ea2cacbd83351, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.SecurityCheckpoint.SecurityCheckPointAudioPlayer
   securityCheckpointDoorsToggler: {fileID: 3748641792527936426}
   publicAddressSystem: {fileID: 4485454736891786356}
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d8b5af6fd5a4374b931131fbcc95d8a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.SecurityCheckpoint.SecurityCheckpointController
 --- !u!4 &2938551763862793360 stripped
 Transform:
@@ -1705,7 +1705,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c8f118e43ec4b85833e49c2a6f10eae, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.InspectionPoints.InspectionBtn
 --- !u!4 &7120475734040506375 stripped
 Transform:
@@ -1790,11 +1790,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
+      value:
       objectReference: {fileID: 8568273311566959338}
     - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
+      value:
       objectReference: {fileID: 8568273311566959338}
     - target: {fileID: 2092816259734064174, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: onSpeakerEnter2.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -1830,11 +1830,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: audioSource
-      value: 
+      value:
       objectReference: {fileID: 8346621958745127898, guid: a68f9e8b2592b084f900d39d6a6e61f7, type: 3}
     - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: speakerConfig
-      value: 
+      value:
       objectReference: {fileID: 11400000, guid: 1309099f6ac19694ca926855a840110f, type: 2}
     - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: eventNameToAdd
@@ -1903,7 +1903,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb9d0cb9e2114e51bbb2646532f08576, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.SpeakersSystem.SpeakersTriggers.SpeakerTriggerEvent
 --- !u!1001 &2302310796776955309
 PrefabInstance:
@@ -2255,11 +2255,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: audioSource
-      value: 
+      value:
       objectReference: {fileID: 8346621958745127898, guid: a68f9e8b2592b084f900d39d6a6e61f7, type: 3}
     - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: speakerConfig
-      value: 
+      value:
       objectReference: {fileID: 11400000, guid: 1309099f6ac19694ca926855a840110f, type: 2}
     - target: {fileID: 5008977562459811631, guid: 4f13dfad1690fb048864e3d9372c6b5b, type: 3}
       propertyPath: eventNameToAdd
@@ -2617,11 +2617,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2760724988019437395, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
       propertyPath: exitDoor
-      value: 
+      value:
       objectReference: {fileID: 3657315169928373464}
     - target: {fileID: 2760724988019437395, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
       propertyPath: entranceDoor
-      value: 
+      value:
       objectReference: {fileID: 1491795343350007696}
     - target: {fileID: 2955886420629123304, guid: 048e6115342939c4dbfffdc706eb9d6f, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
@@ -2688,7 +2688,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0178a437eed3e244ba0d36df00a34854, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
 --- !u!4 &3079732038603716319 stripped
 Transform:
@@ -2704,7 +2704,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0178a437eed3e244ba0d36df00a34854, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.DoorController
 --- !u!1 &4716578087300653979 stripped
 GameObject:
@@ -2721,11 +2721,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66d1cb8e48a746c1a1ca096cf1ac7250, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.SecurityCheckpoint.GameEndTrigger
   screenId:
-    config: {fileID: 11400000, guid: 94ce1a84e75a5bf4281cf8be7303a6e5, type: 2}
-    id: Gameplay-End
+    _config: {fileID: 11400000, guid: 94ce1a84e75a5bf4281cf8be7303a6e5, type: 2}
+    _id: Gameplay-End
   loadingConfig: {fileID: 11400000, guid: dbc4a6a60347e874a8a49487f0d9b811, type: 2}
   sceneRef: {fileID: 11400000, guid: a14681b07f43ea140bfd4da4cf712932, type: 2}
   usableObj: {fileID: 8519738629224243959}
@@ -2738,7 +2738,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d8b5af6fd5a4374b931131fbcc95d8a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.SecurityCheckpoint.SecurityCheckpointController
 --- !u!114 &8519738629224243959 stripped
 MonoBehaviour:
@@ -2749,7 +2749,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc4b110399bd4a7297d234ae559f6672, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.Usable.UsableObj
 --- !u!1001 &6515535459315396840
 PrefabInstance:
@@ -3243,7 +3243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8488995788083161920, guid: 1fe53625b40795d42bf8c7bb4ffb0ca2, type: 3}
       propertyPath: securityCheckpointBtn
-      value: 
+      value:
       objectReference: {fileID: 2284668313796416074}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,5 +1,6 @@
 ﻿using App.Health;
 using Avastrad.UI.UiSystem;
+using Avastrad.UI.UiSystem.Ids;
 using UnityEngine;
 using VContainer;
 
@@ -10,7 +11,7 @@ namespace App
 		[SerializeField] private ScreenIdReference screenId;
         [SerializeField] private HealthModel playerHealth;
         
-        [Inject] private ScreensController _screensController;
+        [Inject] private UiRoot _uiRoot;
 
         private bool _triggered;
 
@@ -29,7 +30,7 @@ namespace App
             if (!playerHealth.IsAlive && !_triggered)
             {
                 _triggered = true;
-                _screensController.SetScreen(screenId);
+                _uiRoot.Set(screenId);
             }
         }
     }

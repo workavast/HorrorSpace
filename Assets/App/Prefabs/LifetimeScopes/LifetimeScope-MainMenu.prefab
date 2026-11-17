@@ -42,9 +42,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 778cba9965a040fcaf10be5e13eab4e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::App.UI.UiScopeConfig
-  screensController: {fileID: 0}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::App.UI.UiInstaller
+  uiRoot: {fileID: 0}
 --- !u!1 &6149050768284719662
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,9 +88,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f3e39ff70954fa7bbc53facfbd453ae, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::App.Scopes.GameplayScope
   parentReference:
-    TypeName: 
+    TypeName:
   autoRun: 0
   autoInjectGameObjects: []

@@ -8,12 +8,15 @@ namespace App.UI
     [RequireComponent(typeof(Button))]
     public class RevertScreenBtn : MonoBehaviour
     {
-        [Inject] private readonly ScreensController _screensController;
+        [Inject] private UiRoot _uiRoot;
 
-        private void Awake() 
-            => GetComponent<Button>().onClick.AddListener(_screensController.Revert);
+        private void OnEnable()
+            => GetComponent<Button>().onClick.AddListener(Revert);
 
-        private void OnDestroy() 
-            => GetComponent<Button>().onClick.RemoveListener(_screensController.Revert);
+        private void OnDisable()
+            => GetComponent<Button>().onClick.RemoveListener(Revert);
+
+        private void Revert()
+            => _uiRoot.Undo();
     }
 }

@@ -706,6 +706,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 861320407371272306, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
+      propertyPath: parentReference.TypeName
+      value: App.LifetimeScopes.GameplayLifetimeScope
+      objectReference: {fileID: 0}
     - target: {fileID: 4312683133350546686, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
       propertyPath: m_Name
       value: UI-Root-Gameplay
@@ -714,6 +718,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 330585545}
+    - target: {fileID: 6874519831015413949, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
+      propertyPath: _rootScope
+      value: 
+      objectReference: {fileID: 1710458442}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -724,17 +732,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4312683133350546686, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
   m_PrefabInstance: {fileID: 1710458439}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1715594491 stripped
+--- !u!114 &1710458441 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6125289676362701475, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
+  m_CorrespondingSourceObject: {fileID: 878376700260779080, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
   m_PrefabInstance: {fileID: 1710458439}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710458440}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 758683eacf0f5dd48856d7dd94b1ed11, type: 3}
+  m_Script: {fileID: 11500000, guid: 40c2319b9659fde4c9bccb709ac23504, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Avastrad.UI::Avastrad.UI.UiSystem.ScreensController
+  m_EditorClassIdentifier: Avastrad.UI::Avastrad.UI.UiSystem.UiRoot
+--- !u!114 &1710458442 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 861320407371272306, guid: dbd369074a4357d4586fbac7bcafa998, type: 3}
+  m_PrefabInstance: {fileID: 1710458439}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a358629528f3d2d4589103329607014b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.UI.UiScope
 --- !u!1001 &2060512591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -744,9 +763,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1717524346027635567, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
-      propertyPath: screensController
+      propertyPath: uiRoot
       value: 
-      objectReference: {fileID: 1715594491}
+      objectReference: {fileID: 1710458441}
     - target: {fileID: 2081316092094408593, guid: 641a2d1488c32604dbb7b6c0dfc06977, type: 3}
       propertyPath: autoInjectGameObjects.Array.size
       value: 4

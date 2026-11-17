@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd17b86c93b401a43b6b4af5359f0bda, type: 3}
   m_Name: ScreenIdConfig
   m_EditorClassIdentifier: Avastrad.UI::Avastrad.UI.UiSystem.ScreenIdConfig
-  ids:
+  _ids:
   - Gameplay-Menu
   - Gameplay-End
   - MainMenu-Main

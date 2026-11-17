@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 71dc6b4e93de5e04bbdab18cf7658af0
   m_currentHash:
     serializedVersion: 2
-    Hash: 609152e5fec149eac73f53aeeb21a0df
+    Hash: b0414e87dbec727bffa27eb0473e9e5a
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -47,17 +47,17 @@ MonoBehaviour:
   m_StripUnityVersionFromBundleBuild: 0
   m_DisableVisibleSubAssetRepresentations: 0
   m_BuiltInBundleNaming: 0
-  mBuiltInBundleCustomNaming: 
+  mBuiltInBundleCustomNaming:
   m_MonoScriptBundleNaming: 0
   m_CheckForContentUpdateRestrictionsOption: 0
-  m_MonoScriptBundleCustomNaming: 
+  m_MonoScriptBundleCustomNaming:
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id:
   m_RemoteCatalogLoadPath:
-    m_Id: 
-  m_ContentStateBuildPathProfileVariableName: 
-  m_CustomContentStateBuildPath: 
-  m_ContentStateBuildPath: 
+    m_Id:
+  m_ContentStateBuildPathProfileVariableName:
+  m_CustomContentStateBuildPath:
+  m_ContentStateBuildPath:
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
@@ -71,7 +71,7 @@ MonoBehaviour:
     m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
   m_ProfileSettings:
     m_Profiles:
-    - m_InheritedParent: 
+    - m_InheritedParent:
       m_Id: 8d103e38d8b5b144e8afe7902ad88618
       m_ProfileName: Default
       m_Values:
@@ -114,8 +114,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e866bdebe43d03d41be26d16f0802c7b, type: 2}
   m_InitializationObjects: []
   m_CertificateHandlerType:
-    m_AssemblyName: 
-    m_ClassName: 
+    m_AssemblyName:
+    m_ClassName:
   m_ActivePlayerDataBuilderIndex: 2
   m_DataBuilders:
   - {fileID: 11400000, guid: 772e436771040744c965a4b8ebe17c45, type: 2}

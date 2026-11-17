@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 1443328956890729550}
   - component: {fileID: 3012511695966634181}
   - component: {fileID: 433206318655295976}
+  - component: {fileID: 1145813079725029812}
   m_Layer: 5
   m_Name: GameplayMenu
   m_TagString: Untagged
@@ -133,9 +134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7708cf21044ee5a026fa740d906be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.UI.GameplayMenu
-  screenIdReference:
-    config: {fileID: 11400000, guid: 94ce1a84e75a5bf4281cf8be7303a6e5, type: 2}
-    id: Gameplay-Menu
 --- !u!114 &1172630417690175238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +198,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1145813079725029812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882952838195766531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d63e5259175314782dd9e8deca5aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::App.UI.ScreenScope
+  parentReference:
+    TypeName: 
+  autoRun: 0
+  autoInjectGameObjects: []
 --- !u!1001 &3492750795738039899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -330,8 +344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::App.UI.SetScreenBtn
   screenId:
-    config: {fileID: 11400000, guid: 94ce1a84e75a5bf4281cf8be7303a6e5, type: 2}
-    id: Core-Settings
+    _config: {fileID: 11400000, guid: 94ce1a84e75a5bf4281cf8be7303a6e5, type: 2}
+    _id: Core-Settings
 --- !u!224 &4894465644214343702 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8328313246240087629, guid: 3eb3094d4d78b5740b9bfd369767b568, type: 3}

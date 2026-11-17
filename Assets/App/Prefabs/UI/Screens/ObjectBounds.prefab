@@ -226,7 +226,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::App.Interaction.BoundsDrawer
   highlightImage: {fileID: 4062895464034822432}
   nonInteractableImage: {fileID: 790172897933257147}
-  mainCamera: {fileID: 0}
 --- !u!1 &6875419335123835493
 GameObject:
   m_ObjectHideFlags: 0

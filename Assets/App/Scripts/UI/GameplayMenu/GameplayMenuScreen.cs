@@ -6,7 +6,7 @@ namespace App.UI.GameplayMenu
 {
     public class GameplayMenuScreen : ScreenBase, IEscListener
     {
-        [Inject] private readonly ScreensController _screensController;
+        [Inject] private UiRoot _uiRoot;
         [Inject] private readonly EscProvider _escProvider;
 
         private void OnEnable() 
@@ -16,6 +16,6 @@ namespace App.UI.GameplayMenu
             => _escProvider.UnSub(this);
 
         public void OnEscPressed() 
-            => _screensController.Revert();
+            => _uiRoot.Undo();
     }
 }
