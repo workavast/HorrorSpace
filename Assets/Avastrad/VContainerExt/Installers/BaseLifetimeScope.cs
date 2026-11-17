@@ -2,9 +2,9 @@
 using VContainer;
 using VContainer.Unity;
 
-namespace App.Installers
+namespace Avastrad.VContainerExt.Installers
 {
-	public abstract class CoreLifetimeScope : LifetimeScope
+	public abstract class BaseLifetimeScope : LifetimeScope
 	{
 		protected sealed override void Configure(IContainerBuilder builder)
 		{

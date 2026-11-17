@@ -1,0 +1,17 @@
+{
+    "name": "Avastrad.VContainerExt",
+    "rootNamespace": "Avastrad.VContainerExt",
+    "references": [
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:20021f8d7cf8be149b8584b7668e2e59"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

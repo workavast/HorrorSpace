@@ -1,8 +1,8 @@
-﻿using App.Installers;
+﻿using Avastrad.VContainerExt.Installers;
 
 namespace App.ScenesLoading
 {
-	public class LoadingSceneLifetimeScope : CoreLifetimeScope
+	public class LoadingSceneLifetimeScope : BaseLifetimeScope
 	{
 		
 	}

@@ -1,5 +1,5 @@
-﻿using App.Installers;
-using Avastrad.UI.UiSystem;
+﻿using Avastrad.UI.UiSystem;
+using Avastrad.VContainerExt.Installers;
 using UnityEngine;
 using VContainer;
 
@@ -9,7 +9,7 @@ namespace App.UI
     {
         [SerializeField] private ScreensController screensController;
         
-        public override void Configure(CoreLifetimeScope scope, IContainerBuilder builder)
+        public override void Configure(BaseLifetimeScope scope, IContainerBuilder builder)
         {
             builder.RegisterInstance(screensController);
         }

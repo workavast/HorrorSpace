@@ -1,5 +1,5 @@
-﻿using App.Installers;
-using Avastrad.ScenesLoading;
+﻿using Avastrad.ScenesLoading;
+using Avastrad.VContainerExt.Installers;
 
 namespace App.ScenesLoading
 {

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using App.Installers;
-using App.LifetimeScopes;
 using Avastrad.PoolSystem.LiteDynamic;
+using Avastrad.VContainerExt.Installers;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;

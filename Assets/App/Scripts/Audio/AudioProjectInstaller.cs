@@ -1,7 +1,6 @@
 ﻿using App.Audio.Settings;
-using App.Installers;
-using App.LifetimeScopes;
 using Avastrad.Settings.Volume;
+using Avastrad.VContainerExt.Installers;
 using UnityEngine;
 using VContainer;
 
@@ -11,7 +10,7 @@ namespace App.Audio
     {
         [SerializeField] private VolumeSettingConfig volumeSettingConfig;
         
-        public override void Configure(CoreLifetimeScope scope, IContainerBuilder builder)
+        public override void Configure(BaseLifetimeScope scope, IContainerBuilder builder)
         {
             builder.Register<SettingsAudioApplier>(Lifetime.Singleton).WithParameter(volumeSettingConfig).NonLazySelf();
         }

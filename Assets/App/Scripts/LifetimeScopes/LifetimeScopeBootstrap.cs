@@ -4,7 +4,7 @@ using Avastrad.Bootstraps;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace App.Installers
+namespace App.LifetimeScopes
 {
 	public class LifetimeScopeBootstrap : Bootstrap
 	{

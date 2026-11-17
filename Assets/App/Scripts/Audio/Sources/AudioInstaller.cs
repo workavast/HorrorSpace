@@ -1,12 +1,11 @@
-using App.Installers;
-using App.LifetimeScopes;
+using Avastrad.VContainerExt.Installers;
 using VContainer;
 
 namespace App.Audio.Sources
 {
     public class AudioInstaller : Installer
     {
-        public override void Configure(CoreLifetimeScope scope, IContainerBuilder builder)
+        public override void Configure(BaseLifetimeScope scope, IContainerBuilder builder)
         {
             builder.Register<AudioFactory>(Lifetime.Singleton).NonLazySelf();
         }

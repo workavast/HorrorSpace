@@ -1,5 +1,4 @@
-﻿using App.Installers;
-using App.LifetimeScopes;
+﻿using Avastrad.VContainerExt.Installers;
 using UnityEngine;
 using VContainer;
 
@@ -9,7 +8,7 @@ namespace App.SpeakersSystem
 	{
 		[SerializeField] private MonologSpeakers monologSpeakers;
 		
-		public override void Configure(CoreLifetimeScope scope, IContainerBuilder builder)
+		public override void Configure(BaseLifetimeScope scope, IContainerBuilder builder)
 		{
 			builder.RegisterInstance<MonologSpeakers>(monologSpeakers);
 		}

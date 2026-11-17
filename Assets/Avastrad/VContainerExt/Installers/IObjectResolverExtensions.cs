@@ -1,6 +1,6 @@
 ﻿using VContainer;
 
-namespace App.Installers
+namespace Avastrad.VContainerExt.Installers
 {
 	public static class ObjectResolverExtensions
 	{

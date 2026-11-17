@@ -1,5 +1,5 @@
 ﻿using System;
-using App.Installers;
+using Avastrad.VContainerExt.Installers;
 using UnityEngine.InputSystem;
 
 namespace App.EscProviding

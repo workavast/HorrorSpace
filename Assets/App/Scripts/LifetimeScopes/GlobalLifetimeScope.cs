@@ -1,8 +1,8 @@
-﻿using App.Installers;
+﻿using Avastrad.VContainerExt.Installers;
 
 namespace App.LifetimeScopes
 {
-	public class GlobalLifetimeScope : CoreLifetimeScope
+	public class GlobalLifetimeScope : BaseLifetimeScope
 	{
 		
 	}

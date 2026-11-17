@@ -1,5 +1,5 @@
-﻿using App.Installers;
-using Avastrad.ScenesLoading;
+﻿using Avastrad.ScenesLoading;
+using Avastrad.VContainerExt.Installers;
 using UnityEngine;
 using VContainer;
 
@@ -10,7 +10,7 @@ namespace App.ScenesLoading
 		[SerializeField] private int loadingSceneIndex;
 		[SerializeField] private LoadingScreen loadingScreen;
 		
-		public override void Configure(CoreLifetimeScope scope, IContainerBuilder builder)
+		public override void Configure(BaseLifetimeScope scope, IContainerBuilder builder)
 		{
 			var screen = Instantiate(loadingScreen);
 			DontDestroyOnLoad(screen);

@@ -1,5 +1,5 @@
-﻿using App.Installers;
-using Avastrad.Settings;
+﻿using Avastrad.Settings;
+using Avastrad.VContainerExt.Installers;
 using UnityEngine;
 using VContainer;
 
@@ -9,7 +9,7 @@ namespace App
     {
         [SerializeField] private SettingsConfigsRepository settingsConfigsRepository;
         
-        public override void Configure(CoreLifetimeScope scope, IContainerBuilder builder)
+        public override void Configure(BaseLifetimeScope scope, IContainerBuilder builder)
         {
             builder.Register<SettingsRepository>(Lifetime.Singleton).WithParameter(settingsConfigsRepository);
         }

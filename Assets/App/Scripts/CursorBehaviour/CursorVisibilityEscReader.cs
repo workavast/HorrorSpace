@@ -1,6 +1,6 @@
 ﻿using System;
 using App.EscProviding;
-using App.Installers;
+using Avastrad.VContainerExt.Installers;
 
 namespace App.CursorBehaviour
 {
